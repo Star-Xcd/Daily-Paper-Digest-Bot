@@ -1,0 +1,7 @@
+requests
+feedparser
+PyYAML
+python-dateutil
+scikit-learn
+numpy
+google-genai

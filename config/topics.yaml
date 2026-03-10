@@ -1,0 +1,78 @@
+recent_work:
+  name: "Current robotics work"
+  keywords:
+    - vision-language-action
+    - vla
+    - dexterous manipulation
+    - cross-embodiment learning
+    - cross embodiment learning
+    - manipulation
+    - deployment-time policy steering
+    - deployment time policy steering
+    - policy steering
+  negative_keywords:
+    - autonomous driving
+    - medical imaging
+    - protein
+    - nlp benchmark
+
+interest_topics:
+  - robot learning for manipulation
+  - dexterous manipulation
+  - learning from human demonstration
+  - learning from human video
+  - egocentric video
+  - robotic foundation model
+  - multimodal learning
+
+author_spotlight:
+  lookback_days: 90
+  authors:
+    - Danfei Xu
+    - Shuran Song
+    - Pieter Abbeel
+    - Jeannette Bohg
+    - Chelsea Finn
+    - Sergey Levine
+    - Dorsa Sadigh
+    - Karen Liu
+    - Jitendra Malik
+    - David Held
+    - Guanya Shi
+    - Deepak Pathak
+    - Zackory Erickson
+    - Pulkit Agrawal
+    - Russ Tedrake
+    - Xiaolong Wang
+    - Huazhe Xu
+    - He Wang
+    - Yang Gao
+    - Yuke Zhu
+    - Yunzhu Li
+    - Matei Ciocarlie
+    - Nima Fazeli
+    - Abhishek Gupta
+    - Dieter Fox
+    - Haozhi Qi
+    - Tapomayukh Bhattacharjee
+    - Lerrel Pinto
+    - Dhruv Shah
+    - Anirudha Majumdar
+    - Jiayuan Mao
+
+source_queries:
+  lookback_days: 90
+  arxiv_queries:
+    - 'cat:cs.RO'
+    - 'cat:cs.AI'
+    - 'cat:cs.LG'
+    - 'all:"robot manipulation"'
+    - 'all:"dexterous manipulation"'
+    - 'all:"vision-language-action"'
+    - 'all:"cross-embodiment learning"'
+    - 'all:"deployment-time policy steering"'
+    - 'all:"learning from human demonstration"'
+    - 'all:"learning from human video"'
+    - 'all:"egocentric video"'
+    - 'all:"robot foundation model"'
+    - 'all:"multimodal robot learning"'
