@@ -60,6 +60,9 @@ author_spotlight:
     - Anirudha Majumdar
     - Jiayuan Mao
 
+# These authors are just within a subset that comes up to me. 
+# Add more great researchers in the future!
+
 source_queries:
   lookback_days: 90
   arxiv_queries:

@@ -36,13 +36,13 @@ If Gemini summarization fails, the pipeline automatically falls back to a plain 
 ## Requirements
 
 - Python 3.11
-- A Gemini API key
+- A Gemini API key (Gemini has free quota every month. You can use your own API keys from other sources, but you need to modify [`summarize_with_llm.py`].)
 - An SMTP account that supports `STARTTLS`
 - A GitHub repository with Actions enabled
 
 ## GitHub Actions Deployment
 
-The workflow file is [`.github/workflows/daily_papers.yml`](.github/workflows/daily_papers.yml). It is scheduled to run every day at `00:30 UTC`, which is `08:30` in Beijing/Taipei.
+The workflow file is [`.github/workflows/daily_papers.yml`](.github/workflows/daily_papers.yml). Currently it is scheduled to run every day at `00:30 UTC`, which is `08:30` in Beijing/Taipei.
 
 To deploy:
 
@@ -64,7 +64,7 @@ To deploy:
 
 The email sender uses SMTP with `STARTTLS`. Typical values look like:
 
-- `SMTP_HOST`: `smtp.gmail.com`
+- `SMTP_HOST`: `smtp.gmail.com`. (If you are using Gmail)
 - `SMTP_PORT`: `587`
 
 If you use Gmail, you will usually need an app password rather than your normal account password.
