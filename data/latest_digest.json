@@ -1,62 +1,65 @@
 [
   {
-    "id": "2602.05325v2",
-    "title": "RoboPaint: From Human Demonstration to Any Robot and Any View",
-    "summary": "Acquiring large-scale, high-fidelity robot demonstration data remains a critical bottleneck for scaling Vision-Language-Action (VLA) models in dexterous manipulation. We propose a Real-Sim-Real data collection and data editing pipeline that transforms human demonstrations into robot-executable, environment-specific training data without direct robot teleoperation. Standardized data collection rooms are built to capture multimodal human demonstrations (synchronized 3 RGB-D videos, 11 RGB videos, 29-DoF glove joint angles, and 14-channel tactile signals). Based on these human demonstrations, we introduce a tactile-aware retargeting method that maps human hand states to robot dex-hand states via geometry and force-guided optimization. Then the retargeted robot trajectories are rendered in a photorealistic Isaac Sim environment to build robot training data. Real world experiments have demonstrated: (1) The retargeted dex-hand trajectories achieve an 84\\% success rate across 10 diverse object manipulation tasks. (2) VLA policies (Pi0.5) trained exclusively on our generated data achieve 80\\% average success rate on three representative tasks, i.e., pick-and-place, pushing and pouring. To conclude, robot training data can be efficiently \"painted\" from human demonstrations using our real-sim-real data pipeline. We offer a scalable, cost-effective alternative to teleoperation with minimal performance loss for complex dexterous manipulation.",
+    "id": "2602.03445v1",
+    "title": "CRL-VLA: Continual Vision-Language-Action Learning",
+    "summary": "Lifelong learning is critical for embodied agents in open-world environments, where reinforcement learning fine-tuning has emerged as an important paradigm to enable Vision-Language-Action (VLA) models to master dexterous manipulation through environmental interaction. Thus, Continual Reinforcement Learning (CRL) is a promising pathway for deploying VLA models in lifelong robotic scenarios, yet balancing stability (retaining old skills) and plasticity (learning new ones) remains a formidable challenge for existing methods. We introduce CRL-VLA, a framework for continual post-training of VLA models with rigorous theoretical bounds. We derive a unified performance bound linking the stability-plasticity trade-off to goal-conditioned advantage magnitude, scaled by policy divergence. CRL-VLA resolves this dilemma via asymmetric regulation: constraining advantage magnitudes on prior tasks while enabling controlled growth on new tasks. This is realized through a simple but effective dual-critic architecture with novel Goal-Conditioned Value Formulation (GCVF), where a frozen critic anchors semantic consistency and a trainable estimator drives adaptation. Experiments on the LIBERO benchmark demonstrate that CRL-VLA effectively harmonizes these conflicting objectives, outperforming baselines in both anti-forgetting and forward adaptation.",
     "authors": [
-      "Jiacheng Fan",
-      "Zhiyue Zhao",
-      "Yiqian Zhang",
-      "Chao Chen",
-      "Peide Wang",
-      "Hengdi Zhang",
-      "Zhengxue Cheng"
+      "Qixin Zeng",
+      "Shuo Zhang",
+      "Hongyin Zhang",
+      "Renjie Wang",
+      "Han Zhao",
+      "Libang Zhao",
+      "Runze Li",
+      "Donglin Wang",
+      "Chao Huang"
     ],
-    "published": "2026-02-05T05:45:12Z",
-    "updated": "2026-02-07T02:08:06Z",
-    "url": "https://arxiv.org/abs/2602.05325v2",
-    "pdf_url": "https://arxiv.org/pdf/2602.05325v2",
+    "published": "2026-02-03T12:09:53Z",
+    "updated": "2026-02-03T12:09:53Z",
+    "url": "https://arxiv.org/abs/2602.03445v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.03445v1",
     "tags": [
+      "cs.AI",
+      "cs.LG",
       "cs.RO"
     ],
     "source": "arxiv",
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2603.12260v1",
-    "title": "HumDex:Humanoid Dexterous Manipulation Made Easy",
-    "summary": "This paper investigates humanoid whole-body dexterous manipulation, where the efficient collection of high-quality demonstration data remains a central bottleneck. Existing teleoperation systems often suffer from limited portability, occlusion, or insufficient precision, which hinders their applicability to complex whole-body tasks. To address these challenges, we introduce HumDex, a portable teleoperation system designed for humanoid whole-body dexterous manipulation. Our system leverages IMU-based motion tracking to address the portability-precision trade-off, enabling accurate full-body tracking while remaining easy to deploy. For dexterous hand control, we further introduce a learning-based retargeting method that generates smooth and natural hand motions without manual parameter tuning. Beyond teleoperation, HumDex enables efficient collection of human motion data. Building on this capability, we propose a two-stage imitation learning framework that first pre-trains on diverse human motion data to learn generalizable priors, and then fine-tunes on robot data to bridge the embodiment gap for precise execution. We demonstrate that this approach significantly improves generalization to new configurations, objects, and backgrounds with minimal data acquisition costs. The entire system is fully reproducible and open-sourced at https://github.com/physical-superintelligence-lab/HumDex.",
+    "id": "2603.13091v1",
+    "title": "Reasoning over Video: Evaluating How MLLMs Extract, Integrate, and Reconstruct Spatiotemporal Evidence",
+    "summary": "The growing interest in embodied agents increases the demand for spatiotemporal video understanding, yet existing benchmarks largely emphasize extractive reasoning, where answers can be explicitly presented within spatiotemporal events. It remains unclear whether multimodal large language models can instead perform abstractive spatiotemporal reasoning, which requires integrating observations over time, combining dispersed cues, and inferring implicit spatial and contextual structure. To address this gap, we formalize abstractive spatiotemporal reasoning from videos by introducing a structured evaluation taxonomy that systematically targets its core dimensions and construct a controllable, scenario-driven synthetic egocentric video dataset tailored to evaluate abstractive spatiotemporal reasoning capabilities, spanning object-, room-, and floor-plan-level scenarios. Based on this framework, we present VAEX-BENCH, a benchmark comprising five abstractive reasoning tasks together with their extractive counterparts. Our extensive experiments compare the performance of state-of-the-art MLLMs under extractive and abstractive settings, exposing their limitations on abstractive tasks and providing a fine-grained analysis of the underlying bottlenecks. The dataset will be released soon.",
     "authors": [
-      "Liang Heng",
-      "Yihe Tang",
-      "Jiajun Xu",
-      "Henghui Bao",
-      "Di Huang",
-      "Yue Wang"
+      "Seunghwan Bang",
+      "Hwanjun Song"
     ],
-    "published": "2026-03-12T17:59:39Z",
-    "updated": "2026-03-12T17:59:39Z",
-    "url": "https://arxiv.org/abs/2603.12260v1",
-    "pdf_url": "https://arxiv.org/pdf/2603.12260v1",
+    "published": "2026-03-13T15:40:42Z",
+    "updated": "2026-03-13T15:40:42Z",
+    "url": "https://arxiv.org/abs/2603.13091v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.13091v1",
     "tags": [
-      "cs.RO"
+      "cs.CV"
     ],
     "source": "arxiv",
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2603.12243v1",
-    "title": "HandelBot: Real-World Piano Playing via Fast Adaptation of Dexterous Robot Policies",
-    "summary": "Mastering dexterous manipulation with multi-fingered hands has been a grand challenge in robotics for decades. Despite its potential, the difficulty of collecting high-quality data remains a primary bottleneck for high-precision tasks. While reinforcement learning and simulation-to-real-world transfer offer a promising alternative, the transferred policies often fail for tasks demanding millimeter-scale precision, such as bimanual piano playing. In this work, we introduce HandelBot, a framework that combines a simulation policy and rapid adaptation through a two-stage pipeline. Starting from a simulation-trained policy, we first apply a structured refinement stage to correct spatial alignments by adjusting lateral finger joints based on physical rollouts. Next, we use residual reinforcement learning to autonomously learn fine-grained corrective actions. Through extensive hardware experiments across five recognized songs, we demonstrate that HandelBot can successfully perform precise bimanual piano playing. Our system outperforms direct simulation deployment by a factor of 1.8x and requires only 30 minutes of physical interaction data.",
+    "id": "2602.12063v2",
+    "title": "VLAW: Iterative Co-Improvement of Vision-Language-Action Policy and World Model",
+    "summary": "The goal of this paper is to improve the performance and reliability of vision-language-action (VLA) models through iterative online interaction. Since collecting policy rollouts in the real world is expensive, we investigate whether a learned simulator-specifically, an action-conditioned video generation model-can be used to generate additional rollout data. Unfortunately, existing world models lack the physical fidelity necessary for policy improvement: they are predominantly trained on demonstration datasets that lack coverage of many different physical interactions (particularly failure cases) and struggle to accurately model small yet critical physical details in contact-rich object manipulation. We propose a simple iterative improvement algorithm that uses real-world roll-out data to improve the fidelity of the world model, which can then, in turn, be used to generate supplemental synthetic data for improving the VLA model. In our experiments on a real robot, we use this approach to improve the performance of a state-of-the-art VLA model on multiple downstream tasks. We achieve a 39.2% absolute success rate improvement over the base policy and 11.6% improvement from training with the generated synthetic rollouts. Videos can be found at this anonymous website: https://sites.google.com/view/vla-w",
     "authors": [
-      "Amber Xie",
-      "Haozhi Qi",
-      "Dorsa Sadigh"
+      "Yanjiang Guo",
+      "Tony Lee",
+      "Lucy Xiaoyang Shi",
+      "Jianyu Chen",
+      "Percy Liang",
+      "Chelsea Finn"
     ],
-    "published": "2026-03-12T17:56:29Z",
-    "updated": "2026-03-12T17:56:29Z",
-    "url": "https://arxiv.org/abs/2603.12243v1",
-    "pdf_url": "https://arxiv.org/pdf/2603.12243v1",
+    "published": "2026-02-12T15:21:47Z",
+    "updated": "2026-02-15T00:04:15Z",
+    "url": "https://arxiv.org/abs/2602.12063v2",
+    "pdf_url": "https://arxiv.org/pdf/2602.12063v2",
     "tags": [
       "cs.RO"
     ],
