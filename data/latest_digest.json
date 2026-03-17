@@ -1,65 +1,76 @@
 [
   {
-    "id": "2602.03445v1",
-    "title": "CRL-VLA: Continual Vision-Language-Action Learning",
-    "summary": "Lifelong learning is critical for embodied agents in open-world environments, where reinforcement learning fine-tuning has emerged as an important paradigm to enable Vision-Language-Action (VLA) models to master dexterous manipulation through environmental interaction. Thus, Continual Reinforcement Learning (CRL) is a promising pathway for deploying VLA models in lifelong robotic scenarios, yet balancing stability (retaining old skills) and plasticity (learning new ones) remains a formidable challenge for existing methods. We introduce CRL-VLA, a framework for continual post-training of VLA models with rigorous theoretical bounds. We derive a unified performance bound linking the stability-plasticity trade-off to goal-conditioned advantage magnitude, scaled by policy divergence. CRL-VLA resolves this dilemma via asymmetric regulation: constraining advantage magnitudes on prior tasks while enabling controlled growth on new tasks. This is realized through a simple but effective dual-critic architecture with novel Goal-Conditioned Value Formulation (GCVF), where a frozen critic anchors semantic consistency and a trainable estimator drives adaptation. Experiments on the LIBERO benchmark demonstrate that CRL-VLA effectively harmonizes these conflicting objectives, outperforming baselines in both anti-forgetting and forward adaptation.",
+    "id": "2602.02142v1",
+    "title": "FD-VLA: Force-Distilled Vision-Language-Action Model for Contact-Rich Manipulation",
+    "summary": "Force sensing is a crucial modality for Vision-Language-Action (VLA) frameworks, as it enables fine-grained perception and dexterous manipulation in contact-rich tasks. We present Force-Distilled VLA (FD-VLA), a novel framework that integrates force awareness into contact-rich manipulation without relying on physical force sensors. The core of our approach is a Force Distillation Module (FDM), which distills force by mapping a learnable query token, conditioned on visual observations and robot states, into a predicted force token aligned with the latent representation of actual force signals. During inference, this distilled force token is injected into the pretrained VLM, enabling force-aware reasoning while preserving the integrity of its vision-language semantics. This design provides two key benefits: first, it allows practical deployment across a wide range of robots that lack expensive or fragile force-torque sensors, thereby reducing hardware cost and complexity; second, the FDM introduces an additional force-vision-state fusion prior to the VLM, which improves cross-modal alignment and enhances perception-action robustness in contact-rich scenarios. Surprisingly, our physical experiments show that the distilled force token outperforms direct sensor force measurements as well as other baselines, which highlights the effectiveness of this force-distilled VLA approach.",
     "authors": [
-      "Qixin Zeng",
-      "Shuo Zhang",
-      "Hongyin Zhang",
-      "Renjie Wang",
-      "Han Zhao",
-      "Libang Zhao",
-      "Runze Li",
-      "Donglin Wang",
-      "Chao Huang"
+      "Ruiteng Zhao",
+      "Wenshuo Wang",
+      "Yicheng Ma",
+      "Xiaocong Li",
+      "Francis E. H. Tay",
+      "Marcelo H. Ang",
+      "Haiyue Zhu"
     ],
-    "published": "2026-02-03T12:09:53Z",
-    "updated": "2026-02-03T12:09:53Z",
-    "url": "https://arxiv.org/abs/2602.03445v1",
-    "pdf_url": "https://arxiv.org/pdf/2602.03445v1",
+    "published": "2026-02-02T14:19:46Z",
+    "updated": "2026-02-02T14:19:46Z",
+    "url": "https://arxiv.org/abs/2602.02142v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.02142v1",
     "tags": [
-      "cs.AI",
-      "cs.LG",
-      "cs.RO"
+      "cs.RO",
+      "cs.CV"
     ],
     "source": "arxiv",
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2603.13091v1",
-    "title": "Reasoning over Video: Evaluating How MLLMs Extract, Integrate, and Reconstruct Spatiotemporal Evidence",
-    "summary": "The growing interest in embodied agents increases the demand for spatiotemporal video understanding, yet existing benchmarks largely emphasize extractive reasoning, where answers can be explicitly presented within spatiotemporal events. It remains unclear whether multimodal large language models can instead perform abstractive spatiotemporal reasoning, which requires integrating observations over time, combining dispersed cues, and inferring implicit spatial and contextual structure. To address this gap, we formalize abstractive spatiotemporal reasoning from videos by introducing a structured evaluation taxonomy that systematically targets its core dimensions and construct a controllable, scenario-driven synthetic egocentric video dataset tailored to evaluate abstractive spatiotemporal reasoning capabilities, spanning object-, room-, and floor-plan-level scenarios. Based on this framework, we present VAEX-BENCH, a benchmark comprising five abstractive reasoning tasks together with their extractive counterparts. Our extensive experiments compare the performance of state-of-the-art MLLMs under extractive and abstractive settings, exposing their limitations on abstractive tasks and providing a fine-grained analysis of the underlying bottlenecks. The dataset will be released soon.",
+    "id": "2603.14401v1",
+    "title": "OCRA: Object-Centric Learning with 3D and Tactile Priors for Human-to-Robot Action Transfer",
+    "summary": "We present OCRA, an Object-Centric framework for video-based human-to-Robot Action transfer that learns directly from human demonstration videos to enable robust manipulation. Object-centric learning emphasizes task-relevant objects and their interactions while filtering out irrelevant background, providing a natural and scalable way to teach robots. OCRA leverages multi-view RGB videos, the state-of-the-art 3D foundation model VGGT, and advanced detection and segmentation models to reconstruct object-centric 3D point clouds, capturing rich interactions between objects. To handle properties not easily perceived by vision alone, we incorporate tactile priors via a large-scale dataset of over one million tactile images. These 3D and tactile priors are fused through a multimodal module (ResFiLM) and fed into a Diffusion Policy to generate robust manipulation actions. Extensive experiments on both vision-only and visuo-tactile tasks show that OCRA significantly outperforms existing baselines and ablations, demonstrating its effectiveness for learning from human demonstration videos.",
     "authors": [
-      "Seunghwan Bang",
-      "Hwanjun Song"
+      "Kuanning Wang",
+      "Ke Fan",
+      "Yuqian Fu",
+      "Siyu Lin",
+      "Hu Luo",
+      "Daniel Seita",
+      "Yanwei Fu",
+      "Yu-Gang Jiang",
+      "Xiangyang Xue"
     ],
-    "published": "2026-03-13T15:40:42Z",
-    "updated": "2026-03-13T15:40:42Z",
-    "url": "https://arxiv.org/abs/2603.13091v1",
-    "pdf_url": "https://arxiv.org/pdf/2603.13091v1",
+    "published": "2026-03-15T14:31:03Z",
+    "updated": "2026-03-15T14:31:03Z",
+    "url": "https://arxiv.org/abs/2603.14401v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.14401v1",
     "tags": [
+      "cs.RO",
       "cs.CV"
     ],
     "source": "arxiv",
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2602.12063v2",
-    "title": "VLAW: Iterative Co-Improvement of Vision-Language-Action Policy and World Model",
-    "summary": "The goal of this paper is to improve the performance and reliability of vision-language-action (VLA) models through iterative online interaction. Since collecting policy rollouts in the real world is expensive, we investigate whether a learned simulator-specifically, an action-conditioned video generation model-can be used to generate additional rollout data. Unfortunately, existing world models lack the physical fidelity necessary for policy improvement: they are predominantly trained on demonstration datasets that lack coverage of many different physical interactions (particularly failure cases) and struggle to accurately model small yet critical physical details in contact-rich object manipulation. We propose a simple iterative improvement algorithm that uses real-world roll-out data to improve the fidelity of the world model, which can then, in turn, be used to generate supplemental synthetic data for improving the VLA model. In our experiments on a real robot, we use this approach to improve the performance of a state-of-the-art VLA model on multiple downstream tasks. We achieve a 39.2% absolute success rate improvement over the base policy and 11.6% improvement from training with the generated synthetic rollouts. Videos can be found at this anonymous website: https://sites.google.com/view/vla-w",
+    "id": "2603.13788v1",
+    "title": "ST-VLA: Enabling 4D-Aware Spatiotemporal Understanding for General Robot Manipulation",
+    "summary": "Robotic manipulation in open-world environments requires reasoning across semantics, geometry, and long-horizon action dynamics. Existing hierarchical Vision-Language-Action (VLA) frameworks typically use 2D representations to connect high-level reasoning with low-level control, but lack depth awareness and temporal consistency, limiting robustness in complex 3D scenes. We propose ST-VLA, a hierarchical VLA framework using a unified 3D-4D representation to bridge perception and action. ST-VLA converts 2D guidance into 3D trajectories and generates smooth spatial masks that capture 4D spatio-temporal context, providing a stable interface between semantic reasoning and continuous control. To enable effective learning of such representations, we introduce ST-Human, a large-scale human manipulation dataset with 14 tasks and 300k episodes, annotated with 2D, 3D, and 4D supervision via a semi-automated pipeline. Using ST-Human, we train ST-VLM, a spatio-temporal vision-language model that generates spatially grounded and temporally coherent 3D representations to guide policy execution. The smooth spatial masks focus on task-relevant geometry and stabilize latent representations, enabling online replanning and long-horizon reasoning. Experiments on RLBench and real-world manipulation tasks show that \\method significantly outperforms state-of-the-art baselines, improving zero-shot success rates by 44.6% and 30.3%. These results demonstrate that offloading spatio-temporal reasoning to VLMs with unified 3D-4D representations substantially improves robustness and generalization for open-world robotic manipulation. Project website: https://oucx117.github.io/ST-VLA/.",
     "authors": [
-      "Yanjiang Guo",
-      "Tony Lee",
-      "Lucy Xiaoyang Shi",
-      "Jianyu Chen",
-      "Percy Liang",
-      "Chelsea Finn"
+      "You Wu",
+      "Zixuan Chen",
+      "Cunxu Ou",
+      "Wenxuan Wang",
+      "Wenbo Huang",
+      "Lin Cao",
+      "Yangtao Chen",
+      "Weichao Qiu",
+      "Xingyue Quan",
+      "Jieqi Shi",
+      "Jing Huo",
+      "Yang Gao"
     ],
-    "published": "2026-02-12T15:21:47Z",
-    "updated": "2026-02-15T00:04:15Z",
-    "url": "https://arxiv.org/abs/2602.12063v2",
-    "pdf_url": "https://arxiv.org/pdf/2602.12063v2",
+    "published": "2026-03-14T06:36:48Z",
+    "updated": "2026-03-14T06:36:48Z",
+    "url": "https://arxiv.org/abs/2603.13788v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.13788v1",
     "tags": [
       "cs.RO"
     ],
