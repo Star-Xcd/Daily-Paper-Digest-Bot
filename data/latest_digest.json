@@ -1,76 +1,68 @@
 [
   {
-    "id": "2602.02142v1",
-    "title": "FD-VLA: Force-Distilled Vision-Language-Action Model for Contact-Rich Manipulation",
-    "summary": "Force sensing is a crucial modality for Vision-Language-Action (VLA) frameworks, as it enables fine-grained perception and dexterous manipulation in contact-rich tasks. We present Force-Distilled VLA (FD-VLA), a novel framework that integrates force awareness into contact-rich manipulation without relying on physical force sensors. The core of our approach is a Force Distillation Module (FDM), which distills force by mapping a learnable query token, conditioned on visual observations and robot states, into a predicted force token aligned with the latent representation of actual force signals. During inference, this distilled force token is injected into the pretrained VLM, enabling force-aware reasoning while preserving the integrity of its vision-language semantics. This design provides two key benefits: first, it allows practical deployment across a wide range of robots that lack expensive or fragile force-torque sensors, thereby reducing hardware cost and complexity; second, the FDM introduces an additional force-vision-state fusion prior to the VLM, which improves cross-modal alignment and enhances perception-action robustness in contact-rich scenarios. Surprisingly, our physical experiments show that the distilled force token outperforms direct sensor force measurements as well as other baselines, which highlights the effectiveness of this force-distilled VLA approach.",
+    "id": "2603.16218v1",
+    "title": "Enabling Dynamic Tracking in Vision-Language-Action Models via Time-Discrete and Time-Continuous Velocity Feedforward",
+    "summary": "While vision-language-action (VLA) models have shown great promise for robot manipulation, their deployment on rigid industrial robots remains challenging due to the inherent trade-off between compliance and responsiveness. Standard Behavior Cloning (BC) approaches predict discrete poses at low frequencies, omitting the velocity and acceleration feedforward terms typically used by low-level compliant controllers. This requires to rely on high stiffness for accurate tracking, thereby sacrificing safe contact dynamics. In this paper, we demonstrate the importance of integrating velocity feedforward terms into VLA policies to resolve this trade-off. We propose two methods for extracting velocity targets from VLAs: a time-discrete finite-difference approximation that serves as a highly effective bridge for existing models, and a continuous Cubic B-Spline action space that natively yields $C^2$ continuous trajectories for high-frequency control. Crucially, both approaches are strictly model-agnostic and compatible with any standard action-chunking architecture, requiring modifications only to teleoperation, data processing, and the low-level controller. We fine-tune the $π_{0.5}$ model and evaluate both of our approaches on a demanding, contact-rich cube-in-hole task. Our results indicate that incorporating the velocity feedforward term via finite differences significantly improves task execution speed, while the continuous B-Spline approach maintains high overall success rates and provides a foundation for smoother higher-order derivatives without compromising compliance.",
     "authors": [
-      "Ruiteng Zhao",
-      "Wenshuo Wang",
-      "Yicheng Ma",
-      "Xiaocong Li",
-      "Francis E. H. Tay",
-      "Marcelo H. Ang",
-      "Haiyue Zhu"
+      "Johannes Hechtl",
+      "Philipp Schmitt",
+      "Georg von Wichert",
+      "Wolfram Burgard"
     ],
-    "published": "2026-02-02T14:19:46Z",
-    "updated": "2026-02-02T14:19:46Z",
-    "url": "https://arxiv.org/abs/2602.02142v1",
-    "pdf_url": "https://arxiv.org/pdf/2602.02142v1",
+    "published": "2026-03-17T07:50:00Z",
+    "updated": "2026-03-17T07:50:00Z",
+    "url": "https://arxiv.org/abs/2603.16218v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.16218v1",
     "tags": [
-      "cs.RO",
-      "cs.CV"
+      "cs.RO"
     ],
     "source": "arxiv",
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2603.14401v1",
-    "title": "OCRA: Object-Centric Learning with 3D and Tactile Priors for Human-to-Robot Action Transfer",
-    "summary": "We present OCRA, an Object-Centric framework for video-based human-to-Robot Action transfer that learns directly from human demonstration videos to enable robust manipulation. Object-centric learning emphasizes task-relevant objects and their interactions while filtering out irrelevant background, providing a natural and scalable way to teach robots. OCRA leverages multi-view RGB videos, the state-of-the-art 3D foundation model VGGT, and advanced detection and segmentation models to reconstruct object-centric 3D point clouds, capturing rich interactions between objects. To handle properties not easily perceived by vision alone, we incorporate tactile priors via a large-scale dataset of over one million tactile images. These 3D and tactile priors are fused through a multimodal module (ResFiLM) and fed into a Diffusion Policy to generate robust manipulation actions. Extensive experiments on both vision-only and visuo-tactile tasks show that OCRA significantly outperforms existing baselines and ablations, demonstrating its effectiveness for learning from human demonstration videos.",
+    "id": "2603.16772v1",
+    "title": "Beyond Cybathlon: On-demand Quadrupedal Assistance for People with Limited Mobility",
+    "summary": "Background: Assistance robots have the potential to increase the independence of people who need daily care due to limited mobility or being wheelchair-bound. Current solutions of attaching robotic arms to motorized wheelchairs offer limited additional mobility at the cost of increased size and reduced wheelchair maneuverability. Methods: We present an on-demand quadrupedal assistance robot system controlled via a shared autonomy approach, which combines semi-autonomous task execution with human teleoperation. Due to the mobile nature of the system it can assist the operator whenever needed and perform autonomous tasks independently, without otherwise restricting their mobility. We automate pick-and-place tasks, as well as robot movement through the environment with semantic, collision-aware navigation. For teleoperation, we present a mouth-level joystick interface that enables an operator with reduced mobility to control the robot's end effector for precision manipulation. Results: We showcase our system in the \\textit{Cybathlon 2024 Assistance Robot Race}, and validate it in an at-home experimental setup, where we measure task completion times and user satisfaction. We find our system capable of assisting in a broad variety of tasks, including those that require dexterous manipulation. The user study confirms the intuition that increased robot autonomy alleviates the operator's mental load. Conclusions: We present a flexible system that has the potential to help people in wheelchairs maintain independence in everyday life by enabling them to solve mobile manipulation problems without external support. We achieve results comparable to previous state-of-the-art on subjective metrics while allowing for more autonomy of the operator and greater agility for manipulation.",
     "authors": [
-      "Kuanning Wang",
-      "Ke Fan",
-      "Yuqian Fu",
-      "Siyu Lin",
-      "Hu Luo",
-      "Daniel Seita",
-      "Yanwei Fu",
-      "Yu-Gang Jiang",
-      "Xiangyang Xue"
+      "Carmen Scheidemann",
+      "Andrei Cramariuc",
+      "Changan Chen",
+      "Jia-Ruei Chiu",
+      "Marco Hutter"
     ],
-    "published": "2026-03-15T14:31:03Z",
-    "updated": "2026-03-15T14:31:03Z",
-    "url": "https://arxiv.org/abs/2603.14401v1",
-    "pdf_url": "https://arxiv.org/pdf/2603.14401v1",
+    "published": "2026-03-17T16:48:36Z",
+    "updated": "2026-03-17T16:48:36Z",
+    "url": "https://arxiv.org/abs/2603.16772v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.16772v1",
     "tags": [
       "cs.RO",
-      "cs.CV"
+      "cs.HC"
     ],
     "source": "arxiv",
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2603.13788v1",
-    "title": "ST-VLA: Enabling 4D-Aware Spatiotemporal Understanding for General Robot Manipulation",
-    "summary": "Robotic manipulation in open-world environments requires reasoning across semantics, geometry, and long-horizon action dynamics. Existing hierarchical Vision-Language-Action (VLA) frameworks typically use 2D representations to connect high-level reasoning with low-level control, but lack depth awareness and temporal consistency, limiting robustness in complex 3D scenes. We propose ST-VLA, a hierarchical VLA framework using a unified 3D-4D representation to bridge perception and action. ST-VLA converts 2D guidance into 3D trajectories and generates smooth spatial masks that capture 4D spatio-temporal context, providing a stable interface between semantic reasoning and continuous control. To enable effective learning of such representations, we introduce ST-Human, a large-scale human manipulation dataset with 14 tasks and 300k episodes, annotated with 2D, 3D, and 4D supervision via a semi-automated pipeline. Using ST-Human, we train ST-VLM, a spatio-temporal vision-language model that generates spatially grounded and temporally coherent 3D representations to guide policy execution. The smooth spatial masks focus on task-relevant geometry and stabilize latent representations, enabling online replanning and long-horizon reasoning. Experiments on RLBench and real-world manipulation tasks show that \\method significantly outperforms state-of-the-art baselines, improving zero-shot success rates by 44.6% and 30.3%. These results demonstrate that offloading spatio-temporal reasoning to VLMs with unified 3D-4D representations substantially improves robustness and generalization for open-world robotic manipulation. Project website: https://oucx117.github.io/ST-VLA/.",
+    "id": "2603.15789v1",
+    "title": "Emergent Dexterity via Diverse Resets and Large-Scale Reinforcement Learning",
+    "summary": "Reinforcement learning in massively parallel physics simulations has driven major progress in sim-to-real robot learning. However, current approaches remain brittle and task-specific, relying on extensive per-task engineering to design rewards, curricula, and demonstrations. Even with this engineering, they often fail on long-horizon, contact-rich manipulation tasks and do not meaningfully scale with compute, as performance quickly saturates when training revisits the same narrow regions of state space. We introduce \\Method, a simple and scalable framework that enables on-policy reinforcement learning to robustly solve a broad class of dexterous manipulation tasks using a single reward function, fixed algorithm hyperparameters, no curricula, and no human demonstrations. Our key insight is that long-horizon exploration can be dramatically simplified by using simulator resets to systematically expose the RL algorithm to the diverse set of robot-object interactions which underlie dexterous manipulation. \\Method\\ programmatically generates such resets with minimal human input, converting additional compute directly into broader behavioral coverage and continued performance gains. We show that \\Method\\ gracefully scales to long-horizon dexterous manipulation tasks beyond the capabilities of existing approaches and is able to learn robust policies over significantly wider ranges of initial conditions than baselines. Finally, we distill \\Method \\ into visuomotor policies which display robust retrying behavior and substantially higher success rates than baselines when transferred to the real world zero-shot. Project webpage: https://omnireset.github.io",
     "authors": [
-      "You Wu",
-      "Zixuan Chen",
-      "Cunxu Ou",
-      "Wenxuan Wang",
-      "Wenbo Huang",
-      "Lin Cao",
-      "Yangtao Chen",
-      "Weichao Qiu",
-      "Xingyue Quan",
-      "Jieqi Shi",
-      "Jing Huo",
-      "Yang Gao"
+      "Patrick Yin",
+      "Tyler Westenbroek",
+      "Zhengyu Zhang",
+      "Joshua Tran",
+      "Ignacio Dagnino",
+      "Eeshani Shilamkar",
+      "Numfor Mbiziwo-Tiapo",
+      "Simran Bagaria",
+      "Xinlei Liu",
+      "Galen Mullins",
+      "Andrey Kolobov",
+      "Abhishek Gupta"
     ],
-    "published": "2026-03-14T06:36:48Z",
-    "updated": "2026-03-14T06:36:48Z",
-    "url": "https://arxiv.org/abs/2603.13788v1",
-    "pdf_url": "https://arxiv.org/pdf/2603.13788v1",
+    "published": "2026-03-16T18:14:36Z",
+    "updated": "2026-03-16T18:14:36Z",
+    "url": "https://arxiv.org/abs/2603.15789v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.15789v1",
     "tags": [
       "cs.RO"
     ],
