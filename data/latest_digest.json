@@ -1,18 +1,20 @@
 [
   {
-    "id": "2603.16218v1",
-    "title": "Enabling Dynamic Tracking in Vision-Language-Action Models via Time-Discrete and Time-Continuous Velocity Feedforward",
-    "summary": "While vision-language-action (VLA) models have shown great promise for robot manipulation, their deployment on rigid industrial robots remains challenging due to the inherent trade-off between compliance and responsiveness. Standard Behavior Cloning (BC) approaches predict discrete poses at low frequencies, omitting the velocity and acceleration feedforward terms typically used by low-level compliant controllers. This requires to rely on high stiffness for accurate tracking, thereby sacrificing safe contact dynamics. In this paper, we demonstrate the importance of integrating velocity feedforward terms into VLA policies to resolve this trade-off. We propose two methods for extracting velocity targets from VLAs: a time-discrete finite-difference approximation that serves as a highly effective bridge for existing models, and a continuous Cubic B-Spline action space that natively yields $C^2$ continuous trajectories for high-frequency control. Crucially, both approaches are strictly model-agnostic and compatible with any standard action-chunking architecture, requiring modifications only to teleoperation, data processing, and the low-level controller. We fine-tune the $π_{0.5}$ model and evaluate both of our approaches on a demanding, contact-rich cube-in-hole task. Our results indicate that incorporating the velocity feedforward term via finite differences significantly improves task execution speed, while the continuous B-Spline approach maintains high overall success rates and provides a foundation for smoother higher-order derivatives without compromising compliance.",
+    "id": "2602.08602v2",
+    "title": "Mimic Intent, Not Just Trajectories",
+    "summary": "While imitation learning (IL) has achieved impressive success in dexterous manipulation through generative modeling and pretraining, state-of-the-art approaches like Vision-Language-Action (VLA) models still struggle with adaptation to environmental changes and skill transfer. We argue this stems from mimicking raw trajectories without understanding the underlying intent. To address this, we propose explicitly disentangling behavior intent from execution details in end-2-end IL: Mimic Intent, Not just Trajectories(MINT). We achieve this via multi-scale frequency-space tokenization, which enforces a spectral decomposition of action chunk representation. We learn action tokens with a multi-scale coarse-to-fine structure, and force the coarsest token to capture low-frequency global structure and finer tokens to encode high-frequency details. This yields an abstract Intent token that facilitates planning and transfer, and multi-scale Execution tokens that enable precise adaptation to environmental dynamics. Building on this hierarchy, our policy generates trajectories through next-scale autoregression, performing progressive intent-to-execution reasoning, thus boosting learning efficiency and generalization. Crucially, this disentanglement enables one-shot transfer of skills, by simply injecting the Intent token from a demonstration into the autoregressive generation process. Experiments on several manipulation benchmarks and on a real robot demonstrate state-of-the-art success rates, superior inference efficiency, robust generalization against disturbances, and effective one-shot transfer.",
     "authors": [
-      "Johannes Hechtl",
-      "Philipp Schmitt",
-      "Georg von Wichert",
-      "Wolfram Burgard"
+      "Renming Huang",
+      "Chendong Zeng",
+      "Wenjing Tang",
+      "Jintian Cai",
+      "Cewu Lu",
+      "Panpan Cai"
     ],
-    "published": "2026-03-17T07:50:00Z",
-    "updated": "2026-03-17T07:50:00Z",
-    "url": "https://arxiv.org/abs/2603.16218v1",
-    "pdf_url": "https://arxiv.org/pdf/2603.16218v1",
+    "published": "2026-02-09T12:44:35Z",
+    "updated": "2026-03-18T08:05:39Z",
+    "url": "https://arxiv.org/abs/2602.08602v2",
+    "pdf_url": "https://arxiv.org/pdf/2602.08602v2",
     "tags": [
       "cs.RO"
     ],
@@ -20,49 +22,38 @@
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2603.16772v1",
-    "title": "Beyond Cybathlon: On-demand Quadrupedal Assistance for People with Limited Mobility",
-    "summary": "Background: Assistance robots have the potential to increase the independence of people who need daily care due to limited mobility or being wheelchair-bound. Current solutions of attaching robotic arms to motorized wheelchairs offer limited additional mobility at the cost of increased size and reduced wheelchair maneuverability. Methods: We present an on-demand quadrupedal assistance robot system controlled via a shared autonomy approach, which combines semi-autonomous task execution with human teleoperation. Due to the mobile nature of the system it can assist the operator whenever needed and perform autonomous tasks independently, without otherwise restricting their mobility. We automate pick-and-place tasks, as well as robot movement through the environment with semantic, collision-aware navigation. For teleoperation, we present a mouth-level joystick interface that enables an operator with reduced mobility to control the robot's end effector for precision manipulation. Results: We showcase our system in the \\textit{Cybathlon 2024 Assistance Robot Race}, and validate it in an at-home experimental setup, where we measure task completion times and user satisfaction. We find our system capable of assisting in a broad variety of tasks, including those that require dexterous manipulation. The user study confirms the intuition that increased robot autonomy alleviates the operator's mental load. Conclusions: We present a flexible system that has the potential to help people in wheelchairs maintain independence in everyday life by enabling them to solve mobile manipulation problems without external support. We achieve results comparable to previous state-of-the-art on subjective metrics while allowing for more autonomy of the operator and greater agility for manipulation.",
+    "id": "2603.17851v1",
+    "title": "DexViTac: Collecting Human Visuo-Tactile-Kinematic Demonstrations for Contact-Rich Dexterous Manipulation",
+    "summary": "Large-scale, high-quality multimodal demonstrations are essential for robot learning of contact-rich dexterous manipulation. While human-centric data collection systems lower the barrier to scaling, they struggle to capture the tactile information during physical interactions. Motivated by this, we present DexViTac, a portable, human-centric data collection system tailored for contact-rich dexterous manipulation. The system enables the high-fidelity acquisition of first-person vision, high-density tactile sensing, end-effector poses, and hand kinematics within unstructured, in-the-wild environments. Building upon this hardware, we propose a kinematics-grounded tactile representation learning algorithm that effectively resolves semantic ambiguities within tactile signals. Leveraging the efficiency of DexViTac, we construct a multimodal dataset comprising over 2,400 visuo-tactile-kinematic demonstrations. Experiments demonstrate that DexViTac achieves a collection efficiency exceeding 248 demonstrations per hour and remains robust against complex visual occlusions. Real-world deployment confirms that policies trained with the proposed dataset and learning strategy achieve an average success rate exceeding 85% across four challenging tasks. This performance significantly outperforms baseline methods, thereby validating the substantial improvement the system provides for learning contact-rich dexterous manipulation. Project page: https://xitong-c.github.io/DexViTac/.",
     "authors": [
-      "Carmen Scheidemann",
-      "Andrei Cramariuc",
-      "Changan Chen",
-      "Jia-Ruei Chiu",
-      "Marco Hutter"
+      "Xitong Chen",
+      "Yifeng Pan",
+      "Min Li",
+      "Xiaotian Ding"
     ],
-    "published": "2026-03-17T16:48:36Z",
-    "updated": "2026-03-17T16:48:36Z",
-    "url": "https://arxiv.org/abs/2603.16772v1",
-    "pdf_url": "https://arxiv.org/pdf/2603.16772v1",
+    "published": "2026-03-18T15:39:58Z",
+    "updated": "2026-03-18T15:39:58Z",
+    "url": "https://arxiv.org/abs/2603.17851v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.17851v1",
     "tags": [
-      "cs.RO",
-      "cs.HC"
+      "cs.RO"
     ],
     "source": "arxiv",
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2603.15789v1",
-    "title": "Emergent Dexterity via Diverse Resets and Large-Scale Reinforcement Learning",
-    "summary": "Reinforcement learning in massively parallel physics simulations has driven major progress in sim-to-real robot learning. However, current approaches remain brittle and task-specific, relying on extensive per-task engineering to design rewards, curricula, and demonstrations. Even with this engineering, they often fail on long-horizon, contact-rich manipulation tasks and do not meaningfully scale with compute, as performance quickly saturates when training revisits the same narrow regions of state space. We introduce \\Method, a simple and scalable framework that enables on-policy reinforcement learning to robustly solve a broad class of dexterous manipulation tasks using a single reward function, fixed algorithm hyperparameters, no curricula, and no human demonstrations. Our key insight is that long-horizon exploration can be dramatically simplified by using simulator resets to systematically expose the RL algorithm to the diverse set of robot-object interactions which underlie dexterous manipulation. \\Method\\ programmatically generates such resets with minimal human input, converting additional compute directly into broader behavioral coverage and continued performance gains. We show that \\Method\\ gracefully scales to long-horizon dexterous manipulation tasks beyond the capabilities of existing approaches and is able to learn robust policies over significantly wider ranges of initial conditions than baselines. Finally, we distill \\Method \\ into visuomotor policies which display robust retrying behavior and substantially higher success rates than baselines when transferred to the real world zero-shot. Project webpage: https://omnireset.github.io",
+    "id": "2603.12243v2",
+    "title": "HandelBot: Real-World Piano Playing via Fast Adaptation of Dexterous Robot Policies",
+    "summary": "Mastering dexterous manipulation with multi-fingered hands has been a grand challenge in robotics for decades. Despite its potential, the difficulty of collecting high-quality data remains a primary bottleneck for high-precision tasks. While reinforcement learning and simulation-to-real-world transfer offer a promising alternative, the transferred policies often fail for tasks demanding millimeter-scale precision, such as bimanual piano playing. In this work, we introduce HandelBot, a framework that combines a simulation policy and rapid adaptation through a two-stage pipeline. Starting from a simulation-trained policy, we first apply a structured refinement stage to correct spatial alignments by adjusting lateral finger joints based on physical rollouts. Next, we use residual reinforcement learning to autonomously learn fine-grained corrective actions. Through extensive hardware experiments across five recognized songs, we demonstrate that HandelBot can successfully perform precise bimanual piano playing. Our system outperforms direct simulation deployment by a factor of 1.8x and requires only 30 minutes of physical interaction data.",
     "authors": [
-      "Patrick Yin",
-      "Tyler Westenbroek",
-      "Zhengyu Zhang",
-      "Joshua Tran",
-      "Ignacio Dagnino",
-      "Eeshani Shilamkar",
-      "Numfor Mbiziwo-Tiapo",
-      "Simran Bagaria",
-      "Xinlei Liu",
-      "Galen Mullins",
-      "Andrey Kolobov",
-      "Abhishek Gupta"
+      "Amber Xie",
+      "Haozhi Qi",
+      "Dorsa Sadigh"
     ],
-    "published": "2026-03-16T18:14:36Z",
-    "updated": "2026-03-16T18:14:36Z",
-    "url": "https://arxiv.org/abs/2603.15789v1",
-    "pdf_url": "https://arxiv.org/pdf/2603.15789v1",
+    "published": "2026-03-12T17:56:29Z",
+    "updated": "2026-03-15T17:16:45Z",
+    "url": "https://arxiv.org/abs/2603.12243v2",
+    "pdf_url": "https://arxiv.org/pdf/2603.12243v2",
     "tags": [
       "cs.RO"
     ],
