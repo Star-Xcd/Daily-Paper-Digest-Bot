@@ -1,20 +1,17 @@
 [
   {
-    "id": "2602.08602v2",
-    "title": "Mimic Intent, Not Just Trajectories",
-    "summary": "While imitation learning (IL) has achieved impressive success in dexterous manipulation through generative modeling and pretraining, state-of-the-art approaches like Vision-Language-Action (VLA) models still struggle with adaptation to environmental changes and skill transfer. We argue this stems from mimicking raw trajectories without understanding the underlying intent. To address this, we propose explicitly disentangling behavior intent from execution details in end-2-end IL: Mimic Intent, Not just Trajectories(MINT). We achieve this via multi-scale frequency-space tokenization, which enforces a spectral decomposition of action chunk representation. We learn action tokens with a multi-scale coarse-to-fine structure, and force the coarsest token to capture low-frequency global structure and finer tokens to encode high-frequency details. This yields an abstract Intent token that facilitates planning and transfer, and multi-scale Execution tokens that enable precise adaptation to environmental dynamics. Building on this hierarchy, our policy generates trajectories through next-scale autoregression, performing progressive intent-to-execution reasoning, thus boosting learning efficiency and generalization. Crucially, this disentanglement enables one-shot transfer of skills, by simply injecting the Intent token from a demonstration into the autoregressive generation process. Experiments on several manipulation benchmarks and on a real robot demonstrate state-of-the-art success rates, superior inference efficiency, robust generalization against disturbances, and effective one-shot transfer.",
+    "id": "2603.19233v1",
+    "title": "Not All Features Are Created Equal: A Mechanistic Study of Vision-Language-Action Models",
+    "summary": "Vision-Language-Action (VLA) models combine perception, language, and motor control in a single architecture, yet how they translate multimodal inputs into actions remains poorly understood. We apply activation injection, sparse autoencoders (SAEs), and linear probes to six models spanning 80M--7B parameters across 394,000+ rollout episodes on four benchmarks. The visual pathway dominates action generation across all architectures: injecting baseline activations into null-prompt episodes recovers near-identical behavior, while cross-task injection steers robots toward source-task positions (99.8\\% of X-VLA episodes align with the source trajectory), exposing spatially bound motor programs tied to scene coordinates rather than abstract task representations. Language sensitivity depends on task structure, not model design: when visual context uniquely specifies the task, language is ignored; when multiple goals share a scene, language becomes essential (X-VLA \\texttt{libero\\_goal}: 94\\%$\\to$10\\% under wrong prompts vs.\\ \\texttt{libero\\_object}: 60--100\\% regardless). In all three multi-pathway architectures (\\pizhalf{}, SmolVLA, GR00T), expert pathways encode motor programs while VLM pathways encode goal semantics ($2\\times$ greater behavioral displacement from expert injection), and subspace injection confirms these occupy separable activation subspaces. Per-token SAE processing is essential for action fidelity on most architectures, though mean-pooling improves fidelity on X-VLA. Contrastive identification recovers 82+ manipulation concepts, and causal ablation reveals sensitivity spanning 28--92\\% zero-effect rates independent of representation width. We release \\textbf{Action Atlas} (https://action-atlas.com) for interactive exploration of VLA representations across all six models.",
     "authors": [
-      "Renming Huang",
-      "Chendong Zeng",
-      "Wenjing Tang",
-      "Jintian Cai",
-      "Cewu Lu",
-      "Panpan Cai"
+      "Bryce Grant",
+      "Xijia Zhao",
+      "Peng Wang"
     ],
-    "published": "2026-02-09T12:44:35Z",
-    "updated": "2026-03-18T08:05:39Z",
-    "url": "https://arxiv.org/abs/2602.08602v2",
-    "pdf_url": "https://arxiv.org/pdf/2602.08602v2",
+    "published": "2026-03-19T17:59:55Z",
+    "updated": "2026-03-19T17:59:55Z",
+    "url": "https://arxiv.org/abs/2603.19233v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.19233v1",
     "tags": [
       "cs.RO"
     ],
@@ -22,40 +19,51 @@
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2603.17851v1",
-    "title": "DexViTac: Collecting Human Visuo-Tactile-Kinematic Demonstrations for Contact-Rich Dexterous Manipulation",
-    "summary": "Large-scale, high-quality multimodal demonstrations are essential for robot learning of contact-rich dexterous manipulation. While human-centric data collection systems lower the barrier to scaling, they struggle to capture the tactile information during physical interactions. Motivated by this, we present DexViTac, a portable, human-centric data collection system tailored for contact-rich dexterous manipulation. The system enables the high-fidelity acquisition of first-person vision, high-density tactile sensing, end-effector poses, and hand kinematics within unstructured, in-the-wild environments. Building upon this hardware, we propose a kinematics-grounded tactile representation learning algorithm that effectively resolves semantic ambiguities within tactile signals. Leveraging the efficiency of DexViTac, we construct a multimodal dataset comprising over 2,400 visuo-tactile-kinematic demonstrations. Experiments demonstrate that DexViTac achieves a collection efficiency exceeding 248 demonstrations per hour and remains robust against complex visual occlusions. Real-world deployment confirms that policies trained with the proposed dataset and learning strategy achieve an average success rate exceeding 85% across four challenging tasks. This performance significantly outperforms baseline methods, thereby validating the substantial improvement the system provides for learning contact-rich dexterous manipulation. Project page: https://xitong-c.github.io/DexViTac/.",
+    "id": "2603.16478v1",
+    "title": "Fast and Reliable Gradients for Deformables Across Frictional Contact Regimes",
+    "summary": "Differentiable simulation establishes the mathematical foundation for solving challenging inverse problems in computer graphics and robotics, such as physical system identification and inverse dynamics control. However, rigor in frictional contact remains the \"elephant in the room.\" Current frameworks often avoid contact singularities via non-Markovian position approximations or heuristic gradients. This lack of mathematical consistency distorts gradients, causing optimization stagnation or failure in complex frictional contact and large-deformation scenarios. We introduce our unified fully GPU-accelerated differentiable simulator, which establishes a rigorous theoretical paradigm through: Long-Horizon Consistency: enforcing strict Markovian dynamics on a coupled position-velocity manifold to prevent gradient collapse; Unified Contact Stability: employing a mass-aligned preconditioner and soft Fischer--Burmeister operator for smooth frictional optimization; Robust Material Identification: resolving FEM singularities via a derived \"Within-block Commutation\" condition. Our experiments demonstrate our solver efficacy in bridging the Sim-to-Real gap, delivering precise, low-noise gradients in contact-rich tasks like dexterous manipulation and cloth folding. By mitigating the gradient instability issues common in conventional approaches, our framework significantly enhances the fidelity of physical system identification and control.",
     "authors": [
-      "Xitong Chen",
-      "Yifeng Pan",
-      "Min Li",
-      "Xiaotian Ding"
+      "Ziqiu Zeng",
+      "Gang Yang",
+      "Zhenhao Huang",
+      "Yulin Li",
+      "Jason Pho",
+      "Siyuan Luo",
+      "Fan Shi"
     ],
-    "published": "2026-03-18T15:39:58Z",
-    "updated": "2026-03-18T15:39:58Z",
-    "url": "https://arxiv.org/abs/2603.17851v1",
-    "pdf_url": "https://arxiv.org/pdf/2603.17851v1",
+    "published": "2026-03-17T13:04:23Z",
+    "updated": "2026-03-17T13:04:23Z",
+    "url": "https://arxiv.org/abs/2603.16478v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.16478v1",
     "tags": [
-      "cs.RO"
+      "cs.GR"
     ],
     "source": "arxiv",
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2603.12243v2",
-    "title": "HandelBot: Real-World Piano Playing via Fast Adaptation of Dexterous Robot Policies",
-    "summary": "Mastering dexterous manipulation with multi-fingered hands has been a grand challenge in robotics for decades. Despite its potential, the difficulty of collecting high-quality data remains a primary bottleneck for high-precision tasks. While reinforcement learning and simulation-to-real-world transfer offer a promising alternative, the transferred policies often fail for tasks demanding millimeter-scale precision, such as bimanual piano playing. In this work, we introduce HandelBot, a framework that combines a simulation policy and rapid adaptation through a two-stage pipeline. Starting from a simulation-trained policy, we first apply a structured refinement stage to correct spatial alignments by adjusting lateral finger joints based on physical rollouts. Next, we use residual reinforcement learning to autonomously learn fine-grained corrective actions. Through extensive hardware experiments across five recognized songs, we demonstrate that HandelBot can successfully perform precise bimanual piano playing. Our system outperforms direct simulation deployment by a factor of 1.8x and requires only 30 minutes of physical interaction data.",
+    "id": "2602.09013v2",
+    "title": "Dexterous Manipulation Policies from RGB Human Videos via 3D Hand-Object Trajectory Reconstruction",
+    "summary": "Multi-finger robotic hand manipulation and grasping are challenging due to the high-dimensional action space and the difficulty of acquiring large-scale training data. Existing approaches largely rely on human teleoperation with wearable devices or specialized sensing equipment to capture hand-object interactions, which limits scalability. In this work, we propose VIDEOMANIP, a device-free framework that learns dexterous manipulation directly from RGB human videos. Leveraging recent advances in computer vision, VIDEOMANIP reconstructs explicit 3D robot-object trajectories from monocular videos by estimating human hand poses, object meshes, and retargets the reconstructed human motions to robotic hands for manipulation learning. To make the reconstructed robot data suitable for dexterous manipulation training, we introduce hand-object contact optimization with interaction-centric grasp modeling, as well as a demonstration synthesis strategy that generates diverse training trajectories from a single video, enabling generalizable policy learning without additional robot demonstrations. In simulation, the learned grasping model achieves a 70.25% success rate across 20 diverse objects using the Inspire Hand. In the real world, manipulation policies trained from RGB videos achieve an average 62.86% success rate across seven tasks using the LEAP Hand, outperforming retargeting-based methods by 15.87%. Project videos are available at videomanip.github.io.",
     "authors": [
-      "Amber Xie",
-      "Haozhi Qi",
-      "Dorsa Sadigh"
+      "Hongyi Chen",
+      "Tony Dong",
+      "Tiancheng Wu",
+      "Liquan Wang",
+      "Yash Jangir",
+      "Yaru Niu",
+      "Yufei Ye",
+      "Homanga Bharadhwaj",
+      "Zackory Erickson",
+      "Jeffrey Ichnowski"
     ],
-    "published": "2026-03-12T17:56:29Z",
-    "updated": "2026-03-15T17:16:45Z",
-    "url": "https://arxiv.org/abs/2603.12243v2",
-    "pdf_url": "https://arxiv.org/pdf/2603.12243v2",
+    "published": "2026-02-09T18:56:02Z",
+    "updated": "2026-02-11T23:32:41Z",
+    "url": "https://arxiv.org/abs/2602.09013v2",
+    "pdf_url": "https://arxiv.org/pdf/2602.09013v2",
     "tags": [
-      "cs.RO"
+      "cs.RO",
+      "cs.CV"
     ],
     "source": "arxiv",
     "bucket": "Representative paper from your selected authors in the last three months"
