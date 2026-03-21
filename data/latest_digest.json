@@ -1,17 +1,19 @@
 [
   {
-    "id": "2603.19233v1",
-    "title": "Not All Features Are Created Equal: A Mechanistic Study of Vision-Language-Action Models",
-    "summary": "Vision-Language-Action (VLA) models combine perception, language, and motor control in a single architecture, yet how they translate multimodal inputs into actions remains poorly understood. We apply activation injection, sparse autoencoders (SAEs), and linear probes to six models spanning 80M--7B parameters across 394,000+ rollout episodes on four benchmarks. The visual pathway dominates action generation across all architectures: injecting baseline activations into null-prompt episodes recovers near-identical behavior, while cross-task injection steers robots toward source-task positions (99.8\\% of X-VLA episodes align with the source trajectory), exposing spatially bound motor programs tied to scene coordinates rather than abstract task representations. Language sensitivity depends on task structure, not model design: when visual context uniquely specifies the task, language is ignored; when multiple goals share a scene, language becomes essential (X-VLA \\texttt{libero\\_goal}: 94\\%$\\to$10\\% under wrong prompts vs.\\ \\texttt{libero\\_object}: 60--100\\% regardless). In all three multi-pathway architectures (\\pizhalf{}, SmolVLA, GR00T), expert pathways encode motor programs while VLM pathways encode goal semantics ($2\\times$ greater behavioral displacement from expert injection), and subspace injection confirms these occupy separable activation subspaces. Per-token SAE processing is essential for action fidelity on most architectures, though mean-pooling improves fidelity on X-VLA. Contrastive identification recovers 82+ manipulation concepts, and causal ablation reveals sensitivity spanning 28--92\\% zero-effect rates independent of representation width. We release \\textbf{Action Atlas} (https://action-atlas.com) for interactive exploration of VLA representations across all six models.",
+    "id": "2603.19183v1",
+    "title": "Sparse Autoencoders Reveal Interpretable and Steerable Features in VLA Models",
+    "summary": "Vision-Language-Action (VLA) models have emerged as a promising approach for general-purpose robot manipulation. However, their generalization is inconsistent: while these models can perform impressively in some settings, fine-tuned variants often fail on novel objects, scenes, and instructions. We apply mechanistic interpretability techniques to better understand the inner workings of VLA models. To probe internal representations, we train Sparse Autoencoders (SAEs) on hidden layer activations of the VLA. SAEs learn a sparse dictionary whose features act as a compact, interpretable basis for the model's computation. We find that the large majority of extracted SAE features correspond to memorized sequences from specific training demonstrations. However, some features correspond to interpretable, general, and steerable motion primitives and semantic properties, offering a promising glimpse toward VLA generalizability. We propose a metric to categorize features according to whether they represent generalizable transferable primitives or episode-specific memorization. We validate these findings through steering experiments on the LIBERO benchmark. We show that individual SAE features causally influence robot behavior. Steering general features induces behaviors consistent with their semantic meaning and can be applied across tasks and scenes. This work provides the first mechanistic evidence that VLAs can learn generalizable features across tasks and scenes. We observe that supervised fine-tuning on small robotics datasets disproportionately amplifies memorization. In contrast, training on larger, more diverse datasets (e.g., DROID) or using knowledge insulation promotes more general features. We provide an open-source codebase and user-friendly interface for activation collection, SAE training, and feature steering. Our project page is located at http://drvla.github.io",
     "authors": [
-      "Bryce Grant",
-      "Xijia Zhao",
-      "Peng Wang"
+      "Aiden Swann",
+      "Lachlain McGranahan",
+      "Hugo Buurmeijer",
+      "Monroe Kennedy",
+      "Mac Schwager"
     ],
-    "published": "2026-03-19T17:59:55Z",
-    "updated": "2026-03-19T17:59:55Z",
-    "url": "https://arxiv.org/abs/2603.19233v1",
-    "pdf_url": "https://arxiv.org/pdf/2603.19233v1",
+    "published": "2026-03-19T17:42:05Z",
+    "updated": "2026-03-19T17:42:05Z",
+    "url": "https://arxiv.org/abs/2603.19183v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.19183v1",
     "tags": [
       "cs.RO"
     ],
@@ -19,51 +21,52 @@
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2603.16478v1",
-    "title": "Fast and Reliable Gradients for Deformables Across Frictional Contact Regimes",
-    "summary": "Differentiable simulation establishes the mathematical foundation for solving challenging inverse problems in computer graphics and robotics, such as physical system identification and inverse dynamics control. However, rigor in frictional contact remains the \"elephant in the room.\" Current frameworks often avoid contact singularities via non-Markovian position approximations or heuristic gradients. This lack of mathematical consistency distorts gradients, causing optimization stagnation or failure in complex frictional contact and large-deformation scenarios. We introduce our unified fully GPU-accelerated differentiable simulator, which establishes a rigorous theoretical paradigm through: Long-Horizon Consistency: enforcing strict Markovian dynamics on a coupled position-velocity manifold to prevent gradient collapse; Unified Contact Stability: employing a mass-aligned preconditioner and soft Fischer--Burmeister operator for smooth frictional optimization; Robust Material Identification: resolving FEM singularities via a derived \"Within-block Commutation\" condition. Our experiments demonstrate our solver efficacy in bridging the Sim-to-Real gap, delivering precise, low-noise gradients in contact-rich tasks like dexterous manipulation and cloth folding. By mitigating the gradient instability issues common in conventional approaches, our framework significantly enhances the fidelity of physical system identification and control.",
+    "id": "2603.15847v1",
+    "title": "FEEL (Force-Enhanced Egocentric Learning): A Dataset for Physical Action Understanding",
+    "summary": "We introduce FEEL (Force-Enhanced Egocentric Learning), the first large-scale dataset pairing force measurements gathered from custom piezoresistive gloves with egocentric video. Our gloves enable scalable data collection, and FEEL contains approximately 3 million force-synchronized frames of natural unscripted manipulation in kitchen environments, with 45% of frames involving hand-object contact. Because force is the underlying cause that drives physical interaction, it is a critical primitive for physical action understanding. We demonstrate the utility of force for physical action understanding through application of FEEL to two families of tasks: (1) contact understanding, where we jointly perform temporal contact segmentation and pixel-level contacted object segmentation; and, (2) action representation learning, where force prediction serves as a self-supervised pretraining objective for video backbones. We achieve state-of-the-art temporal contact segmentation results and competitive pixel-level segmentation results without any need for manual contacted object segmentation annotations. Furthermore we demonstrate that action representation learning with FEEL improves transfer performance on action understanding tasks without any manual labels over EPIC-Kitchens, SomethingSomething-V2, EgoExo4D and Meccano.",
     "authors": [
-      "Ziqiu Zeng",
-      "Gang Yang",
-      "Zhenhao Huang",
-      "Yulin Li",
-      "Jason Pho",
-      "Siyuan Luo",
-      "Fan Shi"
+      "Eadom Dessalene",
+      "Botao He",
+      "Michael Maynord",
+      "Yonatan Tussa",
+      "Pavan Mantripragada",
+      "Yianni Karabati",
+      "Nirupam Roy",
+      "Yiannis Aloimonos"
     ],
-    "published": "2026-03-17T13:04:23Z",
-    "updated": "2026-03-17T13:04:23Z",
-    "url": "https://arxiv.org/abs/2603.16478v1",
-    "pdf_url": "https://arxiv.org/pdf/2603.16478v1",
+    "published": "2026-03-16T19:29:04Z",
+    "updated": "2026-03-16T19:29:04Z",
+    "url": "https://arxiv.org/abs/2603.15847v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.15847v1",
     "tags": [
-      "cs.GR"
+      "cs.CV",
+      "cs.LG",
+      "cs.RO"
     ],
     "source": "arxiv",
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2602.09013v2",
-    "title": "Dexterous Manipulation Policies from RGB Human Videos via 3D Hand-Object Trajectory Reconstruction",
-    "summary": "Multi-finger robotic hand manipulation and grasping are challenging due to the high-dimensional action space and the difficulty of acquiring large-scale training data. Existing approaches largely rely on human teleoperation with wearable devices or specialized sensing equipment to capture hand-object interactions, which limits scalability. In this work, we propose VIDEOMANIP, a device-free framework that learns dexterous manipulation directly from RGB human videos. Leveraging recent advances in computer vision, VIDEOMANIP reconstructs explicit 3D robot-object trajectories from monocular videos by estimating human hand poses, object meshes, and retargets the reconstructed human motions to robotic hands for manipulation learning. To make the reconstructed robot data suitable for dexterous manipulation training, we introduce hand-object contact optimization with interaction-centric grasp modeling, as well as a demonstration synthesis strategy that generates diverse training trajectories from a single video, enabling generalizable policy learning without additional robot demonstrations. In simulation, the learned grasping model achieves a 70.25% success rate across 20 diverse objects using the Inspire Hand. In the real world, manipulation policies trained from RGB videos achieve an average 62.86% success rate across seven tasks using the LEAP Hand, outperforming retargeting-based methods by 15.87%. Project videos are available at videomanip.github.io.",
+    "id": "2602.10105v1",
+    "title": "DexImit: Learning Bimanual Dexterous Manipulation from Monocular Human Videos",
+    "summary": "Data scarcity fundamentally limits the generalization of bimanual dexterous manipulation, as real-world data collection for dexterous hands is expensive and labor-intensive. Human manipulation videos, as a direct carrier of manipulation knowledge, offer significant potential for scaling up robot learning. However, the substantial embodiment gap between human hands and robotic dexterous hands makes direct pretraining from human videos extremely challenging. To bridge this gap and unleash the potential of large-scale human manipulation video data, we propose DexImit, an automated framework that converts monocular human manipulation videos into physically plausible robot data, without any additional information. DexImit employs a four-stage generation pipeline: (1) reconstructing hand-object interactions from arbitrary viewpoints with near-metric scale; (2) performing subtask decomposition and bimanual scheduling; (3) synthesizing robot trajectories consistent with the demonstrated interactions; (4) comprehensive data augmentation for zero-shot real-world deployment. Building on these designs, DexImit can generate large-scale robot data based on human videos, either from the Internet or video generation models. DexImit is capable of handling diverse manipulation tasks, including tool use (e.g., cutting an apple), long-horizon tasks (e.g., making a beverage), and fine-grained manipulations (e.g., stacking cups).",
     "authors": [
-      "Hongyi Chen",
-      "Tony Dong",
-      "Tiancheng Wu",
-      "Liquan Wang",
-      "Yash Jangir",
-      "Yaru Niu",
-      "Yufei Ye",
-      "Homanga Bharadhwaj",
-      "Zackory Erickson",
-      "Jeffrey Ichnowski"
+      "Juncheng Mu",
+      "Sizhe Yang",
+      "Yiming Bao",
+      "Hojin Bae",
+      "Tianming Wei",
+      "Linning Xu",
+      "Boyi Li",
+      "Huazhe Xu",
+      "Jiangmiao Pang"
     ],
-    "published": "2026-02-09T18:56:02Z",
-    "updated": "2026-02-11T23:32:41Z",
-    "url": "https://arxiv.org/abs/2602.09013v2",
-    "pdf_url": "https://arxiv.org/pdf/2602.09013v2",
+    "published": "2026-02-10T18:59:02Z",
+    "updated": "2026-02-10T18:59:02Z",
+    "url": "https://arxiv.org/abs/2602.10105v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.10105v1",
     "tags": [
-      "cs.RO",
-      "cs.CV"
+      "cs.RO"
     ],
     "source": "arxiv",
     "bucket": "Representative paper from your selected authors in the last three months"
