@@ -1,70 +1,64 @@
 [
   {
-    "id": "2603.19183v1",
-    "title": "Sparse Autoencoders Reveal Interpretable and Steerable Features in VLA Models",
-    "summary": "Vision-Language-Action (VLA) models have emerged as a promising approach for general-purpose robot manipulation. However, their generalization is inconsistent: while these models can perform impressively in some settings, fine-tuned variants often fail on novel objects, scenes, and instructions. We apply mechanistic interpretability techniques to better understand the inner workings of VLA models. To probe internal representations, we train Sparse Autoencoders (SAEs) on hidden layer activations of the VLA. SAEs learn a sparse dictionary whose features act as a compact, interpretable basis for the model's computation. We find that the large majority of extracted SAE features correspond to memorized sequences from specific training demonstrations. However, some features correspond to interpretable, general, and steerable motion primitives and semantic properties, offering a promising glimpse toward VLA generalizability. We propose a metric to categorize features according to whether they represent generalizable transferable primitives or episode-specific memorization. We validate these findings through steering experiments on the LIBERO benchmark. We show that individual SAE features causally influence robot behavior. Steering general features induces behaviors consistent with their semantic meaning and can be applied across tasks and scenes. This work provides the first mechanistic evidence that VLAs can learn generalizable features across tasks and scenes. We observe that supervised fine-tuning on small robotics datasets disproportionately amplifies memorization. In contrast, training on larger, more diverse datasets (e.g., DROID) or using knowledge insulation promotes more general features. We provide an open-source codebase and user-friendly interface for activation collection, SAE training, and feature steering. Our project page is located at http://drvla.github.io",
+    "id": "2603.18892v1",
+    "title": "MultihopSpatial: Multi-hop Compositional Spatial Reasoning Benchmark for Vision-Language Model",
+    "summary": "Spatial reasoning is foundational for Vision-Language Models (VLMs), particularly when deployed as Vision-Language-Action (VLA) agents in physical environments. However, existing benchmarks predominantly focus on elementary, single-hop relations, neglecting the multi-hop compositional reasoning and precise visual grounding essential for real-world scenarios. To address this, we introduce MultihopSpatial, offering three key contributions: (1) A comprehensive benchmark designed for multi-hop and compositional spatial reasoning, featuring 1- to 3-hop complex queries across diverse spatial perspectives. (2) Acc@50IoU, a complementary metric that simultaneously evaluates reasoning and visual grounding by requiring both answer selection and precise bounding box prediction - capabilities vital for robust VLA deployment. (3) MultihopSpatial-Train, a dedicated large-scale training corpus to foster spatial intelligence. Extensive evaluation of 37 state-of-the-art VLMs yields eight key insights, revealing that compositional spatial reasoning remains a formidable challenge. Finally, we demonstrate that reinforcement learning post-training on our corpus enhances both intrinsic VLM spatial reasoning and downstream embodied manipulation performance.",
     "authors": [
-      "Aiden Swann",
-      "Lachlain McGranahan",
-      "Hugo Buurmeijer",
-      "Monroe Kennedy",
-      "Mac Schwager"
+      "Youngwan Lee",
+      "Soojin Jang",
+      "Yoorhim Cho",
+      "Seunghwan Lee",
+      "Yong-Ju Lee",
+      "Sung Ju Hwang"
     ],
-    "published": "2026-03-19T17:42:05Z",
-    "updated": "2026-03-19T17:42:05Z",
-    "url": "https://arxiv.org/abs/2603.19183v1",
-    "pdf_url": "https://arxiv.org/pdf/2603.19183v1",
+    "published": "2026-03-19T13:33:26Z",
+    "updated": "2026-03-19T13:33:26Z",
+    "url": "https://arxiv.org/abs/2603.18892v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.18892v1",
     "tags": [
-      "cs.RO"
+      "cs.CV",
+      "cs.AI"
     ],
     "source": "arxiv",
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2603.15847v1",
-    "title": "FEEL (Force-Enhanced Egocentric Learning): A Dataset for Physical Action Understanding",
-    "summary": "We introduce FEEL (Force-Enhanced Egocentric Learning), the first large-scale dataset pairing force measurements gathered from custom piezoresistive gloves with egocentric video. Our gloves enable scalable data collection, and FEEL contains approximately 3 million force-synchronized frames of natural unscripted manipulation in kitchen environments, with 45% of frames involving hand-object contact. Because force is the underlying cause that drives physical interaction, it is a critical primitive for physical action understanding. We demonstrate the utility of force for physical action understanding through application of FEEL to two families of tasks: (1) contact understanding, where we jointly perform temporal contact segmentation and pixel-level contacted object segmentation; and, (2) action representation learning, where force prediction serves as a self-supervised pretraining objective for video backbones. We achieve state-of-the-art temporal contact segmentation results and competitive pixel-level segmentation results without any need for manual contacted object segmentation annotations. Furthermore we demonstrate that action representation learning with FEEL improves transfer performance on action understanding tasks without any manual labels over EPIC-Kitchens, SomethingSomething-V2, EgoExo4D and Meccano.",
+    "id": "2603.14388v1",
+    "title": "Context-Aware Adaptive Shared Control for Magnetically-Driven Bimanual Dexterous Micromanipulation",
+    "summary": "Magnetically actuated robots provide a promising untethered platform for navigation in confined environments, enabling biological studies and targeted micro-delivery. However, dexterous manipulation in complex structures remains challenging. While single-arm magnetic actuation suffices for simple transport, steering through tortuous or bifurcating channels demands coordinated control of multiple magnetic sources to generate the torques required for precise rotation and directional guidance. Bimanual teleoperation enables such dexterous steering but imposes high cognitive demands, as operators must handle the nonlinear dynamics of magnetic actuation while coordinating two robotic manipulators. To address these limitations, we propose Bi-CAST, a context-aware adaptive shared control framework for bimanual magnetic micromanipulation. A multimodal network fuses spatio-temporal visual features, spatial risk metrics, and historical states to continuously adjust the control authority of each manipulator in real time. In parallel, a bidirectional haptic interface integrates force-based intent recognition with risk-aware guidance, enabling force feedback to provide a continuous channel for dynamic human-machine authority negotiation. We validate the framework through user studies with eight participants performing three navigation tasks of increasing complexity in a vascular phantom. Compared with fixed authority and discrete switching baselines, Bi-CAST achieves up to 76.6% reduction in collisions, 25.9% improvement in trajectory smoothness, and 44.4% lower NASA-TLX workload, while delivering the fastest task completion times.",
     "authors": [
-      "Eadom Dessalene",
-      "Botao He",
-      "Michael Maynord",
-      "Yonatan Tussa",
-      "Pavan Mantripragada",
-      "Yianni Karabati",
-      "Nirupam Roy",
-      "Yiannis Aloimonos"
+      "Yongchen Wang",
+      "Kangyi Lu",
+      "Lan Wei",
+      "Dandan Zhang"
     ],
-    "published": "2026-03-16T19:29:04Z",
-    "updated": "2026-03-16T19:29:04Z",
-    "url": "https://arxiv.org/abs/2603.15847v1",
-    "pdf_url": "https://arxiv.org/pdf/2603.15847v1",
+    "published": "2026-03-15T13:58:37Z",
+    "updated": "2026-03-15T13:58:37Z",
+    "url": "https://arxiv.org/abs/2603.14388v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.14388v1",
     "tags": [
-      "cs.CV",
-      "cs.LG",
-      "cs.RO"
+      "eess.SY"
     ],
     "source": "arxiv",
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2602.10105v1",
-    "title": "DexImit: Learning Bimanual Dexterous Manipulation from Monocular Human Videos",
-    "summary": "Data scarcity fundamentally limits the generalization of bimanual dexterous manipulation, as real-world data collection for dexterous hands is expensive and labor-intensive. Human manipulation videos, as a direct carrier of manipulation knowledge, offer significant potential for scaling up robot learning. However, the substantial embodiment gap between human hands and robotic dexterous hands makes direct pretraining from human videos extremely challenging. To bridge this gap and unleash the potential of large-scale human manipulation video data, we propose DexImit, an automated framework that converts monocular human manipulation videos into physically plausible robot data, without any additional information. DexImit employs a four-stage generation pipeline: (1) reconstructing hand-object interactions from arbitrary viewpoints with near-metric scale; (2) performing subtask decomposition and bimanual scheduling; (3) synthesizing robot trajectories consistent with the demonstrated interactions; (4) comprehensive data augmentation for zero-shot real-world deployment. Building on these designs, DexImit can generate large-scale robot data based on human videos, either from the Internet or video generation models. DexImit is capable of handling diverse manipulation tasks, including tool use (e.g., cutting an apple), long-horizon tasks (e.g., making a beverage), and fine-grained manipulations (e.g., stacking cups).",
+    "id": "2603.15186v1",
+    "title": "NavGSim: High-Fidelity Gaussian Splatting Simulator for Large-Scale Navigation",
+    "summary": "Simulating realistic environments for robots is widely recognized as a critical challenge in robot learning, particularly in terms of rendering and physical simulation. This challenge becomes even more pronounced in navigation tasks, where trajectories often extend across multiple rooms or entire floors. In this work, we present NavGSim, a Gaussian Splatting-based simulator designed to generate high-fidelity, large-scale navigation environments. Built upon a hierarchical 3D Gaussian Splatting framework, NavGSim enables photorealistic rendering in expansive scenes spanning hundreds of square meters. To simulate navigation collisions, we introduce a Gaussian Splatting-based slice technique that directly extracts navigable areas from reconstructed Gaussians. Additionally, for ease of use, we provide comprehensive NavGSim APIs supporting multi-GPU development, including tools for custom scene reconstruction, robot configuration, policy training, and evaluation. To evaluate NavGSim's effectiveness, we train a Vision-Language-Action (VLA) model using trajectories collected from NavGSim and assess its performance in both simulated and real-world environments. Our results demonstrate that NavGSim significantly enhances the VLA model's scene understanding, enabling the policy to handle diverse navigation queries effectively.",
     "authors": [
-      "Juncheng Mu",
-      "Sizhe Yang",
-      "Yiming Bao",
-      "Hojin Bae",
-      "Tianming Wei",
-      "Linning Xu",
-      "Boyi Li",
-      "Huazhe Xu",
-      "Jiangmiao Pang"
+      "Jiahang Liu",
+      "Yuanxing Duan",
+      "Jiazhao Zhang",
+      "Minghan Li",
+      "Shaoan Wang",
+      "Zhizheng Zhang",
+      "He Wang"
     ],
-    "published": "2026-02-10T18:59:02Z",
-    "updated": "2026-02-10T18:59:02Z",
-    "url": "https://arxiv.org/abs/2602.10105v1",
-    "pdf_url": "https://arxiv.org/pdf/2602.10105v1",
+    "published": "2026-03-16T12:23:20Z",
+    "updated": "2026-03-16T12:23:20Z",
+    "url": "https://arxiv.org/abs/2603.15186v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.15186v1",
     "tags": [
       "cs.RO"
     ],
