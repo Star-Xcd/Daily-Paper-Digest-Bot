@@ -1,64 +1,71 @@
 [
   {
-    "id": "2603.18892v1",
-    "title": "MultihopSpatial: Multi-hop Compositional Spatial Reasoning Benchmark for Vision-Language Model",
-    "summary": "Spatial reasoning is foundational for Vision-Language Models (VLMs), particularly when deployed as Vision-Language-Action (VLA) agents in physical environments. However, existing benchmarks predominantly focus on elementary, single-hop relations, neglecting the multi-hop compositional reasoning and precise visual grounding essential for real-world scenarios. To address this, we introduce MultihopSpatial, offering three key contributions: (1) A comprehensive benchmark designed for multi-hop and compositional spatial reasoning, featuring 1- to 3-hop complex queries across diverse spatial perspectives. (2) Acc@50IoU, a complementary metric that simultaneously evaluates reasoning and visual grounding by requiring both answer selection and precise bounding box prediction - capabilities vital for robust VLA deployment. (3) MultihopSpatial-Train, a dedicated large-scale training corpus to foster spatial intelligence. Extensive evaluation of 37 state-of-the-art VLMs yields eight key insights, revealing that compositional spatial reasoning remains a formidable challenge. Finally, we demonstrate that reinforcement learning post-training on our corpus enhances both intrinsic VLM spatial reasoning and downstream embodied manipulation performance.",
+    "id": "2602.02142v2",
+    "title": "FD-VLA: Force-Distilled Vision-Language-Action Model for Contact-Rich Manipulation",
+    "summary": "Force sensing is a crucial modality for Vision-Language-Action (VLA) frameworks, as it enables fine-grained perception and dexterous manipulation in contact-rich tasks. We present Force-Distilled VLA (FD-VLA), a novel framework that integrates force awareness into contact-rich manipulation without relying on physical force sensors. The core of our approach is a Force Distillation Module (FDM), which distills force by mapping a learnable query token, conditioned on visual observations and robot states, into a predicted force token aligned with the latent representation of actual force signals. During inference, this distilled force token is injected into the pretrained VLM, enabling force-aware reasoning while preserving the integrity of its vision-language semantics. This design provides two key benefits: first, it allows practical deployment across a wide range of robots that lack expensive or fragile force-torque sensors, thereby reducing hardware cost and complexity; second, the FDM introduces an additional force-vision-state fusion prior to the VLM, which improves cross-modal alignment and enhances perception-action robustness in contact-rich scenarios. Surprisingly, our physical experiments show that the distilled force token outperforms direct sensor force measurements as well as other baselines, which highlights the effectiveness of this force-distilled VLA approach.",
     "authors": [
-      "Youngwan Lee",
-      "Soojin Jang",
-      "Yoorhim Cho",
-      "Seunghwan Lee",
-      "Yong-Ju Lee",
-      "Sung Ju Hwang"
+      "Ruiteng Zhao",
+      "Wenshuo Wang",
+      "Yicheng Ma",
+      "Xiaocong Li",
+      "Francis E. H. Tay",
+      "Marcelo H. Ang",
+      "Haiyue Zhu"
     ],
-    "published": "2026-03-19T13:33:26Z",
-    "updated": "2026-03-19T13:33:26Z",
-    "url": "https://arxiv.org/abs/2603.18892v1",
-    "pdf_url": "https://arxiv.org/pdf/2603.18892v1",
+    "published": "2026-02-02T14:19:46Z",
+    "updated": "2026-03-20T09:53:38Z",
+    "url": "https://arxiv.org/abs/2602.02142v2",
+    "pdf_url": "https://arxiv.org/pdf/2602.02142v2",
     "tags": [
-      "cs.CV",
-      "cs.AI"
+      "cs.RO",
+      "cs.CV"
     ],
     "source": "arxiv",
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2603.14388v1",
-    "title": "Context-Aware Adaptive Shared Control for Magnetically-Driven Bimanual Dexterous Micromanipulation",
-    "summary": "Magnetically actuated robots provide a promising untethered platform for navigation in confined environments, enabling biological studies and targeted micro-delivery. However, dexterous manipulation in complex structures remains challenging. While single-arm magnetic actuation suffices for simple transport, steering through tortuous or bifurcating channels demands coordinated control of multiple magnetic sources to generate the torques required for precise rotation and directional guidance. Bimanual teleoperation enables such dexterous steering but imposes high cognitive demands, as operators must handle the nonlinear dynamics of magnetic actuation while coordinating two robotic manipulators. To address these limitations, we propose Bi-CAST, a context-aware adaptive shared control framework for bimanual magnetic micromanipulation. A multimodal network fuses spatio-temporal visual features, spatial risk metrics, and historical states to continuously adjust the control authority of each manipulator in real time. In parallel, a bidirectional haptic interface integrates force-based intent recognition with risk-aware guidance, enabling force feedback to provide a continuous channel for dynamic human-machine authority negotiation. We validate the framework through user studies with eight participants performing three navigation tasks of increasing complexity in a vascular phantom. Compared with fixed authority and discrete switching baselines, Bi-CAST achieves up to 76.6% reduction in collisions, 25.9% improvement in trajectory smoothness, and 44.4% lower NASA-TLX workload, while delivering the fastest task completion times.",
+    "id": "2603.20169v1",
+    "title": "EgoForge: Goal-Directed Egocentric World Simulator",
+    "summary": "Generative world models have shown promise for simulating dynamic environments, yet egocentric video remains challenging due to rapid viewpoint changes, frequent hand-object interactions, and goal-directed procedures whose evolution depends on latent human intent. Existing approaches either focus on hand-centric instructional synthesis with limited scene evolution, perform static view translation without modeling action dynamics, or rely on dense supervision, such as camera trajectories, long video prefixes, synchronized multicamera capture, etc. In this work, we introduce EgoForge, an egocentric goal-directed world simulator that generates coherent, first-person video rollouts from minimal static inputs: a single egocentric image, a high-level instruction, and an optional auxiliary exocentric view. To improve intent alignment and temporal consistency, we propose VideoDiffusionNFT, a trajectory-level reward-guided refinement that optimizes goal completion, temporal causality, scene consistency, and perceptual fidelity during diffusion sampling. Extensive experiments show EgoForge achieves consistent gains in semantic alignment, geometric stability, and motion fidelity over strong baselines, and robust performance in real-world smart-glasses experiments.",
     "authors": [
-      "Yongchen Wang",
-      "Kangyi Lu",
-      "Lan Wei",
-      "Dandan Zhang"
+      "Yifan Shen",
+      "Jiateng Liu",
+      "Xinzhuo Li",
+      "Yuanzhe Liu",
+      "Bingxuan Li",
+      "Houze Yang",
+      "Wenqi Jia",
+      "Yijiang Li",
+      "Tianjiao Yu",
+      "James Matthew Rehg",
+      "Xu Cao",
+      "Ismini Lourentzou"
     ],
-    "published": "2026-03-15T13:58:37Z",
-    "updated": "2026-03-15T13:58:37Z",
-    "url": "https://arxiv.org/abs/2603.14388v1",
-    "pdf_url": "https://arxiv.org/pdf/2603.14388v1",
+    "published": "2026-03-20T17:46:55Z",
+    "updated": "2026-03-20T17:46:55Z",
+    "url": "https://arxiv.org/abs/2603.20169v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.20169v1",
     "tags": [
-      "eess.SY"
+      "cs.CV",
+      "cs.MM"
     ],
     "source": "arxiv",
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2603.15186v1",
-    "title": "NavGSim: High-Fidelity Gaussian Splatting Simulator for Large-Scale Navigation",
-    "summary": "Simulating realistic environments for robots is widely recognized as a critical challenge in robot learning, particularly in terms of rendering and physical simulation. This challenge becomes even more pronounced in navigation tasks, where trajectories often extend across multiple rooms or entire floors. In this work, we present NavGSim, a Gaussian Splatting-based simulator designed to generate high-fidelity, large-scale navigation environments. Built upon a hierarchical 3D Gaussian Splatting framework, NavGSim enables photorealistic rendering in expansive scenes spanning hundreds of square meters. To simulate navigation collisions, we introduce a Gaussian Splatting-based slice technique that directly extracts navigable areas from reconstructed Gaussians. Additionally, for ease of use, we provide comprehensive NavGSim APIs supporting multi-GPU development, including tools for custom scene reconstruction, robot configuration, policy training, and evaluation. To evaluate NavGSim's effectiveness, we train a Vision-Language-Action (VLA) model using trajectories collected from NavGSim and assess its performance in both simulated and real-world environments. Our results demonstrate that NavGSim significantly enhances the VLA model's scene understanding, enabling the policy to handle diverse navigation queries effectively.",
+    "id": "2602.01789v3",
+    "title": "RFS: Reinforcement Learning with Residual Flow Steering for Dexterous Manipulation",
+    "summary": "Imitation learning has emerged as an effective approach for bootstrapping sequential decision-making in robotics, achieving strong performance even in high-dimensional dexterous manipulation tasks. Recent behavior cloning methods further leverage expressive generative models, such as diffusion models and flow matching, to represent multimodal action distributions. However, policies pretrained in this manner often exhibit limited generalization and require additional fine-tuning to achieve robust performance at deployment time. Such adaptation must preserve the global exploration benefits of pretraining while enabling rapid correction of local execution errors. We propose Residual Flow Steering(RFS), a data-efficient reinforcement learning framework for adapting pretrained generative policies. RFS steers a pretrained flow-matching policy by jointly optimizing a residual action and a latent noise distribution, enabling complementary forms of exploration: local refinement through residual corrections and global exploration through latent-space modulation. This design allows efficient adaptation while retaining the expressive structure of the pretrained policy. We demonstrate the effectiveness of RFS on dexterous manipulation tasks, showing efficient fine-tuning in both simulation and real-world settings when adapting pretrained base policies. Project website:https://weirdlabuw.github.io/rfs.",
     "authors": [
-      "Jiahang Liu",
-      "Yuanxing Duan",
-      "Jiazhao Zhang",
-      "Minghan Li",
-      "Shaoan Wang",
-      "Zhizheng Zhang",
-      "He Wang"
+      "Entong Su",
+      "Tyler Westenbroek",
+      "Anusha Nagabandi",
+      "Abhishek Gupta"
     ],
-    "published": "2026-03-16T12:23:20Z",
-    "updated": "2026-03-16T12:23:20Z",
-    "url": "https://arxiv.org/abs/2603.15186v1",
-    "pdf_url": "https://arxiv.org/pdf/2603.15186v1",
+    "published": "2026-02-02T08:11:57Z",
+    "updated": "2026-02-05T09:22:39Z",
+    "url": "https://arxiv.org/abs/2602.01789v3",
+    "pdf_url": "https://arxiv.org/pdf/2602.01789v3",
     "tags": [
       "cs.RO"
     ],
