@@ -1,73 +1,79 @@
 [
   {
-    "id": "2602.02142v2",
-    "title": "FD-VLA: Force-Distilled Vision-Language-Action Model for Contact-Rich Manipulation",
-    "summary": "Force sensing is a crucial modality for Vision-Language-Action (VLA) frameworks, as it enables fine-grained perception and dexterous manipulation in contact-rich tasks. We present Force-Distilled VLA (FD-VLA), a novel framework that integrates force awareness into contact-rich manipulation without relying on physical force sensors. The core of our approach is a Force Distillation Module (FDM), which distills force by mapping a learnable query token, conditioned on visual observations and robot states, into a predicted force token aligned with the latent representation of actual force signals. During inference, this distilled force token is injected into the pretrained VLM, enabling force-aware reasoning while preserving the integrity of its vision-language semantics. This design provides two key benefits: first, it allows practical deployment across a wide range of robots that lack expensive or fragile force-torque sensors, thereby reducing hardware cost and complexity; second, the FDM introduces an additional force-vision-state fusion prior to the VLM, which improves cross-modal alignment and enhances perception-action robustness in contact-rich scenarios. Surprisingly, our physical experiments show that the distilled force token outperforms direct sensor force measurements as well as other baselines, which highlights the effectiveness of this force-distilled VLA approach.",
+    "id": "2603.22264v1",
+    "title": "UniDex: A Robot Foundation Suite for Universal Dexterous Hand Control from Egocentric Human Videos",
+    "summary": "Dexterous manipulation remains challenging due to the cost of collecting real-robot teleoperation data, the heterogeneity of hand embodiments, and the high dimensionality of control. We present UniDex, a robot foundation suite that couples a large-scale robot-centric dataset with a unified vision-language-action (VLA) policy and a practical human-data capture setup for universal dexterous hand control. First, we construct UniDex-Dataset, a robot-centric dataset over 50K trajectories across eight dexterous hands (6--24 DoFs), derived from egocentric human video datasets. To transform human data into robot-executable trajectories, we employ a human-in-the-loop retargeting procedure to align fingertip trajectories while preserving plausible hand-object contacts, and we operate on explicit 3D pointclouds with human hands masked to narrow kinematic and visual gaps. Second, we introduce the Function-Actuator-Aligned Space (FAAS), a unified action space that maps functionally similar actuators to shared coordinates, enabling cross-hand transfer. Leveraging FAAS as the action parameterization, we train UniDex-VLA, a 3D VLA policy pretrained on UniDex-Dataset and finetuned with task demonstrations. In addition, we build UniDex-Cap, a simple portable capture setup that records synchronized RGB-D streams and human hand poses and converts them into robot-executable trajectories to enable human-robot data co-training that reduces reliance on costly robot demonstrations. On challenging tool-use tasks across two different hands, UniDex-VLA achieves 81% average task progress and outperforms prior VLA baselines by a large margin, while exhibiting strong spatial, object, and zero-shot cross-hand generalization. Together, UniDex-Dataset, UniDex-VLA, and UniDex-Cap provide a scalable foundation suite for universal dexterous manipulation.",
     "authors": [
-      "Ruiteng Zhao",
-      "Wenshuo Wang",
-      "Yicheng Ma",
-      "Xiaocong Li",
-      "Francis E. H. Tay",
-      "Marcelo H. Ang",
-      "Haiyue Zhu"
+      "Gu Zhang",
+      "Qicheng Xu",
+      "Haozhe Zhang",
+      "Jianhan Ma",
+      "Long He",
+      "Yiming Bao",
+      "Zeyu Ping",
+      "Zhecheng Yuan",
+      "Chenhao Lu",
+      "Chengbo Yuan",
+      "Tianhai Liang",
+      "Xiaoyu Tian",
+      "Maanping Shao",
+      "Feihong Zhang",
+      "Mingyu Ding",
+      "Yang Gao",
+      "Hao Zhao",
+      "Hang Zhao",
+      "Huazhe Xu"
     ],
-    "published": "2026-02-02T14:19:46Z",
-    "updated": "2026-03-20T09:53:38Z",
-    "url": "https://arxiv.org/abs/2602.02142v2",
-    "pdf_url": "https://arxiv.org/pdf/2602.02142v2",
+    "published": "2026-03-23T17:49:12Z",
+    "updated": "2026-03-23T17:49:12Z",
+    "url": "https://arxiv.org/abs/2603.22264v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.22264v1",
     "tags": [
-      "cs.RO",
-      "cs.CV"
+      "cs.RO"
     ],
     "source": "arxiv",
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2603.20169v1",
-    "title": "EgoForge: Goal-Directed Egocentric World Simulator",
-    "summary": "Generative world models have shown promise for simulating dynamic environments, yet egocentric video remains challenging due to rapid viewpoint changes, frequent hand-object interactions, and goal-directed procedures whose evolution depends on latent human intent. Existing approaches either focus on hand-centric instructional synthesis with limited scene evolution, perform static view translation without modeling action dynamics, or rely on dense supervision, such as camera trajectories, long video prefixes, synchronized multicamera capture, etc. In this work, we introduce EgoForge, an egocentric goal-directed world simulator that generates coherent, first-person video rollouts from minimal static inputs: a single egocentric image, a high-level instruction, and an optional auxiliary exocentric view. To improve intent alignment and temporal consistency, we propose VideoDiffusionNFT, a trajectory-level reward-guided refinement that optimizes goal completion, temporal causality, scene consistency, and perceptual fidelity during diffusion sampling. Extensive experiments show EgoForge achieves consistent gains in semantic alignment, geometric stability, and motion fidelity over strong baselines, and robust performance in real-world smart-glasses experiments.",
+    "id": "2603.22263v1",
+    "title": "DexDrummer: In-Hand, Contact-Rich, and Long-Horizon Dexterous Robot Drumming",
+    "summary": "Performing in-hand, contact-rich, and long-horizon dexterous manipulation remains an unsolved challenge in robotics. Prior hand dexterity works have considered each of these three challenges in isolation, yet do not combine these skills into a single, complex task. To further test the capabilities of dexterity, we propose drumming as a testbed for dexterous manipulation. Drumming naturally integrates all three challenges: it involves in-hand control for stabilizing and adjusting the drumstick with the fingers, contact-rich interaction through repeated striking of the drum surface, and long-horizon coordination when switching between drums and sustaining rhythmic play. We present DexDrummer, a hierarchical object-centric bimanual drumming policy trained in simulation with sim-to-real transfer. The framework reduces the exploration difficulty of pure reinforcement learning by combining trajectory planning with residual RL corrections for fast transitions between drums. A dexterous manipulation policy handles contact-rich dynamics, guided by rewards that explicitly model both finger-stick and stick-drum interactions. In simulation, we show our policy can play two styles of music: multi-drum, bimanual songs and challenging, technical exercises that require increased dexterity. Across simulated bimanual tasks, our dexterous, reactive policy outperforms a fixed grasp policy by 1.87x across easy songs and 1.22x across hard songs F1 scores. In real-world tasks, we show song performance across a multi-drum setup. DexDrummer is able to play our training song and its extended version with an F1 score of 1.0.",
     "authors": [
-      "Yifan Shen",
-      "Jiateng Liu",
-      "Xinzhuo Li",
-      "Yuanzhe Liu",
-      "Bingxuan Li",
-      "Houze Yang",
-      "Wenqi Jia",
-      "Yijiang Li",
-      "Tianjiao Yu",
-      "James Matthew Rehg",
-      "Xu Cao",
-      "Ismini Lourentzou"
+      "Hung-Chieh Fang",
+      "Amber Xie",
+      "Jennifer Grannen",
+      "Kenneth Llontop",
+      "Dorsa Sadigh"
     ],
-    "published": "2026-03-20T17:46:55Z",
-    "updated": "2026-03-20T17:46:55Z",
-    "url": "https://arxiv.org/abs/2603.20169v1",
-    "pdf_url": "https://arxiv.org/pdf/2603.20169v1",
+    "published": "2026-03-23T17:49:06Z",
+    "updated": "2026-03-23T17:49:06Z",
+    "url": "https://arxiv.org/abs/2603.22263v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.22263v1",
     "tags": [
-      "cs.CV",
-      "cs.MM"
+      "cs.RO"
     ],
     "source": "arxiv",
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2602.01789v3",
-    "title": "RFS: Reinforcement Learning with Residual Flow Steering for Dexterous Manipulation",
-    "summary": "Imitation learning has emerged as an effective approach for bootstrapping sequential decision-making in robotics, achieving strong performance even in high-dimensional dexterous manipulation tasks. Recent behavior cloning methods further leverage expressive generative models, such as diffusion models and flow matching, to represent multimodal action distributions. However, policies pretrained in this manner often exhibit limited generalization and require additional fine-tuning to achieve robust performance at deployment time. Such adaptation must preserve the global exploration benefits of pretraining while enabling rapid correction of local execution errors. We propose Residual Flow Steering(RFS), a data-efficient reinforcement learning framework for adapting pretrained generative policies. RFS steers a pretrained flow-matching policy by jointly optimizing a residual action and a latent noise distribution, enabling complementary forms of exploration: local refinement through residual corrections and global exploration through latent-space modulation. This design allows efficient adaptation while retaining the expressive structure of the pretrained policy. We demonstrate the effectiveness of RFS on dexterous manipulation tasks, showing efficient fine-tuning in both simulation and real-world settings when adapting pretrained base policies. Project website:https://weirdlabuw.github.io/rfs.",
+    "id": "2603.13966v1",
+    "title": "vla-eval: A Unified Evaluation Harness for Vision-Language-Action Models",
+    "summary": "Vision Language Action VLA models are typically evaluated using per benchmark scripts maintained independently by each model repository, leading to duplicated code, dependency conflicts, and underspecified protocols. We present vla eval, an open source evaluation harness that decouples model inference from benchmark execution through a WebSocket msgpack protocol with Docker based environment isolation. Models integrate once by implementing a single predict() method; benchmarks integrate once via a four method interface; the full cross evaluation matrix works automatically. A complete evaluation requires only two commands: vla eval serve and vla eval run. The framework supports 13 simulation benchmarks and six model servers. Parallel evaluation via episode sharding and batch inference achieves a 47x throughput improvement, completing 2000 LIBERO episodes in about 18 minutes. Using this infrastructure, we conduct a reproducibility audit of a published VLA model across three benchmarks, finding that all three closely reproduce published values while uncovering undocumented requirements ambiguous termination semantics and hidden normalization statistics that can silently distort results. We additionally release a VLA leaderboard aggregating 657 published results across 17 benchmarks. Framework, evaluation configs, and all reproduction results are publicly available.",
     "authors": [
-      "Entong Su",
-      "Tyler Westenbroek",
-      "Anusha Nagabandi",
-      "Abhishek Gupta"
+      "Suhwan Choi",
+      "Yunsung Lee",
+      "Yubeen Park",
+      "Chris Dongjoo Kim",
+      "Ranjay Krishna",
+      "Dieter Fox",
+      "Youngjae Yu"
     ],
-    "published": "2026-02-02T08:11:57Z",
-    "updated": "2026-02-05T09:22:39Z",
-    "url": "https://arxiv.org/abs/2602.01789v3",
-    "pdf_url": "https://arxiv.org/pdf/2602.01789v3",
+    "published": "2026-03-14T14:38:53Z",
+    "updated": "2026-03-14T14:38:53Z",
+    "url": "https://arxiv.org/abs/2603.13966v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.13966v1",
     "tags": [
-      "cs.RO"
+      "cs.AI"
     ],
     "source": "arxiv",
     "bucket": "Representative paper from your selected authors in the last three months"
