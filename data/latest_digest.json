@@ -1,79 +1,77 @@
 [
   {
-    "id": "2603.22876v1",
-    "title": "Grounding Sim-to-Real Generalization in Dexterous Manipulation: An Empirical Study with Vision-Language-Action Models",
-    "summary": "Learning a generalist control policy for dexterous manipulation typically relies on large-scale datasets. Given the high cost of real-world data collection, a practical alternative is to generate synthetic data through simulation. However, the resulting synthetic data often exhibits a significant gap from real-world distributions. While many prior studies have proposed algorithms to bridge the Sim-to-Real discrepancy, there remains a lack of principled research that grounds these methods in real-world manipulation tasks, particularly their performance on generalist policies such as Vision-Language-Action (VLA) models. In this study, we empirically examine the primary determinants of Sim-to-Real generalization across four dimensions: multi-level domain randomization, photorealistic rendering, physics-realistic modeling, and reinforcement learning updates. To support this study, we design a comprehensive evaluation protocol to quantify the real-world performance of manipulation tasks. The protocol accounts for key variations in background, lighting, distractors, object types, and spatial features. Through experiments involving over 10k real-world trials, we derive critical insights into Sim-to-Real transfer. To inform and advance future studies, we release both the robotic platforms and the evaluation protocol for public access to facilitate independent verification, thereby establishing a realistic and standardized benchmark for dexterous manipulation policies.",
+    "id": "2603.24584v1",
+    "title": "TAG: Target-Agnostic Guidance for Stable Object-Centric Inference in Vision-Language-Action Models",
+    "summary": "Vision--Language--Action (VLA) policies have shown strong progress in mapping language instructions and visual observations to robotic actions, yet their reliability degrades in cluttered scenes with distractors. By analyzing failure cases, we find that many errors do not arise from infeasible motions, but from instance-level grounding failures: the policy often produces a plausible grasp trajectory that lands slightly off-target or even on the wrong object instance. To address this issue, we propose TAG (Target-Agnostic Guidance), a simple inference-time guidance mechanism that explicitly reduces distractor- and appearance-induced bias in VLA policies. Inspired by classifier-free guidance (CFG), TAG contrasts policy predictions under the original observation and an object-erased observation, and uses their difference as a residual steering signal that strengthens the influence of object evidence in the decision process. TAG does not require modifying the policy architecture and can be integrated with existing VLA policies with minimal training and inference changes. We evaluate TAG on standard manipulation benchmarks, including LIBERO, LIBERO-Plus, and VLABench, where it consistently improves robustness under clutter and reduces near-miss and wrong-object executions.",
     "authors": [
-      "Ruixing Jin",
-      "Zicheng Zhu",
-      "Ruixiang Ouyang",
-      "Sheng Xu",
-      "Bo Yue",
-      "Zhizheng Wu",
-      "Guiliang Liu"
+      "Jiaying Zhou",
+      "Zhihao Zhan",
+      "Ruifeng Zhai",
+      "Qinhan Lyu",
+      "Hao Liu",
+      "Keze Wang",
+      "Liang Lin",
+      "Guangrun Wang"
     ],
-    "published": "2026-03-24T07:21:29Z",
-    "updated": "2026-03-24T07:21:29Z",
-    "url": "https://arxiv.org/abs/2603.22876v1",
-    "pdf_url": "https://arxiv.org/pdf/2603.22876v1",
+    "published": "2026-03-25T17:56:32Z",
+    "updated": "2026-03-25T17:56:32Z",
+    "url": "https://arxiv.org/abs/2603.24584v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.24584v1",
     "tags": [
-      "cs.RO",
-      "cs.AI"
+      "cs.CV",
+      "cs.RO"
     ],
     "source": "arxiv",
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2603.23404v1",
-    "title": "Unleashing Spatial Reasoning in Multimodal Large Language Models via Textual Representation Guided Reasoning",
-    "summary": "Existing Multimodal Large Language Models (MLLMs) struggle with 3D spatial reasoning, as they fail to construct structured abstractions of the 3D environment depicted in video inputs. To bridge this gap, drawing inspiration from cognitive theories of allocentric spatial reasoning, we investigate how to enable MLLMs to model and reason over text-based spatial representations of video. Specifically, we introduce Textual Representation of Allocentric Context from Egocentric Video (TRACE), a prompting method that induces MLLMs to generate text-based representations of 3D environments as intermediate reasoning traces for more accurate spatial question answering. TRACE encodes meta-context, camera trajectories, and detailed object entities to support structured spatial reasoning over egocentric videos. Extensive experiments on VSI-Bench and OST-Bench demonstrate that TRACE yields notable and consistent improvements over prior prompting strategies across a diverse range of MLLM backbones, spanning different parameter scales and training schemas. We further present ablation studies to validate our design choices, along with detailed analyses that probe the bottlenecks of 3D spatial reasoning in MLLMs.",
+    "id": "2603.23916v1",
+    "title": "DecepGPT: Schema-Driven Deception Detection with Multicultural Datasets and Robust Multimodal Learning",
+    "summary": "Multimodal deception detection aims to identify deceptive behavior by analyzing audiovisual cues for forensics and security. In these high-stakes settings, investigators need verifiable evidence connecting audiovisual cues to final decisions, along with reliable generalization across domains and cultural contexts. However, existing benchmarks provide only binary labels without intermediate reasoning cues. Datasets are also small with limited scenario coverage, leading to shortcut learning. We address these issues through three contributions. First, we construct reasoning datasets by augmenting existing benchmarks with structured cue-level descriptions and reasoning chains, enabling model output auditable reports. Second, we release T4-Deception, a multicultural dataset based on the unified ``To Tell The Truth'' television format implemented across four countries. With 1695 samples, it is the largest non-laboratory deception detection dataset. Third, we propose two modules for robust learning under small-data conditions. Stabilized Individuality-Commonality Synergy (SICS) refines multimodal representations by synergizing learnable global priors with sample-adaptive residuals, followed by a polarity-aware adjustment that bi-directionally recalibrates representations. Distilled Modality Consistency (DMC) aligns modality-specific predictions with the fused multimodal predictions via knowledge distillation to prevent unimodal shortcut learning. Experiments on three established benchmarks and our novel dataset demonstrate that our method achieves state-of-the-art performance in both in-domain and cross-domain scenarios, while exhibiting superior transferability across diverse cultural contexts. The datasets and codes will be released.",
     "authors": [
-      "Jiacheng Hua",
-      "Yishu Yin",
-      "Yuhang Wu",
-      "Tai Wang",
-      "Yifei Huang",
-      "Miao Liu"
+      "Jiajian Huang",
+      "Dongliang Zhu",
+      "Zitong YU",
+      "Hui Ma",
+      "Jiayu Zhang",
+      "Chunmei Zhu",
+      "Xiaochun Cao"
     ],
-    "published": "2026-03-24T16:38:09Z",
-    "updated": "2026-03-24T16:38:09Z",
-    "url": "https://arxiv.org/abs/2603.23404v1",
-    "pdf_url": "https://arxiv.org/pdf/2603.23404v1",
+    "published": "2026-03-25T04:06:36Z",
+    "updated": "2026-03-25T04:06:36Z",
+    "url": "https://arxiv.org/abs/2603.23916v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.23916v1",
     "tags": [
       "cs.CV",
-      "cs.CL"
+      "cs.AI"
     ],
     "source": "arxiv",
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2603.22435v1",
-    "title": "CaP-X: A Framework for Benchmarking and Improving Coding Agents for Robot Manipulation",
-    "summary": "\"Code-as-Policy\" considers how executable code can complement data-intensive Vision-Language-Action (VLA) methods, yet their effectiveness as autonomous controllers for embodied manipulation remains underexplored. We present CaP-X, an open-access framework for systematically studying Code-as-Policy agents in robot manipulation. At its core is CaP-Gym, an interactive environment in which agents control robots by synthesizing and executing programs that compose perception and control primitives. Building on this foundation, CaP-Bench evaluates frontier language and vision-language models across varying levels of abstraction, interaction, and perceptual grounding. Across 12 models, CaP-Bench reveals a consistent trend: performance improves with human-crafted abstractions but degrades as these priors are removed, exposing a dependence on designer scaffolding. At the same time, we observe that this gap can be mitigated through scaling agentic test-time computation--through multi-turn interaction, structured execution feedback, visual differencing, automatic skill synthesis, and ensembled reasoning--substantially improves robustness even when agents operate over low-level primitives. These findings allow us to derive CaP-Agent0, a training-free framework that recovers human-level reliability on several manipulation tasks in simulation and on real embodiments. We further introduce CaP-RL, showing reinforcement learning with verifiable rewards improves success rates and transfers from sim2real with minimal gap. Together, CaP-X provides a principled, open-access platform for advancing embodied coding agents.",
+    "id": "2603.15789v2",
+    "title": "Emergent Dexterity via Diverse Resets and Large-Scale Reinforcement Learning",
+    "summary": "Reinforcement learning in massively parallel physics simulations has driven major progress in sim-to-real robot learning. However, current approaches remain brittle and task-specific, relying on extensive per-task engineering to design rewards, curricula, and demonstrations. Even with this engineering, they often fail on long-horizon, contact-rich manipulation tasks and do not meaningfully scale with compute, as performance quickly saturates when training revisits the same narrow regions of state space. We introduce OmniReset, a simple and scalable framework that enables on-policy reinforcement learning to robustly solve a broad class of dexterous manipulation tasks using a single reward function, fixed algorithm hyperparameters, no curricula, and no human demonstrations. Our key insight is that long-horizon exploration can be dramatically simplified by using simulator resets to systematically expose the RL algorithm to the diverse set of robot-object interactions which underlie dexterous manipulation. OmniReset programmatically generates such resets with minimal human input, converting additional compute directly into broader behavioral coverage and continued performance gains. We show that OmniReset gracefully scales to long-horizon dexterous manipulation tasks beyond the capabilities of existing approaches and is able to learn robust policies over significantly wider ranges of initial conditions than baselines. Finally, we distill OmniReset into visuomotor policies which display robust retrying behavior and substantially higher success rates than baselines when transferred to the real world zero-shot. Project webpage: https://omnireset.github.io",
     "authors": [
-      "Max Fu",
-      "Justin Yu",
-      "Karim El-Refai",
-      "Ethan Kou",
-      "Haoru Xue",
-      "Huang Huang",
-      "Wenli Xiao",
-      "Guanzhi Wang",
-      "Fei-Fei Li",
-      "Guanya Shi",
-      "Jiajun Wu",
-      "Shankar Sastry",
-      "Yuke Zhu",
-      "Ken Goldberg",
-      "Linxi \"Jim\" Fan"
+      "Patrick Yin",
+      "Tyler Westenbroek",
+      "Zhengyu Zhang",
+      "Joshua Tran",
+      "Ignacio Dagnino",
+      "Eeshani Shilamkar",
+      "Numfor Mbiziwo-Tiapo",
+      "Simran Bagaria",
+      "Xinlei Liu",
+      "Galen Mullins",
+      "Andrey Kolobov",
+      "Abhishek Gupta"
     ],
-    "published": "2026-03-23T18:08:10Z",
-    "updated": "2026-03-23T18:08:10Z",
-    "url": "https://arxiv.org/abs/2603.22435v1",
-    "pdf_url": "https://arxiv.org/pdf/2603.22435v1",
+    "published": "2026-03-16T18:14:36Z",
+    "updated": "2026-03-24T06:21:28Z",
+    "url": "https://arxiv.org/abs/2603.15789v2",
+    "pdf_url": "https://arxiv.org/pdf/2603.15789v2",
     "tags": [
-      "cs.RO",
-      "cs.AI"
+      "cs.RO"
     ],
     "source": "arxiv",
     "bucket": "Representative paper from your selected authors in the last three months"
