@@ -1,19 +1,27 @@
 [
   {
-    "id": "2603.25481v1",
-    "title": "LILAC: Language-Conditioned Object-Centric Optical Flow for Open-Loop Trajectory Generation",
-    "summary": "We address language-conditioned robotic manipulation using flow-based trajectory generation, which enables training on human and web videos of object manipulation and requires only minimal embodiment-specific data. This task is challenging, as object trajectory generation from pre-manipulation images and natural language instructions requires appropriate instruction-flow alignment. To tackle this challenge, we propose the flow-based Language Instruction-guided open-Loop ACtion generator (LILAC). This flow-based Vision-Language-Action model (VLA) generates object-centric 2D optical flow from an RGB image and a natural language instruction, and converts the flow into a 6-DoF manipulator trajectory. LILAC incorporates two key components: Semantic Alignment Loss, which strengthens language conditioning to generate instruction-aligned optical flow, and Prompt-Conditioned Cross-Modal Adapter, which aligns learned visual prompts with image and text features to provide rich cues for flow generation. Experimentally, our method outperformed existing approaches in generated flow quality across multiple benchmarks. Furthermore, in physical object manipulation experiments using free-form instructions, LILAC demonstrated a superior task success rate compared to existing methods. The project page is available at https://lilac-75srg.kinsta.page/.",
+    "id": "2603.25406v1",
+    "title": "MMaDA-VLA: Large Diffusion Vision-Language-Action Model with Unified Multi-Modal Instruction and Generation",
+    "summary": "Vision-Language-Action (VLA) models aim to control robots for manipulation from visual observations and natural-language instructions. However, existing hierarchical and autoregressive paradigms often introduce architectural overhead, suffer from temporal inconsistency and long-horizon error accumulation, and lack a mechanism to capture environment dynamics without extra modules. To this end, we present MMaDA-VLA, a fully native pre-trained large diffusion VLA model that unifies multi-modal understanding and generation in a single framework. Our key idea is a native discrete diffusion formulation that embeds language, images, and continuous robot controls into one discrete token space and trains a single backbone with masked token denoising to jointly generate a future goal observation and an action chunk in parallel. Iterative denoising enables global, order-free refinement, improving long-horizon consistency while grounding actions in predicted future visual outcomes without auxiliary world models. Experiments across simulation benchmarks and real-world tasks show state-of-the-art performance, achieving 98.0% average success on LIBERO and 4.78 average length on CALVIN.",
     "authors": [
-      "Motonari Kambara",
-      "Koki Seno",
-      "Tomoya Kaichi",
-      "Yanan Wang",
-      "Komei Sugiura"
+      "Yang Liu",
+      "Pengxiang Ding",
+      "Tengyue Jiang",
+      "Xudong Wang",
+      "Wenxuan Song",
+      "Minghui Lin",
+      "Han Zhao",
+      "Hongyin Zhang",
+      "Zifeng Zhuang",
+      "Wei Zhao",
+      "Siteng Huang",
+      "Jinkui Shi",
+      "Donglin Wang"
     ],
-    "published": "2026-03-26T14:21:22Z",
-    "updated": "2026-03-26T14:21:22Z",
-    "url": "https://arxiv.org/abs/2603.25481v1",
-    "pdf_url": "https://arxiv.org/pdf/2603.25481v1",
+    "published": "2026-03-26T12:55:51Z",
+    "updated": "2026-03-26T12:55:51Z",
+    "url": "https://arxiv.org/abs/2603.25406v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.25406v1",
     "tags": [
       "cs.RO"
     ],
@@ -21,48 +29,42 @@
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2603.25288v1",
-    "title": "CSI-tuples-based 3D Channel Fingerprints Construction Assisted by MultiModal Learning",
-    "summary": "Low-altitude communications can promote the integration of aerial and terrestrial wireless resources, expand network coverage, and enhance transmission quality, thereby empowering the development of sixth-generation (6G) mobile communications. As an enabler for low-altitude transmission, 3D channel fingerprints (3D-CF), also referred to as the 3D radio map or 3D channel knowledge map, are expected to enhance the understanding of communication environments and assist in the acquisition of channel state information (CSI), thereby avoiding repeated estimations and reducing computational complexity. In this paper, we propose a modularized multimodal framework to construct 3D-CF. Specifically, we first establish the 3D-CF model as a collection of CSI-tuples based on Rician fading channels, with each tuple comprising the low-altitude vehicle's (LAV) positions and its corresponding statistical CSI. In consideration of the heterogeneous structures of different prior data, we formulate the 3D-CF construction problem as a multimodal regression task, where the target channel information in the CSI-tuple can be estimated directly by its corresponding LAV positions, together with communication measurements and geographic environment maps. Then, a high-efficiency multimodal framework is proposed accordingly, which includes a correlation-based multimodal fusion (Corr-MMF) module, a multimodal representation (MMR) module, and a CSI regression (CSI-R) module. Numerical results show that our proposed framework can efficiently construct 3D-CF and achieve at least 27.5% higher accuracy than the state-of-the-art algorithms under different communication scenarios, demonstrating its competitive performance and excellent generalization ability. We also analyze the computational complexity and illustrate its superiority in terms of the inference time.",
+    "id": "2603.25573v1",
+    "title": "Hierarchy-Guided Multimodal Representation Learning for Taxonomic Inference",
+    "summary": "Accurate biodiversity identification from large-scale field data is a foundational problem with direct impact on ecology, conservation, and environmental monitoring. In practice, the core task is taxonomic prediction - inferring order, family, genus, or species from imperfect inputs such as specimen images, DNA barcodes, or both. Existing multimodal methods often treat taxonomy as a flat label space and therefore fail to encode the hierarchical structure of biological classification, which is critical for robustness under noise and missing modalities. We present two end-to-end variants for hierarchy-aware multimodal learning: CLiBD-HiR, which introduces Hierarchical Information Regularization (HiR) to shape embedding geometry across taxonomic levels, yielding structured and noise-robust representations; and CLiBD-HiR-Fuse, which additionally trains a lightweight fusion predictor that supports image-only, DNA-only, or joint inference and is resilient to modality corruption. Across large-scale biodiversity benchmarks, our approach improves taxonomic classification accuracy by over 14 percent compared to strong multimodal baselines, with particularly large gains under partial and corrupted DNA conditions. These results highlight that explicitly encoding biological hierarchy, together with flexible fusion, is key for practical biodiversity foundation models.",
     "authors": [
-      "Chenjie Xie",
-      "Li You",
-      "Ruirong Chen",
-      "Gaoning He",
-      "Xiqi Gao"
+      "Sk Miraj Ahmed",
+      "Xi Yu",
+      "Yunqi Li",
+      "Yuewei Lin",
+      "Wei Xu"
     ],
-    "published": "2026-03-26T10:25:43Z",
-    "updated": "2026-03-26T10:25:43Z",
-    "url": "https://arxiv.org/abs/2603.25288v1",
-    "pdf_url": "https://arxiv.org/pdf/2603.25288v1",
+    "published": "2026-03-26T15:47:03Z",
+    "updated": "2026-03-26T15:47:03Z",
+    "url": "https://arxiv.org/abs/2603.25573v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.25573v1",
     "tags": [
-      "cs.IT",
-      "cs.AI",
-      "cs.ET",
-      "cs.LG",
-      "eess.SP"
+      "cs.CV",
+      "cs.LG"
     ],
     "source": "arxiv",
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2603.03818v2",
-    "title": "Pretrained Vision-Language-Action Models are Surprisingly Resistant to Forgetting in Continual Learning",
-    "summary": "Continual learning is a long-standing challenge in robot policy learning, where a policy must acquire new skills over time without catastrophically forgetting previously learned ones. While prior work has extensively studied continual learning in relatively small behavior cloning (BC) policy models trained from scratch, its behavior in modern large-scale pretrained Vision-Language-Action (VLA) models remains underexplored. In this work, we found that pretrained VLAs are remarkably resistant to forgetting compared with smaller policy models trained from scratch. Simple Experience Replay (ER) works surprisingly well on VLAs, sometimes achieving zero forgetting even with a small replay data size. Our analysis reveals that pretraining plays a critical role in downstream continual learning performance: large pretrained models mitigate forgetting with a small replay buffer size while maintaining strong forward learning capabilities. Furthermore, we found that VLAs can retain relevant knowledge from prior tasks despite performance degradation during learning new tasks. This knowledge retention enables rapid recovery of seemingly forgotten skills through finetuning. Together, these insights imply that large-scale pretraining fundamentally changes the dynamics of continual learning, enabling models to continually acquire new skills over time with simple replay. Code and more information can be found at https://continual-vlas.github.io/forget-me-not/",
+    "id": "2602.22461v1",
+    "title": "EgoAVFlow: Robot Policy Learning with Active Vision from Human Egocentric Videos via 3D Flow",
+    "summary": "Egocentric human videos provide a scalable source of manipulation demonstrations; however, deploying them on robots requires active viewpoint control to maintain task-critical visibility, which human viewpoint imitation often fails to provide due to human-specific priors. We propose EgoAVFlow, which learns manipulation and active vision from egocentric videos through a shared 3D flow representation that supports geometric visibility reasoning and transfers without robot demonstrations. EgoAVFlow uses diffusion models to predict robot actions, future 3D flow, and camera trajectories, and refines viewpoints at test time with reward-maximizing denoising under a visibility-aware reward computed from predicted motion and scene geometry. Real-world experiments under actively changing viewpoints show that EgoAVFlow consistently outperforms prior human-demo-based baselines, demonstrating effective visibility maintenance and robust manipulation without robot demonstrations.",
     "authors": [
-      "Huihan Liu",
-      "Changyeon Kim",
-      "Bo Liu",
-      "Minghuan Liu",
-      "Yuke Zhu"
+      "Daesol Cho",
+      "Youngseok Jang",
+      "Danfei Xu",
+      "Sehoon Ha"
     ],
-    "published": "2026-03-04T08:03:13Z",
-    "updated": "2026-03-17T18:41:08Z",
-    "url": "https://arxiv.org/abs/2603.03818v2",
-    "pdf_url": "https://arxiv.org/pdf/2603.03818v2",
+    "published": "2026-02-25T22:50:51Z",
+    "updated": "2026-02-25T22:50:51Z",
+    "url": "https://arxiv.org/abs/2602.22461v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.22461v1",
     "tags": [
-      "cs.LG",
-      "cs.AI",
       "cs.RO"
     ],
     "source": "arxiv",
