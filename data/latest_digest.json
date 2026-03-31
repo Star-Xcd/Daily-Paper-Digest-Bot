@@ -1,27 +1,19 @@
 [
   {
-    "id": "2603.25406v1",
-    "title": "MMaDA-VLA: Large Diffusion Vision-Language-Action Model with Unified Multi-Modal Instruction and Generation",
-    "summary": "Vision-Language-Action (VLA) models aim to control robots for manipulation from visual observations and natural-language instructions. However, existing hierarchical and autoregressive paradigms often introduce architectural overhead, suffer from temporal inconsistency and long-horizon error accumulation, and lack a mechanism to capture environment dynamics without extra modules. To this end, we present MMaDA-VLA, a fully native pre-trained large diffusion VLA model that unifies multi-modal understanding and generation in a single framework. Our key idea is a native discrete diffusion formulation that embeds language, images, and continuous robot controls into one discrete token space and trains a single backbone with masked token denoising to jointly generate a future goal observation and an action chunk in parallel. Iterative denoising enables global, order-free refinement, improving long-horizon consistency while grounding actions in predicted future visual outcomes without auxiliary world models. Experiments across simulation benchmarks and real-world tasks show state-of-the-art performance, achieving 98.0% average success on LIBERO and 4.78 average length on CALVIN.",
+    "id": "2603.28740v1",
+    "title": "FocusVLA: Focused Visual Utilization for Vision-Language-Action Models",
+    "summary": "Vision-Language-Action (VLA) models improve action generation by conditioning policies on rich vision-language information. However, current auto-regressive policies are constrained by three bottlenecks: (1) architectural bias drives models to overlook visual details, (2) an excessive number of visual tokens makes attention difficult to focus on the correct regions, and (3) task-irrelevant visual information introduces substantial noise - together severely impairing the quality of action. In this paper, we investigate how to effectively utilize different visual representations for action generation. To this end, we first empirically validate the above issues and show that VLA performance is primarily limited by how visual information is utilized, rather than by the quality of visual representations. Based on these insights, we introduce FocusVLA, a novel paradigm that directs the model's attention to task-relevant visual regions to effectively bridge vision to action. Specifically, we first propose Modality Cascaded Attention to eliminate shortcut pathways, thereby compelling VLA models to rely on task-relevant visual details for action generation. Furthermore, we propose Focus Attention, which dynamically selects task-relevant visual patches to control information quantity while explicitly modulating their influence to suppress task-irrelevant noise. Extensive experiments on both simulated and real-world robotic benchmarks demonstrate that FocusVLA not only effectively leverages visual details to perform dexterous manipulations, but also substantially improves performance and accelerates convergence across a variety of tasks.",
     "authors": [
-      "Yang Liu",
-      "Pengxiang Ding",
-      "Tengyue Jiang",
-      "Xudong Wang",
-      "Wenxuan Song",
-      "Minghui Lin",
-      "Han Zhao",
-      "Hongyin Zhang",
-      "Zifeng Zhuang",
-      "Wei Zhao",
-      "Siteng Huang",
-      "Jinkui Shi",
-      "Donglin Wang"
+      "Yichi Zhang",
+      "Weihao Yuan",
+      "Yizhuo Zhang",
+      "Xidong Zhang",
+      "Jia Wan"
     ],
-    "published": "2026-03-26T12:55:51Z",
-    "updated": "2026-03-26T12:55:51Z",
-    "url": "https://arxiv.org/abs/2603.25406v1",
-    "pdf_url": "https://arxiv.org/pdf/2603.25406v1",
+    "published": "2026-03-30T17:50:54Z",
+    "updated": "2026-03-30T17:50:54Z",
+    "url": "https://arxiv.org/abs/2603.28740v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.28740v1",
     "tags": [
       "cs.RO"
     ],
@@ -29,43 +21,51 @@
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2603.25573v1",
-    "title": "Hierarchy-Guided Multimodal Representation Learning for Taxonomic Inference",
-    "summary": "Accurate biodiversity identification from large-scale field data is a foundational problem with direct impact on ecology, conservation, and environmental monitoring. In practice, the core task is taxonomic prediction - inferring order, family, genus, or species from imperfect inputs such as specimen images, DNA barcodes, or both. Existing multimodal methods often treat taxonomy as a flat label space and therefore fail to encode the hierarchical structure of biological classification, which is critical for robustness under noise and missing modalities. We present two end-to-end variants for hierarchy-aware multimodal learning: CLiBD-HiR, which introduces Hierarchical Information Regularization (HiR) to shape embedding geometry across taxonomic levels, yielding structured and noise-robust representations; and CLiBD-HiR-Fuse, which additionally trains a lightweight fusion predictor that supports image-only, DNA-only, or joint inference and is resilient to modality corruption. Across large-scale biodiversity benchmarks, our approach improves taxonomic classification accuracy by over 14 percent compared to strong multimodal baselines, with particularly large gains under partial and corrupted DNA conditions. These results highlight that explicitly encoding biological hierarchy, together with flexible fusion, is key for practical biodiversity foundation models.",
+    "id": "2603.28542v1",
+    "title": "Feel Robot Feels: Tactile Feedback Array Glove for Dexterous Manipulation",
+    "summary": "Teleoperation is a key approach for collecting high-quality, physically consistent demonstrations for robotic manipulation. However, teleoperation for dexterous manipulation remains constrained by: (i) inaccurate hand-robot motion mapping, which limits teleoperated dexterity, and (ii) limited tactile feedback that forces vision-dominated interaction and hinders perception of contact geometry and force variation. To address these challenges, we present TAG, a low-cost glove system that integrates precise hand motion capture with high-resolution tactile feedback, enabling effective tactile-in-the-loop dexterous teleoperation. For motion capture, TAG employs a non-contact magnetic sensing design that provides drift-free, electromagnetically robust 21-DoF joint tracking with joint angle estimation errors below 1 degree. Meanwhile, to restore tactile sensation, TAG equips each finger with a 32-actuator tactile array within a compact 2 cm^2 module, allowing operators to directly feel physical interactions at the robot end-effector through spatial activation patterns. Through real-world teleoperation experiments and user studies, we show that TAG enables reliable real-time perception of contact geometry and dynamic force, improves success rates in contact-rich teleoperation tasks, and increases the reliability of demonstration data collection for learning-based manipulation.",
     "authors": [
-      "Sk Miraj Ahmed",
-      "Xi Yu",
-      "Yunqi Li",
-      "Yuewei Lin",
-      "Wei Xu"
+      "Feiyu Jia",
+      "Xiaojie Niu",
+      "Sizhe Yang",
+      "Qingwei Ben",
+      "Tao Huang",
+      "Feng zhao",
+      "Jingbo Wang",
+      "Jiangmiao Pang"
     ],
-    "published": "2026-03-26T15:47:03Z",
-    "updated": "2026-03-26T15:47:03Z",
-    "url": "https://arxiv.org/abs/2603.25573v1",
-    "pdf_url": "https://arxiv.org/pdf/2603.25573v1",
+    "published": "2026-03-30T15:04:13Z",
+    "updated": "2026-03-30T15:04:13Z",
+    "url": "https://arxiv.org/abs/2603.28542v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.28542v1",
     "tags": [
-      "cs.CV",
-      "cs.LG"
+      "cs.RO"
     ],
     "source": "arxiv",
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2602.22461v1",
-    "title": "EgoAVFlow: Robot Policy Learning with Active Vision from Human Egocentric Videos via 3D Flow",
-    "summary": "Egocentric human videos provide a scalable source of manipulation demonstrations; however, deploying them on robots requires active viewpoint control to maintain task-critical visibility, which human viewpoint imitation often fails to provide due to human-specific priors. We propose EgoAVFlow, which learns manipulation and active vision from egocentric videos through a shared 3D flow representation that supports geometric visibility reasoning and transfers without robot demonstrations. EgoAVFlow uses diffusion models to predict robot actions, future 3D flow, and camera trajectories, and refines viewpoints at test time with reward-maximizing denoising under a visibility-aware reward computed from predicted motion and scene geometry. Real-world experiments under actively changing viewpoints show that EgoAVFlow consistently outperforms prior human-demo-based baselines, demonstrating effective visibility maintenance and robust manipulation without robot demonstrations.",
+    "id": "2603.26660v2",
+    "title": "Ruka-v2: Tendon Driven Open-Source Dexterous Hand with Wrist and Abduction for Robot Learning",
+    "summary": "Lack of accessible and dexterous robot hardware has been a significant bottleneck to achieving human-level dexterity in robots. Last year, we released Ruka, a fully open-sourced, tendon-driven humanoid hand with 11 degrees of freedom - 2 per finger and 3 at the thumb - buildable for under $1,300. It was one of the first fully open-sourced humanoid hands, and introduced a novel data-driven approach to finger control that captures tendon dynamics within the control system. Despite these contributions, Ruka lacked two degrees of freedom essential for closely imitating human behavior: wrist mobility and finger adduction/abduction. In this paper, we introduce Ruka-v2: a fully open-sourced, tendon-driven humanoid hand featuring a decoupled 2-DOF parallel wrist and abduction/adduction at the fingers. The parallel wrist adds smooth, independent flexion/extension and radial/ulnar deviation, enabling manipulation in confined environments such as cabinets. Abduction enables motions such as grasping thin objects, in-hand rotation, and calligraphy. We present the design of Ruka-v2 and evaluate it against Ruka through user studies on teleoperated tasks, finding a 51.3% reduction in completion time and a 21.2% increase in success rate. We further demonstrate its full range of applications for robot learning: bimanual and single-arm teleoperation across 13 dexterous tasks, and autonomous policy learning on 3 tasks. All 3D print files, assembly instructions, controller software, and videos are available at https://ruka-hand-v2.github.io/ .",
     "authors": [
-      "Daesol Cho",
-      "Youngseok Jang",
-      "Danfei Xu",
-      "Sehoon Ha"
+      "Xinqi Lucas Liu",
+      "Ruoxi Hu",
+      "Alejandro Ojeda Olarte",
+      "Zhuoran Chen",
+      "Kenny Ma",
+      "Charles Cheng Ji",
+      "Lerrel Pinto",
+      "Raunaq Bhirangi",
+      "Irmak Guzey"
     ],
-    "published": "2026-02-25T22:50:51Z",
-    "updated": "2026-02-25T22:50:51Z",
-    "url": "https://arxiv.org/abs/2602.22461v1",
-    "pdf_url": "https://arxiv.org/pdf/2602.22461v1",
+    "published": "2026-03-27T17:58:03Z",
+    "updated": "2026-03-30T16:30:40Z",
+    "url": "https://arxiv.org/abs/2603.26660v2",
+    "pdf_url": "https://arxiv.org/pdf/2603.26660v2",
     "tags": [
-      "cs.RO"
+      "cs.RO",
+      "cs.AI"
     ],
     "source": "arxiv",
     "bucket": "Representative paper from your selected authors in the last three months"
