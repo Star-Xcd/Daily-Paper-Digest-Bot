@@ -1,19 +1,20 @@
 [
   {
-    "id": "2603.28740v1",
-    "title": "FocusVLA: Focused Visual Utilization for Vision-Language-Action Models",
-    "summary": "Vision-Language-Action (VLA) models improve action generation by conditioning policies on rich vision-language information. However, current auto-regressive policies are constrained by three bottlenecks: (1) architectural bias drives models to overlook visual details, (2) an excessive number of visual tokens makes attention difficult to focus on the correct regions, and (3) task-irrelevant visual information introduces substantial noise - together severely impairing the quality of action. In this paper, we investigate how to effectively utilize different visual representations for action generation. To this end, we first empirically validate the above issues and show that VLA performance is primarily limited by how visual information is utilized, rather than by the quality of visual representations. Based on these insights, we introduce FocusVLA, a novel paradigm that directs the model's attention to task-relevant visual regions to effectively bridge vision to action. Specifically, we first propose Modality Cascaded Attention to eliminate shortcut pathways, thereby compelling VLA models to rely on task-relevant visual details for action generation. Furthermore, we propose Focus Attention, which dynamically selects task-relevant visual patches to control information quantity while explicitly modulating their influence to suppress task-irrelevant noise. Extensive experiments on both simulated and real-world robotic benchmarks demonstrate that FocusVLA not only effectively leverages visual details to perform dexterous manipulations, but also substantially improves performance and accelerates convergence across a variety of tasks.",
+    "id": "2602.08602v3",
+    "title": "Mimic Intent, Not Just Trajectories",
+    "summary": "While imitation learning (IL) has achieved impressive success in dexterous manipulation through generative modeling and pretraining, state-of-the-art approaches like Vision-Language-Action (VLA) models still struggle with adaptation to environmental changes and skill transfer. We argue this stems from mimicking raw trajectories without understanding the underlying intent. To address this, we propose explicitly disentangling behavior intent from execution details in end-2-end IL: Mimic Intent, Not just Trajectories(MINT). We achieve this via multi-scale frequency-space tokenization, which enforces a spectral decomposition of action chunk representation. We learn action tokens with a multi-scale coarse-to-fine structure, and force the coarsest token to capture low-frequency global structure and finer tokens to encode high-frequency details. This yields an abstract Intent token that facilitates planning and transfer, and multi-scale Execution tokens that enable precise adaptation to environmental dynamics. Building on this hierarchy, our policy generates trajectories through next-scale autoregression, performing progressive intent-to-execution reasoning, thus boosting learning efficiency and generalization. Crucially, this disentanglement enables one-shot transfer of skills, by simply injecting the Intent token from a demonstration into the autoregressive generation process. Experiments on several manipulation benchmarks and on a real robot demonstrate state-of-the-art success rates, superior inference efficiency, robust generalization against disturbances, and effective one-shot transfer.",
     "authors": [
-      "Yichi Zhang",
-      "Weihao Yuan",
-      "Yizhuo Zhang",
-      "Xidong Zhang",
-      "Jia Wan"
+      "Renming Huang",
+      "Chendong Zeng",
+      "Wenjing Tang",
+      "Jintian Cai",
+      "Cewu Lu",
+      "Panpan Cai"
     ],
-    "published": "2026-03-30T17:50:54Z",
-    "updated": "2026-03-30T17:50:54Z",
-    "url": "https://arxiv.org/abs/2603.28740v1",
-    "pdf_url": "https://arxiv.org/pdf/2603.28740v1",
+    "published": "2026-02-09T12:44:35Z",
+    "updated": "2026-03-28T01:57:36Z",
+    "url": "https://arxiv.org/abs/2602.08602v3",
+    "pdf_url": "https://arxiv.org/pdf/2602.08602v3",
     "tags": [
       "cs.RO"
     ],
@@ -21,48 +22,43 @@
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2603.28542v1",
-    "title": "Feel Robot Feels: Tactile Feedback Array Glove for Dexterous Manipulation",
-    "summary": "Teleoperation is a key approach for collecting high-quality, physically consistent demonstrations for robotic manipulation. However, teleoperation for dexterous manipulation remains constrained by: (i) inaccurate hand-robot motion mapping, which limits teleoperated dexterity, and (ii) limited tactile feedback that forces vision-dominated interaction and hinders perception of contact geometry and force variation. To address these challenges, we present TAG, a low-cost glove system that integrates precise hand motion capture with high-resolution tactile feedback, enabling effective tactile-in-the-loop dexterous teleoperation. For motion capture, TAG employs a non-contact magnetic sensing design that provides drift-free, electromagnetically robust 21-DoF joint tracking with joint angle estimation errors below 1 degree. Meanwhile, to restore tactile sensation, TAG equips each finger with a 32-actuator tactile array within a compact 2 cm^2 module, allowing operators to directly feel physical interactions at the robot end-effector through spatial activation patterns. Through real-world teleoperation experiments and user studies, we show that TAG enables reliable real-time perception of contact geometry and dynamic force, improves success rates in contact-rich teleoperation tasks, and increases the reliability of demonstration data collection for learning-based manipulation.",
+    "id": "2603.29677v1",
+    "title": "Mind the Gap: A Framework for Assessing Pitfalls in Multimodal Active Learning",
+    "summary": "Multimodal learning enables neural networks to integrate information from heterogeneous sources, but active learning in this setting faces distinct challenges. These include missing modalities, differences in modality difficulty, and varying interaction structures. These are issues absent in the unimodal case. While the behavior of active learning strategies in unimodal settings is well characterized, their behavior under such multimodal conditions remains poorly understood. We introduce a new framework for benchmarking multimodal active learning that isolates these pitfalls using synthetic datasets, allowing systematic evaluation without confounding noise. Using this framework, we compare unimodal and multimodal query strategies and validate our findings on two real-world datasets. Our results show that models consistently develop imbalanced representations, relying primarily on one modality while neglecting others. Existing query methods do not mitigate this effect, and multimodal strategies do not consistently outperform unimodal ones. These findings highlight limitations of current active learning methods and underline the need for modality-aware query strategies that explicitly address these pitfalls. Code and benchmark resources will be made publicly available.",
     "authors": [
-      "Feiyu Jia",
-      "Xiaojie Niu",
-      "Sizhe Yang",
-      "Qingwei Ben",
-      "Tao Huang",
-      "Feng zhao",
-      "Jingbo Wang",
-      "Jiangmiao Pang"
+      "Dustin Eisenhardt",
+      "Yunhee Jeong",
+      "Florian Buettner"
     ],
-    "published": "2026-03-30T15:04:13Z",
-    "updated": "2026-03-30T15:04:13Z",
-    "url": "https://arxiv.org/abs/2603.28542v1",
-    "pdf_url": "https://arxiv.org/pdf/2603.28542v1",
+    "published": "2026-03-31T12:33:45Z",
+    "updated": "2026-03-31T12:33:45Z",
+    "url": "https://arxiv.org/abs/2603.29677v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.29677v1",
     "tags": [
-      "cs.RO"
+      "cs.LG",
+      "cs.AI"
     ],
     "source": "arxiv",
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2603.26660v2",
-    "title": "Ruka-v2: Tendon Driven Open-Source Dexterous Hand with Wrist and Abduction for Robot Learning",
-    "summary": "Lack of accessible and dexterous robot hardware has been a significant bottleneck to achieving human-level dexterity in robots. Last year, we released Ruka, a fully open-sourced, tendon-driven humanoid hand with 11 degrees of freedom - 2 per finger and 3 at the thumb - buildable for under $1,300. It was one of the first fully open-sourced humanoid hands, and introduced a novel data-driven approach to finger control that captures tendon dynamics within the control system. Despite these contributions, Ruka lacked two degrees of freedom essential for closely imitating human behavior: wrist mobility and finger adduction/abduction. In this paper, we introduce Ruka-v2: a fully open-sourced, tendon-driven humanoid hand featuring a decoupled 2-DOF parallel wrist and abduction/adduction at the fingers. The parallel wrist adds smooth, independent flexion/extension and radial/ulnar deviation, enabling manipulation in confined environments such as cabinets. Abduction enables motions such as grasping thin objects, in-hand rotation, and calligraphy. We present the design of Ruka-v2 and evaluate it against Ruka through user studies on teleoperated tasks, finding a 51.3% reduction in completion time and a 21.2% increase in success rate. We further demonstrate its full range of applications for robot learning: bimanual and single-arm teleoperation across 13 dexterous tasks, and autonomous policy learning on 3 tasks. All 3D print files, assembly instructions, controller software, and videos are available at https://ruka-hand-v2.github.io/ .",
+    "id": "2603.27012v1",
+    "title": "UMI-Underwater: Learning Underwater Manipulation without Underwater Teleoperation",
+    "summary": "Underwater robotic grasping is difficult due to degraded, highly variable imagery and the expense of collecting diverse underwater demonstrations. We introduce a system that (i) autonomously collects successful underwater grasp demonstrations via a self-supervised data collection pipeline and (ii) transfers grasp knowledge from on-land human demonstrations through a depth-based affordance representation that bridges the on-land-to-underwater domain gap and is robust to lighting and color shift. An affordance model trained on on-land handheld demonstrations is deployed underwater zero-shot via geometric alignment, and an affordance-conditioned diffusion policy is then trained on underwater demonstrations to generate control actions. In pool experiments, our approach improves grasping performance and robustness to background shifts, and enables generalization to objects seen only in on-land data, outperforming RGB-only baselines. Code, videos, and additional results are available at https://umi-under-water.github.io.",
     "authors": [
-      "Xinqi Lucas Liu",
-      "Ruoxi Hu",
-      "Alejandro Ojeda Olarte",
-      "Zhuoran Chen",
-      "Kenny Ma",
-      "Charles Cheng Ji",
-      "Lerrel Pinto",
-      "Raunaq Bhirangi",
-      "Irmak Guzey"
+      "Hao Li",
+      "Long Yin Chung",
+      "Jack Goler",
+      "Ryan Zhang",
+      "Xiaochi Xie",
+      "Huy Ha",
+      "Shuran Song",
+      "Mark Cutkosky"
     ],
-    "published": "2026-03-27T17:58:03Z",
-    "updated": "2026-03-30T16:30:40Z",
-    "url": "https://arxiv.org/abs/2603.26660v2",
-    "pdf_url": "https://arxiv.org/pdf/2603.26660v2",
+    "published": "2026-03-27T22:01:19Z",
+    "updated": "2026-03-27T22:01:19Z",
+    "url": "https://arxiv.org/abs/2603.27012v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.27012v1",
     "tags": [
       "cs.RO",
       "cs.AI"
