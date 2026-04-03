@@ -1,70 +1,73 @@
 [
   {
-    "id": "2603.29844v1",
-    "title": "DIAL: Decoupling Intent and Action via Latent World Modeling for End-to-End VLA",
-    "summary": "The development of Vision-Language-Action (VLA) models has been significantly accelerated by pre-trained Vision-Language Models (VLMs). However, most existing end-to-end VLAs treat the VLM primarily as a multimodal encoder, directly mapping vision-language features to low-level actions. This paradigm underutilizes the VLM's potential in high-level decision making and introduces training instability, frequently degrading its rich semantic representations. To address these limitations, we introduce DIAL, a framework bridging high-level decision making and low-level motor execution through a differentiable latent intent bottleneck. Specifically, a VLM-based System-2 performs latent world modeling by synthesizing latent visual foresight within the VLM's native feature space; this foresight explicitly encodes intent and serves as the structural bottleneck. A lightweight System-1 policy then decodes this predicted intent together with the current observation into precise robot actions via latent inverse dynamics. To ensure optimization stability, we employ a two-stage training paradigm: a decoupled warmup phase where System-2 learns to predict latent futures while System-1 learns motor control under ground-truth future guidance within a unified feature space, followed by seamless end-to-end joint optimization. This enables action-aware gradients to refine the VLM backbone in a controlled manner, preserving pre-trained knowledge. Extensive experiments on the RoboCasa GR1 Tabletop benchmark show that DIAL establishes a new state-of-the-art, achieving superior performance with 10x fewer demonstrations than prior methods. Furthermore, by leveraging heterogeneous human demonstrations, DIAL learns physically grounded manipulation priors and exhibits robust zero-shot generalization to unseen objects and novel configurations during real-world deployment on a humanoid robot.",
+    "id": "2604.01618v1",
+    "title": "Tex3D: Objects as Attack Surfaces via Adversarial 3D Textures for Vision-Language-Action Models",
+    "summary": "Vision-language-action (VLA) models have shown strong performance in robotic manipulation, yet their robustness to physically realizable adversarial attacks remains underexplored. Existing studies reveal vulnerabilities through language perturbations and 2D visual attacks, but these attack surfaces are either less representative of real deployment or limited in physical realism. In contrast, adversarial 3D textures pose a more physically plausible and damaging threat, as they are naturally attached to manipulated objects and are easier to deploy in physical environments. Bringing adversarial 3D textures to VLA systems is nevertheless nontrivial. A central obstacle is that standard 3D simulators do not provide a differentiable optimization path from the VLA objective function back to object appearance, making it difficult to optimize through an end-to-end manner. To address this, we introduce Foreground-Background Decoupling (FBD), which enables differentiable texture optimization through dual-renderer alignment while preserving the original simulation environment. To further ensure that the attack remains effective across long-horizon and diverse viewpoints in the physical world, we propose Trajectory-Aware Adversarial Optimization (TAAO), which prioritizes behaviorally critical frames and stabilizes optimization with a vertex-based parameterization. Built on these designs, we present Tex3D, the first framework for end-to-end optimization of 3D adversarial textures directly within the VLA simulation environment. Experiments in both simulation and real-robot settings show that Tex3D significantly degrades VLA performance across multiple manipulation tasks, achieving task failure rates of up to 96.7\\%. Our empirical results expose critical vulnerabilities of VLA systems to physically grounded 3D adversarial attacks and highlight the need for robustness-aware training.",
     "authors": [
-      "Yi Chen",
-      "Yuying Ge",
-      "Hui Zhou",
-      "Mingyu Ding",
-      "Yixiao Ge",
-      "Xihui Liu"
+      "Jiawei Chen",
+      "Simin Huang",
+      "Jiawei Du",
+      "Shuaihang Chen",
+      "Yu Tian",
+      "Mingjie Wei",
+      "Chao Yu",
+      "Zhaoxia Yin"
     ],
-    "published": "2026-03-31T15:02:27Z",
-    "updated": "2026-03-31T15:02:27Z",
-    "url": "https://arxiv.org/abs/2603.29844v1",
-    "pdf_url": "https://arxiv.org/pdf/2603.29844v1",
-    "tags": [
-      "cs.RO",
-      "cs.AI",
-      "cs.CV",
-      "cs.LG"
-    ],
-    "source": "arxiv",
-    "bucket": "Most relevant to your recent work"
-  },
-  {
-    "id": "2604.01001v1",
-    "title": "EgoSim: Egocentric World Simulator for Embodied Interaction Generation",
-    "summary": "We introduce EgoSim, a closed-loop egocentric world simulator that generates spatially consistent interaction videos and persistently updates the underlying 3D scene state for continuous simulation. Existing egocentric simulators either lack explicit 3D grounding, causing structural drift under viewpoint changes, or treat the scene as static, failing to update world states across multi-stage interactions. EgoSim addresses both limitations by modeling 3D scenes as updatable world states. We generate embodiment interactions via a Geometry-action-aware Observation Simulation model, with spatial consistency from an Interaction-aware State Updating module. To overcome the critical data bottleneck posed by the difficulty in acquiring densely aligned scene-interaction training pairs, we design a scalable pipeline that extracts static point clouds, camera trajectories, and embodiment actions from in-the-wild large-scale monocular egocentric videos. We further introduce EgoCap, a capture system that enables low-cost real-world data collection with uncalibrated smartphones. Extensive experiments demonstrate that EgoSim significantly outperforms existing methods in terms of visual quality, spatial consistency, and generalization to complex scenes and in-the-wild dexterous interactions, while supporting cross-embodiment transfer to robotic manipulation. Codes and datasets will be open soon. The project page is at egosimulator.github.io.",
-    "authors": [
-      "Jinkun Hao",
-      "Mingda Jia",
-      "Ruiyan Wang",
-      "Xihui Liu",
-      "Ran Yi",
-      "Lizhuang Ma",
-      "Jiangmiao Pang",
-      "Xudong Xu"
-    ],
-    "published": "2026-04-01T15:00:46Z",
-    "updated": "2026-04-01T15:00:46Z",
-    "url": "https://arxiv.org/abs/2604.01001v1",
-    "pdf_url": "https://arxiv.org/pdf/2604.01001v1",
+    "published": "2026-04-02T04:55:34Z",
+    "updated": "2026-04-02T04:55:34Z",
+    "url": "https://arxiv.org/abs/2604.01618v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.01618v1",
     "tags": [
       "cs.CV",
       "cs.AI"
     ],
     "source": "arxiv",
+    "bucket": "Most relevant to your recent work"
+  },
+  {
+    "id": "2604.01966v1",
+    "title": "Ego-Grounding for Personalized Question-Answering in Egocentric Videos",
+    "summary": "We present the first systematic analysis of multimodal large language models (MLLMs) in personalized question-answering requiring ego-grounding - the ability to understand the camera-wearer in egocentric videos. To this end, we introduce MyEgo, the first egocentric VideoQA dataset designed to evaluate MLLMs' ability to understand, remember, and reason about the camera wearer. MyEgo comprises 541 long videos and 5K personalized questions asking about \"my things\", \"my activities\", and \"my past\". Benchmarking reveals that competitive MLLMs across variants, including open-source vs. proprietary, thinking vs. non-thinking, small vs. large scales all struggle on MyEgo. Top closed- and open-source models (e.g., GPT-5 and Qwen3-VL) achieve only~46% and 36% accuracy, trailing human performance by near 40% and 50% respectively. Surprisingly, neither explicit reasoning nor model scaling yield consistent improvements. Models improve when relevant evidence is explicitly provided, but gains drop over time, indicating limitations in tracking and remembering \"me\" and \"my past\". These findings collectively highlight the crucial role of ego-grounding and long-range memory in enabling personalized QA in egocentric videos. We hope MyEgo and our analyses catalyze further progress in these areas for egocentric personalized assistance. Data and code are available at https://github.com/Ryougetsu3606/MyEgo",
+    "authors": [
+      "Junbin Xiao",
+      "Shenglang Zhang",
+      "Pengxiang Zhu",
+      "Angela Yao"
+    ],
+    "published": "2026-04-02T12:29:23Z",
+    "updated": "2026-04-02T12:29:23Z",
+    "url": "https://arxiv.org/abs/2604.01966v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.01966v1",
+    "tags": [
+      "cs.CV",
+      "cs.AI",
+      "cs.RO"
+    ],
+    "source": "arxiv",
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2603.25725v1",
-    "title": "SoftMimicGen: A Data Generation System for Scalable Robot Learning in Deformable Object Manipulation",
-    "summary": "Large-scale robot datasets have facilitated the learning of a wide range of robot manipulation skills, but these datasets remain difficult to collect and scale further, owing to the intractable amount of human time, effort, and cost required. Simulation and synthetic data generation have proven to be an effective alternative to fuel this need for data, especially with the advent of recent work showing that such synthetic datasets can dramatically reduce real-world data requirements and facilitate generalization to novel scenarios unseen in real-world demonstrations. However, this paradigm has been limited to rigid-body tasks, which are easy to simulate. Deformable object manipulation encompasses a large portion of real-world manipulation and remains a crucial gap to address towards increasing adoption of the synthetic simulation data paradigm. In this paper, we introduce SoftMimicGen, an automated data generation pipeline for deformable object manipulation tasks. We introduce a suite of high-fidelity simulation environments that encompasses a wide range of deformable objects (stuffed animal, rope, tissue, towel) and manipulation behaviors (high-precision threading, dynamic whipping, folding, pick-and-place), across four robot embodiments: a single-arm manipulator, bimanual arms, a humanoid, and a surgical robot. We apply SoftMimicGen to generate datasets across the task suite, train high-performing policies from the data, and systematically analyze the data generation system. Project website: \\href{https://softmimicgen.github.io}{softmimicgen.github.io}.",
+    "id": "2603.15789v3",
+    "title": "Emergent Dexterity via Diverse Resets and Large-Scale Reinforcement Learning",
+    "summary": "Reinforcement learning in massively parallel physics simulations has driven major progress in sim-to-real robot learning. However, current approaches remain brittle and task-specific, relying on extensive per-task engineering to design rewards, curricula, and demonstrations. Even with this engineering, they often fail on long-horizon, contact-rich manipulation tasks and do not meaningfully scale with compute, as performance quickly saturates when training revisits the same narrow regions of state space. We introduce OmniReset, a simple and scalable framework that enables on-policy reinforcement learning to robustly solve a broad class of dexterous manipulation tasks using a single reward function, fixed algorithm hyperparameters, no curricula, and no human demonstrations. Our key insight is that long-horizon exploration can be dramatically simplified by using simulator resets to systematically expose the RL algorithm to the diverse set of robot-object interactions which underlie dexterous manipulation. OmniReset programmatically generates such resets with minimal human input, converting additional compute directly into broader behavioral coverage and continued performance gains. We show that OmniReset gracefully scales to long-horizon dexterous manipulation tasks beyond the capabilities of existing approaches and is able to learn robust policies over significantly wider ranges of initial conditions than baselines. Finally, we distill OmniReset into visuomotor policies which display robust retrying behavior and substantially higher success rates than baselines when transferred to the real world zero-shot. Project webpage: https://weirdlabuw.github.io/omnireset/",
     "authors": [
-      "Masoud Moghani",
-      "Mahdi Azizian",
-      "Animesh Garg",
-      "Yuke Zhu",
-      "Sean Huver",
-      "Ajay Mandlekar"
+      "Patrick Yin",
+      "Tyler Westenbroek",
+      "Zhengyu Zhang",
+      "Joshua Tran",
+      "Ignacio Dagnino",
+      "Eeshani Shilamkar",
+      "Numfor Mbiziwo-Tiapo",
+      "Simran Bagaria",
+      "Xinlei Liu",
+      "Galen Mullins",
+      "Andrey Kolobov",
+      "Abhishek Gupta"
     ],
-    "published": "2026-03-26T17:58:40Z",
-    "updated": "2026-03-26T17:58:40Z",
-    "url": "https://arxiv.org/abs/2603.25725v1",
-    "pdf_url": "https://arxiv.org/pdf/2603.25725v1",
+    "published": "2026-03-16T18:14:36Z",
+    "updated": "2026-04-02T01:57:12Z",
+    "url": "https://arxiv.org/abs/2603.15789v3",
+    "pdf_url": "https://arxiv.org/pdf/2603.15789v3",
     "tags": [
       "cs.RO"
     ],
