@@ -1,66 +1,78 @@
 [
   {
-    "id": "2604.01570v1",
-    "title": "Boosting Vision-Language-Action Finetuning with Feasible Action Neighborhood Prior",
-    "summary": "In real-world robotic manipulation, states typically admit a neighborhood of near-equivalent actions. That is, for each state, there exist a feasible action neighborhood (FAN) rather than a single correct action, within which motions yield indistinguishable progress. However, prevalent VLA training methodologies are directly inherited from linguistic settings and do not exploit the FAN property, thus leading to poor generalization and low sample efficiency. To address this limitation, we introduce a FAN-guided regularizer that shapes the model's output distribution to align with the geometry of FAN. Concretely, we introduce a Gaussian prior that promotes locally smooth and unimodal predictions around the preferred direction and magnitude. In extensive experiments across both reinforced finetuning (RFT) and supervised finetuning (SFT), our method achieves significant improvement in sample efficiency, and success rate in both in-distribution and out-of-distribution (OOD) scenarios. By aligning with the intrinsic action tolerance of physical manipulation, FAN-guided regularization provides a principled and practical method for sample-efficient, and generalizable VLA adaptation.",
+    "id": "2603.28545v1",
+    "title": "ManipArena: Comprehensive Real-world Evaluation of Reasoning-Oriented Generalist Robot Manipulation",
+    "summary": "Vision-Language-Action (VLA) models and world models have recently emerged as promising paradigms for general-purpose robotic intelligence, yet their progress is hindered by the lack of reliable evaluation protocols that reflect real-world deployment. Existing benchmarks are largely simulator-centric, which provide controllability but fail to capture the reality gap caused by perception noise, complex contact dynamics, hardware constraints, and system latency. Moreover, fragmented real-world evaluations across different robot platforms prevent fair and reproducible comparison. To address these challenges, we introduce ManipArena, a standardized evaluation framework designed to bridge simulation and real-world execution. ManipArena comprises 20 diverse tasks across 10,812 expert trajectories emphasizing reasoning-oriented manipulation tasks requiring semantic and spatial reasoning, supports multi-level generalization through controlled out-of-distribution settings, and incorporates long-horizon mobile manipulation beyond tabletop scenarios. The framework further provides rich sensory diagnostics, including low-level motor signals, and synchronized real-to-sim environments constructed via high-quality 3D scanning. Together, these features enable fair, realistic, and reproducible evaluation for both VLA and world model approaches, providing a scalable foundation for diagnosing and advancing embodied intelligence systems.",
     "authors": [
-      "Haochen Niu",
-      "Kanyu Zhang",
-      "Shuyu Yin",
-      "Qinghai Guo",
-      "Peilin Liu",
-      "Fei Wen"
+      "Yu Sun",
+      "Meng Cao",
+      "Ping Yang",
+      "Rongtao Xu",
+      "Yunxiao Yan",
+      "Runze Xu",
+      "Liang Ma",
+      "Roy Gan",
+      "Andy Zhai",
+      "Qingxuan Chen",
+      "Zunnan Xu",
+      "Hao Wang",
+      "Jincheng Yu",
+      "Lucy Liang",
+      "Qian Wang",
+      "Ivan Laptev",
+      "Ian D Reid",
+      "Xiaodan Liang"
     ],
-    "published": "2026-04-02T03:30:43Z",
-    "updated": "2026-04-02T03:30:43Z",
-    "url": "https://arxiv.org/abs/2604.01570v1",
-    "pdf_url": "https://arxiv.org/pdf/2604.01570v1",
+    "published": "2026-03-30T15:06:41Z",
+    "updated": "2026-03-30T15:06:41Z",
+    "url": "https://arxiv.org/abs/2603.28545v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.28545v1",
     "tags": [
-      "cs.RO"
+      "cs.RO",
+      "cs.CV"
     ],
     "source": "arxiv",
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2604.01421v1",
-    "title": "EgoFlow: Gradient-Guided Flow Matching for Egocentric 6DoF Object Motion Generation",
-    "summary": "Understanding and predicting object motion from egocentric video is fundamental to embodied perception and interaction. However, generating physically consistent 6DoF trajectories remains challenging due to occlusions, fast motion, and the lack of explicit physical reasoning in existing generative models. We present EgoFlow, a flow-matching framework that synthesizes realistic and physically plausible trajectories conditioned on multimodal egocentric observations. EgoFlow employs a hybrid Mamba-Transformer-Perceiver architecture to jointly model temporal dynamics, scene geometry, and semantic intent, while a gradient-guided inference process enforces differentiable physical constraints such as collision avoidance and motion smoothness. This combination yields coherent and controllable motion generation without post-hoc filtering or additional supervision. Experiments on real-world datasets HD-EPIC, EgoExo4D, and HOT3D show that EgoFlow outperforms diffusion-based and transformer baselines in accuracy, generalization, and physical realism, reducing collision rates by up to 79%, and strong generalization to unseen scenes. Our results highlight the promise of flow-based generative modeling for scalable and physically grounded egocentric motion understanding.",
+    "id": "2603.27797v1",
+    "title": "Which Reconstruction Model Should a Robot Use? Routing Image-to-3D Models for Cost-Aware Robotic Manipulation",
+    "summary": "Robotic manipulation tasks require 3D mesh reconstructions of varying quality: dexterous manipulation demands fine-grained surface detail, while collision-free planning tolerates coarser representations. Multiple reconstruction methods offer different cost-quality tradeoffs, from Image-to-3D models - whose output quality depends heavily on the input viewpoint - to view-invariant methods such as structured light scanning. Querying all models is computationally prohibitive, motivating per-input model selection. We propose SCOUT, a novel routing framework that decouples reconstruction scores into two components: (1) the relative performance of viewpoint-dependent models, captured by a learned probability distribution, and (2) the overall image difficulty, captured by a scalar partition function estimate. As the learned network operates only over the viewpoint-dependent models, view-invariant pipelines can be added, removed, or reconfigured without retraining. SCOUT also supports arbitrary cost constraints at inference time, accommodating the multi-dimensional cost constraints common in robotics. We evaluate on the Google Scanned Objects, BigBIRD, and YCB datasets under multiple mesh quality metrics, demonstrating consistent improvements over routing baselines adapted from the LLM literature across various cost constraints. We further validate the framework through robotic grasping and dexterous manipulation experiments. We release the code and additional results on our website.",
     "authors": [
-      "Abhishek Saroha",
-      "Huajian Zeng",
-      "Xingxing Zuo",
-      "Daniel Cremers",
-      "Xi Wang"
+      "Akash Anand",
+      "Aditya Agarwal",
+      "Leslie Pack Kaelbling"
     ],
-    "published": "2026-04-01T21:43:57Z",
-    "updated": "2026-04-01T21:43:57Z",
-    "url": "https://arxiv.org/abs/2604.01421v1",
-    "pdf_url": "https://arxiv.org/pdf/2604.01421v1",
+    "published": "2026-03-29T18:23:28Z",
+    "updated": "2026-03-29T18:23:28Z",
+    "url": "https://arxiv.org/abs/2603.27797v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.27797v1",
     "tags": [
-      "cs.CV"
+      "cs.RO"
     ],
     "source": "arxiv",
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2603.24318v1",
-    "title": "Toward Generalist Neural Motion Planners for Robotic Manipulators: Challenges and Opportunities",
-    "summary": "State-of-the-art generalist manipulation policies have enabled the deployment of robotic manipulators in unstructured human environments. However, these frameworks struggle in cluttered environments primarily because they utilize auxiliary modules for low-level motion planning and control. Motion planning remains challenging due to the high dimensionality of the robot's configuration space and the presence of workspace obstacles. Neural motion planners have enhanced motion planning efficiency by offering fast inference and effectively handling the inherent multi-modality of the motion planning problem. Despite such benefits, current neural motion planners often struggle to generalize to unseen, out-of-distribution planning settings. This paper reviews and analyzes the state-of-the-art neural motion planners, highlighting both their benefits and limitations. It also outlines a path toward establishing generalist neural motion planners capable of handling domain-specific challenges. For a list of the reviewed papers, please refer to https://davoodsz.github.io/planning-manip-survey.github.io/.",
+    "id": "2603.14522v1",
+    "title": "One-Policy-Fits-All: Geometry-Aware Action Latents for Cross-Embodiment Manipulation",
+    "summary": "Cross-embodiment manipulation is crucial for enhancing the scalability of robot manipulation and reducing the high cost of data collection. However, the significant differences between embodiments, such as variations in action spaces and structural disparities, pose challenges for joint training across multiple sources of data. To address this, we propose One-Policy-Fits-All (OPFA), a framework that enables learning a single, versatile policy across multiple embodiments. We first learn a Geometry-Aware Latent Representation (GaLR), which leverages 3D convolution networks and transformers to build a shared latent action space across different embodiments. Then we design a unified latent retargeting decoder that extracts embodiment-specific actions from the latent representations, without any embodiment-specific decoder tuning. OPFA enables end-to-end co-training of data from diverse embodiments, including various grippers and dexterous hands with arbitrary degrees of freedom, significantly improving data efficiency and reducing the cost of skill transfer. We conduct extensive experiments across 11 different end-effectors. The results demonstrate that OPFA significantly improves policy performance in diverse settings by leveraging heterogeneous embodiment data. For instance, cross-embodiment co-training can improve success rates by more than 50% compared to single-source training. Moreover, by adding only a few demonstrations from a new embodiment (e.g., eight), OPFA can achieve performance comparable to that of a well-trained model with 72 demonstrations.",
     "authors": [
-      "Davood Soleymanzadeh",
-      "Ivan Lopez-Sanchez",
-      "Hao Su",
-      "Yunzhu Li",
-      "Xiao Liang",
-      "Minghui Zheng"
+      "Juncheng Mu",
+      "Sizhe Yang",
+      "Hojin Bae",
+      "Feiyu Jia",
+      "Qingwei Ben",
+      "Boyi Li",
+      "Huazhe Xu",
+      "Jiangmiao Pang"
     ],
-    "published": "2026-03-25T13:59:42Z",
-    "updated": "2026-03-25T13:59:42Z",
-    "url": "https://arxiv.org/abs/2603.24318v1",
-    "pdf_url": "https://arxiv.org/pdf/2603.24318v1",
+    "published": "2026-03-15T17:59:08Z",
+    "updated": "2026-03-15T17:59:08Z",
+    "url": "https://arxiv.org/abs/2603.14522v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.14522v1",
     "tags": [
-      "cs.RO",
-      "cs.AI"
+      "cs.RO"
     ],
     "source": "arxiv",
     "bucket": "Representative paper from your selected authors in the last three months"
