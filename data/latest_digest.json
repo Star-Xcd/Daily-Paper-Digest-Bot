@@ -1,52 +1,36 @@
 [
   {
-    "id": "2603.28545v1",
-    "title": "ManipArena: Comprehensive Real-world Evaluation of Reasoning-Oriented Generalist Robot Manipulation",
-    "summary": "Vision-Language-Action (VLA) models and world models have recently emerged as promising paradigms for general-purpose robotic intelligence, yet their progress is hindered by the lack of reliable evaluation protocols that reflect real-world deployment. Existing benchmarks are largely simulator-centric, which provide controllability but fail to capture the reality gap caused by perception noise, complex contact dynamics, hardware constraints, and system latency. Moreover, fragmented real-world evaluations across different robot platforms prevent fair and reproducible comparison. To address these challenges, we introduce ManipArena, a standardized evaluation framework designed to bridge simulation and real-world execution. ManipArena comprises 20 diverse tasks across 10,812 expert trajectories emphasizing reasoning-oriented manipulation tasks requiring semantic and spatial reasoning, supports multi-level generalization through controlled out-of-distribution settings, and incorporates long-horizon mobile manipulation beyond tabletop scenarios. The framework further provides rich sensory diagnostics, including low-level motor signals, and synchronized real-to-sim environments constructed via high-quality 3D scanning. Together, these features enable fair, realistic, and reproducible evaluation for both VLA and world model approaches, providing a scalable foundation for diagnosing and advancing embodied intelligence systems.",
+    "id": "2604.03191v1",
+    "title": "The Compression Gap: Why Discrete Tokenization Limits Vision-Language-Action Model Scaling",
+    "summary": "Scaling Vision-Language-Action (VLA) models by upgrading the vision encoder is expected to improve downstream manipulation performance--as it does in vision-language modeling. We show that this expectation fails when actions are represented as discrete tokens, and explain why through an information-theoretic principle we call the Compression Gap: in any visuomotor pipeline, scaling behavior is governed by the location of the tightest information bottleneck. When actions are continuous (e.g., Diffusion Policy), the vision encoder is the binding constraint, and upgrading it directly improves performance. When actions are discretized through a fixed-capacity codebook (e.g., OAT), the codebook becomes the binding constraint, and encoder improvements cannot propagate past it--regardless of how rich the upstream representation is. We validate this principle on the LIBERO benchmark with three lines of evidence: a factorial experiment showing that encoder upgrades improve Diffusion Policy by over 21 percentage points while OAT gains are substantially attenuated across model scales; an encoder quality gradient across four encoders confirming that Diffusion Policy tracks encoder quality monotonically while OAT remains flat; and a codebook size experiment demonstrating that relaxing codebook capacity partially recovers encoder sensitivity, providing causal evidence for the bottleneck hypothesis. Our findings reveal that scaling in Physical AI requires identifying where information bottlenecks lie in the pipeline, rather than uniformly increasing model or data size.",
     "authors": [
-      "Yu Sun",
-      "Meng Cao",
-      "Ping Yang",
-      "Rongtao Xu",
-      "Yunxiao Yan",
-      "Runze Xu",
-      "Liang Ma",
-      "Roy Gan",
-      "Andy Zhai",
-      "Qingxuan Chen",
-      "Zunnan Xu",
-      "Hao Wang",
-      "Jincheng Yu",
-      "Lucy Liang",
-      "Qian Wang",
-      "Ivan Laptev",
-      "Ian D Reid",
-      "Xiaodan Liang"
+      "Takuya Shiba"
     ],
-    "published": "2026-03-30T15:06:41Z",
-    "updated": "2026-03-30T15:06:41Z",
-    "url": "https://arxiv.org/abs/2603.28545v1",
-    "pdf_url": "https://arxiv.org/pdf/2603.28545v1",
+    "published": "2026-04-03T17:06:31Z",
+    "updated": "2026-04-03T17:06:31Z",
+    "url": "https://arxiv.org/abs/2604.03191v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.03191v1",
     "tags": [
       "cs.RO",
-      "cs.CV"
+      "cs.CV",
+      "cs.LG"
     ],
     "source": "arxiv",
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2603.27797v1",
-    "title": "Which Reconstruction Model Should a Robot Use? Routing Image-to-3D Models for Cost-Aware Robotic Manipulation",
-    "summary": "Robotic manipulation tasks require 3D mesh reconstructions of varying quality: dexterous manipulation demands fine-grained surface detail, while collision-free planning tolerates coarser representations. Multiple reconstruction methods offer different cost-quality tradeoffs, from Image-to-3D models - whose output quality depends heavily on the input viewpoint - to view-invariant methods such as structured light scanning. Querying all models is computationally prohibitive, motivating per-input model selection. We propose SCOUT, a novel routing framework that decouples reconstruction scores into two components: (1) the relative performance of viewpoint-dependent models, captured by a learned probability distribution, and (2) the overall image difficulty, captured by a scalar partition function estimate. As the learned network operates only over the viewpoint-dependent models, view-invariant pipelines can be added, removed, or reconfigured without retraining. SCOUT also supports arbitrary cost constraints at inference time, accommodating the multi-dimensional cost constraints common in robotics. We evaluate on the Google Scanned Objects, BigBIRD, and YCB datasets under multiple mesh quality metrics, demonstrating consistent improvements over routing baselines adapted from the LLM literature across various cost constraints. We further validate the framework through robotic grasping and dexterous manipulation experiments. We release the code and additional results on our website.",
+    "id": "2603.27452v1",
+    "title": "Robotic Dexterous Manipulation via Anisotropic Friction Modulation using Passive Rollers",
+    "summary": "Controlling friction at the fingertip is fundamental to dexterous manipulation, yet remains difficult to realize in robotic hands. We present the design and analysis of a robotic fingertip equipped with passive rollers that can be selectively braked or pivoted to modulate contact friction and constraint directions. When unbraked, the rollers permit unconstrained sliding of the contact point along the rolling direction; when braked, they resist motion like a conventional fingertip. The rollers are mounted on a pivoting mechanism, allowing reorientation of the constraint frame to accommodate different manipulation tasks. We develop a constraint-based model of the fingertip integrated into a parallel-jaw gripper and analyze its ability to support diverse manipulation strategies. Experiments show that the proposed design enables a wide range of dexterous actions that are conventionally challenging for robotic grippers, including sliding and pivoting within the grasp, robust adaptation to uncertain contacts, multi-object or multi-part manipulation, and interactions requiring asymmetric friction across fingers. These results demonstrate the versatility of passive roller fingertips as a low-complexity, mechanically efficient approach to friction modulation, advancing the development of more adaptable and robust robotic manipulation.",
     "authors": [
-      "Akash Anand",
-      "Aditya Agarwal",
-      "Leslie Pack Kaelbling"
+      "Ethan Fisk",
+      "Taeyoon Lee",
+      "Shenli Yuan"
     ],
-    "published": "2026-03-29T18:23:28Z",
-    "updated": "2026-03-29T18:23:28Z",
-    "url": "https://arxiv.org/abs/2603.27797v1",
-    "pdf_url": "https://arxiv.org/pdf/2603.27797v1",
+    "published": "2026-03-29T00:05:53Z",
+    "updated": "2026-03-29T00:05:53Z",
+    "url": "https://arxiv.org/abs/2603.27452v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.27452v1",
     "tags": [
       "cs.RO"
     ],
@@ -54,23 +38,18 @@
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2603.14522v1",
-    "title": "One-Policy-Fits-All: Geometry-Aware Action Latents for Cross-Embodiment Manipulation",
-    "summary": "Cross-embodiment manipulation is crucial for enhancing the scalability of robot manipulation and reducing the high cost of data collection. However, the significant differences between embodiments, such as variations in action spaces and structural disparities, pose challenges for joint training across multiple sources of data. To address this, we propose One-Policy-Fits-All (OPFA), a framework that enables learning a single, versatile policy across multiple embodiments. We first learn a Geometry-Aware Latent Representation (GaLR), which leverages 3D convolution networks and transformers to build a shared latent action space across different embodiments. Then we design a unified latent retargeting decoder that extracts embodiment-specific actions from the latent representations, without any embodiment-specific decoder tuning. OPFA enables end-to-end co-training of data from diverse embodiments, including various grippers and dexterous hands with arbitrary degrees of freedom, significantly improving data efficiency and reducing the cost of skill transfer. We conduct extensive experiments across 11 different end-effectors. The results demonstrate that OPFA significantly improves policy performance in diverse settings by leveraging heterogeneous embodiment data. For instance, cross-embodiment co-training can improve success rates by more than 50% compared to single-source training. Moreover, by adding only a few demonstrations from a new embodiment (e.g., eight), OPFA can achieve performance comparable to that of a well-trained model with 72 demonstrations.",
+    "id": "2604.02523v1",
+    "title": "Tune to Learn: How Controller Gains Shape Robot Policy Learning",
+    "summary": "Position controllers have become the dominant interface for executing learned manipulation policies. Yet a critical design decision remains understudied: how should we choose controller gains for policy learning? The conventional wisdom is to select gains based on desired task compliance or stiffness. However, this logic breaks down when controllers are paired with state-conditioned policies: effective stiffness emerges from the interplay between learned reactions and control dynamics, not from gains alone. We argue that gain selection should instead be guided by learnability: how amenable different gain settings are to the learning algorithm in use. In this work, we systematically investigate how position controller gains affect three core components of modern robot learning pipelines: behavior cloning, reinforcement learning from scratch, and sim-to-real transfer. Through extensive experiments across multiple tasks and robot embodiments, we find that: (1) behavior cloning benefits from compliant and overdamped gain regimes, (2) reinforcement learning can succeed across all gain regimes given compatible hyperparameter tuning, and (3) sim-to-real transfer is harmed by stiff and overdamped gain regimes. These findings reveal that optimal gain selection depends not on the desired task behavior, but on the learning paradigm employed. Project website: https://younghyopark.me/tune-to-learn",
     "authors": [
-      "Juncheng Mu",
-      "Sizhe Yang",
-      "Hojin Bae",
-      "Feiyu Jia",
-      "Qingwei Ben",
-      "Boyi Li",
-      "Huazhe Xu",
-      "Jiangmiao Pang"
+      "Antonia Bronars",
+      "Younghyo Park",
+      "Pulkit Agrawal"
     ],
-    "published": "2026-03-15T17:59:08Z",
-    "updated": "2026-03-15T17:59:08Z",
-    "url": "https://arxiv.org/abs/2603.14522v1",
-    "pdf_url": "https://arxiv.org/pdf/2603.14522v1",
+    "published": "2026-04-02T21:23:08Z",
+    "updated": "2026-04-02T21:23:08Z",
+    "url": "https://arxiv.org/abs/2604.02523v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.02523v1",
     "tags": [
       "cs.RO"
     ],
