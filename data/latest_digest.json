@@ -1,17 +1,20 @@
 [
   {
-    "id": "2604.09036v1",
-    "title": "V-CAGE: Vision-Closed-Loop Agentic Generation Engine for Robotic Manipulation",
-    "summary": "Scaling Vision-Language-Action (VLA) models requires massive datasets that are both semantically coherent and physically feasible. However, existing scene generation methods often lack context-awareness, making it difficult to synthesize high-fidelity environments embedded with rich semantic information, frequently resulting in unreachable target positions that cause tasks to fail prematurely. We present V-CAGE (Vision-Closed-loop Agentic Generation Engine), an agentic framework for autonomous robotic data synthesis. Unlike traditional scripted pipelines, V-CAGE operates as an embodied agentic system, leveraging foundation models to bridge high-level semantic reasoning with low-level physical interaction. Specifically, we introduce Inpainting-Guided Scene Construction to systematically arrange context-aware layouts, ensuring that the generated scenes are both semantically structured and kinematically reachable. To ensure trajectory correctness, we integrate functional metadata with a Vision-Language Model based closed-loop verification mechanism, acting as a visual critic to rigorously filter out silent failures and sever the error propagation chain. Finally, to overcome the storage bottleneck of massive video datasets, we implement a perceptually-driven compression algorithm that achieves over 90\\% filesize reduction without compromising downstream VLA training efficacy. By centralizing semantic layout planning and visual self-verification, V-CAGE automates the end-to-end pipeline, enabling the highly scalable synthesis of diverse, high-quality robotic manipulation datasets.",
+    "id": "2604.10432v1",
+    "title": "AnySlot: Goal-Conditioned Vision-Language-Action Policies for Zero-Shot Slot-Level Placement",
+    "summary": "Vision-Language-Action (VLA) policies have emerged as a versatile paradigm for generalist robotic manipulation. However, precise object placement under compositional language instructions remains a major challenge for modern monolithic VLA policies. Slot-level tasks require both reliable slot grounding and sub-centimeter execution accuracy. To this end, we propose AnySlot, a framework that reduces compositional complexity by introducing an explicit spatial visual goal as an intermediate representation between language grounding and control. AnySlot turns language into an explicit visual goal by generating a scene marker, then executes this goal with a goal-conditioned VLA policy. This hierarchical design effectively decouples high-level slot selection from low-level execution, ensuring both semantic accuracy and spatial robustness. Furthermore, recognizing the lack of existing benchmarks for such precision-demanding tasks, we introduce SlotBench, a comprehensive simulation benchmark featuring nine task categories tailored to evaluate structured spatial reasoning in slot-level placement. Extensive experiments show that AnySlot significantly outperforms flat VLA baselines and previous modular grounding methods in zero-shot slot-level placement.",
     "authors": [
-      "Yaru Liu",
-      "Ao-bo Wang",
-      "Nanyang Ye"
+      "Zhaofeng Hu",
+      "Sifan Zhou",
+      "Qinbo Zhang",
+      "Rongtao Xu",
+      "Qi Su",
+      "Ci-Jyun Liang"
     ],
-    "published": "2026-04-10T06:56:17Z",
-    "updated": "2026-04-10T06:56:17Z",
-    "url": "https://arxiv.org/abs/2604.09036v1",
-    "pdf_url": "https://arxiv.org/pdf/2604.09036v1",
+    "published": "2026-04-12T03:09:44Z",
+    "updated": "2026-04-12T03:09:44Z",
+    "url": "https://arxiv.org/abs/2604.10432v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.10432v1",
     "tags": [
       "cs.RO"
     ],
@@ -19,48 +22,45 @@
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2604.09294v1",
-    "title": "A Benchmark of Dexterity for Anthropomorphic Robotic Hands",
-    "summary": "Dexterity is a central yet ambiguously defined concept in the design and evaluation of anthropomorphic robotic hands. In practice, the term is often used inconsistently, with different systems evaluated under disparate criteria, making meaningful comparisons across designs difficult. This highlights the need for a unified, performance-based definition of dexterity grounded in measurable outcomes rather than proxy metrics. In this work, we introduce POMDAR, a comprehensive dexterity benchmark that formalizes dexterity as task performance across a structured set of manipulation and grasping motions. The benchmark was systematically derived from established taxonomies in human motor control. It is implemented in both real-world and simulation and includes four manipulation configurations: vertical and horizontal configurations, continuous rotation, and pure grasping. The task designs contain mechanical scaffolding to constrain task motion, suppress compensatory strategies, and enable metrics to be measured unambiguously. We define a quantitative scoring metric combining task correctness and execution speed, effectively measuring dexterity as throughput. This enables objective, reproducible, and interpretable evaluation across different hand designs. POMDAR provides an open-source, standardized, and taxonomy-grounded benchmark for consistent comparison and evaluation of anthropomorphic robot hands to facilitate a systematic advancement of dexterous manipulation platforms. CAD, simulation files, and evaluation videos are publicly available at https://srl-ethz.github.io/POMDAR/.",
+    "id": "2604.11640v1",
+    "title": "Micro-Dexterity in Biological Micromanipulation: Embodiment, Perception, and Control",
+    "summary": "Microscale manipulation has advanced substantially in controlled locomotion and targeted transport, yet many biomedical applications require precise and adaptive interaction with biological micro-objects. At these scales, manipulation is realized through three main classes of platforms: embodied microrobots that physically interact as mobile agents, field-mediated systems that generate contactless trapping or manipulation forces, and externally actuated end-effectors that interact through remotely driven physical tools. Unlike macroscale manipulators, these systems function in fluidic, confined, and surface-dominated environments characterized by negligible inertia, dominant interfacial forces, and soft, heterogeneous, and fragile targets. Consequently, classical assumptions of dexterous manipulation, including rigid-body contact, stable grasping, and rich proprioceptive feedback, become difficult to maintain. This review introduces micro-dexterity as a framework for analyzing biological micromanipulation through the coupled roles of embodiment, perception, and control. We examine how classical manipulation primitives, including pushing, reorientation, grasping, and cooperative manipulation, are reformulated at the microscale; compare the architectures that enable them, from contact-based micromanipulators to contactless field-mediated systems and cooperative multi-agent platforms; and review the perception and control strategies required for task execution. We identify the current dexterity gap between laboratory demonstrations and clinically relevant biological manipulation, and outline key challenges for future translation.",
     "authors": [
-      "Davide Liconti",
-      "Yuning Zhou",
-      "Yasunori Toshimitsu",
-      "Ronan Hinchet",
-      "Robert K. Katzschmann"
+      "Kangyi Lu",
+      "Lan Wei",
+      "Zongcai Tan",
+      "Dandan Zhang"
     ],
-    "published": "2026-04-10T13:04:28Z",
-    "updated": "2026-04-10T13:04:28Z",
-    "url": "https://arxiv.org/abs/2604.09294v1",
-    "pdf_url": "https://arxiv.org/pdf/2604.09294v1",
+    "published": "2026-04-13T15:50:20Z",
+    "updated": "2026-04-13T15:50:20Z",
+    "url": "https://arxiv.org/abs/2604.11640v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.11640v1",
     "tags": [
-      "cs.RO"
+      "cs.RO",
+      "eess.SY"
     ],
     "source": "arxiv",
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2603.10616v1",
-    "title": "AdaClearGrasp: Learning Adaptive Clearing for Zero-Shot Robust Dexterous Grasping in Densely Cluttered Environments",
-    "summary": "In densely cluttered environments, physical interference, visual occlusions, and unstable contacts often cause direct dexterous grasping to fail, while aggressive singulation strategies may compromise safety. Enabling robots to adaptively decide whether to clear surrounding objects or directly grasp the target is therefore crucial for robust manipulation. We propose AdaClearGrasp, a closed-loop decision-execution framework for adaptive clearing and zero-shot dexterous grasping in densely cluttered environments. The framework formulates manipulation as a controllable high-level decision process that determines whether to directly grasp the target or first clear surrounding objects. A pretrained vision-language model (VLM) interprets visual observations and language task descriptions to reason about grasp interference and generate a high-level planning skeleton, which invokes structured atomic skills through a unified action interface. For dexterous grasping, we train a reinforcement learning policy with a relative hand-object distance representation, enabling zero-shot generalization across diverse object geometries and physical properties. During execution, visual feedback monitors outcomes and triggers replanning upon failures, forming a closed-loop correction mechanism. To evaluate language-conditioned dexterous grasping in clutter, we introduce Clutter-Bench, the first simulation benchmark with graded clutter complexity. It includes seven target objects across three clutter levels, yielding 210 task scenarios. We further perform sim-to-real experiments on three objects under three clutter levels (18 scenarios). Results demonstrate that AdaClearGrasp significantly improves grasp success rates in densely cluttered environments. For more videos and code, please visit our project website: https://chenzixuan99.github.io/adaclear-grasp.github.io/.",
+    "id": "2604.10579v1",
+    "title": "AffordGen: Generating Diverse Demonstrations for Generalizable Object Manipulation with Afford Correspondence",
+    "summary": "Despite the recent success of modern imitation learning methods in robot manipulation, their performance is often constrained by geometric variations due to limited data diversity. Leveraging powerful 3D generative models and vision foundation models (VFMs), the proposed AffordGen framework overcomes this limitation by utilizing the semantic correspondence of meaningful keypoints across large-scale 3D meshes to generate new robot manipulation trajectories. This large-scale, affordance-aware dataset is then used to train a robust, closed-loop visuomotor policy, combining the semantic generalizability of affordances with the reactive robustness of end-to-end learning. Experiments in simulation and the real world show that policies trained with AffordGen achieve high success rates and enable zero-shot generalization to truly unseen objects, significantly improving data efficiency in robot learning.",
     "authors": [
-      "Zixuan Chen",
-      "Wenquan Zhang",
-      "Jing Fang",
-      "Ruiming Zeng",
-      "Zhixuan Xu",
-      "Yiwen Hou",
-      "Xinke Wang",
-      "Jieqi Shi",
-      "Jing Huo",
-      "Yang Gao"
+      "Jiawei Zhang",
+      "Kaizhe Hu",
+      "Yingqian Huang",
+      "Yuanchen Ju",
+      "Zhengrong Xue",
+      "Huazhe Xu"
     ],
-    "published": "2026-03-11T10:24:20Z",
-    "updated": "2026-03-11T10:24:20Z",
-    "url": "https://arxiv.org/abs/2603.10616v1",
-    "pdf_url": "https://arxiv.org/pdf/2603.10616v1",
+    "published": "2026-04-12T10:56:31Z",
+    "updated": "2026-04-12T10:56:31Z",
+    "url": "https://arxiv.org/abs/2604.10579v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.10579v1",
     "tags": [
-      "cs.RO"
+      "cs.RO",
+      "cs.AI"
     ],
     "source": "arxiv",
     "bucket": "Representative paper from your selected authors in the last three months"
