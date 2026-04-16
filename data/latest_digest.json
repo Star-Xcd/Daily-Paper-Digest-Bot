@@ -1,67 +1,73 @@
 [
   {
-    "id": "2604.10432v2",
-    "title": "AnySlot: Goal-Conditioned Vision-Language-Action Policies for Zero-Shot Slot-Level Placement",
-    "summary": "Vision-Language-Action (VLA) policies have emerged as a versatile paradigm for generalist robotic manipulation. However, precise object placement under compositional language instructions remains a major challenge for modern monolithic VLA policies. Slot-level tasks require both reliable slot grounding and sub-centimeter execution accuracy. To this end, we propose AnySlot, a framework that reduces compositional complexity by introducing an explicit spatial visual goal as an intermediate representation between language grounding and control. AnySlot turns language into an explicit visual goal by generating a scene marker, then executes this goal with a goal-conditioned VLA policy. This hierarchical design effectively decouples high-level slot selection from low-level execution, ensuring both semantic accuracy and spatial robustness. Furthermore, recognizing the lack of existing benchmarks for such precision-demanding tasks, we introduce SlotBench, a comprehensive simulation benchmark featuring nine task categories tailored to evaluate structured spatial reasoning in slot-level placement. Extensive experiments show that AnySlot significantly outperforms flat VLA baselines and previous modular grounding methods in zero-shot slot-level placement.",
+    "id": "2604.14125v1",
+    "title": "HiVLA: A Visual-Grounded-Centric Hierarchical Embodied Manipulation System",
+    "summary": "While end-to-end Vision-Language-Action (VLA) models offer a promising paradigm for robotic manipulation, fine-tuning them on narrow control data often compromises the profound reasoning capabilities inherited from their base Vision-Language Models (VLMs). To resolve this fundamental trade-off, we propose HiVLA, a visual-grounded-centric hierarchical framework that explicitly decouples high-level semantic planning from low-level motor control. In high-level part, a VLM planner first performs task decomposition and visual grounding to generate structured plans, comprising a subtask instruction and a precise target bounding box. Then, to translate this plan into physical actions, we introduce a flow-matching Diffusion Transformer (DiT) action expert in low-level part equipped with a novel cascaded cross-attention mechanism. This design sequentially fuses global context, high-resolution object-centric crops and skill semantics, enabling the DiT to focus purely on robust execution. Our decoupled architecture preserves the VLM's zero-shot reasoning while allowing independent improvement of both components. Extensive experiments in simulation and the real world demonstrate that HiVLA significantly outperforms state-of-the-art end-to-end baselines, particularly excelling in long-horizon skill composition and the fine-grained manipulation of small objects in cluttered scenes.",
     "authors": [
-      "Zhaofeng Hu",
-      "Sifan Zhou",
-      "Qinbo Zhang",
-      "Rongtao Xu",
-      "Qi Su",
-      "Ci-Jyun Liang"
+      "Tianshuo Yang",
+      "Guanyu Chen",
+      "Yutian Chen",
+      "Zhixuan Liang",
+      "Yitian Liu",
+      "Zanxin Chen",
+      "Chunpu Xu",
+      "Haotian Liang",
+      "Jiangmiao Pang",
+      "Yao Mu",
+      "Ping Luo"
     ],
-    "published": "2026-04-12T03:09:44Z",
-    "updated": "2026-04-14T04:07:15Z",
-    "url": "https://arxiv.org/abs/2604.10432v2",
-    "pdf_url": "https://arxiv.org/pdf/2604.10432v2",
+    "published": "2026-04-15T17:50:07Z",
+    "updated": "2026-04-15T17:50:07Z",
+    "url": "https://arxiv.org/abs/2604.14125v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.14125v1",
     "tags": [
+      "cs.CV",
+      "cs.AI",
       "cs.RO"
     ],
     "source": "arxiv",
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2604.12579v1",
-    "title": "EEG-Based Multimodal Learning via Hyperbolic Mixture-of-Curvature Experts",
-    "summary": "Electroencephalography (EEG)-based multimodal learning integrates brain signals with complementary modalities to improve mental state assessment, providing great clinical potential. The effectiveness of such paradigms largely depends on the representation learning on heterogeneous modalities. For EEG-based paradigms, one promising approach is to leverage their hierarchical structures, as recent studies have shown that both EEG and associated modalities (e.g., facial expressions) exhibit hierarchical structures reflecting complex cognitive processes. However, Euclidean embeddings struggle to represent these hierarchical structures due to their flat geometry, while hyperbolic spaces, with their exponential growth property, are naturally suited for them. In this work, we propose EEG-MoCE, a novel hyperbolic mixture-of-curvature experts framework designed for multimodal neurotechnology. EEG-MoCE assigns each modality to an expert in a learnable-curvature hyperbolic space, enabling adaptive modeling of its intrinsic geometry. A curvature-aware fusion strategy then dynamically weights experts, emphasizing modalities with richer hierarchical information. Extensive experiments on benchmark datasets demonstrate that EEG-MoCE achieves state-of-the-art performance, including emotion recognition, sleep staging, and cognitive assessment.",
+    "id": "2604.13504v1",
+    "title": "Chain of Uncertain Rewards with Large Language Models for Reinforcement Learning",
+    "summary": "Designing effective reward functions is a cornerstone of reinforcement learning (RL), yet it remains a challenging and labor-intensive process due to the inefficiencies and inconsistencies inherent in traditional methods. Existing methods often rely on extensive manual design and evaluation steps, which are prone to redundancy and overlook local uncertainties at intermediate decision points. To address these challenges, we propose the Chain of Uncertain Rewards (CoUR), a novel framework that integrates large language models (LLMs) to streamline reward function design and evaluation in RL environments. Specifically, our CoUR introduces code uncertainty quantification with a similarity selection mechanism that combines textual and semantic analyses to identify and reuse the most relevant reward function components. By reducing redundant evaluations and leveraging Bayesian optimization on decoupled reward terms, CoUR enables a more efficient and robust search for optimal reward feedback. We comprehensively evaluate CoUR across nine original environments from IsaacGym and all 20 tasks from the Bidexterous Manipulation benchmark. The experimental results demonstrate that CoUR not only achieves better performance but also significantly lowers the cost of reward evaluations.",
     "authors": [
-      "Runhe Zhou",
-      "Shanglin Li",
-      "Guanxiang Huang",
-      "Xinliang Zhou",
-      "Qibin Zhao",
-      "Motoaki Kawanabe",
-      "Yi Ding",
-      "Cuntai Guan"
+      "Shentong Mo"
     ],
-    "published": "2026-04-14T11:03:51Z",
-    "updated": "2026-04-14T11:03:51Z",
-    "url": "https://arxiv.org/abs/2604.12579v1",
-    "pdf_url": "https://arxiv.org/pdf/2604.12579v1",
+    "published": "2026-04-15T05:44:14Z",
+    "updated": "2026-04-15T05:44:14Z",
+    "url": "https://arxiv.org/abs/2604.13504v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.13504v1",
     "tags": [
-      "cs.LG"
+      "cs.LG",
+      "cs.AI",
+      "cs.CL",
+      "cs.MA",
+      "cs.RO"
     ],
     "source": "arxiv",
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2604.11793v1",
-    "title": "Disentangled Point Diffusion for Precise Object Placement",
-    "summary": "Recent advances in robotic manipulation have highlighted the effectiveness of learning from demonstration. However, while end-to-end policies excel in expressivity and flexibility, they struggle both in generalizing to novel object geometries and in attaining a high degree of precision. An alternative, object-centric approach frames the task as predicting the placement pose of the target object, providing a modular decomposition of the problem. Building on this goal-prediction paradigm, we propose TAX-DPD, a hierarchical, disentangled point diffusion framework that achieves state-of-the-art performance in placement precision, multi-modal coverage, and generalization to variations in object geometries and scene configurations. We model global scene-level placements through a novel feed-forward Dense Gaussian Mixture Model (GMM) that yields a spatially dense prior over global placements; we then model the local object-level configuration through a novel disentangled point cloud diffusion module that separately diffuses the object geometry and the placement frame, enabling precise local geometric reasoning. Interestingly, we demonstrate that our point cloud diffusion achieves substantially higher accuracy than a prior approach based on SE(3)-diffusion, even in the context of rigid object placement. We validate our approach across a suite of challenging tasks in simulation and in the real-world on high-precision industrial insertion tasks. Furthermore, we present results on a cloth-hanging task in simulation, indicating that our framework can further relax assumptions on object rigidity.",
+    "id": "2604.13645v1",
+    "title": "A Mechanistic Analysis of Sim-and-Real Co-Training in Generative Robot Policies",
+    "summary": "Co-training, which combines limited in-domain real-world data with abundant surrogate data such as simulation or cross-embodiment robot data, is widely used for training generative robot policies. Despite its empirical success, the mechanisms that determine when and why co-training is effective remain poorly understood. We investigate the mechanism of sim-and-real co-training through theoretical analysis and empirical study, and identify two intrinsic effects governing performance. The first, \\textbf{``structured representation alignment\"}, reflects a balance between cross-domain representation alignment and domain discernibility, and plays a primary role in downstream performance. The second, the \\textbf{``importance reweighting effect\"}, arises from domain-dependent modulation of action weighting and operates at a secondary level. We validate these effects with controlled experiments on a toy model and extensive sim-and-sim and sim-and-real robot manipulation experiments. Our analysis offers a unified interpretation of recent co-training techniques and motivates a simple method that consistently improves upon prior approaches. More broadly, our aim is to examine the inner workings of co-training and to facilitate research in this direction.",
     "authors": [
-      "Lyuxing He",
-      "Eric Cai",
-      "Shobhit Aggarwal",
-      "Jianjun Wang",
-      "David Held"
+      "Yu Lei",
+      "Minghuan Liu",
+      "Abhiram Maddukuri",
+      "Zhenyu Jiang",
+      "Yuke Zhu"
     ],
-    "published": "2026-04-13T17:55:47Z",
-    "updated": "2026-04-13T17:55:47Z",
-    "url": "https://arxiv.org/abs/2604.11793v1",
-    "pdf_url": "https://arxiv.org/pdf/2604.11793v1",
+    "published": "2026-04-15T09:14:43Z",
+    "updated": "2026-04-15T09:14:43Z",
+    "url": "https://arxiv.org/abs/2604.13645v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.13645v1",
     "tags": [
-      "cs.RO"
+      "cs.RO",
+      "cs.AI",
+      "cs.LG"
     ],
     "source": "arxiv",
     "bucket": "Representative paper from your selected authors in the last three months"
