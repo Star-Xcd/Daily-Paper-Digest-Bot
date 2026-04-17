@@ -1,73 +1,75 @@
 [
   {
-    "id": "2604.14125v1",
-    "title": "HiVLA: A Visual-Grounded-Centric Hierarchical Embodied Manipulation System",
-    "summary": "While end-to-end Vision-Language-Action (VLA) models offer a promising paradigm for robotic manipulation, fine-tuning them on narrow control data often compromises the profound reasoning capabilities inherited from their base Vision-Language Models (VLMs). To resolve this fundamental trade-off, we propose HiVLA, a visual-grounded-centric hierarchical framework that explicitly decouples high-level semantic planning from low-level motor control. In high-level part, a VLM planner first performs task decomposition and visual grounding to generate structured plans, comprising a subtask instruction and a precise target bounding box. Then, to translate this plan into physical actions, we introduce a flow-matching Diffusion Transformer (DiT) action expert in low-level part equipped with a novel cascaded cross-attention mechanism. This design sequentially fuses global context, high-resolution object-centric crops and skill semantics, enabling the DiT to focus purely on robust execution. Our decoupled architecture preserves the VLM's zero-shot reasoning while allowing independent improvement of both components. Extensive experiments in simulation and the real world demonstrate that HiVLA significantly outperforms state-of-the-art end-to-end baselines, particularly excelling in long-horizon skill composition and the fine-grained manipulation of small objects in cluttered scenes.",
+    "id": "2604.13942v1",
+    "title": "Goal2Skill: Long-Horizon Manipulation with Adaptive Planning and Reflection",
+    "summary": "Recent vision-language-action (VLA) systems have demonstrated strong capabilities in embodied manipulation. However, most existing VLA policies rely on limited observation windows and end-to-end action prediction, which makes them brittle in long-horizon, memory-dependent tasks with partial observability, occlusions, and multi-stage dependencies. Such tasks require not only precise visuomotor control, but also persistent memory, adaptive task decomposition, and explicit recovery from execution failures. To address these limitations, we propose a dual-system framework for long-horizon embodied manipulation. Our framework explicitly separates high-level semantic reasoning from low-level motor execution. A high-level planner, implemented as a VLM-based agentic module, maintains structured task memory and performs goal decomposition, outcome verification, and error-driven correction. A low-level executor, instantiated as a VLA-based visuomotor controller, carries out each sub-task through diffusion-based action generation conditioned on geometry-preserving filtered observations. Together, the two systems form a closed loop between planning and execution, enabling memory-aware reasoning, adaptive replanning, and robust online recovery. Experiments on representative RMBench tasks show that the proposed framework substantially outperforms representative baselines, achieving a 32.4% average success rate compared with 9.8% for the strongest baseline. Ablation studies further confirm the importance of structured memory and closed-loop recovery for long-horizon manipulation.",
     "authors": [
-      "Tianshuo Yang",
-      "Guanyu Chen",
-      "Yutian Chen",
-      "Zhixuan Liang",
-      "Yitian Liu",
-      "Zanxin Chen",
-      "Chunpu Xu",
-      "Haotian Liang",
-      "Jiangmiao Pang",
-      "Yao Mu",
-      "Ping Luo"
+      "Zhen Liu",
+      "Xinyu Ning",
+      "Zhe Hu",
+      "Xinxin Xie",
+      "Weize Li",
+      "Zhipeng Tang",
+      "Chongyu Wang",
+      "Zejun Yang",
+      "Hanlin Wang",
+      "Yitong Liu",
+      "Zhongzhu Pu"
     ],
-    "published": "2026-04-15T17:50:07Z",
-    "updated": "2026-04-15T17:50:07Z",
-    "url": "https://arxiv.org/abs/2604.14125v1",
-    "pdf_url": "https://arxiv.org/pdf/2604.14125v1",
+    "published": "2026-04-15T14:53:09Z",
+    "updated": "2026-04-15T14:53:09Z",
+    "url": "https://arxiv.org/abs/2604.13942v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.13942v1",
     "tags": [
-      "cs.CV",
-      "cs.AI",
       "cs.RO"
     ],
     "source": "arxiv",
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2604.13504v1",
-    "title": "Chain of Uncertain Rewards with Large Language Models for Reinforcement Learning",
-    "summary": "Designing effective reward functions is a cornerstone of reinforcement learning (RL), yet it remains a challenging and labor-intensive process due to the inefficiencies and inconsistencies inherent in traditional methods. Existing methods often rely on extensive manual design and evaluation steps, which are prone to redundancy and overlook local uncertainties at intermediate decision points. To address these challenges, we propose the Chain of Uncertain Rewards (CoUR), a novel framework that integrates large language models (LLMs) to streamline reward function design and evaluation in RL environments. Specifically, our CoUR introduces code uncertainty quantification with a similarity selection mechanism that combines textual and semantic analyses to identify and reuse the most relevant reward function components. By reducing redundant evaluations and leveraging Bayesian optimization on decoupled reward terms, CoUR enables a more efficient and robust search for optimal reward feedback. We comprehensively evaluate CoUR across nine original environments from IsaacGym and all 20 tasks from the Bidexterous Manipulation benchmark. The experimental results demonstrate that CoUR not only achieves better performance but also significantly lowers the cost of reward evaluations.",
+    "id": "2604.14944v1",
+    "title": "HRDexDB: A Large-Scale Dataset of Dexterous Human and Robotic Hand Grasps",
+    "summary": "We present HRDexDB, a large-scale, multi-modal dataset of high-fidelity dexterous grasping sequences featuring both human and diverse robotic hands. Unlike existing datasets, HRDexDB provides a comprehensive collection of grasping trajectories across human hands and multiple robot hand embodiments, spanning 100 diverse objects. Leveraging state-of-the-art vision methods and a new dedicated multi-camera system, our HRDexDB offers high-precision spatiotemporal 3D ground-truth motion for both the agent and the manipulated object. To facilitate the study of physical interaction, HRDexDB includes high-resolution tactile signals, synchronized multi-view video, and egocentric video streams. The dataset comprises 1.4K grasping trials, encompassing both successes and failures, each enriched with visual, kinematic, and tactile modalities. By providing closely aligned captures of human dexterity and robotic execution on the same target objects under comparable grasping motions, HRDexDB serves as a foundational benchmark for multi-modal policy learning and cross-domain dexterous manipulation.",
     "authors": [
-      "Shentong Mo"
+      "Jongbin Lim",
+      "Taeyun Ha",
+      "Mingi Choi",
+      "Jisoo Kim",
+      "Byungjun Kim",
+      "Subin Jeon",
+      "Hanbyul Joo"
     ],
-    "published": "2026-04-15T05:44:14Z",
-    "updated": "2026-04-15T05:44:14Z",
-    "url": "https://arxiv.org/abs/2604.13504v1",
-    "pdf_url": "https://arxiv.org/pdf/2604.13504v1",
+    "published": "2026-04-16T12:38:14Z",
+    "updated": "2026-04-16T12:38:14Z",
+    "url": "https://arxiv.org/abs/2604.14944v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.14944v1",
     "tags": [
-      "cs.LG",
-      "cs.AI",
-      "cs.CL",
-      "cs.MA",
-      "cs.RO"
+      "cs.RO",
+      "cs.CV"
     ],
     "source": "arxiv",
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2604.13645v1",
-    "title": "A Mechanistic Analysis of Sim-and-Real Co-Training in Generative Robot Policies",
-    "summary": "Co-training, which combines limited in-domain real-world data with abundant surrogate data such as simulation or cross-embodiment robot data, is widely used for training generative robot policies. Despite its empirical success, the mechanisms that determine when and why co-training is effective remain poorly understood. We investigate the mechanism of sim-and-real co-training through theoretical analysis and empirical study, and identify two intrinsic effects governing performance. The first, \\textbf{``structured representation alignment\"}, reflects a balance between cross-domain representation alignment and domain discernibility, and plays a primary role in downstream performance. The second, the \\textbf{``importance reweighting effect\"}, arises from domain-dependent modulation of action weighting and operates at a secondary level. We validate these effects with controlled experiments on a toy model and extensive sim-and-sim and sim-and-real robot manipulation experiments. Our analysis offers a unified interpretation of recent co-training techniques and motivates a simple method that consistently improves upon prior approaches. More broadly, our aim is to examine the inner workings of co-training and to facilitate research in this direction.",
+    "id": "2603.18811v1",
+    "title": "V-Dreamer: Automating Robotic Simulation and Trajectory Synthesis via Video Generation Priors",
+    "summary": "Training generalist robots demands large-scale, diverse manipulation data, yet real-world collection is prohibitively expensive, and existing simulators are often constrained by fixed asset libraries and manual heuristics. To bridge this gap, we present V-Dreamer, a fully automated framework that generates open-vocabulary, simulation-ready manipulation environments and executable expert trajectories directly from natural language instructions. V-Dreamer employs a novel generative pipeline that constructs physically grounded 3D scenes using large language models and 3D generative models, validated by geometric constraints to ensure stable, collision-free layouts. Crucially, for behavior synthesis, we leverage video generation models as rich motion priors. These visual predictions are then mapped into executable robot trajectories via a robust Sim-to-Gen visual-kinematic alignment module utilizing CoTracker3 and VGGT. This pipeline supports high visual diversity and physical fidelity without manual intervention. To evaluate the generated data, we train imitation learning policies on synthesized trajectories encompassing diverse object and environment variations. Extensive evaluations on tabletop manipulation tasks using the Piper robotic arm demonstrate that our policies robustly generalize to unseen objects in simulation and achieve effective sim-to-real transfer, successfully manipulating novel real-world objects.",
     "authors": [
-      "Yu Lei",
-      "Minghuan Liu",
-      "Abhiram Maddukuri",
-      "Zhenyu Jiang",
-      "Yuke Zhu"
+      "Songjia He",
+      "Zixuan Chen",
+      "Hongyu Ding",
+      "Dian Shao",
+      "Jieqi Shi",
+      "Chenxu Li",
+      "Jing Huo",
+      "Yang Gao"
     ],
-    "published": "2026-04-15T09:14:43Z",
-    "updated": "2026-04-15T09:14:43Z",
-    "url": "https://arxiv.org/abs/2604.13645v1",
-    "pdf_url": "https://arxiv.org/pdf/2604.13645v1",
+    "published": "2026-03-19T12:00:04Z",
+    "updated": "2026-03-19T12:00:04Z",
+    "url": "https://arxiv.org/abs/2603.18811v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.18811v1",
     "tags": [
-      "cs.RO",
-      "cs.AI",
-      "cs.LG"
+      "cs.RO"
     ],
     "source": "arxiv",
     "bucket": "Representative paper from your selected authors in the last three months"
