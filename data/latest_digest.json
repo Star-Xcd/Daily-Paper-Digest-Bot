@@ -1,73 +1,61 @@
 [
   {
-    "id": "2604.13942v1",
-    "title": "Goal2Skill: Long-Horizon Manipulation with Adaptive Planning and Reflection",
-    "summary": "Recent vision-language-action (VLA) systems have demonstrated strong capabilities in embodied manipulation. However, most existing VLA policies rely on limited observation windows and end-to-end action prediction, which makes them brittle in long-horizon, memory-dependent tasks with partial observability, occlusions, and multi-stage dependencies. Such tasks require not only precise visuomotor control, but also persistent memory, adaptive task decomposition, and explicit recovery from execution failures. To address these limitations, we propose a dual-system framework for long-horizon embodied manipulation. Our framework explicitly separates high-level semantic reasoning from low-level motor execution. A high-level planner, implemented as a VLM-based agentic module, maintains structured task memory and performs goal decomposition, outcome verification, and error-driven correction. A low-level executor, instantiated as a VLA-based visuomotor controller, carries out each sub-task through diffusion-based action generation conditioned on geometry-preserving filtered observations. Together, the two systems form a closed loop between planning and execution, enabling memory-aware reasoning, adaptive replanning, and robust online recovery. Experiments on representative RMBench tasks show that the proposed framework substantially outperforms representative baselines, achieving a 32.4% average success rate compared with 9.8% for the strongest baseline. Ablation studies further confirm the importance of structured memory and closed-loop recovery for long-horizon manipulation.",
+    "id": "2604.13733v1",
+    "title": "Jump-Start Reinforcement Learning with Vision-Language-Action Regularization",
+    "summary": "Reinforcement learning (RL) enables high-frequency, closed-loop control for robotic manipulation, but scaling to long-horizon tasks with sparse or imperfect rewards remains difficult due to inefficient exploration and poor credit assignment. Vision-Language-Action (VLA) models leverage large-scale multimodal pretraining to provide generalist, task-level reasoning, but current limitations hinder their direct use in fast and precise manipulation. In this paper, we propose Vision-Language-Action Jump-Starting (VLAJS), a method that bridges sparse VLA guidance with on-policy RL to improve exploration and learning efficiency. VLAJS treats VLAs as transient sources of high-level action suggestions that bias early exploration and improve credit assignment, while preserving the high-frequency, state-based control of RL. Our approach augments Proximal Policy Optimization (PPO) with a directional action-consistency regularization that softly aligns the RL agent's actions with VLA guidance during early training, without enforcing strict imitation, requiring demonstrations, or relying on continuous teacher queries. VLA guidance is applied sparsely and annealed over time, allowing the agent to adapt online and ultimately surpass the guiding policy. We evaluate VLAJS on six challenging manipulation tasks: lifting, pick-and-place, peg reorientation, peg insertion, poking, and pushing in simulation, and validate a subset on a real Franka Panda robot. VLAJS consistently outperforms PPO and distillation-style baselines in sample efficiency, reducing required environment interactions by over 50% in several tasks. Real-world experiments demonstrate zero-shot sim-to-real transfer and robust execution under clutter, object variation, and external perturbations.",
     "authors": [
-      "Zhen Liu",
-      "Xinyu Ning",
-      "Zhe Hu",
-      "Xinxin Xie",
-      "Weize Li",
-      "Zhipeng Tang",
-      "Chongyu Wang",
-      "Zejun Yang",
-      "Hanlin Wang",
-      "Yitong Liu",
-      "Zhongzhu Pu"
+      "Angelo Moroncelli",
+      "Roberto Zanetti",
+      "Marco Maccarini",
+      "Loris Roveda"
     ],
-    "published": "2026-04-15T14:53:09Z",
-    "updated": "2026-04-15T14:53:09Z",
-    "url": "https://arxiv.org/abs/2604.13942v1",
-    "pdf_url": "https://arxiv.org/pdf/2604.13942v1",
+    "published": "2026-04-15T11:17:54Z",
+    "updated": "2026-04-15T11:17:54Z",
+    "url": "https://arxiv.org/abs/2604.13733v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.13733v1",
     "tags": [
+      "cs.LG",
+      "cs.AI",
       "cs.RO"
     ],
     "source": "arxiv",
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2604.14944v1",
-    "title": "HRDexDB: A Large-Scale Dataset of Dexterous Human and Robotic Hand Grasps",
-    "summary": "We present HRDexDB, a large-scale, multi-modal dataset of high-fidelity dexterous grasping sequences featuring both human and diverse robotic hands. Unlike existing datasets, HRDexDB provides a comprehensive collection of grasping trajectories across human hands and multiple robot hand embodiments, spanning 100 diverse objects. Leveraging state-of-the-art vision methods and a new dedicated multi-camera system, our HRDexDB offers high-precision spatiotemporal 3D ground-truth motion for both the agent and the manipulated object. To facilitate the study of physical interaction, HRDexDB includes high-resolution tactile signals, synchronized multi-view video, and egocentric video streams. The dataset comprises 1.4K grasping trials, encompassing both successes and failures, each enriched with visual, kinematic, and tactile modalities. By providing closely aligned captures of human dexterity and robotic execution on the same target objects under comparable grasping motions, HRDexDB serves as a foundational benchmark for multi-modal policy learning and cross-domain dexterous manipulation.",
+    "id": "2604.15013v1",
+    "title": "DEX-Mouse: A Low-cost Portable and Universal Interface with Force Feedback for Data Collection of Dexterous Robotic Hands",
+    "summary": "Data-driven dexterous hand manipulation requires large-scale, physically consistent demonstration data. Simulation and video-based methods suffer from sim-to-real gaps and retargeting problems, while MoCap glove-based teleoperation systems require per-operator calibration and lack portability, as the robot hand is typically fixed to a stationary arm. Portable alternatives improve mobility but lack cross-platform and cross-operator compatibility. We present DEX-Mouse, a portable, calibration-free hand-held teleoperation interface with integrated kinesthetic force feedback, built from commercial off-the-shelf components under USD 150. The operator-agnostic design requires no calibration or structural modification, enabling immediate deployment across diverse environments and platforms. The interface supports a configuration in which the target robot hand is mounted directly on the forearm of an operator, producing robot-aligned data. In a comparative user study across various dexterous manipulation tasks, operators using the proposed system achieved an 86.67% task completion rate under the attached configuration. Also, we found that the attached configuration reduced the perceived workload of the operators compared to spatially separated teleoperation setups across all compared interfaces. The complete hardware and software stack, including bill of materials, CAD models, and firmware, is open-sourced at https://dex-mouse.github.io/ to facilitate replication and adoption.",
     "authors": [
-      "Jongbin Lim",
-      "Taeyun Ha",
-      "Mingi Choi",
-      "Jisoo Kim",
-      "Byungjun Kim",
-      "Subin Jeon",
-      "Hanbyul Joo"
+      "Joonho Koh",
+      "Haechan Jung",
+      "Nayoung Kim",
+      "Wook Ko",
+      "Changjoo Nam"
     ],
-    "published": "2026-04-16T12:38:14Z",
-    "updated": "2026-04-16T12:38:14Z",
-    "url": "https://arxiv.org/abs/2604.14944v1",
-    "pdf_url": "https://arxiv.org/pdf/2604.14944v1",
+    "published": "2026-04-16T13:41:07Z",
+    "updated": "2026-04-16T13:41:07Z",
+    "url": "https://arxiv.org/abs/2604.15013v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.15013v1",
     "tags": [
-      "cs.RO",
-      "cs.CV"
+      "cs.RO"
     ],
     "source": "arxiv",
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2603.18811v1",
-    "title": "V-Dreamer: Automating Robotic Simulation and Trajectory Synthesis via Video Generation Priors",
-    "summary": "Training generalist robots demands large-scale, diverse manipulation data, yet real-world collection is prohibitively expensive, and existing simulators are often constrained by fixed asset libraries and manual heuristics. To bridge this gap, we present V-Dreamer, a fully automated framework that generates open-vocabulary, simulation-ready manipulation environments and executable expert trajectories directly from natural language instructions. V-Dreamer employs a novel generative pipeline that constructs physically grounded 3D scenes using large language models and 3D generative models, validated by geometric constraints to ensure stable, collision-free layouts. Crucially, for behavior synthesis, we leverage video generation models as rich motion priors. These visual predictions are then mapped into executable robot trajectories via a robust Sim-to-Gen visual-kinematic alignment module utilizing CoTracker3 and VGGT. This pipeline supports high visual diversity and physical fidelity without manual intervention. To evaluate the generated data, we train imitation learning policies on synthesized trajectories encompassing diverse object and environment variations. Extensive evaluations on tabletop manipulation tasks using the Piper robotic arm demonstrate that our policies robustly generalize to unseen objects in simulation and achieve effective sim-to-real transfer, successfully manipulating novel real-world objects.",
+    "id": "2603.13832v1",
+    "title": "GraspADMM: Improving Dexterous Grasp Synthesis via ADMM Optimization",
+    "summary": "Synthesizing high-quality dexterous grasps is a fundamental challenge in robot manipulation, requiring adherence to diversity, kinematic feasibility (valid hand-object contact without penetration), and dynamic stability (secure multi-contact forces). The recent framework Dexonomy successfully ensures broad grasp diversity through dense sampling and improves kinematic feasibility via a simulator-based refinement method that excels at resolving exact collisions. However, its reliance on fixed contact points restricts the hand's reachability and prevents the optimization of grasp metrics for dynamic stability. Conversely, purely gradient-based optimizers can maximize dynamic stability but rely on simplified contact approximations that inevitably cause physical penetrations. To bridge this gap, we propose GraspADMM, a novel grasp synthesis framework that preserves sampling-based diversity while improving kinematic feasibility and dynamic stability. By formulating the refinement stage using the Alternating Direction Method of Multipliers (ADMM), we decouple the target contact points on the object from the actual contact locations on the hand. This decomposition allows the pipeline to alternate between updating the target object points to directly maximize dynamic grasp metrics, and adjusting the hand pose to physically reach these targets while strictly respecting collision boundaries. Extensive experiments demonstrate that GraspADMM significantly outperforms state-of-the-art baselines, achieving a nearly 15\\% absolute improvement in grasp success rate for type-unaware synthesis and roughly a 100\\% relative improvement in type-aware synthesis. Furthermore, our approach maintains robust, physically plausible grasp generation even under extreme low-friction conditions.",
     "authors": [
-      "Songjia He",
-      "Zixuan Chen",
-      "Hongyu Ding",
-      "Dian Shao",
-      "Jieqi Shi",
-      "Chenxu Li",
-      "Jing Huo",
-      "Yang Gao"
+      "Liangwang Ruan",
+      "Jiayi Chen",
+      "He Wang",
+      "Baoquan Chen"
     ],
-    "published": "2026-03-19T12:00:04Z",
-    "updated": "2026-03-19T12:00:04Z",
-    "url": "https://arxiv.org/abs/2603.18811v1",
-    "pdf_url": "https://arxiv.org/pdf/2603.18811v1",
+    "published": "2026-03-14T08:32:13Z",
+    "updated": "2026-03-14T08:32:13Z",
+    "url": "https://arxiv.org/abs/2603.13832v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.13832v1",
     "tags": [
       "cs.RO"
     ],
