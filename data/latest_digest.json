@@ -1,37 +1,47 @@
 [
   {
-    "id": "2604.17896v1",
-    "title": "Can Explicit Physical Feasibility Benefit VLA Learning? An Empirical Study",
-    "summary": "Vision-Language-Action (VLA) models map multimodal inputs directly to robot actions and are typically trained through large-scale imitation learning. While this paradigm has shown strong performance, prevailing VLA training procedures do not explicitly supervise hard physical constraints such as obstacle avoidance or kinematic feasibility. As a result, the geometric structure underlying physically feasible behavior must be inferred only implicitly from demonstrations. In this paper, we study whether introducing explicit feasibility supervision can provide effective structured guidance for VLA policies. We formulate a simple geometry-grounded feasibility objective and integrate it into the training stage of a diffusion-based VLA policy. To evaluate this idea systematically, we use obstacle-aware manipulation as a controlled probe of geometry-dependent physical feasibility. Empirical results show that augmenting VLA training with feasibility supervision improves both physical reliability and overall task performance, while also enhancing learning efficiency in the low-data regime. These findings indicate that explicit feasibility signals can effectively complement imitation-based VLA learning, highlighting their potential for developing more reliable VLA policies.",
+    "id": "2604.19728v1",
+    "title": "VLA Foundry: A Unified Framework for Training Vision-Language-Action Models",
+    "summary": "We present VLA Foundry, an open-source framework that unifies LLM, VLM, and VLA training in a single codebase. Most open-source VLA efforts specialize on the action training stage, often stitching together incompatible pretraining pipelines. VLA Foundry instead provides a shared training stack with end-to-end control, from language pretraining to action-expert fine-tuning. VLA Foundry supports both from-scratch training and pretrained backbones from Hugging Face. To demonstrate the utility of our framework, we train and release two types of models: the first trained fully from scratch through our LLM-->VLM-->VLA pipeline and the second built on the pretrained Qwen3-VL backbone. We evaluate closed-loop policy performance of both models on LBM Eval, an open-data, open-source simulator. We also contribute usability improvements to the simulator and the STEP analysis tools for easier public use. In the nominal evaluation setting, our fully-open from-scratch model is on par with our prior closed-source work and substituting in the Qwen3-VL backbone leads to a strong multi-task table top manipulation policy outperforming our baseline by a wide margin. The VLA Foundry codebase is available at https://github.com/TRI-ML/vla_foundry and all multi-task model weights are released on https://huggingface.co/collections/TRI-ML/vla-foundry. Additional qualitative videos are available on the project website https://tri-ml.github.io/vla_foundry.",
     "authors": [
-      "Yubai Wei",
-      "Chen Wu",
-      "Hashem Haghbayan"
+      "Jean Mercat",
+      "Sedrick Keh",
+      "Kushal Arora",
+      "Isabella Huang",
+      "Paarth Shah",
+      "Haruki Nishimura",
+      "Shun Iwase",
+      "Katherine Liu"
     ],
-    "published": "2026-04-20T07:15:12Z",
-    "updated": "2026-04-20T07:15:12Z",
-    "url": "https://arxiv.org/abs/2604.17896v1",
-    "pdf_url": "https://arxiv.org/pdf/2604.17896v1",
+    "published": "2026-04-21T17:51:51Z",
+    "updated": "2026-04-21T17:51:51Z",
+    "url": "https://arxiv.org/abs/2604.19728v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.19728v1",
     "tags": [
-      "cs.LG",
+      "cs.RO",
       "cs.AI",
-      "cs.RO"
+      "cs.CV",
+      "cs.LG",
+      "cs.SE"
     ],
     "source": "arxiv",
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2604.18236v1",
-    "title": "COFFAIL: A Dataset of Successful and Anomalous Robot Skill Executions in the Context of Coffee Preparation",
-    "summary": "In the context of robot learning for manipulation, curated datasets are an important resource for advancing the state of the art; however, available datasets typically only include successful executions or are focused on one particular type of skill. In this short paper, we briefly describe a dataset of various skills performed in the context of coffee preparation. The dataset, which we call COFFAIL, includes both successful and anomalous skill execution episodes collected with a physical robot in a kitchen environment, a couple of which are performed with bimanual manipulation. In addition to describing the data collection setup and the collected data, the paper illustrates the use of the data in COFFAIL to learn a robot policy using imitation learning.",
+    "id": "2604.17888v1",
+    "title": "SpaceDex: Generalizable Dexterous Grasping in Tiered Workspaces",
+    "summary": "Generalizable grasping with high-degree-of-freedom (DoF) dexterous hands remains challenging in tiered workspaces, where occlusion, narrow clearances, and height-dependent constraints are substantially stronger than in open tabletop scenes. Most existing methods are evaluated in relatively unoccluded settings and typically do not explicitly model the distinct control requirements of arm navigation and hand articulation under spatial constraints. We present SpaceDex, a hierarchical framework for dexterous manipulation in constrained 3D environments. At the high level, a Vision-Language Model (VLM) planner parses user intent, reasons about occlusion and height relations across multiple camera views, and generates target bounding boxes for zero-shot segmentation and mask tracking. This stage provides structured spatial guidance for downstream control instead of relying on single-view target selection. At the low level, we introduce an arm-hand Feature Separation Network that decouples global trajectory control for the arm from geometry-aware grasp mode selection for the hand, reducing feature interference between reaching and grasping objectives. The controller further integrates multi-view perception, fingertip tactile sensing, and a small set of recovery demonstrations to improve robustness to partial observability and off-nominal contacts. In 100 real-world trials involving over 30 unseen objects across four categories, SpaceDex achieves a 63.0\\% success rate, compared with 39.0\\% for a strong tabletop baseline. These results indicate that combining hierarchical spatial planning with arm-hand representation decoupling improves dexterous grasping performance in spatially constrained environments.",
     "authors": [
-      "Alex Mitrevski",
-      "Ayush Salunke"
+      "Wensheng Wang",
+      "Chuanjun Guo",
+      "Wei Wei",
+      "Tong Wu",
+      "Ning Tan"
     ],
-    "published": "2026-04-20T13:21:38Z",
-    "updated": "2026-04-20T13:21:38Z",
-    "url": "https://arxiv.org/abs/2604.18236v1",
-    "pdf_url": "https://arxiv.org/pdf/2604.18236v1",
+    "published": "2026-04-20T07:01:21Z",
+    "updated": "2026-04-20T07:01:21Z",
+    "url": "https://arxiv.org/abs/2604.17888v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.17888v1",
     "tags": [
       "cs.RO"
     ],
@@ -39,24 +49,23 @@
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2603.04531v2",
-    "title": "PTLD: Sim-to-real Privileged Tactile Latent Distillation for Dexterous Manipulation",
-    "summary": "Tactile dexterous manipulation is essential to automating complex household tasks, yet learning effective control policies remains a challenge. While recent work has relied on imitation learning, obtaining high quality demonstrations for multi-fingered hands via robot teleoperation or kinesthetic teaching is prohibitive. Alternatively, with reinforcement we can learn skills in simulation, but fast and realistic simulation of tactile observations is challenging. To bridge this gap, we introduce PTLD: sim-to-real Privileged Tactile Latent Distillation, a novel approach to learning tactile manipulation skills without requiring tactile simulation. Instead of simulating tactile sensors or relying purely on proprioceptive policies to transfer zero-shot sim-to-real, our key idea is to leverage privileged sensors in the real world to collect real-world tactile policy data. This data is then used to distill a robust state estimator that operates on tactile input. We demonstrate from our experiments that PTLD can be used to improve proprioceptive manipulation policies trained in simulation significantly by incorporating tactile sensing. On the benchmark in-hand rotation task, PTLD achieves a 182% improvement over a proprioception only policy. We also show that PTLD enables learning the challenging task of tactile in-hand reorientation where we see a 57% improvement in the number of goals reached over using proprioception alone. Website: https://akashsharma02.github.io/ptld-website/.",
+    "id": "2604.08475v2",
+    "title": "LAMP: Lift Image-Editing as General 3D Priors for Open-world Manipulation",
+    "summary": "Human-like generalization in open-world remains a fundamental challenge for robotic manipulation. Existing learning-based methods, including reinforcement learning, imitation learning, and vision-language-action-models (VLAs), often struggle with novel tasks and unseen environments. Another promising direction is to explore generalizable representations that capture fine-grained spatial and geometric relations for open-world manipulation. While large-language-model (LLMs) and vision-language-model (VLMs) provide strong semantic reasoning based on language or annotated 2D representations, their limited 3D awareness restricts their applicability to fine-grained manipulation. To address this, we propose LAMP, which lifts image-editing as 3D priors to extract inter-object 3D transformations as continuous, geometry-aware representations. Our key insight is that image-editing inherently encodes rich 2D spatial cues, and lifting these implicit cues into 3D transformations provides fine-grained and accurate guidance for open-world manipulation. Extensive experiments demonstrate that \\codename delivers precise 3D transformations and achieves strong zero-shot generalization in open-world manipulation. Project page: https://zju3dv.github.io/LAMP/.",
     "authors": [
-      "Rosy Chen",
-      "Mustafa Mukadam",
-      "Michael Kaess",
-      "Tingfan Wu",
-      "Francois R Hogan",
-      "Jitendra Malik",
-      "Akash Sharma"
+      "Jingjing Wang",
+      "Zhengdong Hong",
+      "Chong Bao",
+      "Yuke Zhu",
+      "Junhan Sun",
+      "Guofeng Zhang"
     ],
-    "published": "2026-03-04T19:17:42Z",
-    "updated": "2026-04-20T01:08:09Z",
-    "url": "https://arxiv.org/abs/2603.04531v2",
-    "pdf_url": "https://arxiv.org/pdf/2603.04531v2",
+    "published": "2026-04-09T17:14:00Z",
+    "updated": "2026-04-21T11:35:00Z",
+    "url": "https://arxiv.org/abs/2604.08475v2",
+    "pdf_url": "https://arxiv.org/pdf/2604.08475v2",
     "tags": [
-      "cs.RO"
+      "cs.CV"
     ],
     "source": "arxiv",
     "bucket": "Representative paper from your selected authors in the last three months"
