@@ -1,47 +1,50 @@
 [
   {
-    "id": "2604.19728v1",
-    "title": "VLA Foundry: A Unified Framework for Training Vision-Language-Action Models",
-    "summary": "We present VLA Foundry, an open-source framework that unifies LLM, VLM, and VLA training in a single codebase. Most open-source VLA efforts specialize on the action training stage, often stitching together incompatible pretraining pipelines. VLA Foundry instead provides a shared training stack with end-to-end control, from language pretraining to action-expert fine-tuning. VLA Foundry supports both from-scratch training and pretrained backbones from Hugging Face. To demonstrate the utility of our framework, we train and release two types of models: the first trained fully from scratch through our LLM-->VLM-->VLA pipeline and the second built on the pretrained Qwen3-VL backbone. We evaluate closed-loop policy performance of both models on LBM Eval, an open-data, open-source simulator. We also contribute usability improvements to the simulator and the STEP analysis tools for easier public use. In the nominal evaluation setting, our fully-open from-scratch model is on par with our prior closed-source work and substituting in the Qwen3-VL backbone leads to a strong multi-task table top manipulation policy outperforming our baseline by a wide margin. The VLA Foundry codebase is available at https://github.com/TRI-ML/vla_foundry and all multi-task model weights are released on https://huggingface.co/collections/TRI-ML/vla-foundry. Additional qualitative videos are available on the project website https://tri-ml.github.io/vla_foundry.",
+    "id": "2604.20834v1",
+    "title": "PokeVLA: Empowering Pocket-Sized Vision-Language-Action Model with Comprehensive World Knowledge Guidance",
+    "summary": "Recent advances in Vision-Language-Action (VLA) models have opened new avenues for robot manipulation, yet existing methods exhibit limited efficiency and a lack of high-level knowledge and spatial awareness. To address these challenges, we propose PokeVLA, a lightweight yet powerful foundation model for embodied manipulation that effectively infuses vision-language understanding into action learning. Our framework introduces a two-stage training paradigm: first, we pre-train a compact vision-language model (PokeVLM) on a curated multimodal dataset of 2.4M samples encompassing spatial grounding, affordance, and embodied reasoning tasks; second, we inject manipulation-relevant representations into the action space through multi-view goal-aware semantics learning, geometry alignment, and a novel action expert. Extensive experiments demonstrate state-of-the-art performance on the LIBERO-Plus benchmark and in real-world deployment, outperforming comparable baselines in success rate and robustness under diverse perturbations. To foster reproducibility and community progress, we will open-source our code, model weights, and the scripts for the curated pre-training dataset. Project page: https://getterupper.github.io/PokeVLA",
     "authors": [
-      "Jean Mercat",
-      "Sedrick Keh",
-      "Kushal Arora",
-      "Isabella Huang",
-      "Paarth Shah",
-      "Haruki Nishimura",
-      "Shun Iwase",
-      "Katherine Liu"
+      "Yupeng Zheng",
+      "Xiang Li",
+      "Songen Gu",
+      "Yuhang Zheng",
+      "Shuai Tian",
+      "Weize Li",
+      "Linbo Wang",
+      "Senyu Fei",
+      "Pengfei Li",
+      "Yinfeng Gao",
+      "Zebin Xing",
+      "Yilun Chen",
+      "Qichao Zhang",
+      "Haoran Li",
+      "Wenchao Ding"
     ],
-    "published": "2026-04-21T17:51:51Z",
-    "updated": "2026-04-21T17:51:51Z",
-    "url": "https://arxiv.org/abs/2604.19728v1",
-    "pdf_url": "https://arxiv.org/pdf/2604.19728v1",
+    "published": "2026-04-22T17:58:19Z",
+    "updated": "2026-04-22T17:58:19Z",
+    "url": "https://arxiv.org/abs/2604.20834v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.20834v1",
     "tags": [
-      "cs.RO",
-      "cs.AI",
-      "cs.CV",
-      "cs.LG",
-      "cs.SE"
+      "cs.RO"
     ],
     "source": "arxiv",
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2604.17888v1",
-    "title": "SpaceDex: Generalizable Dexterous Grasping in Tiered Workspaces",
-    "summary": "Generalizable grasping with high-degree-of-freedom (DoF) dexterous hands remains challenging in tiered workspaces, where occlusion, narrow clearances, and height-dependent constraints are substantially stronger than in open tabletop scenes. Most existing methods are evaluated in relatively unoccluded settings and typically do not explicitly model the distinct control requirements of arm navigation and hand articulation under spatial constraints. We present SpaceDex, a hierarchical framework for dexterous manipulation in constrained 3D environments. At the high level, a Vision-Language Model (VLM) planner parses user intent, reasons about occlusion and height relations across multiple camera views, and generates target bounding boxes for zero-shot segmentation and mask tracking. This stage provides structured spatial guidance for downstream control instead of relying on single-view target selection. At the low level, we introduce an arm-hand Feature Separation Network that decouples global trajectory control for the arm from geometry-aware grasp mode selection for the hand, reducing feature interference between reaching and grasping objectives. The controller further integrates multi-view perception, fingertip tactile sensing, and a small set of recovery demonstrations to improve robustness to partial observability and off-nominal contacts. In 100 real-world trials involving over 30 unseen objects across four categories, SpaceDex achieves a 63.0\\% success rate, compared with 39.0\\% for a strong tabletop baseline. These results indicate that combining hierarchical spatial planning with arm-hand representation decoupling improves dexterous grasping performance in spatially constrained environments.",
+    "id": "2604.20689v1",
+    "title": "FingerEye: Continuous and Unified Vision-Tactile Sensing for Dexterous Manipulation",
+    "summary": "Dexterous robotic manipulation requires comprehensive perception across all phases of interaction: pre-contact, contact initiation, and post-contact. Such continuous feedback allows a robot to adapt its actions throughout interaction. However, many existing tactile sensors, such as GelSight and its variants, only provide feedback after contact is established, limiting a robot's ability to precisely initiate contact. We introduce FingerEye, a compact and cost-effective sensor that provides continuous vision-tactile feedback throughout the interaction process. FingerEye integrates binocular RGB cameras to provide close-range visual perception with implicit stereo depth. Upon contact, external forces and torques deform a compliant ring structure; these deformations are captured via marker-based pose estimation and serve as a proxy for contact wrench sensing. This design enables a perception stream that smoothly transitions from pre-contact visual cues to post-contact tactile feedback. Building on this sensing capability, we develop a vision-tactile imitation learning policy that fuses signals from multiple FingerEye sensors to learn dexterous manipulation behaviors from limited real-world data. We further develop a digital twin of our sensor and robot platform to improve policy generalization. By combining real demonstrations with visually augmented simulated observations for representation learning, the learned policies become more robust to object appearance variations. Together, these design aspects enable dexterous manipulation across diverse object properties and interaction regimes, including coin standing, chip picking, letter retrieving, and syringe manipulation. The hardware design, code, appendix, and videos are available on our project website: https://nus-lins-lab.github.io/FingerEyeWeb/",
     "authors": [
-      "Wensheng Wang",
-      "Chuanjun Guo",
-      "Wei Wei",
-      "Tong Wu",
-      "Ning Tan"
+      "Zhixuan Xu",
+      "Yichen Li",
+      "Xuanye Wu",
+      "Tianyu Qiu",
+      "Lin Shao"
     ],
-    "published": "2026-04-20T07:01:21Z",
-    "updated": "2026-04-20T07:01:21Z",
-    "url": "https://arxiv.org/abs/2604.17888v1",
-    "pdf_url": "https://arxiv.org/pdf/2604.17888v1",
+    "published": "2026-04-22T15:37:34Z",
+    "updated": "2026-04-22T15:37:34Z",
+    "url": "https://arxiv.org/abs/2604.20689v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.20689v1",
     "tags": [
       "cs.RO"
     ],
@@ -49,23 +52,22 @@
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2604.08475v2",
-    "title": "LAMP: Lift Image-Editing as General 3D Priors for Open-world Manipulation",
-    "summary": "Human-like generalization in open-world remains a fundamental challenge for robotic manipulation. Existing learning-based methods, including reinforcement learning, imitation learning, and vision-language-action-models (VLAs), often struggle with novel tasks and unseen environments. Another promising direction is to explore generalizable representations that capture fine-grained spatial and geometric relations for open-world manipulation. While large-language-model (LLMs) and vision-language-model (VLMs) provide strong semantic reasoning based on language or annotated 2D representations, their limited 3D awareness restricts their applicability to fine-grained manipulation. To address this, we propose LAMP, which lifts image-editing as 3D priors to extract inter-object 3D transformations as continuous, geometry-aware representations. Our key insight is that image-editing inherently encodes rich 2D spatial cues, and lifting these implicit cues into 3D transformations provides fine-grained and accurate guidance for open-world manipulation. Extensive experiments demonstrate that \\codename delivers precise 3D transformations and achieves strong zero-shot generalization in open-world manipulation. Project page: https://zju3dv.github.io/LAMP/.",
+    "id": "2604.19730v1",
+    "title": "FASTER: Value-Guided Sampling for Fast RL",
+    "summary": "Some of the most performant reinforcement learning algorithms today can be prohibitively expensive as they use test-time scaling methods such as sampling multiple action candidates and selecting the best one. In this work, we propose FASTER, a method for getting the benefits of sampling-based test-time scaling of diffusion-based policies without the computational cost by tracing the performance gain of action samples back to earlier in the denoising process. Our key insight is that we can model the denoising of multiple action candidates and selecting the best one as a Markov Decision Process (MDP) where the goal is to progressively filter action candidates before denoising is complete. With this MDP, we can learn a policy and value function in the denoising space that predicts the downstream value of action candidates in the denoising process and filters them while maximizing returns. The result is a method that is lightweight and can be plugged into existing generative RL algorithms. Across challenging long-horizon manipulation tasks in online and batch-online RL, FASTER consistently improves the underlying policies and achieves the best overall performance among the compared methods. Applied to a pretrained VLA, FASTER achieves the same performance while substantially reducing training and inference compute requirements. Code is available at https://github.com/alexanderswerdlow/faster .",
     "authors": [
-      "Jingjing Wang",
-      "Zhengdong Hong",
-      "Chong Bao",
-      "Yuke Zhu",
-      "Junhan Sun",
-      "Guofeng Zhang"
+      "Perry Dong",
+      "Alexander Swerdlow",
+      "Dorsa Sadigh",
+      "Chelsea Finn"
     ],
-    "published": "2026-04-09T17:14:00Z",
-    "updated": "2026-04-21T11:35:00Z",
-    "url": "https://arxiv.org/abs/2604.08475v2",
-    "pdf_url": "https://arxiv.org/pdf/2604.08475v2",
+    "published": "2026-04-21T17:52:17Z",
+    "updated": "2026-04-21T17:52:17Z",
+    "url": "https://arxiv.org/abs/2604.19730v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.19730v1",
     "tags": [
-      "cs.CV"
+      "cs.LG",
+      "cs.AI"
     ],
     "source": "arxiv",
     "bucket": "Representative paper from your selected authors in the last three months"
