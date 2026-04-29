@@ -1,49 +1,45 @@
 [
   {
-    "id": "2604.24182v1",
-    "title": "$M^2$-VLA: Boosting Vision-Language Models for Generalizable Manipulation via Layer Mixture and Meta-Skills",
-    "summary": "Current Vision-Language-Action (VLA) models predominantly rely on end-to-end fine-tuning. While effective, this paradigm compromises the inherent generalization capabilities of Vision-Language Models (VLMs) and incurs catastrophic forgetting. To address these limitations, we propose $M^2$-VLA, which demonstrates that a generalized VLM is able to serve as a powerful backbone for robotic manipulation directly. However, it remains a key challenge to bridge the gap between the high-level semantic understanding of VLMs and the precise requirements of robotic control. To overcome this, we introduce the Mixture of Layers (MoL) strategy that selectively extracts task-critical information from dense semantic features. Furthermore, to facilitate efficient trajectory learning under constrained model capacity, we propose a Meta Skill Module (MSM) that integrates strong inductive biases. Extensive experiments in both simulated and real-world environments demonstrate the effectiveness of our approach. Furthermore, generalization and ablation studies validate the architecture's zero-shot capabilities and confirm the contribution of each key component. Our code and pre-trained models will be made publicly available.",
+    "id": "2604.24921v1",
+    "title": "Libra-VLA: Achieving Learning Equilibrium via Asynchronous Coarse-to-Fine Dual-System",
+    "summary": "Vision-Language-Action (VLA) models are a promising paradigm for generalist robotic manipulation by grounding high-level semantic instructions into executable physical actions. However, prevailing approaches typically adopt a monolithic generation paradigm, directly mapping visual-linguistic features to high-frequency motor commands in a flat, non-hierarchical fashion. This strategy overlooks the inherent hierarchy of robotic manipulation, where complex actions can be naturally modeled in a Hybrid Action Space, decomposing into discrete macro-directional reaching and continuous micro-pose alignment, severely widening the semantic-actuation gap and imposing a heavy representational burden on grounding high-level semantics to continuous actions. To address this, we introduce Libra-VLA, a novel Coarse-to-Fine Dual-System VLA architecture. We explicitly decouple the learning complexity into a coarse-to-fine hierarchy to strike a training equilibrium, while simultaneously leveraging this structural modularity to implement an asynchronous execution strategy. The Semantic Planner predicts discrete action tokens capturing macro-directional intent, while the Action Refiner conditions on coarse intent to generate high-frequency continuous actions for precise alignment. Crucially, our empirical analysis reveals that performance follows an inverted-U curve relative to action decomposition granularity, peaking exactly when the learning difficulty is balanced between the two sub-systems. With the asynchronous design, our approach offers a scalable, robust, and responsive solution for open-world manipulation.",
     "authors": [
-      "Siyao Xiao",
-      "Yuhong Zhang",
-      "Zhifang Liu",
-      "Zihan Gao",
-      "Jingye Zhang",
-      "Sinwai Choo",
-      "Dake Zhong",
-      "Mengzhe Wang",
-      "Xiao Lin",
-      "Xianfeng Zhou",
-      "Jia Jia",
-      "Haoqian Wang"
+      "Yifei Wei",
+      "Linqing Zhong",
+      "Yi Liu",
+      "Yuxiang Lu",
+      "Xindong He",
+      "Maoqing Yao",
+      "Guanghui Ren"
     ],
-    "published": "2026-04-27T08:44:12Z",
-    "updated": "2026-04-27T08:44:12Z",
-    "url": "https://arxiv.org/abs/2604.24182v1",
-    "pdf_url": "https://arxiv.org/pdf/2604.24182v1",
+    "published": "2026-04-27T19:02:46Z",
+    "updated": "2026-04-27T19:02:46Z",
+    "url": "https://arxiv.org/abs/2604.24921v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.24921v1",
     "tags": [
-      "cs.RO"
+      "cs.RO",
+      "cs.AI",
+      "cs.CL",
+      "cs.CV"
     ],
     "source": "arxiv",
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2604.23609v1",
-    "title": "Tube Diffusion Policy: Reactive Visual-Tactile Policy Learning for Contact-rich Manipulation",
-    "summary": "Contact-rich manipulation is central to many everyday human activities, requiring continuous adaptation to contact uncertainty and external disturbances through multi-modal perception, particularly vision and tactile feedback. While imitation learning has shown strong potential for learning complex manipulation behaviors, most existing approaches rely on action chunking, which fundamentally limits their ability to react to unforeseen observations during execution. This limitation becomes especially critical in contact-rich scenarios, where physical uncertainty and high-frequency tactile feedback demand rapid, reactive control. To address this challenge, we propose Tube Diffusion Policy (TDP), a novel reactive visual-tactile policy learning framework that bridges diffusion-based imitation learning with tube-based feedback control. By leveraging the expressive power of generative models, TDP learns an observation-conditioned feedback flow around nominal action chunks, forming an action tube that enables fast and adaptive reactions during execution. We evaluate TDP on the widely used Push-T benchmark and three additional challenging visual-tactile dexterous manipulation tasks. Across all benchmarks, TDP consistently outperforms state-of-the-art imitation learning baselines. Two real-world experiments further validate its robust reactivity under contact uncertainty and external disturbances. Moreover, the step-wise correction mechanism enabled by action tube significantly reduces the required denoising steps, making TDP well suited for real-time, high-frequency feedback control in contact-rich manipulation.",
+    "id": "2604.25126v1",
+    "title": "HANDFUL: Sequential Grasp-Conditioned Dexterous Manipulation with Resource Awareness",
+    "summary": "Dexterous robot hands offer rich opportunities for multifunctional manipulation, where a robot must execute multiple skills in sequence while maintaining control over previously grasped objects. Most prior work in dexterous manipulation focuses on single-object, single-skill tasks. In contrast, our insight is that many sequential tasks require resource-aware grasps that conserve fingers for future actions. In this paper, we study sequential grasp-conditioned dexterous manipulation, where a robot first grasps an object and then performs a second, distinct manipulation subtask while preserving the initial grasp. We introduce HANDFUL, a learning framework that models finger usage as a limited resource and encourages exploration of resource-aware grasps through finger-level contact rewards. These grasps are subsequently selected for downstream tasks via curriculum-based policy learning. We further propose HANDFUL-Bench, a simulation benchmark that introduces sequential dexterous manipulation tasks across multiple secondsubtask objectives, including pushing, pulling, and pressing, under a shared grasp-conditioned setup. Extensive simulation results demonstrate that prioritizing resource-aware grasps improves second-subtask success and robustness compared to a baseline that greedily optimizes the initial grasp before attempting the second subtask. We additionally validate our approach on a real dexterous LEAP hand. Together, this work establishes resource-aware grasp planning as a key principle for multifunctional dexterous manipulation. Supplementary material is available on our website: https://handful-dex.github.io.",
     "authors": [
-      "Teng Xue",
-      "Alberto Rigo",
-      "Bingjian Huang",
-      "Jiayi Shen",
-      "Zhengtong Xu",
-      "Nick Colonnese",
-      "Amirhossein H. Memar"
+      "Ethan Foong",
+      "Yunshuang Li",
+      "Hao Jiang",
+      "Gaurav S. Sukhatme",
+      "Daniel Seita"
     ],
-    "published": "2026-04-26T08:48:26Z",
-    "updated": "2026-04-26T08:48:26Z",
-    "url": "https://arxiv.org/abs/2604.23609v1",
-    "pdf_url": "https://arxiv.org/pdf/2604.23609v1",
+    "published": "2026-04-28T02:04:50Z",
+    "updated": "2026-04-28T02:04:50Z",
+    "url": "https://arxiv.org/abs/2604.25126v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.25126v1",
     "tags": [
       "cs.RO"
     ],
@@ -51,25 +47,26 @@
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2604.23073v1",
-    "title": "RL Token: Bootstrapping Online RL with Vision-Language-Action Models",
-    "summary": "Vision-language-action (VLA) models can learn to perform diverse manipulation skills \"out of the box,\" but achieving the precision and speed that real-world tasks demand requires further fine-tuning -- for example, via reinforcement learning (RL). We introduce a lightweight method that enables sample-efficient online RL fine-tuning of pretrained VLAs using just a few hours of real-world practice. We (1) adapt the VLA to expose an \"RL token,\" a compact readout representation that preserves task-relevant pretrained knowledge while serving as an efficient interface for online RL, and (2) train a small actor-critic head on this RL token to refine the actions, while anchoring the learned policy to the VLA. Online RL with the RL token (RLT) makes it possible to fine-tune even large VLAs with RL quickly and efficiently. Across four real-robot tasks (screw installation, zip tie fastening, charger insertion, and Ethernet insertion), RLT improves the speed on the hardest part of the task by up to 3x and raises success rates significantly within minutes to a few hours of practice. It can even surpass the speed of human teleoperation on some of the tasks.",
+    "id": "2604.23121v1",
+    "title": "Breaking Lock-In: Preserving Steerability under Low-Data VLA Post-Training",
+    "summary": "Have you ever post-trained a generalist vision-language-action (VLA) policy on a small demonstration dataset, only to find that it stops responding to new instructions and is limited to behaviors observed during post-training? We identify this phenomenon as lock-in: after low-data, supervised fine-tuning (SFT), the policy becomes overly specialized to the post-training data and fails to generalize to novel instructions, manifesting as concept lock-in (fixation on training objects/attributes) and spatial lock-in (fixation on training spatial targets). Many existing remedies introduce additional supervision signals, such as those derived from foundation models or auxiliary objectives, or rely on augmented datasets to recover generalization. In this paper, we show that the policy's internal pre-trained knowledge is sufficient: DeLock mitigates lock-in by preserving visual grounding during post-training and applying test-time contrastive prompt guidance to steer the policy's denoising dynamics according to novel instructions. Across eight simulation and real-world evaluations, DeLock consistently outperforms strong baselines and matches or exceeds the performance of a state-of-the-art generalist policy post-trained with substantially more curated demonstrations.",
     "authors": [
-      "Charles Xu",
-      "Jost Tobias Springenberg",
-      "Michael Equi",
-      "Ali Amin",
-      "Adnan Esmail",
-      "Sergey Levine",
-      "Liyiming Ke"
+      "Suning Huang",
+      "Jiaqi Shao",
+      "Ke Wang",
+      "Qianzhong Chen",
+      "Jiankai Sun",
+      "Yanjiang Guo",
+      "Mac Schwager",
+      "Jeannette Bohg"
     ],
-    "published": "2026-04-24T23:57:45Z",
-    "updated": "2026-04-24T23:57:45Z",
-    "url": "https://arxiv.org/abs/2604.23073v1",
-    "pdf_url": "https://arxiv.org/pdf/2604.23073v1",
+    "published": "2026-04-25T03:18:07Z",
+    "updated": "2026-04-25T03:18:07Z",
+    "url": "https://arxiv.org/abs/2604.23121v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.23121v1",
     "tags": [
-      "cs.LG",
-      "cs.RO"
+      "cs.RO",
+      "cs.CV"
     ],
     "source": "arxiv",
     "bucket": "Representative paper from your selected authors in the last three months"
