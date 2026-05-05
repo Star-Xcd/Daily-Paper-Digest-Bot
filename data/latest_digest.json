@@ -1,30 +1,29 @@
 [
   {
-    "id": "2605.00416v1",
-    "title": "Learning while Deploying: Fleet-Scale Reinforcement Learning for Generalist Robot Policies",
-    "summary": "Generalist robot policies increasingly benefit from large-scale pretraining, but offline data alone is insufficient for robust real-world deployment. Deployed robots encounter distribution shifts, long-tail failures, task variations, and human correction opportunities that fixed demonstration datasets cannot fully capture. We present Learning While Deploying (LWD), a fleet-scale offline-to-online reinforcement learning framework for continual post-training of generalist Vision-Language-Action (VLA) policies. Starting from a pretrained VLA policy, LWD closes the loop between deployment, shared physical experience, policy improvement, and redeployment by using autonomous rollouts and human interventions collected across a robot fleet. To stabilize learning from heterogeneous, sparse-reward fleet data, LWD combines Distributional Implicit Value Learning (DIVL) for robust value estimation with Q-learning via Adjoint Matching (QAM) for policy extraction in flow-based VLA action generators. We validate LWD on a fleet of 16 dual-arm robots across eight real-world manipulation tasks, including semantic grocery restocking and 3--5 minute long-horizon tasks. A single generalist policy improves as fleet experience accumulates, reaching an average success rate of 95%, with the largest gains on long-horizon tasks.",
+    "id": "2605.02739v1",
+    "title": "Latent Bridge: Feature Delta Prediction for Efficient Dual-System Vision-Language-Action Model Inference",
+    "summary": "Dual-system Vision-Language-Action (VLA) models achieve state-of-the-art robotic manipulation but are bottlenecked by the VLM backbone, which must execute at every control step while producing temporally redundant features. We propose Latent Bridge, a lightweight model that predicts VLM output deltas between timesteps, enabling the action head to operate on predicted outputs while the expensive VLM backbone is called only periodically. We instantiate Latent Bridge on two architecturally distinct VLAs: GR00T-N1.6 (feature-space bridge) and π0.5 (KV-cache bridge), demonstrating that the approach generalizes across VLA designs. Our task-agnostic DAgger training pipeline transfers across benchmarks without modification. Across four LIBERO suites, 24 RoboCasa kitchen tasks, and the ALOHA sim transfer-cube task, Latent Bridge achieves 95-100% performance retention while reducing VLM calls by 50-75%, yielding 1.65-1.73x net per-episode speedup.",
     "authors": [
-      "Yi Wang",
-      "Xinchen Li",
-      "Pengwei Xie",
-      "Pu Yang",
-      "Buqing Nie",
-      "Yunuo Cai",
-      "Qinglin Zhang",
-      "Chendi Qu",
-      "Jeffrey Wu",
-      "Jianheng Song",
-      "Xinlin Ren",
-      "Jingshun Huang",
-      "Mingjie Pan",
-      "Siyuan Feng",
-      "Zhi Chen",
-      "Jianlan Luo"
+      "Yudong Liu",
+      "Yuan Li",
+      "Zijia Tang",
+      "Yuxi Zheng",
+      "Yueqian Lin",
+      "Qinsi Wang",
+      "Yi Li",
+      "Shuangjun Liu",
+      "Shuai Zhang",
+      "Taotao Jing",
+      "Dashan Gao",
+      "Ning Bi",
+      "Jingwei Sun",
+      "Yiran Chen",
+      "Hai Li"
     ],
-    "published": "2026-05-01T05:20:26Z",
-    "updated": "2026-05-01T05:20:26Z",
-    "url": "https://arxiv.org/abs/2605.00416v1",
-    "pdf_url": "https://arxiv.org/pdf/2605.00416v1",
+    "published": "2026-05-04T15:37:55Z",
+    "updated": "2026-05-04T15:37:55Z",
+    "url": "https://arxiv.org/abs/2605.02739v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.02739v1",
     "tags": [
       "cs.RO"
     ],
@@ -32,47 +31,50 @@
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2605.00733v1",
-    "title": "EASE: Federated Multimodal Unlearning via Entanglement-Aware Anchor Closure",
-    "summary": "Federated Multimodal Learning (FML) trains multimodal models across decentralized clients while keeping their image-text pairs private. However, joint embedding training entangles forgotten knowledge across both modalities and client gradient subspaces, hindering federated unlearning. Previous federated unlearning approaches neither sever the cross-modal reconstruction channel mediated by bilinear coupling nor separate forget-exclusive update directions from those shared with retained clients. We identify an Anchor Principle for federated multimodal contrastive unlearning: forgotten alignments persist through three residual anchors arising from bilinear cross-modal coupling, principal-angle subspace entanglement, and continued federated updates. At the modality level, we show that bilateral displacement of both visual and language branches closes the cross-modal reconstruction channel. Correspondingly, our method addresses subspace entanglement through Cosine--Sine decomposition of client-update subspaces, isolating forget-exclusive directions from retain support. Moreover, we propose a direction-selective Forget Lock that bounds residual drift across rounds. Combining these strategies, we present EASE, an Entanglement-Aware Subspace Excision framework that closes all three anchor channels under a unified design. EASE demonstrates consistent superiority across multiple datasets and unlearning scenarios, for instance, matching the retrain reference to within 0.2 and 4.2 R@1 points on the forget and retain sides under client unlearning on Flickr30K with CLIP-B/32.",
+    "id": "2605.01434v1",
+    "title": "High-Speed, Scalable Sensor Readout for Dexterous Robotic Hands via Shift-Register Multiplexing",
+    "summary": "Dexterous robotic hands require high-speed multimodal sensing across many degrees of freedom, yet existing readout architectures often impose trade-offs between sensor count, wiring complexity, and sampling bandwidth. This paper presents a scalable analog sensor readout architecture based on a serial-in parallel-out (SIPO) shift-register principle. The proposed architecture supports versatile integration of heterogeneous analog-output sensors, scalable expansion using only three signal lines between sensor modules, and fast, configurable sampling. We validate the approach on a tendon-driven robotic hand integrating 16 joint sensor modules and one four-channel tactile sensor module, enabling acquisition of 20 sensor channels at a full-scan rate of 1 kHz, with stable operation up to 1.5 kHz. Joint sensor characterization showed a maximum slope absolute percentage error (APE) of 0.446% and sub-degree estimation error, indicating that the proposed readout system does not significantly degrade sensing performance. For tactile sensing, LSTM-based models achieved an RMSE of 0.125 N for force estimation and 93.4% accuracy for five-class contact-location classification, and were deployed for real-time inference at 1 kHz. System-level experiments showed that the joint sensors provide more accurate feedback than motor-based estimation during interaction, while the tactile sensor enables responsive force estimation in contact. The proposed architecture offers a practical path toward fully sensorized robotic hands for dexterous manipulation.",
     "authors": [
-      "Zihao Ding",
-      "Beining Wu",
-      "Jun Huang"
+      "Jaehoon Kim",
+      "Lazaros Christoforidis",
+      "Michalis Papadakis",
+      "Victor Kartsch",
+      "Robert K. Katzschmann"
     ],
-    "published": "2026-05-01T15:33:38Z",
-    "updated": "2026-05-01T15:33:38Z",
-    "url": "https://arxiv.org/abs/2605.00733v1",
-    "pdf_url": "https://arxiv.org/pdf/2605.00733v1",
+    "published": "2026-05-02T13:14:28Z",
+    "updated": "2026-05-02T13:14:28Z",
+    "url": "https://arxiv.org/abs/2605.01434v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.01434v1",
     "tags": [
-      "cs.NI",
-      "cs.AI",
-      "cs.LG",
-      "cs.MM"
+      "cs.RO"
     ],
     "source": "arxiv",
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2604.23073v2",
-    "title": "RL Token: Bootstrapping Online RL with Vision-Language-Action Models",
-    "summary": "Vision-language-action (VLA) models can learn to perform diverse manipulation skills \"out of the box,\" but achieving the precision and speed that real-world tasks demand requires further fine-tuning -- for example, via reinforcement learning (RL). We introduce a lightweight method that enables sample-efficient online RL fine-tuning of pretrained VLAs using just a few hours of real-world practice. We (1) adapt the VLA to expose an \"RL token,\" a compact readout representation that preserves task-relevant pretrained knowledge while serving as an efficient interface for online RL, and (2) train a small actor-critic head on this RL token to refine the actions, while anchoring the learned policy to the VLA. Online RL with the RL token (RLT) makes it possible to fine-tune even large VLAs with RL quickly and efficiently. Across four real-robot tasks (screw installation, zip tie fastening, charger insertion, and Ethernet insertion), RLT improves the speed on the hardest part of the task by up to 3x and raises success rates significantly within minutes to a few hours of practice. It can even surpass the speed of human teleoperation on some of the tasks.",
+    "id": "2605.00244v1",
+    "title": "Lucid-XR: An Extended-Reality Data Engine for Robotic Manipulation",
+    "summary": "We introduce Lucid-XR, a generative data engine for creating diverse and realistic-looking multi-modal data to train real-world robotic systems. At the core of Lucid-XR is vuer, a web-based physics simulation environment that runs directly on the XR headset, enabling internet-scale access to immersive, latency-free virtual interactions without requiring specialized equipment. The complete system integrates on-device physics simulation with human-to-robot pose retargeting. Data collected is further amplified by a physics-guided video generation pipeline steerable via natural language specifications. We demonstrate zero-shot transfer of robot visual policies to unseen, cluttered, and badly lit evaluation environments, after training entirely on Lucid-XR's synthetic data. We include examples across dexterous manipulation tasks that involve soft materials, loosely bound particles, and rigid body contact. Project website: https://lucidxr.github.io",
     "authors": [
-      "Charles Xu",
-      "Jost Tobias Springenberg",
-      "Michael Equi",
-      "Ali Amin",
-      "Adnan Esmail",
-      "Sergey Levine",
-      "Liyiming Ke"
+      "Yajvan Ravan",
+      "Adam Rashid",
+      "Alan Yu",
+      "Kai McClennen",
+      "Gio Huh",
+      "Kevin Yang",
+      "Zhutian Yang",
+      "Qinxi Yu",
+      "Xiaolong Wang",
+      "Phillip Isola",
+      "Ge Yang"
     ],
-    "published": "2026-04-24T23:57:45Z",
-    "updated": "2026-04-30T20:04:38Z",
-    "url": "https://arxiv.org/abs/2604.23073v2",
-    "pdf_url": "https://arxiv.org/pdf/2604.23073v2",
+    "published": "2026-04-30T21:25:20Z",
+    "updated": "2026-04-30T21:25:20Z",
+    "url": "https://arxiv.org/abs/2605.00244v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.00244v1",
     "tags": [
-      "cs.LG",
-      "cs.RO"
+      "cs.RO",
+      "cs.CV"
     ],
     "source": "arxiv",
     "bucket": "Representative paper from your selected authors in the last three months"
