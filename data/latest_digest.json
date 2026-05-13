@@ -1,24 +1,26 @@
 [
   {
-    "id": "2605.06481v1",
-    "title": "OA-WAM: Object-Addressable World Action Model for Robust Robot Manipulation",
-    "summary": "World Action Models (WAMs) enhance Vision-Language-Action policies by jointly predicting scene evolution and robot actions, but existing methods usually represent the predicted world as holistic images, video tokens, or global latents. These representations are difficult for an action decoder to address when an instruction refers to a particular object, especially under scene shifts where object identity is entangled with context. We propose OA-WAM, an Object-Addressable World Action Model for robust robot manipulation. OA-WAM decomposes each frame into N+1 slot states, with one robot slot and N object slots. Each slot contains a persistent address vector and a time-varying content vector, and is fused with text, image, proprioception, and past-action tokens in a block-causal sequence. A world head predicts next-frame slot states, while a flow-matching action head decodes a 16-step continuous action chunk in the same forward pass. Addressability is enforced by routing cross-slot attention through address-only keys and resetting the address slice at every transformer layer, separating which object to act on from what that object currently is without adding extra tokens. OA-WAM matches strong VLA and WAM baselines on LIBERO (97.8%) and SimplerEnv (79.3%), reaches state-of-the-art performance on the most relevant LIBERO-Plus geometric axes, and remains competitive on the seven-axis aggregate. A causal slot-intervention test yields a swap-binding cosine of 0.87, versus at most 0.09 for holistic baselines. These results suggest that addressable object states provide an effective interface for robust world-action modeling under scene perturbations.",
+    "id": "2605.11832v1",
+    "title": "Learning Action Manifold with Multi-view Latent Priors for Robotic Manipulation",
+    "summary": "This paper tackles spatial perception and manipulation challenges in Vision-Language-Action (VLA) models. To address depth ambiguity from monocular input, we leverage a pre-trained multi-view diffusion model to synthesize latent novel views and propose a Geometry-Guided Gated Transformer (G3T) that aligns multi-view features under 3D geometric guidance while adaptively filtering occlusion noise. To improve action learning efficiency, we introduce Action Manifold Learning (AML), which directly predicts actions on the valid action manifold, bypassing inefficient regression of unstructured targets like noise or velocity. Experiments on LIBERO, RoboTwin 2.0, and real-robot tasks show our method achieves superior success rate and robustness over SOTA baselines. Project page: https://junjxiao.github.io/Multi-view-VLA.github.io/.",
     "authors": [
-      "Yushan Liu",
-      "Peibo Sun",
-      "Shoujie Li",
-      "Yifan Xie",
-      "Lingfeng Zhang",
-      "Xintao Chao",
-      "Shiyuan Dong",
-      "Fang Chen",
-      "Xiao-Ping Zhang",
-      "Wenbo Ding"
+      "Junjin Xiao",
+      "Dongyang Li",
+      "Yandan Yang",
+      "Shuang Zeng",
+      "Tong Lin",
+      "Xinyuan Chang",
+      "Feng Xiong",
+      "Mu Xu",
+      "Xing Wei",
+      "Zhiheng Ma",
+      "Qing Zhang",
+      "Wei-Shi Zheng"
     ],
-    "published": "2026-05-07T16:06:08Z",
-    "updated": "2026-05-07T16:06:08Z",
-    "url": "https://arxiv.org/abs/2605.06481v1",
-    "pdf_url": "https://arxiv.org/pdf/2605.06481v1",
+    "published": "2026-05-12T09:21:29Z",
+    "updated": "2026-05-12T09:21:29Z",
+    "url": "https://arxiv.org/abs/2605.11832v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.11832v1",
     "tags": [
       "cs.RO"
     ],
@@ -26,44 +28,55 @@
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2605.05053v1",
-    "title": "Reduced-order Neural Modeling with Differentiable Simulation for High-Detail Tactile Perception",
-    "summary": "Tactile perception is key to dexterous manipulation, yet simulating high-resolution elastomer deformation remains computationally prohibitive. Finite element methods (FEM) deliver high fidelity but demand costly remeshing, while Material Point Methods (MPM) suffer from heavy particle-memory tradeoffs. We propose a {reduced-order neural simulation framework} that couples coarse-grained MPM dynamics with an implicit neural decoder to reconstruct sub-particle tactile details from compact latent states. The framework learns a continuous deformation manifold from paired high- and low-resolution simulations, enabling physically consistent, differentiable inference. Compared to the TacIPC, our method achieves over 65\\% faster simulation and {40\\% lower memory usage}, while maintaining better geometric fidelity. In tactile rendering and 3D surface reconstruction, our methods further improve accuracy by 25\\% and produce realistic depth images and surface mesh within a faster inference speed. These results demonstrate that the proposed reduced-order neural model enables high-detail, physically grounded tactile simulation with substantial efficiency gains for robotic interaction and optimization.",
+    "id": "2605.12090v1",
+    "title": "World Action Models: The Next Frontier in Embodied AI",
+    "summary": "Vision-Language-Action (VLA) models have achieved strong semantic generalization for embodied policy learning, yet they learn reactive observation-to-action mappings without explicitly modeling how the physical world evolves under intervention. A growing body of work addresses this limitation by integrating world models, predictive models of environment dynamics, into the action generation pipeline. We term this emerging paradigm World Action Models (WAMs): embodied foundation models that unify predictive state modeling with action generation, targeting a joint distribution over future states and actions rather than actions alone. However, the literature remains fragmented across architectures, learning objectives, and application scenarios, lacking a unified conceptual framework. We formally define WAMs and disambiguate them from related concepts, and trace the foundations and early integration of VLA and world model research that gave rise to this paradigm. We organize existing methods into a structured taxonomy of Cascaded and Joint WAMs, with further subdivision by generation modality, conditioning mechanism, and action decoding strategy. We systematically analyze the data ecosystem fueling WAMs development, spanning robot teleoperation, portable human demonstrations, simulation, and internet-scale egocentric video, and synthesize emerging evaluation protocols organized around visual fidelity, physical commonsense, and action plausibility. Overall, this survey provides the first systematic account of the WAMs landscape, clarifies key architectural paradigms and their trade-offs, and identifies open challenges and future opportunities for this rapidly evolving field.",
     "authors": [
-      "Yuhu Guo",
-      "Zhikai Shen",
-      "Jiasheng Qu",
-      "Chenghao Qian",
-      "Yuming Huang",
-      "Bin Chen",
-      "Guoxing Fang"
+      "Siyin Wang",
+      "Junhao Shi",
+      "Zhaoyang Fu",
+      "Xinzhe He",
+      "Feihong Liu",
+      "Chenchen Yang",
+      "Yikang Zhou",
+      "Zhaoye Fei",
+      "Jingjing Gong",
+      "Jinlan Fu",
+      "Mike Zheng Shou",
+      "Xuanjing Huang",
+      "Xipeng Qiu",
+      "Yu-Gang Jiang"
     ],
-    "published": "2026-05-06T15:51:06Z",
-    "updated": "2026-05-06T15:51:06Z",
-    "url": "https://arxiv.org/abs/2605.05053v1",
-    "pdf_url": "https://arxiv.org/pdf/2605.05053v1",
+    "published": "2026-05-12T13:10:52Z",
+    "updated": "2026-05-12T13:10:52Z",
+    "url": "https://arxiv.org/abs/2605.12090v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.12090v1",
     "tags": [
       "cs.RO",
+      "cs.CL",
       "cs.CV"
     ],
     "source": "arxiv",
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2603.12243v3",
-    "title": "HandelBot: Real-World Piano Playing via Fast Adaptation of Dexterous Robot Policies",
-    "summary": "Mastering dexterous manipulation with multi-fingered hands has been a grand challenge in robotics for decades. Despite its potential, the difficulty of collecting high-quality data remains a primary bottleneck for high-precision tasks. While reinforcement learning and simulation-to-real-world transfer offer a promising alternative, the transferred policies often fail for tasks demanding millimeter-scale precision, such as bimanual piano playing. In this work, we introduce HandelBot, a framework that combines a simulation policy and rapid adaptation through a two-stage pipeline. Starting from a simulation-trained policy, we first apply a structured refinement stage to correct spatial alignments by adjusting lateral finger joints based on physical rollouts. Next, we use residual reinforcement learning to autonomously learn fine-grained corrective actions. Through extensive hardware experiments across five recognized songs, we demonstrate that HandelBot can successfully perform precise bimanual piano playing. Our system outperforms direct simulation deployment by a factor of 1.8x and requires only 30 minutes of physical interaction data.",
+    "id": "2605.12236v1",
+    "title": "TMRL: Diffusion Timestep-Modulated Pretraining Enables Exploration for Efficient Policy Finetuning",
+    "summary": "Fine-tuning pre-trained robot policies with reinforcement learning (RL) often inherits the bottlenecks introduced by pre-training with behavioral cloning (BC), which produces narrow action distributions that lack the coverage necessary for downstream exploration. We present a unified framework that enables the exploration necessary to enable efficient robot policy finetuning by bridging BC pre-training and RL fine-tuning. Our pre-training method, Context-Smoothed Pre-training (CSP), injects forward-diffusion noise into policy inputs, creating a continuum between precise imitation and broad action coverage. We then fine-tune pre-trained policies via Timestep-Modulated Reinforcement Learning (TMRL), which trains the agent to dynamically adjust this conditioning during fine-tuning by modulating the diffusion timestep, granting explicit control over exploration. Integrating seamlessly with arbitrary policy inputs, e.g., states, 3D point clouds, or image-based VLA policies, we show that TMRL improves RL fine-tuning sample efficiency. Notably, TMRL enables successful real-world fine-tuning on complex manipulation tasks in under one hour. Videos and code available at https://weirdlabuw.github.io/tmrl/.",
     "authors": [
-      "Amber Xie",
-      "Haozhi Qi",
-      "Dorsa Sadigh"
+      "Matthew M. Hong",
+      "Jesse Zhang",
+      "Anusha Nagabandi",
+      "Abhishek Gupta"
     ],
-    "published": "2026-03-12T17:56:29Z",
-    "updated": "2026-05-03T21:33:52Z",
-    "url": "https://arxiv.org/abs/2603.12243v3",
-    "pdf_url": "https://arxiv.org/pdf/2603.12243v3",
+    "published": "2026-05-12T15:07:04Z",
+    "updated": "2026-05-12T15:07:04Z",
+    "url": "https://arxiv.org/abs/2605.12236v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.12236v1",
     "tags": [
-      "cs.RO"
+      "cs.RO",
+      "cs.AI",
+      "cs.LG"
     ],
     "source": "arxiv",
     "bucket": "Representative paper from your selected authors in the last three months"
