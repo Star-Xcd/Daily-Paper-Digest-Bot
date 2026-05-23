@@ -1,75 +1,66 @@
 [
   {
-    "id": "2605.22812v1",
-    "title": "GesVLA: Gesture-Aware Vision-Language-Action Model Embedded Representations",
-    "summary": "Vision-Language-Action (VLA) models have shown strong potential for general-purpose robot manipulation by unifying perception and action. However, existing VLA systems primarily rely on textual instructions and struggle to resolve spatial ambiguity in complex scenes with multiple similar objects. To address this limitation, we introduce gesture as a parallel instruction modality and propose a Gesture-aware Vision-Language-Action model (GesVLA). Our approach encodes gesture features directly into the latent space, enabling them to participate in both high-level reasoning and low-level action generation, and adopts a dual-VLM architecture to achieve tight coupling between gesture representations and action policies. At the data level, we construct a scalable gesture data generation pipeline by rendering hand models onto real-world scene images. This reduces the sim-to-real visual gap while producing rich data with diverse motion patterns and corresponding pointing annotations. In addition, we employ a two-stage training strategy to equip the model with both gesture perception and action prediction capabilities. We evaluate our approach on multiple real-world robotic tasks, including a controlled block manipulation task for validation and more practical scenarios such as product and produce selection. Experimental results show that incorporating gesture consistently improves target grounding accuracy and human-robot interaction efficiency, especially in complex and cluttered environments. Project page: https://gwxuan.github.io/GesVLA/.",
+    "id": "2605.22283v1",
+    "title": "Spatial Memory for Out-of-Vision Manipulation in Vision-Language-Action",
+    "summary": "We introduce SOMA, the Spatial Memory framework for Out-of-Vision Manipulation in Vision-Language-Action (VLA) models. Most existing VLAs implicitly assume that task-relevant objects are always visible, leading to brittle and reactive behaviors when targets fall outside the camera's field of view. SOMA addresses this limitation by equipping VLAs with a persistent spatial memory constructed from multi-view observations acquired via a movable head camera, enabling reasoning beyond the current visual frustum. The framework consists of three components: Spatial Memory Construction, which aggregates angular-wise observations into a unified spatial-semantic representation through scanning; Dynamic Memory Refinement, which maintains global consistency over time; and Contextual Memory Retrieval, which activates instruction-relevant spatial cues during manipulation. We evaluate SOMA on five challenging real-world out-of-vision manipulation tasks, including multi-step and dual-arm scenarios where target objects are initially invisible. Experimental results show that SOMA not only improves task success rates, but also induces qualitatively different manipulation behaviors, with faster target localization, reduced viewpoint search, and near one-shot grasping under partial observability. Additional experiments on RoboCasa GR1 and SimplerEnv further validate the effectiveness of SOMA's memory design under conventional fully observable settings. Code will be released soon.",
     "authors": [
-      "Wenxuan Guo",
-      "Ziyuan Li",
-      "Meng Zhang",
-      "Yichen Liu",
-      "Yimeng Dong",
-      "Chuxi Xu",
-      "Yunfei Wei",
-      "Ze Chen",
-      "Erjin Zhou",
-      "Jianjiang Feng"
+      "Pengteng Li",
+      "Weiyu Guo",
+      "He Zhang",
+      "Tiefu Cai",
+      "Xiao He",
+      "Yandong Guo",
+      "Hui Xiong"
     ],
-    "published": "2026-05-21T17:57:44Z",
-    "updated": "2026-05-21T17:57:44Z",
-    "url": "https://arxiv.org/abs/2605.22812v1",
-    "pdf_url": "https://arxiv.org/pdf/2605.22812v1",
+    "published": "2026-05-21T10:32:53Z",
+    "updated": "2026-05-21T10:32:53Z",
+    "url": "https://arxiv.org/abs/2605.22283v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.22283v1",
     "tags": [
-      "cs.RO",
-      "cs.CV"
+      "cs.RO"
     ],
     "source": "arxiv",
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2605.21811v1",
-    "title": "Safe and Steerable Geometric Motion Policies for Robotic Dexterous Manipulation",
-    "summary": "Robotic dexterous manipulation requires continuously reconciling objectives and constraints defined on heterogeneous geometric spaces: a robot controlled on a $\\mathbb{R}^7$ configuration manifold may need to track end effector poses on $\\mathrm{SE}(3)$ while satisfying obstacle avoidance margins in $\\mathbb{R}$. We present Safe Pullback Bundle Dynamical Systems (SafePBDS), a geometrically consistent framework that computes optimal, certifiably safe configuration manifold accelerations from objectives and safety requirements on arbitrary task manifolds. SafePBDS builds on prior work that combines predefined task manifold dynamical systems to produce autonomous motion. Its first innovation is a pullback control barrier function construction, which converts task manifold safety conditions into linear constraints on configuration manifold accelerations. The second innovation is a task manifold action interface that allows a high-level policy to inject low dimensional residual motions; zero input recovers the autonomous behavior, while safety is preserved under arbitrary inputs. This lets high-level policies efficiently steer exploration while leaving precise motion to the autonomous behavior. We validate SafePBDS in simulation and on a 23-DOF Franka Panda-Allegro Hand platform. On dexterous grasping, SafePBDS achieves a $92.5\\%$ success rate across 20 household objects and 120 trials. Using the action interface, the method can exclude any one of the four fingers during grasping via a one-dimensional action, achieving $94.4\\%$ 3-finger grasp success across 3 objects and 36 trials. The efficient planning and safety guarantee of SafePBDS also enables the first model-based, fully actuated palm-down in-hand reorientation, exceeding $360^\\circ$ of yaw rotation in both directions under varying object weight and wrist motion. Demo video and details: https://tml.stanford.edu/safe-pbds",
+    "id": "2605.20901v1",
+    "title": "VISTA: Technical Report for the Ego4D Short-Term Object Interaction Anticipation at EgoVis 2026",
+    "summary": "We propose VISTA, a V-JEPA Integrated StillFast Temporal Anticipator for the Ego4D Short-Term Object Interaction Anticipation (STA) Challenge at EgoVis 2026. Given an egocentric video timestamp, the task requires anticipating the next human-object interaction, including the future active object's bounding box, noun category, verb category, time-to-contact, and confidence score. VISTA follows a StillFast-style design that combines object-centric spatial detection with short-horizon temporal context. Specifically, a COCO-pretrained Faster R-CNN ResNet-50 FPN detector generates object proposals from the last observed high-resolution frame, while a frozen V-JEPA 2.1 temporal branch extracts clip-level egocentric context from the observed video. The temporal representation is injected into the detection pathway through feature modulation and ROI-level context fusion. The fused proposal features are then passed to multi-head STA predictors for box refinement, noun classification, verb classification, time-to-contact regression, and interaction confidence estimation. For the final submission, we further ensemble complementary predictions to improve robustness. Experimental results on the official challenge server show that VISTA achieves first place in the EgoVis 2026 Ego4D STA Challenge. Our code will be released at https://github.com/CorrineQiu/VISTA.",
     "authors": [
-      "Albert Wu",
-      "Riccardo Bonalli",
-      "Thomas Lew",
-      "C. Karen Liu"
+      "Qiaohui Chu",
+      "Haoyu Zhang",
+      "Yisen Feng",
+      "Meng Liu",
+      "Weili Guan",
+      "Dongmei Jiang",
+      "Liqiang Nie"
     ],
-    "published": "2026-05-20T23:16:01Z",
-    "updated": "2026-05-20T23:16:01Z",
-    "url": "https://arxiv.org/abs/2605.21811v1",
-    "pdf_url": "https://arxiv.org/pdf/2605.21811v1",
+    "published": "2026-05-20T08:42:56Z",
+    "updated": "2026-05-20T08:42:56Z",
+    "url": "https://arxiv.org/abs/2605.20901v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.20901v1",
     "tags": [
-      "cs.RO"
+      "cs.CV",
+      "cs.AI"
     ],
     "source": "arxiv",
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2605.16257v1",
-    "title": "DexJoCo: A Benchmark and Toolkit for Task-Oriented Dexterous Manipulation on MuJoCo",
-    "summary": "Achieving human-level manipulation requires dexterous robotic hands capable of complex object interactions. Advancing such capabilities further demands standardized benchmarks for systematic evaluation. However, existing dexterous benchmarks lack tasks that reflect the unique manipulation capabilities of dexterous hands over parallel grippers, as well as comprehensive evaluation pipelines. In this paper, we present DexJoCo, a benchmark and toolkit for task-oriented dexterous manipulation, comprising 11 functionally grounded tasks that evaluate tool-use, bimanual coordination, long-horizon execution, and reasoning. We develop a low-cost data collection system and collect 1.1K trajectories across these tasks, with support for domain randomization to assess robustness. We benchmark modern models under diverse settings, including visual and dynamics randomization, multi-task training, and action-head adaptation. Through extensive empirical analysis, we identify several important insights and common limitations of current policies in dexterous manipulation, highlighting key challenges for future research in dexterous hand robot learning. Project page available at: https://dexjoco.github.io",
+    "id": "2605.19919v1",
+    "title": "Beyond Action Residuals: Real-World Robot Policy Steering via Bottleneck Latent Reinforcement Learning",
+    "summary": "Pretrained imitation policies have become a strong foundation for robot manipulation, but they often require online improvement to overcome execution errors, limited dataset coverage, and deployment mismatch. A central question is therefore how reinforcement learning (RL) should adapt policies after offline pretraining. Existing lightweight methods commonly apply residual corrections directly in action space, but this often leads to noisy and poorly structured exploration. In this work, we propose Z-Perturbation Reinforcement Learning (ZPRL), an approach that steers pretrained policies through a compact bottleneck latent rather than through policy weights or output actions. During offline training, we augment the policy with a plug-and-play variational information bottleneck (VIB) module to extract a task-relevant latent interface from observation embeddings. During online finetuning, the base policy is frozen and RL learns only a residual perturbation on this latent, whose decoded representation conditions the frozen action generator. We instantiate ZPRL on flow-matching policies and evaluate it on eight simulation tasks and four real-world tasks. Across diverse manipulation settings, ZPRL improves both sample efficiency and final performance over strong post-training baselines. In the real world, ZPRL improves the average success rate on four tasks by 33.7% over imitation base policies while producing smoother exploration behaviors than an action residual counterpart. These results suggest that a compact, task-aligned bottleneck latent provides an effective interface for online RL adaptation. More videos can be found at https://manutdmoon.github.io/ZPRL/.",
     "authors": [
-      "Hanwen Wang",
-      "Weizhi Zhao",
-      "Xiangyu Wang",
-      "Siyuan Huang",
-      "He Lin",
-      "Boyuan Zheng",
-      "Rongtao Xu",
-      "Gang Wang",
-      "Yao Mu",
-      "He Wang",
-      "Lue Fan",
-      "Hongsheng Li",
-      "Zhaoxiang Zhang",
-      "Tieniu Tan"
+      "Dongjie Yu",
+      "Kun Lei",
+      "Zhennan Jiang",
+      "Jia Pan",
+      "Huazhe Xu"
     ],
-    "published": "2026-05-15T17:59:51Z",
-    "updated": "2026-05-15T17:59:51Z",
-    "url": "https://arxiv.org/abs/2605.16257v1",
-    "pdf_url": "https://arxiv.org/pdf/2605.16257v1",
+    "published": "2026-05-19T14:43:26Z",
+    "updated": "2026-05-19T14:43:26Z",
+    "url": "https://arxiv.org/abs/2605.19919v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.19919v1",
     "tags": [
       "cs.RO"
     ],
