@@ -1,66 +1,65 @@
 [
   {
-    "id": "2605.22283v1",
-    "title": "Spatial Memory for Out-of-Vision Manipulation in Vision-Language-Action",
-    "summary": "We introduce SOMA, the Spatial Memory framework for Out-of-Vision Manipulation in Vision-Language-Action (VLA) models. Most existing VLAs implicitly assume that task-relevant objects are always visible, leading to brittle and reactive behaviors when targets fall outside the camera's field of view. SOMA addresses this limitation by equipping VLAs with a persistent spatial memory constructed from multi-view observations acquired via a movable head camera, enabling reasoning beyond the current visual frustum. The framework consists of three components: Spatial Memory Construction, which aggregates angular-wise observations into a unified spatial-semantic representation through scanning; Dynamic Memory Refinement, which maintains global consistency over time; and Contextual Memory Retrieval, which activates instruction-relevant spatial cues during manipulation. We evaluate SOMA on five challenging real-world out-of-vision manipulation tasks, including multi-step and dual-arm scenarios where target objects are initially invisible. Experimental results show that SOMA not only improves task success rates, but also induces qualitatively different manipulation behaviors, with faster target localization, reduced viewpoint search, and near one-shot grasping under partial observability. Additional experiments on RoboCasa GR1 and SimplerEnv further validate the effectiveness of SOMA's memory design under conventional fully observable settings. Code will be released soon.",
+    "id": "2605.22183v1",
+    "title": "Action with Visual Primitives",
+    "summary": "Vision-Language-Action (VLA) models have emerged as a promising paradigm for generalist robotic manipulation. A common design in current architectures maps language instructions and visual observations to actions in a single forward pass. While conceptually simple, this formulation entangles instruction comprehension, spatial scene understanding, and motor control within a single learning objective. As a result, the action expert must implicitly relearn cognitive and perceptual capabilities already present in the pretrained VLM, which can limit both learning efficiency and generalization. We introduce AVP (Action with Visual Primitives), an end-to-end architecture that implements this visual-primitive-centric interface: the VLM infers the next-stage target and emits visual-primitive tokens that condition a flow-matching action expert, with supervision derived from end-effector kinematics. Real-robot experiments on general pick-and-place tasks show that AVP improves the success rate by 27.61% over pi_0.5 and outperforms other recent methods, with consistent gains in data efficiency, spatial-compositional generalization, and object-level transfer.",
     "authors": [
-      "Pengteng Li",
-      "Weiyu Guo",
-      "He Zhang",
-      "Tiefu Cai",
-      "Xiao He",
-      "Yandong Guo",
-      "Hui Xiong"
+      "Weilong Guo",
+      "Yuchen Wang",
+      "Renping Zhou",
+      "Yunfeng Zhang",
+      "Rui Fang",
+      "Yue Meng",
+      "Wenda Xu",
+      "Yuan He",
+      "Gao Huang"
     ],
-    "published": "2026-05-21T10:32:53Z",
-    "updated": "2026-05-21T10:32:53Z",
-    "url": "https://arxiv.org/abs/2605.22283v1",
-    "pdf_url": "https://arxiv.org/pdf/2605.22283v1",
+    "published": "2026-05-21T08:52:47Z",
+    "updated": "2026-05-21T08:52:47Z",
+    "url": "https://arxiv.org/abs/2605.22183v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.22183v1",
     "tags": [
-      "cs.RO"
+      "cs.RO",
+      "cs.AI"
     ],
     "source": "arxiv",
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2605.20901v1",
-    "title": "VISTA: Technical Report for the Ego4D Short-Term Object Interaction Anticipation at EgoVis 2026",
-    "summary": "We propose VISTA, a V-JEPA Integrated StillFast Temporal Anticipator for the Ego4D Short-Term Object Interaction Anticipation (STA) Challenge at EgoVis 2026. Given an egocentric video timestamp, the task requires anticipating the next human-object interaction, including the future active object's bounding box, noun category, verb category, time-to-contact, and confidence score. VISTA follows a StillFast-style design that combines object-centric spatial detection with short-horizon temporal context. Specifically, a COCO-pretrained Faster R-CNN ResNet-50 FPN detector generates object proposals from the last observed high-resolution frame, while a frozen V-JEPA 2.1 temporal branch extracts clip-level egocentric context from the observed video. The temporal representation is injected into the detection pathway through feature modulation and ROI-level context fusion. The fused proposal features are then passed to multi-head STA predictors for box refinement, noun classification, verb classification, time-to-contact regression, and interaction confidence estimation. For the final submission, we further ensemble complementary predictions to improve robustness. Experimental results on the official challenge server show that VISTA achieves first place in the EgoVis 2026 Ego4D STA Challenge. Our code will be released at https://github.com/CorrineQiu/VISTA.",
+    "id": "2605.20889v1",
+    "title": "Map-Mono-Ego: Map-Grounded Global Human Pose Estimation from Monocular Egocentric Video",
+    "summary": "Monocular egocentric human pose estimation is essential for ubiquitous activity monitoring. However, understanding the user's absolute location within the environment remains a challenge. Existing methods primarily focus on relative motion from an initial position, and tend not to account for the wearer's absolute location within an environment. Furthermore, inherent scale ambiguity in monocular vision leads to severe translational drift, limiting long-term tracking without specialized multi-sensor hardware. To address this, we propose MapMonoEgo, a novel framework achieving globally consistent human pose estimation solely from a monocular camera by leveraging a pre-scanned 3D point cloud. We also introduce AIST-Living dataset, a new dataset pairing egocentric video with ground-truth motion in a scanned environment. Experiments demonstrate that our approach significantly outperforms the state-of-the-art baseline, proving its utility for practical monitoring tasks without specialized hardware.",
     "authors": [
-      "Qiaohui Chu",
-      "Haoyu Zhang",
-      "Yisen Feng",
-      "Meng Liu",
-      "Weili Guan",
-      "Dongmei Jiang",
-      "Liqiang Nie"
+      "Hiroyuki Deguchi",
+      "Ryosuke Hori",
+      "Kotaro Amaya",
+      "Tsubasa Maruyama",
+      "Mitsunori Tada",
+      "Hideo Saito"
     ],
-    "published": "2026-05-20T08:42:56Z",
-    "updated": "2026-05-20T08:42:56Z",
-    "url": "https://arxiv.org/abs/2605.20901v1",
-    "pdf_url": "https://arxiv.org/pdf/2605.20901v1",
+    "published": "2026-05-20T08:30:09Z",
+    "updated": "2026-05-20T08:30:09Z",
+    "url": "https://arxiv.org/abs/2605.20889v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.20889v1",
     "tags": [
-      "cs.CV",
-      "cs.AI"
+      "cs.CV"
     ],
     "source": "arxiv",
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2605.19919v1",
-    "title": "Beyond Action Residuals: Real-World Robot Policy Steering via Bottleneck Latent Reinforcement Learning",
-    "summary": "Pretrained imitation policies have become a strong foundation for robot manipulation, but they often require online improvement to overcome execution errors, limited dataset coverage, and deployment mismatch. A central question is therefore how reinforcement learning (RL) should adapt policies after offline pretraining. Existing lightweight methods commonly apply residual corrections directly in action space, but this often leads to noisy and poorly structured exploration. In this work, we propose Z-Perturbation Reinforcement Learning (ZPRL), an approach that steers pretrained policies through a compact bottleneck latent rather than through policy weights or output actions. During offline training, we augment the policy with a plug-and-play variational information bottleneck (VIB) module to extract a task-relevant latent interface from observation embeddings. During online finetuning, the base policy is frozen and RL learns only a residual perturbation on this latent, whose decoded representation conditions the frozen action generator. We instantiate ZPRL on flow-matching policies and evaluate it on eight simulation tasks and four real-world tasks. Across diverse manipulation settings, ZPRL improves both sample efficiency and final performance over strong post-training baselines. In the real world, ZPRL improves the average success rate on four tasks by 33.7% over imitation base policies while producing smoother exploration behaviors than an action residual counterpart. These results suggest that a compact, task-aligned bottleneck latent provides an effective interface for online RL adaptation. More videos can be found at https://manutdmoon.github.io/ZPRL/.",
+    "id": "2603.12243v4",
+    "title": "HandelBot: Real-World Piano Playing via Fast Adaptation of Dexterous Robot Policies",
+    "summary": "Mastering dexterous manipulation with multi-fingered hands has been a grand challenge in robotics for decades. Despite its potential, the difficulty of collecting high-quality data remains a primary bottleneck for high-precision tasks. While reinforcement learning and simulation-to-real-world transfer offer a promising alternative, the transferred policies often fail for tasks demanding millimeter-scale precision, such as bimanual piano playing. In this work, we introduce HandelBot, a framework that combines a simulation policy and rapid adaptation through a two-stage pipeline. Starting from a simulation-trained policy, we first apply a structured refinement stage to correct spatial alignments by adjusting lateral finger joints based on physical rollouts. Next, we use residual reinforcement learning to autonomously learn fine-grained corrective actions. Through extensive hardware experiments across five recognized songs, we demonstrate that HandelBot can successfully perform precise bimanual piano playing. Our system outperforms direct simulation deployment by a factor of 1.8x and requires only 30 minutes of physical interaction data.",
     "authors": [
-      "Dongjie Yu",
-      "Kun Lei",
-      "Zhennan Jiang",
-      "Jia Pan",
-      "Huazhe Xu"
+      "Amber Xie",
+      "Haozhi Qi",
+      "Dorsa Sadigh"
     ],
-    "published": "2026-05-19T14:43:26Z",
-    "updated": "2026-05-19T14:43:26Z",
-    "url": "https://arxiv.org/abs/2605.19919v1",
-    "pdf_url": "https://arxiv.org/pdf/2605.19919v1",
+    "published": "2026-03-12T17:56:29Z",
+    "updated": "2026-05-15T22:34:49Z",
+    "url": "https://arxiv.org/abs/2603.12243v4",
+    "pdf_url": "https://arxiv.org/pdf/2603.12243v4",
     "tags": [
       "cs.RO"
     ],
