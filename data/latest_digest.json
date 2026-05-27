@@ -1,22 +1,28 @@
 [
   {
-    "id": "2605.25829v1",
-    "title": "OASIS: Observation-Action Space Alignment via SE(3) Trajectory Prediction for Robotic Manipulation",
-    "summary": "Recent vision-language-action (VLA) models and world action models (WAMs) advance robotic manipulation by enriching intermediate representations with auxiliary spatial features or future visual-state prediction. However, these representations largely remain within the observation space and do not share the rigid-body geometry of the action space, forcing the action decoder to implicitly recover this geometry. We propose OASIS, a visuomotor policy that aligns the intermediate representation with the action space via $SE(3)$ end-effector trajectory prediction. OASIS couples a 3D-aware feature encoder that fuses vision-language and metric-depth features with an $SE(3)$ trajectory predictor that produces a camera-frame end-effector trajectory. Conditioned on the predictor's pose-supervised hidden states, the action decoder generates action chunks consistent with rigid-body motion. Across simulation and real-world experiments, OASIS outperforms VLA and WAM baselines in success rate and out-of-distribution generalization. Our project page is available at https://npuhandsome.github.io/OASIS_web.",
+    "id": "2605.27284v1",
+    "title": "FineVLA: Fine-Grained Instruction Alignment for Steerable Vision-Language-Action Policies",
+    "summary": "Vision-Language-Action (VLA) models are increasingly expected to not only complete robot tasks, but also follow human instructions about how those tasks should be executed. However, existing robot datasets usually pair trajectories with coarse goal-level language, leaving execution-critical details such as active arm, approach direction, and contact region unspecified. This limits steerable policy learning and robotic video understanding. We introduce FineVLA, an open framework for action-aligned fine-grained VLA supervision. The framework includes: (1) a data construction tool that unifies 972,247 trajectories across 85K tasks from 10 open-source robot datasets and builds FineVLA-Data, a human-verified dataset of 47,159 fine-grained trajectories; (2) a held-out benchmark with 500 videos, 10,816 atomic facts, and 1,030 VQA questions; (3) a robotics-specialized VLM annotator for scalable fine-grained annotation; and (4) a steerable VLA policy trained with controlled mixtures of fine-grained and raw goal-level instructions. Our experiments yield three findings. First, fine-grained supervision does not sacrifice goal-level success: FG-only improves over Raw-only by +1.4 to +8.1 success-rate points across settings. Second, fine-grained and raw instructions are complementary, following a consistent inverted-U trend peaking at FG:Raw = 1:2 to 1:1. The best mixed setting reaches 86.8%/82.5% in RoboTwin simulation and 62.7/100 in real-world dual-arm manipulation (vs. 49.9 Raw-only). Third, fine-grained supervision improves steerable control: the largest real-world gains appear on pose (+23), color (+18), and approach direction (+18)--factors where goal-level instructions provide no guidance. Overall, fine-grained language should augment goal-level instructions: specifying how to execute alongside what to achieve. Project page: https://finevla.xlang.ai/",
     "authors": [
-      "Xinzhe Chen",
-      "Sihua Ren",
-      "Liqi Huang",
-      "Haowen Sun",
-      "Mingyang Li",
-      "Xingyu Chen",
-      "Zeyang Liu",
-      "Xuguang Lan"
+      "Xintong Hu",
+      "Xuhong Huang",
+      "Jinyu Zhang",
+      "Yutong Yao",
+      "Yuchong Sun",
+      "Qiuyue Wang",
+      "Mingsheng Li",
+      "Sicheng Xie",
+      "Yitao Liu",
+      "Junhao Chen",
+      "Yixuan Chen",
+      "Yingming Zheng",
+      "Shuai Bai",
+      "Tao Yu"
     ],
-    "published": "2026-05-25T13:28:33Z",
-    "updated": "2026-05-25T13:28:33Z",
-    "url": "https://arxiv.org/abs/2605.25829v1",
-    "pdf_url": "https://arxiv.org/pdf/2605.25829v1",
+    "published": "2026-05-26T17:01:10Z",
+    "updated": "2026-05-26T17:01:10Z",
+    "url": "https://arxiv.org/abs/2605.27284v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.27284v1",
     "tags": [
       "cs.RO",
       "cs.AI"
@@ -25,50 +31,59 @@
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2605.24934v1",
-    "title": "HumanEgo: Zero-Shot Robot Learning from Minutes of Human Egocentric Videos",
-    "summary": "Human egocentric video captures rich manipulation demonstrations without any robot hardware, yet transferring these skills to robots remains challenging due to the embodiment gap between human and robot in both visual appearance and kinematics. We present HumanEgo, a framework that bridges the embodiment gap by lifting each human demonstration to an entity-level representation of hand-object interaction, and training a flow matching policy with dense auxiliary objectives that amplify supervision from every trajectory. HumanEgo is robot-data-free, hardware-agnostic, data-efficient, and zero-shot human-to-robot transferable. With only 30 minutes of human videos per task, HumanEgo achieves 92.5% average success across four real-world tasks (75% with just 15 minutes), outperforms matched-time robot teleoperation by 41%, and robustly transfers zero-shot across novel robots, cameras, and environments.",
+    "id": "2605.26478v1",
+    "title": "Efficient On-policy Visual-RL via Stochastic Decoupled Policy Gradient",
+    "summary": "We present the stochastic decoupled policy gradient (SDPG), a lightweight visual reinforcement learning (RL) method that trains diverse visuomotor control policies end-to-end within a few hours on a single NVIDIA RTX 4080 GPU. SDPG estimates policy gradients via random perturbations of trajectory rollouts, requiring orders of magnitude fewer batch-rendered environments and substantially reducing compute and memory overhead. On visual MuJoCo benchmarks, SDPG consistently outperforms baseline methods in training time, memory usage, and rewards. Finally, to support future research, we introduce a suite of realistic visual robotics benchmarks spanning dexterous manipulation, challenging locomotion, and demonstrate effective sim-to-real transfer on physical hardware.",
     "authors": [
-      "Zhi",
-      "Wang",
-      "Botao He",
-      "Kelin Yu",
-      "Seungjae Lee",
-      "Ruohan Gao",
-      "Furong Huang",
-      "Yiannis Aloimonos"
+      "Haoxiang You",
+      "Yilang Liu",
+      "Davis Zong",
+      "Qian Wang",
+      "Teeratham Vitchutripop",
+      "Qi Wang",
+      "Daniel Rakita",
+      "Ian Abraham"
     ],
-    "published": "2026-05-24T08:26:41Z",
-    "updated": "2026-05-24T08:26:41Z",
-    "url": "https://arxiv.org/abs/2605.24934v1",
-    "pdf_url": "https://arxiv.org/pdf/2605.24934v1",
+    "published": "2026-05-26T02:35:08Z",
+    "updated": "2026-05-26T02:35:08Z",
+    "url": "https://arxiv.org/abs/2605.26478v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.26478v1",
     "tags": [
       "cs.RO",
       "cs.AI",
       "cs.CV",
-      "cs.LG"
+      "cs.LG",
+      "eess.SY"
     ],
     "source": "arxiv",
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2605.25477v1",
-    "title": "EXPO-FT: Sample-Efficient Reinforcement Learning Finetuning for Vision-Language-Action Models",
-    "summary": "The ability to efficiently and reliably learn new tasks has been a foundational challenge in robotics. Vision-Language-Action (VLA) models have demonstrated strong generalization across diverse manipulation tasks, yet pretrained policies consistently fall short of the reliability required for real-world deployment. Reinforcement learning (RL) fine-tuning offers a promising path to bridge this gap, but existing approaches either train from scratch without fully leveraging pretrained priors, or fine-tune VLAs without achieving the sample efficiency and success rates that practical deployment demands. We present EXPO-FT, a system for stable, sample-efficient RL finetuning of pretrained VLA policies that closes this gap. Our system solves a suite of challenging manipulation tasks, including routing string lights and inserting the plug to light it up, striking a pool ball into a pocket, and inserting a flower into a wine bottle, each requiring combinations of high precision, dynamic actions, and robustness to varied initial states. Our system achieves perfect task performance (30/30 successes) across all evaluated tasks within an average of 19.1 minutes of online robot data, outperforming both prior RL-from-scratch and VLA finetuning approaches. We release an open-source codebase with the aim of facilitating broader adoption of RL finetuning of VLA models in robotics.",
+    "id": "2605.21976v1",
+    "title": "TacO: Benchmarking Tactile Sensors for Object Manipulation",
+    "summary": "Vision-based learning from demonstrations has achieved remarkable success in enabling robots to perform manipulation tasks and high-level semantic reasoning, yet it remains insufficient for complex, contact-rich manipulation. While there is broad agreement that tactile sensing improves manipulation, there is no empirical guidance on which tactile sensors are best suited for which manipulation tasks. In this paper, we provide a systematic, task-driven evaluation of tactile sensors for robot manipulation and propose a framework for selecting and evaluating sensors based on manipulation policy performance. Separate manipulation policies are trained for tactile sensors of four distinct modalities: visual, acoustic, magnetic, and resistive, across three tasks: pick-and-place with unknown mass, object reorientation, and plug insertion. For each task, an analysis of how sensor properties such as spatial resolution, shear sensing, and tactile representation, and the inherent material friction affect task performances is done. Rather than tactile sensing being universally beneficial in the same way, our results show that the usefulness of tactile information depends strongly on sensor modality, material properties, and the specific manipulation tasks. All of the tactile sensors, code, data, and hardware setup will be publicly available on the project website.",
     "authors": [
-      "Perry Dong",
-      "Kuo-Han Hung",
-      "Tian Gao",
-      "Dorsa Sadigh",
-      "Chelsea Finn"
+      "Anya Zorin",
+      "Zilin Si",
+      "Myungsun Park",
+      "Junsung Park",
+      "Alexiy Buynitsky",
+      "Sachin Bhadang",
+      "Taejun Park",
+      "Sohee John Yoon",
+      "Yong-Lae Park",
+      "Oliver Kroemer",
+      "Zeynep Temel",
+      "Michael T. Tolley",
+      "Sha Yi",
+      "Xiaolong Wang"
     ],
-    "published": "2026-05-25T06:31:03Z",
-    "updated": "2026-05-25T06:31:03Z",
-    "url": "https://arxiv.org/abs/2605.25477v1",
-    "pdf_url": "https://arxiv.org/pdf/2605.25477v1",
+    "published": "2026-05-21T04:11:03Z",
+    "updated": "2026-05-21T04:11:03Z",
+    "url": "https://arxiv.org/abs/2605.21976v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.21976v1",
     "tags": [
-      "cs.RO",
-      "cs.AI"
+      "cs.RO"
     ],
     "source": "arxiv",
     "bucket": "Representative paper from your selected authors in the last three months"
