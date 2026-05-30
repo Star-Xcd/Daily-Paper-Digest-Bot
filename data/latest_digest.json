@@ -1,82 +1,72 @@
 [
   {
-    "id": "2605.28634v1",
-    "title": "PrimitiveVLA: Learning Reusable Motion Primitives for Efficient and Generalizable Robotic Manipulation",
-    "summary": "Vision-Language-Action (VLA) models offer a promising paradigm for generalist robotic policies, yet their adaptation is hindered by data inefficiency and poor generalization. We argue that these bottlenecks stem from the prevailing Direct Instruction-to-Control Mapping, which forces models to memorize monolithic trajectories rather than reusable motion patterns, i.e., primitives. We propose PrimitiveVLA, a framework that shifts this paradigm toward a Primitive-Centric Disassemble & Assemble paradigm. Supported by a shared Multimodal Canonical Representation (MCR), PrimitiveVLA unifies two phases: (1) Fine-tuning-phase Disassembly, which uses an automated pipeline to disassemble demonstrations into reusable primitives; and (2) Inference-phase Assembly, which employs a VLM-based planner and an LLM-generated switch module for robust closed-loop execution. By disassembling tasks into reusable primitives, PrimitiveVLA enables VLA models to learn invariant motion patterns instead of task-specific trajectories. Extensive experiments show that our framework improves data efficiency and achieves superior zero-shot generalization across unseen and long-horizon tasks.",
+    "id": "2605.30226v1",
+    "title": "BORA: Bridging Offline Reinforcement Learning and Online Residual Adaptation for Real-World Dexterous VLA Models",
+    "summary": "Vision-Language-Action (VLA) models have emerged as a promising paradigm for grounding visual-language understanding into real-world robotic manipulation. However, dexterous manipulation remains challenging for VLA policies due to high-dimensional hand control and compounding execution errors, which makes real-world RL post-training essential for bridging the gap between visually grounded action generation and physically reliable dexterous execution. However, high-dimensional dexterous exploration often triggers temporal inconsistency, sample inefficiency and hardware risks in the real world. To address these challenges, we propose BORA, an offline-to-online RL post-training framework designed for real-world dexterous VLA models. In the offline phase, BORA constructs a critic that takes both the VLM's cognition tokens and action chunks as inputs. This design enables action-conditioned value guidance, allowing the critic to evaluate dexterous hand motions beyond visual context alone. During the subsequent online phase, BORA freezes the VLA base and introduces a lightweight, Human-in-the-Loop (HiL) chunk-wise residual adaptation mechanism to mitigate real-world execution errors and further correct the offline-learned intents within the actual physical environment. By inheriting the offline critic and employing intervention-driven rewards, BORA effectively corrects execution discrepancies and adapts to real-world physical variances while preserving the pretrained policy as a stable prior. Extensive evaluations across five complex real-world dexterous tasks demonstrate that BORA significantly outperforms pure imitation learning and traditional decoupled RL baselines, achieving a 33% absolute increase in average success rate under standard settings and up to a 43% improvement in unseen object generalization.",
     "authors": [
-      "Yutai Li",
-      "Shaohui Peng",
-      "Jiaming Guo",
-      "Di Huang",
-      "Zihao Zhang",
-      "Yuxuan Guo",
-      "Yunkai Gao",
-      "Siming Lan",
-      "Ling Li",
-      "Xing Hu",
-      "Yunji Chen"
+      "Zhongxi Chen",
+      "Yifan Han",
+      "Yanming Shao",
+      "Huanming Liu",
+      "Congsheng Xu",
+      "Xiaoyu Chen",
+      "Yao Mu",
+      "Wenzhao Lian"
     ],
-    "published": "2026-05-27T15:41:18Z",
-    "updated": "2026-05-27T15:41:18Z",
-    "url": "https://arxiv.org/abs/2605.28634v1",
-    "pdf_url": "https://arxiv.org/pdf/2605.28634v1",
+    "published": "2026-05-28T16:57:47Z",
+    "updated": "2026-05-28T16:57:47Z",
+    "url": "https://arxiv.org/abs/2605.30226v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.30226v1",
     "tags": [
-      "cs.RO"
+      "cs.RO",
+      "cs.AI"
     ],
     "source": "arxiv",
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2605.28812v1",
-    "title": "Beyond Binary: Sim-to-Real Dexterous Manipulation with Physics-Grounded Contact Representation",
-    "summary": "A primary bottleneck in contact-rich manipulation is the difficulty of collecting real-world data. Sim-to-real reinforcement learning offers a scalable alternative, but the simulation-reality gap prevents information-dense modalities like touch from being effectively used. Existing sim-to-real methods often mitigate this gap by simplifying tactile data into coarse low-dimensional features -- sacrificing the richness required for complex manipulation. In this work, we introduce Center-of-Pressure (CoP), an effective tactile representation grounded in physical principles that preserves dense contact information while maintaining robustness for sim-to-real transfer. To support this representation, we propose a sensor calibration scheme based on differentiable dynamics, enabling the estimation of taxel orientations without requiring ground-truth force measurements. We evaluate CoP on two blind, challenging contact-rich manipulation tasks: peg-in-hole insertion and ball balancing. Across both tasks, policies conditioned on CoP achieve zero-shot sim-to-real transfer on a multi-fingered hand, and outperform both coarse binary-contact and raw-taxel baselines. Analysis of learned policy states further suggests that CoP-conditioned policies encode task-relevant physical properties, such as object mass, as an emergent byproduct of control.",
+    "id": "2605.29402v1",
+    "title": "Semantic and Visual Evidence for Efficient Long-Video Reasoning: A Solution for the HD-EPIC VQA Challenge",
+    "summary": "Understanding long-form egocentric videos remains challenging for multimodal large language models (MLLMs) due to limited context length and insufficient grounding of fine-grained visual details. The recently proposed HD-EPIC benchmark highlights these limitations: even strong long-context models achieve relatively low performance across diverse video question answering tasks. In this paper, we propose a unified framework that decouples long-video reasoning into two complementary forms of evidence: semantic evidence and visual evidence. Semantic evidence captures global procedural structure through a coarse-to-fine extraction pipeline, while object-centric visual evidence preserves fine-grained grounding through bounding boxes and visual embeddings. During inference, we formulate reasoning as a query-conditioned evidence retrieval and integration process, dynamically selecting relevant information from both sources. Our approach achieves competitive performance in the HD-EPIC-VQA Challenge across multiple task categories. More broadly, our results demonstrate that explicitly structuring, retrieving, and integrating semantic and visual evidence is critical for effective long-video understanding with MLLMs.",
     "authors": [
-      "Jiahe Pan",
-      "Stelian Coros",
-      "Jitendra Malik",
-      "Toru Lin"
+      "Yinsong Xu",
+      "Wei Jing",
+      "Liuxin Zhang",
+      "Wanjun Lv",
+      "Hui Li"
     ],
-    "published": "2026-05-27T17:59:02Z",
-    "updated": "2026-05-27T17:59:02Z",
-    "url": "https://arxiv.org/abs/2605.28812v1",
-    "pdf_url": "https://arxiv.org/pdf/2605.28812v1",
+    "published": "2026-05-28T05:53:34Z",
+    "updated": "2026-05-28T05:53:34Z",
+    "url": "https://arxiv.org/abs/2605.29402v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.29402v1",
     "tags": [
-      "cs.RO",
-      "cs.AI",
-      "cs.LG"
+      "cs.CV",
+      "cs.AI"
     ],
     "source": "arxiv",
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2605.27582v1",
-    "title": "Uni-LaViRA: Language-Vision-Robot Actions Translation for Unified Embodied Navigation",
-    "summary": "Embodied navigation requires an agent to map language and visual observations to a stream of spatial actions that drive a real robot through environments it has never seen. The dominant approach has been to scale vision-language-action (VLA) foundation models on ever-larger collections of robot trajectories. This paper argues that, for navigation specifically, generality can be obtained structurally, not only through data scale. The underlying decision structure of navigation reduces to a single Language-Vision-Robot Actions Translation. The language action emits semantic-level directional command and the vision action emits a pixel-level visual target. Both outputs lie inside the natural output manifold of pretrained multimodal large language models (MLLMs), so the task can be reasoned about by an agent rather than learned from robot data. Therefore, we present Uni-LaViRA, a unified agentic architecture that extends the same insight to four task families (VLN-CE, ObjectNav, EQA, and Aerial-VLN) and to four heterogeneous real robots (Wheeled, Quadruped, Humanoid robot, and a self-built UAV) in a zero-shot manner. Two agent-loop mechanisms make this unification practical. TODO List Memory (TDM) rewrites a structured checklist of pending sub-goals at every step, reciting the unfinished items back into the agent's most recent attention window. Second Chance Backtrack (SCB) rolls the robot back to the pre-error state and conditions the agent's next plan on the failed sub-trajectory, turning single-pass navigation into a self-correcting process. With zero training effort, Uni-LaViRA reaches 60.7% SR on VLN-CE R2R, 51.3% on VLN-CE RxR, 77.7% on HM3D-v2, 60.0% on HM3D-OVON, 54.7% on MP3D-EQA, and 40.0% on OpenUAV, matching or even surpassing recent training navigation foundation models that consume millions of samples and thousands of GPU-hours.",
+    "id": "2605.30326v1",
+    "title": "RoboWits: Unexpected Challenges for Robotic Creative Problem Solving",
+    "summary": "The ability to reason, adapt, and creatively solve problems under unexpected challenges is essential for robots operating in real-world environments. However, current robotic benchmarks primarily emphasize skill-level execution and provide limited insight into such cognitive reasoning capabilities. We introduce RoboWits, a bi-manual robotic benchmark designed to systematically evaluate cognitive reasoning, creative tool use, and robustness to unexpected conditions. To enable scalable construction of high-quality reasoning-centric unexpected scenarios, we propose an automated task generation pipeline formulated as a multi-agent cooperative framework, comprising agents for seed task generation and verification, metric generation, scene generation, and task mutation. Using the pipeline, we curated 30 diverse seed tasks and 208 tasks with mutations and graded difficulty across geometry, material, and assembly-based reasoning. We benchmark popular robot policies, pre-trained VLAs, and oracle-state planners. Our results reveal a significant performance gap: while pre-trained VLAs exhibit preliminary success on seed tasks after single-task fine-tuning, they struggle to perform on mutated tasks, implying their brittleness in manipulation tasks requiring reasoning, strategy adaptation, and robustness to deceptive or constrained environments. Project page is available at https://umass-embodied-agi.github.io/RoboWits.",
     "authors": [
-      "Hongyu Ding",
-      "Sizhuo Zhang",
-      "Ziming Xu",
-      "Jinwen Guo",
-      "Hongxiu Liu",
-      "Xingzhi Cheng",
-      "Zixuan Chen",
-      "Haifei Qi",
-      "Duo Wang",
-      "Hao Xu",
-      "Jieqi Shi",
-      "Yifan Zhang",
-      "Jing Huo",
-      "Jian Cheng",
-      "Yang Gao",
-      "Jiebo Luo"
+      "Chunru Lin",
+      "Hongxin Zhang",
+      "Fenghao Yu",
+      "Zhehuan Chen",
+      "Thomas L. Griffiths",
+      "Yejin Choi",
+      "David Held",
+      "Chuang Gan"
     ],
-    "published": "2026-05-26T18:52:04Z",
-    "updated": "2026-05-26T18:52:04Z",
-    "url": "https://arxiv.org/abs/2605.27582v1",
-    "pdf_url": "https://arxiv.org/pdf/2605.27582v1",
+    "published": "2026-05-28T17:57:15Z",
+    "updated": "2026-05-28T17:57:15Z",
+    "url": "https://arxiv.org/abs/2605.30326v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.30326v1",
     "tags": [
       "cs.RO",
-      "cs.CV"
+      "cs.AI"
     ],
     "source": "arxiv",
     "bucket": "Representative paper from your selected authors in the last three months"
