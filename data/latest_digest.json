@@ -1,27 +1,22 @@
 [
   {
-    "id": "2606.03784v1",
-    "title": "Revisiting Embodied Chain-of-Thought for Generalizable Robot Manipulation",
-    "summary": "Embodied chain-of-thought (CoT) aims to bridge linguistic reasoning and robotic control, but its effective form and integration strategy remain underexplored. In this paper, we revisit embodied CoT for vision-language-action (VLA) models at large scale. We construct the largest embodied CoT corpus to date, comprising 978,743 trajectories, 226.3M samples, and 2592.5 hours of robot data. Through extensive experiments, we find that effective embodied CoT should ground high-level semantic understanding into concrete action guidance, such as end-effector movement descriptions and image-space trajectories, while high-level reasoning alone brings only marginal gains. We further show that explicit CoT does not scale reliably when used as an autoregressive action prefix, as it suffers from compounding inference errors and unstable reasoning-action coupling. To address these limitations, we propose ERVLA, a VLA model that uses embodied CoT as representation-shaping supervision rather than mandatory test-time reasoning. ERVLA is trained with a reasoning-dropout strategy, enabling the model to absorb rich reasoning traces during training while predicting actions directly without CoT decoding during inference. This design improves scalability with increasing pre-training data and avoids autoregressive instability. ERVLA achieves state-of-the-art performance on LIBERO-Plus with an 86.9% success rate and reaches 53.2% success rate on VLABench, demonstrating strong out-of-distribution generalization. In real-robot experiments, ERVLA further outperforms competitive state-of-the-art baselines, especially on tasks requiring semantic disambiguation and long-horizon execution. Code, data, and model checkpoints will be released.",
+    "id": "2606.04825v1",
+    "title": "HapTile: A Haptic-Informed Vision-Tactile-Language-Action Dataset for Contact-Rich Imitation Learning",
+    "summary": "Despite the importance of tactile sensing for reliable manipulation, most existing Vision-Language-Action (VLA) datasets remain vision-only, and those that do incorporate tactile information typically lack the joint combination of task diversity, language conditioning, and action trajectories. Furthermore, existing teleoperation pipelines rarely provide haptic feedback to the operator, despite its established role in demonstration quality and manipulation stability. In this work, we present HapTile, a contact-grounded visuotactile manipulation dataset that advances beyond vision-only trajectory datasets by embedding physical interaction sensing at two levels: fingertip tactile feedback at the robot end-effector, and haptic-informed demonstrations at the teleoperator side. The data collection platform integrates haptic feedback directly into the teleoperation controller, enabling the operator to perceive contact interactions in real time. It is built around a standard and reproducible robotic system equipped with custom-designed fingertip tactile sensors. The dataset comprises everyday manipulation tasks spanning a broad range of contact-rich skills, including pick-and-place, folding, pressing, stacking, and other routine activities. Each task is paired with language instructions that condition the policy on the manipulation objective, together with synchronized visuotactile observations and action trajectories. In addition, we provide a benchmarking study on contact-rich policy learning using two baseline models to evaluate the effectiveness of the proposed contact-grounded dataset. The dataset and additional details are available on our website: haptile-dataset.github.io.",
     "authors": [
-      "Nan Sun",
-      "Yuan Zhang",
-      "Yongkun Yang",
-      "Wentao Zhao",
-      "Peiyan Li",
-      "Jun Guo",
-      "Wenxuan Song",
-      "Pengxiang Ding",
-      "Runze Suo",
-      "Yifei Su",
-      "Xin Xiao",
-      "Xinghang Li",
-      "Huaping Liu"
+      "Amirhosein Alian",
+      "Yongqiang Zhao",
+      "Shiyi Gu",
+      "Xuyang Zhang",
+      "Zhuo Chen",
+      "Christopher E. Mower",
+      "Haitham Bou-Ammar",
+      "Shan Luo"
     ],
-    "published": "2026-06-02T15:37:59Z",
-    "updated": "2026-06-02T15:37:59Z",
-    "url": "https://arxiv.org/abs/2606.03784v1",
-    "pdf_url": "https://arxiv.org/pdf/2606.03784v1",
+    "published": "2026-06-03T12:48:17Z",
+    "updated": "2026-06-03T12:48:17Z",
+    "url": "https://arxiv.org/abs/2606.04825v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.04825v1",
     "tags": [
       "cs.RO"
     ],
@@ -29,47 +24,51 @@
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2606.03954v1",
-    "title": "VLESA: Vision-Language Embodied Safety Agent for Human Activity Monitoring",
-    "summary": "As AI systems increasingly assist humans in physical tasks, ensuring safety becomes paramount -- physical actions carry immediate and irreversible consequences that digital errors do not. We introduce the Vision-Language Embodied Safety Agent (VLESA), a framework that monitors human activities from egocentric video and triggers real-time safety interventions when dangerous actions are predicted. VLESA addresses intent-dependent safety where identical actions can be safe or dangerous depending on context. A dataset pairing egocentric frames with goal-conditioned safety annotations is introduced, enabling a goal-conditioned safety Q-filter trained via GRPO that evaluates actions with respect to inferred intent without retraining. On top of that, an intent-action prediction agent is proposed to jointly infer goals and predict future actions from video. On the ASIMOV-2.0 benchmark, VLESA achieves higher intervention accuracy at the exact ground-truth frame compared to baselines, while the GRPO-trained Q-filter improves action safety by over 41 percentage points through goal-conditioned constrained decoding. Code is available at https://github.com/HanjiangHu/VLESA.",
+    "id": "2606.05115v1",
+    "title": "Continual Visual and Verbal Learning Through a Child's Egocentric Input",
+    "summary": "Children learn the meanings of words from a continuous, temporally structured stream of egocentric experience. Recent work shows that neural networks can also learn word-referent mappings from a child's egocentric video recordings, but they cycle through the shuffled data for hundreds of epochs, contrasting with how children actually encounter their environment. We introduce BabyCL, a continual multimodal learning framework that processes the SAYCam dataset in a single chronological pass, combining streaming visual representation learning with an image-text contrastive objective. BabyCL combines a multi-stage temporal segmentation of the stream with a dual replay buffer that independently manages visual and multimodal histories, and it is jointly trained with three contrastive losses on a shared backbone. Under a matched optimization budget, BabyCL outperforms streaming learning baselines on the SAYCam Labeled-S 4AFC benchmark, substantially narrowing the gap to an upper bound of offline training. Ablations show that the gains are robust to the length of the online temporal segmentation window and the eviction rule of the replay buffer. Together, these results show that meaningful word-referent mappings can emerge under training conditions much closer to a child's actual experience.",
     "authors": [
-      "Hanjiang Hu",
-      "Yiyuan Pan",
-      "Jiaxing Li",
-      "Xusheng Luo",
-      "Alexander Robey",
-      "Na Li",
-      "Yebin Wang",
-      "Changliu Liu"
+      "Xiaoyang Jiang",
+      "Yanlai Yang",
+      "Kenneth A. Norman",
+      "Brenden Lake",
+      "Mengye Ren"
     ],
-    "published": "2026-06-02T17:42:17Z",
-    "updated": "2026-06-02T17:42:17Z",
-    "url": "https://arxiv.org/abs/2606.03954v1",
-    "pdf_url": "https://arxiv.org/pdf/2606.03954v1",
+    "published": "2026-06-03T17:20:18Z",
+    "updated": "2026-06-03T17:20:18Z",
+    "url": "https://arxiv.org/abs/2606.05115v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.05115v1",
     "tags": [
       "cs.CV",
-      "cs.LG",
-      "cs.RO"
+      "cs.AI",
+      "cs.CL"
     ],
     "source": "arxiv",
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2606.03177v1",
-    "title": "ConTrack: Constrained Hand Motion Tracking with Adaptive Trade-off Control",
-    "summary": "Human demonstrations provide strong priors for robot manipulation, yet it is non-trivial to transfer them to execute on real robots due to the kinematic gap. In dexterous manipulation, it remains challenging to track long-horizon, contact-rich sequences even in simulators: a reference-tracking policy must keep objects on their target trajectories while preserving demonstrated joint motion and contact timing. Existing approaches often rely on hand-crafted reward tuning that require per-sequence tuning and break under limited interaction budgets. We introduce ConTrack, a reinforcement learning (RL) framework that scales with tracking data. ConTrack treats object tracking as a constraint and allocates remaining control authority to motion fidelity, which allows it to adapt task--style trade-offs online using a dual-variable update. In addition, ConTrack also stabilizes long-horizon learning with an adaptive mid-trajectory reset library that reuses policy-reachable simulator states. Our qualitative and quantitative results in simulation tracking and real robot demonstrate that ConTrack improves success and object pose accuracy significantly over prior arts while preserving joint and contact fidelity. Website: https://www.lyt0112.com/projects/ConTrack.",
+    "id": "2606.02745v1",
+    "title": "SeeTraceAct: Visibility-Aware Latent Planning from Cross-Embodiment Demonstration Videos",
+    "summary": "Vision-language-action models (VLAs) are promising general-purpose robot policies, but adapting them to new tasks typically requires costly task-specific teleoperation data. As an alternative, we study one-shot demo-conditioned VLAs, where a robot policy is conditioned on a single demonstration video of an unseen task. We find that existing end-to-end approaches often struggle when successful execution requires precisely localizing small target regions. To address this limitation, we propose SeeTraceAct, a demo-conditioned VLA framework that encourages precise spatial grounding through visibility-aware prediction of future end-effector traces. To enable reproducible evaluation with cross-embodiment demonstrations, we introduce and release RoboCasa-DC, a demo-conditioned extension of RoboCasa with episode-paired humanoid videos. Experiments on RoboCasa-DC and a real-world benchmark, where a Franka Panda arm is conditioned on human demonstrations, show that SeeTraceAct outperforms baselines, achieving the best success rate across all four RoboCasa-DC settings and improving real-world average success by 12.5 percentage points.",
     "authors": [
-      "Yutong Liang",
-      "Quanquan Peng",
-      "Ri-Zhao Qiu",
-      "Xiaolong Wang"
+      "Jaehyeon Son",
+      "Junhyun Kim",
+      "Kyle Kam",
+      "Jeremiah Coholich",
+      "Seok Joon Kim",
+      "Jinhoo Kim",
+      "Chris Dongjoo Kim",
+      "Jaemin Cho",
+      "Dieter Fox",
+      "Zsolt Kira"
     ],
-    "published": "2026-06-02T05:31:32Z",
-    "updated": "2026-06-02T05:31:32Z",
-    "url": "https://arxiv.org/abs/2606.03177v1",
-    "pdf_url": "https://arxiv.org/pdf/2606.03177v1",
+    "published": "2026-06-01T18:09:31Z",
+    "updated": "2026-06-01T18:09:31Z",
+    "url": "https://arxiv.org/abs/2606.02745v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.02745v1",
     "tags": [
-      "cs.RO"
+      "cs.RO",
+      "cs.LG"
     ],
     "source": "arxiv",
     "bucket": "Representative paper from your selected authors in the last three months"
