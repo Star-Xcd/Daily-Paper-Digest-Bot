@@ -1,74 +1,71 @@
 [
   {
-    "id": "2606.04825v1",
-    "title": "HapTile: A Haptic-Informed Vision-Tactile-Language-Action Dataset for Contact-Rich Imitation Learning",
-    "summary": "Despite the importance of tactile sensing for reliable manipulation, most existing Vision-Language-Action (VLA) datasets remain vision-only, and those that do incorporate tactile information typically lack the joint combination of task diversity, language conditioning, and action trajectories. Furthermore, existing teleoperation pipelines rarely provide haptic feedback to the operator, despite its established role in demonstration quality and manipulation stability. In this work, we present HapTile, a contact-grounded visuotactile manipulation dataset that advances beyond vision-only trajectory datasets by embedding physical interaction sensing at two levels: fingertip tactile feedback at the robot end-effector, and haptic-informed demonstrations at the teleoperator side. The data collection platform integrates haptic feedback directly into the teleoperation controller, enabling the operator to perceive contact interactions in real time. It is built around a standard and reproducible robotic system equipped with custom-designed fingertip tactile sensors. The dataset comprises everyday manipulation tasks spanning a broad range of contact-rich skills, including pick-and-place, folding, pressing, stacking, and other routine activities. Each task is paired with language instructions that condition the policy on the manipulation objective, together with synchronized visuotactile observations and action trajectories. In addition, we provide a benchmarking study on contact-rich policy learning using two baseline models to evaluate the effectiveness of the proposed contact-grounded dataset. The dataset and additional details are available on our website: haptile-dataset.github.io.",
+    "id": "2606.06491v1",
+    "title": "TempoVLA: Learning Speed-Controllable Vision-Language-Action Policies",
+    "summary": "Robot manipulation alternates between low-risk transit phases that call for fast execution and high-risk contact stages that demand slow, precise motion. Yet existing Vision-Language-Action models (VLAs) only inherit a single fixed speed from training demonstrations. Prior efforts to accelerate VLAs through model compression, KV-cache reuse, or reinforcement learning only shift the policy from one fixed speed to another, and leave deceleration almost unexplored. We observe that the magnitude of each predicted action already governs how fast the robot moves, opening a direct route to controllable execution speed. We turn this observation into TempoVLA, a single VLA whose execution speed is controlled by an explicit condition. TempoVLA combines two coupled components. (1) A data-side Variable-Speed Trajectory Augmentation (VSTA) that re-times demonstration to any target speed by merging or splitting actions while preserving its motion semantics. (2) A model-side conditioning mechanism that feeds the speed to the policy. Statistics show that VSTA reaches the requested speed with negligible motion error. Experiments in simulation and on real-world tasks demonstrate that TempoVLA achieves flexible speed control in both directions, while VSTA additionally boosts the default $1\\times$ performance via better data utilization. Furthermore, by cooperating with a large multimodal model, TempoVLA realizes dynamic speed control, accelerating through low-risk phases and decelerating for high-risk ones.",
     "authors": [
-      "Amirhosein Alian",
-      "Yongqiang Zhao",
-      "Shiyi Gu",
-      "Xuyang Zhang",
-      "Zhuo Chen",
-      "Christopher E. Mower",
-      "Haitham Bou-Ammar",
-      "Shan Luo"
+      "Dong Jing",
+      "Jingchen Nie",
+      "Tianqi Zhang",
+      "Jiaqi Liu",
+      "Huaxiu Yao",
+      "Zhiwu Lu",
+      "Mingyu Ding"
     ],
-    "published": "2026-06-03T12:48:17Z",
-    "updated": "2026-06-03T12:48:17Z",
-    "url": "https://arxiv.org/abs/2606.04825v1",
-    "pdf_url": "https://arxiv.org/pdf/2606.04825v1",
+    "published": "2026-06-04T17:59:40Z",
+    "updated": "2026-06-04T17:59:40Z",
+    "url": "https://arxiv.org/abs/2606.06491v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.06491v1",
     "tags": [
-      "cs.RO"
+      "cs.RO",
+      "cs.AI"
     ],
     "source": "arxiv",
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2606.05115v1",
-    "title": "Continual Visual and Verbal Learning Through a Child's Egocentric Input",
-    "summary": "Children learn the meanings of words from a continuous, temporally structured stream of egocentric experience. Recent work shows that neural networks can also learn word-referent mappings from a child's egocentric video recordings, but they cycle through the shuffled data for hundreds of epochs, contrasting with how children actually encounter their environment. We introduce BabyCL, a continual multimodal learning framework that processes the SAYCam dataset in a single chronological pass, combining streaming visual representation learning with an image-text contrastive objective. BabyCL combines a multi-stage temporal segmentation of the stream with a dual replay buffer that independently manages visual and multimodal histories, and it is jointly trained with three contrastive losses on a shared backbone. Under a matched optimization budget, BabyCL outperforms streaming learning baselines on the SAYCam Labeled-S 4AFC benchmark, substantially narrowing the gap to an upper bound of offline training. Ablations show that the gains are robust to the length of the online temporal segmentation window and the eviction rule of the replay buffer. Together, these results show that meaningful word-referent mappings can emerge under training conditions much closer to a child's actual experience.",
+    "id": "2606.06194v1",
+    "title": "ActiveMimic: Egocentric Video Pretraining with Active Perception",
+    "summary": "Egocentric human video offers a scalable alternative to robot data for pretraining, yet models pretrained on such video consistently underperform those pretrained on robot data. We attribute this gap to a missing signal, the active perception behavior in egocentric videos, where humans continuously reposition their viewpoint during manipulation, inducing camera motion that standard pipelines treat as noise. To address this, we present ActiveMimic, a pretraining framework that recovers synchronized camera and wrist trajectories from a single body-worn RGB camera, models camera motion as a viewpoint action, and jointly learns active perception and manipulation from in-the-wild egocentric human video before adapting to a target robot. Empirically, real-world experiments across tasks with diverse active perception demands show that ActiveMimic consistently surpasses baselines pretrained on human video and matches state-of-the-art models pretrained on robot data. Further analysis provides evidence that active perception capability originates from egocentric human video pretraining rather than robot-specific fine-tuning, confirming active perception as the key to unlocking egocentric human video for robot pretraining.",
     "authors": [
-      "Xiaoyang Jiang",
-      "Yanlai Yang",
-      "Kenneth A. Norman",
-      "Brenden Lake",
-      "Mengye Ren"
+      "Xingyao Lin",
+      "Guojin Zhong",
+      "Tianyi Lu",
+      "Ziyi Ye",
+      "Yichen Zhu",
+      "Zuxuan Wu",
+      "Yu-Gang Jiang"
     ],
-    "published": "2026-06-03T17:20:18Z",
-    "updated": "2026-06-03T17:20:18Z",
-    "url": "https://arxiv.org/abs/2606.05115v1",
-    "pdf_url": "https://arxiv.org/pdf/2606.05115v1",
+    "published": "2026-06-04T14:01:01Z",
+    "updated": "2026-06-04T14:01:01Z",
+    "url": "https://arxiv.org/abs/2606.06194v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.06194v1",
     "tags": [
-      "cs.CV",
-      "cs.AI",
-      "cs.CL"
+      "cs.RO",
+      "cs.CV"
     ],
     "source": "arxiv",
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2606.02745v1",
-    "title": "SeeTraceAct: Visibility-Aware Latent Planning from Cross-Embodiment Demonstration Videos",
-    "summary": "Vision-language-action models (VLAs) are promising general-purpose robot policies, but adapting them to new tasks typically requires costly task-specific teleoperation data. As an alternative, we study one-shot demo-conditioned VLAs, where a robot policy is conditioned on a single demonstration video of an unseen task. We find that existing end-to-end approaches often struggle when successful execution requires precisely localizing small target regions. To address this limitation, we propose SeeTraceAct, a demo-conditioned VLA framework that encourages precise spatial grounding through visibility-aware prediction of future end-effector traces. To enable reproducible evaluation with cross-embodiment demonstrations, we introduce and release RoboCasa-DC, a demo-conditioned extension of RoboCasa with episode-paired humanoid videos. Experiments on RoboCasa-DC and a real-world benchmark, where a Franka Panda arm is conditioned on human demonstrations, show that SeeTraceAct outperforms baselines, achieving the best success rate across all four RoboCasa-DC settings and improving real-world average success by 12.5 percentage points.",
+    "id": "2606.06218v1",
+    "title": "TAM: Torque Adaptation Module for Robust Motion Transfer in Manipulation",
+    "summary": "A policy tuned for one robot often behaves differently on another, whether due to the sim-to-real gap, unknown payloads, or the differing dynamics of two instances of the same robot. In contact-rich, dynamic manipulation, even small motion discrepancies can result in failure to track reference motion, since they disrupt the timing and modes of contact. Common remedies, such as domain randomization or system identification, either produce overly conservative task policies or require data that must be recollected for each robot or payload. We introduce the Torque Adaptation Module (TAM), a learned module that adapts the torque commands sent to the robot to match the behavior of an ideal robot. TAM operates between the low-level controller that tracks the policy's actions and the robot's torque interface. It includes a history encoder that embeds proprioceptive history into a latent state and a torque adaptor that computes residual torque corrections. Because TAM depends only on proprioceptive history and not on policy observations, or the action space, the same TAM weights can be reused to adapt policies with different action spaces (joint targets, end-effector targets, or direct torques). The policies themselves do not need to be trained with domain randomization of robot parameters. Instead, we offload the need for domain randomization to TAM by training it entirely in randomized simulation, using multi-robot pretraining followed by a robot-specific fine-tuning step that still requires no real-robot data. We evaluate TAM zero-shot on a real Franka Panda robot across dynamic manipulation tasks that include a vision-based box pushing policy (from RL), a flip policy (from BC), and an MPC ball-on-plate balancing. Our experiments show that TAM improves zero-shot real-robot execution compared to online system identification and RMA baselines and enables robust dynamic manipulation performance.",
     "authors": [
-      "Jaehyeon Son",
-      "Junhyun Kim",
-      "Kyle Kam",
-      "Jeremiah Coholich",
-      "Seok Joon Kim",
-      "Jinhoo Kim",
-      "Chris Dongjoo Kim",
-      "Jaemin Cho",
-      "Dieter Fox",
-      "Zsolt Kira"
+      "Dongwon Son",
+      "Florian Shkurti",
+      "Jason Lee",
+      "Naman Shah",
+      "Beomjoon Kim",
+      "Dieter Fox"
     ],
-    "published": "2026-06-01T18:09:31Z",
-    "updated": "2026-06-01T18:09:31Z",
-    "url": "https://arxiv.org/abs/2606.02745v1",
-    "pdf_url": "https://arxiv.org/pdf/2606.02745v1",
+    "published": "2026-06-04T14:31:54Z",
+    "updated": "2026-06-04T14:31:54Z",
+    "url": "https://arxiv.org/abs/2606.06218v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.06218v1",
     "tags": [
       "cs.RO",
-      "cs.LG"
+      "cs.AI"
     ],
     "source": "arxiv",
     "bucket": "Representative paper from your selected authors in the last three months"
