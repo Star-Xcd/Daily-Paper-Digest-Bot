@@ -1,71 +1,85 @@
 [
   {
-    "id": "2606.06491v1",
-    "title": "TempoVLA: Learning Speed-Controllable Vision-Language-Action Policies",
-    "summary": "Robot manipulation alternates between low-risk transit phases that call for fast execution and high-risk contact stages that demand slow, precise motion. Yet existing Vision-Language-Action models (VLAs) only inherit a single fixed speed from training demonstrations. Prior efforts to accelerate VLAs through model compression, KV-cache reuse, or reinforcement learning only shift the policy from one fixed speed to another, and leave deceleration almost unexplored. We observe that the magnitude of each predicted action already governs how fast the robot moves, opening a direct route to controllable execution speed. We turn this observation into TempoVLA, a single VLA whose execution speed is controlled by an explicit condition. TempoVLA combines two coupled components. (1) A data-side Variable-Speed Trajectory Augmentation (VSTA) that re-times demonstration to any target speed by merging or splitting actions while preserving its motion semantics. (2) A model-side conditioning mechanism that feeds the speed to the policy. Statistics show that VSTA reaches the requested speed with negligible motion error. Experiments in simulation and on real-world tasks demonstrate that TempoVLA achieves flexible speed control in both directions, while VSTA additionally boosts the default $1\\times$ performance via better data utilization. Furthermore, by cooperating with a large multimodal model, TempoVLA realizes dynamic speed control, accelerating through low-risk phases and decelerating for high-risk ones.",
+    "id": "2606.06155v1",
+    "title": "AffordanceVLA: A Vision-Language-Action Model Empowering Action Generation through Affordance-Aware Understanding",
+    "summary": "Vision-Language-Action (VLA) models leverage the rich world knowledge of pretrained vision-language models (VLMs) to enable instruction-following robotic manipulation. However, the structural mismatch between VLM semantic spaces and embodied control policies often hinders the learning of precise perception--action mappings. To address this challenge, we propose \\textbf{AffordanceVLA}, a unified framework that introduces structured affordance forecasting as a task-oriented intermediate representation to establish a more precise and robust perception--action mapping. Specifically, we progressively model manipulation priors through three complementary components: 1) \\textbf{Which2Act} for object-centric grounding via visual latent prediction to suppress distractions; 2) \\textbf{Where2Act} for 2D interaction localization via affordance map estimation; and 3) \\textbf{How2Act} for 3D geometric reasoning to guide manipulation policies. These affordance cues provide spatially grounded, semantically conditioned, and action-coupled intermediate representations, thereby naturally bridging vision, language and action. We integrate these modules into a Mixture-of-Transformer (MoT) architecture with specialized experts and train the model using a three-stage training strategy with a progressive data curriculum. To overcome the scarcity of dense affordance labels in robotic datasets, we also develop a robust automated data augmentation pipeline. Extensive experiments on simulation and real-world demonstrate that AffordanceVLA achieves strong performance across diverse manipulation scenarios.",
     "authors": [
-      "Dong Jing",
-      "Jingchen Nie",
-      "Tianqi Zhang",
-      "Jiaqi Liu",
-      "Huaxiu Yao",
-      "Zhiwu Lu",
-      "Mingyu Ding"
+      "Qize Yu",
+      "Jiadi You",
+      "Yuran Wang",
+      "Jiaqi Liang",
+      "Bowen Ping",
+      "Yang Tian",
+      "Yue Chen",
+      "Minghong Cai",
+      "Zeying Gong",
+      "Ruihai Wu",
+      "Yinchuan Li",
+      "Junwei Liang",
+      "Yingcong Chen"
     ],
-    "published": "2026-06-04T17:59:40Z",
-    "updated": "2026-06-04T17:59:40Z",
-    "url": "https://arxiv.org/abs/2606.06491v1",
-    "pdf_url": "https://arxiv.org/pdf/2606.06491v1",
+    "published": "2026-06-04T13:28:51Z",
+    "updated": "2026-06-04T13:28:51Z",
+    "url": "https://arxiv.org/abs/2606.06155v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.06155v1",
     "tags": [
       "cs.RO",
-      "cs.AI"
+      "cs.CV",
+      "cs.MM"
     ],
     "source": "arxiv",
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2606.06194v1",
-    "title": "ActiveMimic: Egocentric Video Pretraining with Active Perception",
-    "summary": "Egocentric human video offers a scalable alternative to robot data for pretraining, yet models pretrained on such video consistently underperform those pretrained on robot data. We attribute this gap to a missing signal, the active perception behavior in egocentric videos, where humans continuously reposition their viewpoint during manipulation, inducing camera motion that standard pipelines treat as noise. To address this, we present ActiveMimic, a pretraining framework that recovers synchronized camera and wrist trajectories from a single body-worn RGB camera, models camera motion as a viewpoint action, and jointly learns active perception and manipulation from in-the-wild egocentric human video before adapting to a target robot. Empirically, real-world experiments across tasks with diverse active perception demands show that ActiveMimic consistently surpasses baselines pretrained on human video and matches state-of-the-art models pretrained on robot data. Further analysis provides evidence that active perception capability originates from egocentric human video pretraining rather than robot-specific fine-tuning, confirming active perception as the key to unlocking egocentric human video for robot pretraining.",
+    "id": "2606.06033v1",
+    "title": "RealDexUMI: A Wearable Universal Manipulation Interface for Dexterous Robot Learning",
+    "summary": "Learning dexterous manipulation requires demonstrations that preserve fine hand-object interactions while remaining executable at deployment. Existing pipelines either lose deployable dexterity through retargeting or embodiment conversion, or rely on robot-specific teleoperation that is costly to scale and often lacks intuitive, contact-aware control for dexterous data collection. We present RealDexUMI, a wearable universal manipulation interface built around a shared dexterous end-effector module that integrates a lightweight dexterous hand, in-hand vision, and fingertip tactile sensing. A palm-side isomorphic teleoperation glove maps human finger inputs to robot-hand joint commands, enabling real-time, retargeting-free, intuitive, and precise hand control. The shared hand and sensing modules yield zero-gap end-effector data, with matched in-hand observations, tactile signals, contacts, and hand actions between collection and deployment. Across eight real-robot tasks spanning fine-grained, contact-rich, long-horizon, and bimanual manipulation, policies trained on RealDexUMI data achieve an average success rate of 88.75%, generalize to unseen initial poses, and transfer across three embodiments. Website: https://research.beingbeyond.com/realdexumi",
     "authors": [
-      "Xingyao Lin",
-      "Guojin Zhong",
-      "Tianyi Lu",
-      "Ziyi Ye",
-      "Yichen Zhu",
-      "Zuxuan Wu",
-      "Yu-Gang Jiang"
+      "Chaoyi Xu",
+      "Yixuan Jiang",
+      "Jiahui Huan",
+      "Yuhui Fu",
+      "Haoyu Zhou",
+      "Weitian Yuan",
+      "Jiayi Yu",
+      "Wanpeng Zhang",
+      "Haoqi Yuan",
+      "Zongqing Lu"
     ],
-    "published": "2026-06-04T14:01:01Z",
-    "updated": "2026-06-04T14:01:01Z",
-    "url": "https://arxiv.org/abs/2606.06194v1",
-    "pdf_url": "https://arxiv.org/pdf/2606.06194v1",
+    "published": "2026-06-04T11:28:23Z",
+    "updated": "2026-06-04T11:28:23Z",
+    "url": "https://arxiv.org/abs/2606.06033v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.06033v1",
     "tags": [
-      "cs.RO",
-      "cs.CV"
+      "cs.RO"
     ],
     "source": "arxiv",
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2606.06218v1",
-    "title": "TAM: Torque Adaptation Module for Robust Motion Transfer in Manipulation",
-    "summary": "A policy tuned for one robot often behaves differently on another, whether due to the sim-to-real gap, unknown payloads, or the differing dynamics of two instances of the same robot. In contact-rich, dynamic manipulation, even small motion discrepancies can result in failure to track reference motion, since they disrupt the timing and modes of contact. Common remedies, such as domain randomization or system identification, either produce overly conservative task policies or require data that must be recollected for each robot or payload. We introduce the Torque Adaptation Module (TAM), a learned module that adapts the torque commands sent to the robot to match the behavior of an ideal robot. TAM operates between the low-level controller that tracks the policy's actions and the robot's torque interface. It includes a history encoder that embeds proprioceptive history into a latent state and a torque adaptor that computes residual torque corrections. Because TAM depends only on proprioceptive history and not on policy observations, or the action space, the same TAM weights can be reused to adapt policies with different action spaces (joint targets, end-effector targets, or direct torques). The policies themselves do not need to be trained with domain randomization of robot parameters. Instead, we offload the need for domain randomization to TAM by training it entirely in randomized simulation, using multi-robot pretraining followed by a robot-specific fine-tuning step that still requires no real-robot data. We evaluate TAM zero-shot on a real Franka Panda robot across dynamic manipulation tasks that include a vision-based box pushing policy (from RL), a flip policy (from BC), and an MPC ball-on-plate balancing. Our experiments show that TAM improves zero-shot real-robot execution compared to online system identification and RMA baselines and enables robust dynamic manipulation performance.",
+    "id": "2606.05873v1",
+    "title": "LadderMan: Learning Humanoid Perceptive Ladder Climbing",
+    "summary": "Humanoid robots hold great promise for operating in human-centered environments, yet ladder climbing remains one of the most challenging tasks due to sparse footholds and handholds, complex whole-body coordination, and sensitivity to perception and control errors. We present \\textbf{LadderMan}, a unified system that enables humanoid robots to robustly climb diverse ladders and perform manipulation under such constrained conditions. Our climbing policy is built on a scalable two-stage learning pipeline, where we use hybrid motion tracking to learn multiple climbing experts from a single reference motion, and distill these experts into a unified depth-based visuomotor climbing policy via hybrid imitation and reinforcement learning. To enable real-world deployment, we leverage vision foundation models to bridge the sim-to-real gap in depth perception. Building on the learned climbing policy, we further train a separate manipulation policy using a dual-agent formulation, allowing stable on-ladder manipulation via teleoperation. Experiments demonstrate that LadderMan achieves robust ladder climbing across a wide range of geometries, successfully transfers to real-world hardware in a zero-shot manner, and supports various manipulation tasks under challenging ladder constraints. Video results are available at https://ladderman-robot.github.io .",
     "authors": [
-      "Dongwon Son",
-      "Florian Shkurti",
-      "Jason Lee",
-      "Naman Shah",
-      "Beomjoon Kim",
-      "Dieter Fox"
+      "Siheng Zhao",
+      "Yuanhang Zhang",
+      "Ziqi Lu",
+      "Pieter Abbeel",
+      "Rocky Duan",
+      "Koushil Sreenath",
+      "Yue Wang",
+      "C. Karen Liu",
+      "Guanya Shi"
     ],
-    "published": "2026-06-04T14:31:54Z",
-    "updated": "2026-06-04T14:31:54Z",
-    "url": "https://arxiv.org/abs/2606.06218v1",
-    "pdf_url": "https://arxiv.org/pdf/2606.06218v1",
+    "published": "2026-06-04T08:47:08Z",
+    "updated": "2026-06-04T08:47:08Z",
+    "url": "https://arxiv.org/abs/2606.05873v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.05873v1",
     "tags": [
       "cs.RO",
-      "cs.AI"
+      "cs.AI",
+      "cs.CV",
+      "cs.LG"
     ],
     "source": "arxiv",
     "bucket": "Representative paper from your selected authors in the last three months"
