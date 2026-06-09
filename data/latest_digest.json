@@ -1,76 +1,81 @@
 [
   {
-    "id": "2606.07386v1",
-    "title": "Spline Policy: A Structured Representation for Robot Policies",
-    "summary": "Modern imitation-learning policies for robot manipulation often represent actions as fixed-resolution action chunks, which are simple and effective but expose limited geometric and temporal structure before execution. This paper studies Spline Policy (SP), a structured representation that replaces action chunks with spline parameters while keeping the policy backbone unchanged. The predicted spline can be decoded as a compact continuous trajectory, queried at different temporal resolutions, constrained or edited in parameter space, and passed to downstream controllers. For quadratic spline outputs, the same representation can also be converted into a state-dependent vector field through an analytical distance-field construction. Under the regularity and projection assumptions of this construction, the induced dynamics do not increase the distance to the generated spline, yielding a principled local corrective mechanism around the predicted motion. The spline output further supports uncertainty propagation from observations to spline parameters, trajectories, and flow fields, and can be combined with classical control mechanisms such as null-space collision avoidance without retraining the policy backbone. We instantiate SP with diffusion, flow-matching, transformer-based, and vision-language-action backbones. Experiments in low-dimensional motion learning, simulated manipulation under matched backbones, dexterous manipulation, and real-robot case studies show that SP remains compatible with modern policy learners while exposing useful motion-structure properties, including compact decoding, temporal resampling, local correction around predicted motions, uncertainty evaluation, and controller compatibility.",
+    "id": "2605.30226v2",
+    "title": "BORA: Bridging Offline Reinforcement Learning and Online Residual Adaptation for Real-World Dexterous VLA Models",
+    "summary": "Vision-Language-Action (VLA) models have emerged as a promising paradigm for grounding visual-language understanding into real-world robotic manipulation. However, dexterous manipulation remains challenging for VLA policies due to high-dimensional hand control and compounding execution errors, which makes real-world RL post-training essential for bridging the gap between visually grounded action generation and physically reliable dexterous execution. However, high-dimensional dexterous exploration often triggers temporal inconsistency, sample inefficiency and hardware risks in the real world. To address these challenges, we propose BORA, an offline-to-online RL post-training framework designed for real-world dexterous VLA models. In the offline phase, BORA constructs a critic that takes both the VLM's cognition tokens and action chunks as inputs. This design enables action-conditioned value guidance, allowing the critic to evaluate dexterous hand motions beyond visual context alone. During the subsequent online phase, BORA freezes the VLA base and introduces a lightweight, Human-in-the-Loop (HiL) chunk-wise residual adaptation mechanism to mitigate real-world execution errors and further correct the offline-learned intents within the actual physical environment. By inheriting the offline critic and employing intervention-driven rewards, BORA effectively corrects execution discrepancies and adapts to real-world physical variances while preserving the pretrained policy as a stable prior. Extensive evaluations across five complex real-world dexterous tasks demonstrate that BORA significantly outperforms pure imitation learning and traditional decoupled RL baselines, achieving a 33% absolute increase in average success rate under standard settings and up to a 43% improvement in unseen object generalization.",
     "authors": [
-      "Mengze Tian",
-      "Yiming Li",
-      "Sichao Liu",
-      "Auke Ijspeert",
-      "Sylvain Calinon"
+      "Zhongxi Chen",
+      "Yifan Han",
+      "Yanming Shao",
+      "Huanming Liu",
+      "Congsheng Xu",
+      "Xiaoyu Chen",
+      "Yao Mu",
+      "Wenzhao Lian"
     ],
-    "published": "2026-06-05T15:23:54Z",
-    "updated": "2026-06-05T15:23:54Z",
-    "url": "https://arxiv.org/abs/2606.07386v1",
-    "pdf_url": "https://arxiv.org/pdf/2606.07386v1",
+    "published": "2026-05-28T16:57:47Z",
+    "updated": "2026-06-06T09:12:27Z",
+    "url": "https://arxiv.org/abs/2605.30226v2",
+    "pdf_url": "https://arxiv.org/pdf/2605.30226v2",
     "tags": [
-      "cs.RO"
+      "cs.RO",
+      "cs.AI"
     ],
     "source": "arxiv",
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2606.07172v1",
-    "title": "Textual Supervision Enhances Geospatial Representations in Vision-Language Models",
-    "summary": "Geospatial understanding is a critical yet underexplored dimension in the development of machine learning systems for tasks such as image geolocation and spatial reasoning. In this work, we analyze the geospatial representations acquired by three model families: vision-only architectures (e.g., ViT), vision-language models (e.g., CLIP), and large-scale multimodal foundation models (e.g., LLaVA, Qwen, and Gemma). By evaluating across image clusters, including people, landmarks, and everyday objects, grouped based on the degree of localizability, we reveal systematic gaps in spatial accuracy and show that textual supervision enhances the learning of geospatial representations. Our findings suggest the role of language as an effective complementary modality for encoding spatial context and multimodal learning as a key direction for advancing geospatial AI.",
+    "id": "2606.08057v1",
+    "title": "EgoAERO: Learning Dexterous Manipulation from a Single Egocentric Video without Object Assets",
+    "summary": "Egocentric RGB-D videos offer a natural source of human dexterous manipulation demonstrations, but existing data is difficult to use for robot learning because object pose, geometry, and contact information are often missing or require pre-scanned object assets. We present EgoAERO, the first framework that learns dexterous manipulation from a single egocentric RGB-D human demonstration without object assets. EgoAERO reconstructs contact-consistent hand-object trajectories through asset-free object tracking and reconstruction, ego motion compensation, and adaptive contact optimization, then converts them into robot policies using two-stage residual learning. We further introduce an online quality assessment mechanism and construct EgoDex-R, a large-scale egocentric dataset with 4.3M RGB-D frames for dexterous policy learning. Simulation and real-world experiments show that EgoAERO enables single-demonstration dexterous manipulation and achieves downstream performance close to CAD-based reconstructions on HOI4D.",
     "authors": [
-      "Marcelo Sartori Locatelli",
-      "Fernando Tonucci",
-      "Jea Kwon",
-      "Luiz Felipe Vecchietti",
-      "Bryan Nathanael Wijaya",
-      "Cheng Yaw Low",
-      "Virgilio Almeida",
-      "Meeyoung Cha"
+      "Yichen Niu",
+      "Haoran Lv",
+      "Xinrui Zhang",
+      "Xueyao Wan",
+      "Shiyu Gao",
+      "Ying Ai",
+      "Hui Xu",
+      "Yongqi Hu",
+      "Hengyi Zhang",
+      "Yang Xie",
+      "Zhaxizhuoma",
+      "Yue Zhao",
+      "Zhenshan Bing",
+      "Yan Ding",
+      "Jianxing Liu"
     ],
-    "published": "2026-06-05T11:40:13Z",
-    "updated": "2026-06-05T11:40:13Z",
-    "url": "https://arxiv.org/abs/2606.07172v1",
-    "pdf_url": "https://arxiv.org/pdf/2606.07172v1",
+    "published": "2026-06-06T08:39:52Z",
+    "updated": "2026-06-06T08:39:52Z",
+    "url": "https://arxiv.org/abs/2606.08057v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.08057v1",
     "tags": [
-      "cs.CV",
-      "cs.AI",
-      "cs.CL",
-      "cs.LG"
+      "cs.RO",
+      "cs.AI"
     ],
     "source": "arxiv",
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2606.07107v1",
-    "title": "Coarse-to-Control: Action-Token Planning for Vision-Language-Action Models",
-    "summary": "Most vision-language-action (VLA) models map observations directly to actions without explicit intermediate planning, which limits performance on long-horizon tasks where early mistakes compound. We propose Coarse-to-Control, a plan-execute VLA that introduces planning natively in the action-token space. The key idea is to let the policy first predict a compact sequence of coarse action tokens that summarize the intended future trajectory, and then generate executable action tokens conditioned on this plan. Because both planning and execution share a unified discrete action vocabulary, the plan stays close to the control manifold and provides directly actionable guidance rather than an abstract hint that must be translated back to motor commands. Experiments on LIBERO, SimplerEnv-WidowX, and real-world manipulation tasks show that action-token planning consistently improves over direct action generation, with the largest gains on long-horizon multi-stage tasks.",
+    "id": "2606.08107v1",
+    "title": "Ego-Pi: VLA Fine-Tuning for Ego-Centric Human and Robot Data",
+    "summary": "Robotics faces a fundamental challenge of data scarcity. Unlike language or vision research, there is no internet-scale dataset for robotic manipulation. A promising path forward is to leverage egocentric human data, which can be collected more easily, with greater breadth, and at a larger scale. Towards this end, we investigate key design choices for learning across human and humanoid embodiments equipped with dexterous five-finger hands, using the $π_{0.5}$ model as a foundation. Our results show that human data enables robots to learn new task semantics and compose existing skills into novel behaviors without corresponding robot data. The paper website is here: https://egopipaper.github.io/",
     "authors": [
-      "Jinhao Wu",
-      "Shiduo Zhang",
-      "Yicheng Liu",
-      "Xiaopeng Yu",
-      "Sixian Li",
-      "Siyin Wang",
-      "Hang Zhao",
-      "Jing Huo",
-      "Yang Gao",
-      "Jingjing Gong",
-      "Xipeng Qiu",
-      "Yu-Gang Jiang"
+      "Ji Woong Kim",
+      "Ke Wang",
+      "Zipeng Fu",
+      "Sirui Chen",
+      "Cong Zhao",
+      "Jeff Lai",
+      "Chelsea Finn"
     ],
-    "published": "2026-06-05T10:01:37Z",
-    "updated": "2026-06-05T10:01:37Z",
-    "url": "https://arxiv.org/abs/2606.07107v1",
-    "pdf_url": "https://arxiv.org/pdf/2606.07107v1",
+    "published": "2026-06-06T11:14:21Z",
+    "updated": "2026-06-06T11:14:21Z",
+    "url": "https://arxiv.org/abs/2606.08107v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.08107v1",
     "tags": [
-      "cs.RO"
+      "cs.RO",
+      "cs.AI"
     ],
     "source": "arxiv",
     "bucket": "Representative paper from your selected authors in the last three months"
