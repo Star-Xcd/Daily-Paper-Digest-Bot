@@ -1,71 +1,71 @@
 [
   {
-    "id": "2606.12109v1",
-    "title": "Bridging the Morphology Gap: Adapting VLA Models to Dexterous Manipulation via Intent-Conditioned Fine-Tuning",
-    "summary": "Vision-Language-Action (VLA) models have demonstrated remarkable zero-shot generalization in robotic manipulation, yet the vast majority of pre-trained pipelines remain strictly confined to low-DoF parallel grippers. Adapting these rich semantic priors to high-DoF dexterous hands introduces a severe morphology gap, direct end-to-end joint fine-tuning inherently causes catastrophic forgetting of spatial reasoning and acute action manifold collapse due to data scarcity. In this paper, we present InDex, a novel, data-efficient adaptation framework rooted in cross-morphology semantic inheritance. Rather than discarding the pre-trained 1-DoF parallel grasp output, we repurpose it as a continuous, macroscopic virtual grasp intent proxy to sequentialize the control topology. We implement a two-stage decoupled learning architecture: the first stage parameter-efficiently aligns the VLA backbone to predict continuous arm trajectories and the scalar grasp intent; the second stage freezes this spatial backbone and leverages an intent-conditioned denoising diffusion head to decode fine-grained joint articulations for multi-fingered end-effectors. Extensive simulation benchmarks across a suite of multi-stage, contact-rich dexterous manipulation tasks demonstrate that InDex effectively masters intricate skills with minimal demonstration data, substantially outperforming monolithic baselines while preserving the robust spatial generalizability of the original VLA prior.",
+    "id": "2606.13435v1",
+    "title": "GIVE: Grounding Human Gestures in Vision-Language-Action Models",
+    "summary": "Human communication is inherently multimodal, where language is often accompanied by non-verbal cues such as gestures to convey intentions. However, current Vision-Language-Action (VLA) models treat robotic manipulation as a pure text-driven task, overlooking the important role of gestures in Human-Robot Interaction (HRI). This often leads to inaccurate intent grounding and unreliable manipulation when language instructions are ambiguous or underspecified. To address this challenge, we propose GIVE (Gesture Intent via Visual-Semantic Enhancement), an effective approach that enhances pre-trained VLA models with human gesture understanding without architectural modifications. Specifically, GIVE incorporates gesture information through two complementary pathways: a visual pathway that overlays hand skeletons and fingertip rays onto robot observations for explicit object grounding, and a semantic pathway that generates high-level descriptions of human gestures and task instructions for robust intent grounding. By jointly leveraging visual and semantic guidance, GIVE enables VLA policies to better associate gestures with manipulation behaviors and adapt to dynamic interaction intents. In real-world HRI experiments, GIVE substantially outperforms the baseline, improving target object recognition accuracy by 40% and overall task success rate by 80%, while demonstrating strong robustness and generalization to unseen spatial layouts and diverse participants.",
     "authors": [
-      "Chuanke Pang",
-      "Junyi Huang",
-      "Zhijun Zhao",
-      "Yaobing Wang",
-      "Kun Xu",
-      "Xilun Ding"
+      "Pengfei Liu",
+      "Gen Li",
+      "Junqiao Fan",
+      "Boyu Ma",
+      "Jindou Jia",
+      "Yang Xiao",
+      "Jianfei Yang"
     ],
-    "published": "2026-06-10T14:03:52Z",
-    "updated": "2026-06-10T14:03:52Z",
-    "url": "https://arxiv.org/abs/2606.12109v1",
-    "pdf_url": "https://arxiv.org/pdf/2606.12109v1",
+    "published": "2026-06-11T14:59:38Z",
+    "updated": "2026-06-11T14:59:38Z",
+    "url": "https://arxiv.org/abs/2606.13435v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.13435v1",
     "tags": [
-      "cs.RO",
-      "cs.AI"
+      "cs.RO"
     ],
     "source": "arxiv",
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2606.12362v1",
-    "title": "Latent World Recovery for Multimodal Learning with Missing Modalities",
-    "summary": "We study multimodal learning under missing modalities, with particular motivation from bioscience applications in which heterogeneous modalities are often only partially available when decisions need to be made. We propose Latent World Recovery (LWR), a framework built on two key ideas: (i) modality-specific embeddings from different modalities are aligned in a shared latent space, and (ii) a unified representation is constructed by fusing only the embeddings of the modalities that are actually available at both training and inference time. Rather than imputing missing modalities or requiring a fixed modality set, LWR treats each modality as a partial perception of an underlying latent state and performs availability-aware representation learning directly from the observed modalities. This combination of neighbor-based latent alignment and availability-aware modality fusion enables robust multimodal prediction under partial observation, while avoiding error propagation from explicit reconstruction of missing modalities. We evaluate the proposed framework on real-world incomplete multi-omics benchmarks and demonstrate that it provides an effective approach to downstream tasks such as cancer phenotype classification and survival prediction.",
+    "id": "2606.13677v1",
+    "title": "Mana: Dexterous Manipulation of Articulated Tools",
+    "summary": "Articulated tool manipulation remains a major challenge in dexterous robotics due to the need to coordinate internal degrees of freedom and contact-rich interactions. While prior work has largely focused on rigid objects, articulated tool use remains underexplored because of its physical complexity and the difficulty of learning functional grasping and manipulation policies. We present Mana (Manipulation Animator), a general sim-to-real framework that reinterprets dexterous manipulation as an animation problem. Inspired by computer animation, Mana employs a coarse-to-fine pipeline that transforms procedurally-generated grasp keyframes into manipulation trajectories through motion planning and reinforcement learning. The data generation process is largely automatic, requiring only a few mouse clicks to specify functional affordances (<1 minute per tool). Across four articulated tools spanning different scales and joint types, Mana achieves zero-shot sim-to-real transfer for both grasping and in-hand manipulation, demonstrating a scalable approach to dexterous articulated tool use.",
     "authors": [
-      "Hui Wang",
-      "Tianyu Ren",
-      "Joseph Butler",
-      "Christopher Baker",
-      "Karen Rafferty",
-      "Simon McDade"
+      "Zhao-Heng Yin",
+      "Guanya Shi",
+      "Pieter Abbeel",
+      "C. Karen Liu"
     ],
-    "published": "2026-06-10T17:31:34Z",
-    "updated": "2026-06-10T17:31:34Z",
-    "url": "https://arxiv.org/abs/2606.12362v1",
-    "pdf_url": "https://arxiv.org/pdf/2606.12362v1",
+    "published": "2026-06-11T17:59:49Z",
+    "updated": "2026-06-11T17:59:49Z",
+    "url": "https://arxiv.org/abs/2606.13677v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.13677v1",
     "tags": [
-      "cs.LG",
-      "cs.AI"
+      "cs.RO",
+      "cs.AI",
+      "cs.CV",
+      "cs.LG"
     ],
     "source": "arxiv",
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2606.10267v1",
-    "title": "What Matters in Orchestrating Robot Policies: A Systematic Study of Hierarchical VLA Agents",
-    "summary": "Hierarchical vision-language-action (Hi-VLA) systems have emerged as a promising paradigm for complex robot manipulation, by using high-level VLM planners to decompose tasks into language subgoals executed by low-level VLA controllers. Despite recent empirical progress, there is a lack of unified design principles for these systems: existing Hi-VLA systems differ in how they choose and connect planners, controllers, mechanisms to switch between the two, and how observations and memory are represented in the planner. In this paper, we present a systematic study of Hi-VLA design for robot manipulation. We unify representative Hi-VLA agents under an options-style control framework and benchmark core design choices across short-horizon, long-horizon, and reasoning-intensive tasks. Our analysis distills practical principles for building Hi-VLA systems, showing how model choices and interface mechanisms jointly shape performance. Applying these principles yields a substantially stronger system than either flat VLA control or a naively designed hierarchy, across experiments both in simulation and on a real ALOHA robot. Overall, our results provide a foundation for building more capable, robust, and principled hierarchical VLA agents. More information and video at jiahenghu.github.io/hi-vla.",
+    "id": "2606.12604v1",
+    "title": "EgoEngine: From Egocentric Human Videos to High-Fidelity Dexterous Robot Demonstrations",
+    "summary": "Dexterous manipulation is limited by the cost of collecting large-scale robot demonstrations. Egocentric human videos offer a scalable source of diverse manipulation behaviors, but directly using them for robot learning requires bridging two gaps: the visual gap between human and robot observations, and the action gap between human motion and robot-executable action. We propose EgoEngine, a scalable framework for transforming egocentric human manipulation videos into high-fidelity robot data. Given an egocentric RGB video, EgoEngine produces: (i) a high-fidelity robot observation video replacing human with robot while preserving scene context and temporal alignment, and (ii) a task-aligned, executable robot action trajectory under feasibility constraints. Experiments in simulation and on real robots show that EgoEngine enables scalable conversion of human videos into robot data and, to our knowledge, demonstrates the first zero-shot visuomotor dexterous policy learning from egocentric human videos without real-robot demonstrations. Project website: https://egoengine.github.io.",
     "authors": [
-      "Jiaheng Hu",
-      "Mohit Shridhar",
-      "Caden Lu",
-      "Dhruv Shah",
-      "Hao-Tien Lewis Chiang",
-      "Jie Tan",
-      "Annie Xie"
+      "Yangcen Liu",
+      "Shuo Cheng",
+      "Xinchen Yin",
+      "Woo Chul Shin",
+      "Alfred Cueva",
+      "Yiran Yang",
+      "Zhenyang Chen",
+      "Chuye Zhang",
+      "Danfei Xu"
     ],
-    "published": "2026-06-09T00:24:00Z",
-    "updated": "2026-06-09T00:24:00Z",
-    "url": "https://arxiv.org/abs/2606.10267v1",
-    "pdf_url": "https://arxiv.org/pdf/2606.10267v1",
+    "published": "2026-06-10T19:01:40Z",
+    "updated": "2026-06-10T19:01:40Z",
+    "url": "https://arxiv.org/abs/2606.12604v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.12604v1",
     "tags": [
-      "cs.RO",
-      "cs.AI",
-      "cs.LG"
+      "cs.RO"
     ],
     "source": "arxiv",
     "bucket": "Representative paper from your selected authors in the last three months"
