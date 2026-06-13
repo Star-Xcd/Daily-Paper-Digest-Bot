@@ -1,21 +1,17 @@
 [
   {
-    "id": "2606.13435v1",
-    "title": "GIVE: Grounding Human Gestures in Vision-Language-Action Models",
-    "summary": "Human communication is inherently multimodal, where language is often accompanied by non-verbal cues such as gestures to convey intentions. However, current Vision-Language-Action (VLA) models treat robotic manipulation as a pure text-driven task, overlooking the important role of gestures in Human-Robot Interaction (HRI). This often leads to inaccurate intent grounding and unreliable manipulation when language instructions are ambiguous or underspecified. To address this challenge, we propose GIVE (Gesture Intent via Visual-Semantic Enhancement), an effective approach that enhances pre-trained VLA models with human gesture understanding without architectural modifications. Specifically, GIVE incorporates gesture information through two complementary pathways: a visual pathway that overlays hand skeletons and fingertip rays onto robot observations for explicit object grounding, and a semantic pathway that generates high-level descriptions of human gestures and task instructions for robust intent grounding. By jointly leveraging visual and semantic guidance, GIVE enables VLA policies to better associate gestures with manipulation behaviors and adapt to dynamic interaction intents. In real-world HRI experiments, GIVE substantially outperforms the baseline, improving target object recognition accuracy by 40% and overall task success rate by 80%, while demonstrating strong robustness and generalization to unseen spatial layouts and diverse participants.",
+    "id": "2606.13279v1",
+    "title": "See Selectively, Act Adaptively: Dual-Level Structural Decomposition for Bimanual Robot Manipulation",
+    "summary": "In bimanual robotic manipulation, task-relevant visual information varies with the task stage and context, while the interaction of the two arms shifts between independent and coordinated modes, making policy learning challenging. However, existing monolithic Vision-Language-Action (VLA) policies process diverse visual inputs and interaction patterns through a single shared representation and action generation pathway, often failing to separately account for visual relevance and bimanual interaction structure. To address this issue, we propose a bimanual manipulation VLA framework based on Dual-Level Structural Decomposition. The View-Selective Visual Router dynamically adjusts wrist-view contributions to emphasize relevant visual cues, while the Interaction-Aware Action Mixture-of-Experts (MoE) decomposes action generation into coordinated and arm-wise pathways to adapt to varying bimanual interaction modes. We evaluate the proposed method on six simulated bimanual manipulation tasks in RoboTwin 2.0 and three long-horizon real-world tasks. Our model improves the overall average success rate over a monolithic baseline by 27.7% in simulation and 43.3% in real-world evaluation, while consistently outperforming single-module variants across both settings. These results demonstrate that jointly considering selective visual processing and explicit decomposition of bimanual interaction structures provides an effective inductive bias for robust bimanual manipulation.",
     "authors": [
-      "Pengfei Liu",
-      "Gen Li",
-      "Junqiao Fan",
-      "Boyu Ma",
-      "Jindou Jia",
-      "Yang Xiao",
-      "Jianfei Yang"
+      "Yoon-Ji Choi",
+      "Young-Chae Son",
+      "Soo-Chul Lim"
     ],
-    "published": "2026-06-11T14:59:38Z",
-    "updated": "2026-06-11T14:59:38Z",
-    "url": "https://arxiv.org/abs/2606.13435v1",
-    "pdf_url": "https://arxiv.org/pdf/2606.13435v1",
+    "published": "2026-06-11T12:33:55Z",
+    "updated": "2026-06-11T12:33:55Z",
+    "url": "https://arxiv.org/abs/2606.13279v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.13279v1",
     "tags": [
       "cs.RO"
     ],
@@ -23,49 +19,48 @@
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2606.13677v1",
-    "title": "Mana: Dexterous Manipulation of Articulated Tools",
-    "summary": "Articulated tool manipulation remains a major challenge in dexterous robotics due to the need to coordinate internal degrees of freedom and contact-rich interactions. While prior work has largely focused on rigid objects, articulated tool use remains underexplored because of its physical complexity and the difficulty of learning functional grasping and manipulation policies. We present Mana (Manipulation Animator), a general sim-to-real framework that reinterprets dexterous manipulation as an animation problem. Inspired by computer animation, Mana employs a coarse-to-fine pipeline that transforms procedurally-generated grasp keyframes into manipulation trajectories through motion planning and reinforcement learning. The data generation process is largely automatic, requiring only a few mouse clicks to specify functional affordances (<1 minute per tool). Across four articulated tools spanning different scales and joint types, Mana achieves zero-shot sim-to-real transfer for both grasping and in-hand manipulation, demonstrating a scalable approach to dexterous articulated tool use.",
+    "id": "2606.13601v1",
+    "title": "MCR-Bionic Hand: Anatomical Structural Priors for Dexterous Manipulation",
+    "summary": "Dexterous robotic hands are usually formulated as high dimensional active control systems governed by degrees of freedom, actuation, and algorithms. Human hand dexterity, however, is partly encoded in the physical architecture of bones, ligaments, tendons, aponeuroses, and intrinsic muscles. This work describes that contribution as two linked forms of structural intelligence: structural prior generation, in which wrist to finger tenodesis, FDS/FDP routing, and the dorsal extensor hood transform low dimensional posture inputs into default grasp configurations and PIP to DIP coordination; and muscle mediated modulation, in which extrinsic muscles, lumbricals, and interossei regulate MCP posture, distal stability, fingertip force paths, and contact states around that default state. Based on this framework, MCR-Bionic Hand is developed as a 1:1 musculoskeletal biomimetic hand integrating a two row eight bone wrist, cross wrist tendons, anatomical flexor routing, volar plate and collateral ligament constraints, the dorsal extensor hood, and intrinsic muscle pathways within one body. Functional demonstrations and geometric mechanical models show that wrist posture induces multi joint pre shaping, the extensor hood maps PIP posture to a coupled DIP response, and intrinsic plus pathways modulate distal stability and fingertip action direction after grasp formation. Contact rich tasks, including coin rotation, pen transfer, dorsal coin flipping, and cube manipulation, show that MCR-Bionic links low dimensional state generation with fine post contact modulation. These results suggest that anatomical biomimetics is valuable not for visual similarity, but for identifying human hand structures that perform part of control.",
     "authors": [
-      "Zhao-Heng Yin",
-      "Guanya Shi",
-      "Pieter Abbeel",
-      "C. Karen Liu"
+      "Haosen Yang",
+      "Guowu Wei"
     ],
-    "published": "2026-06-11T17:59:49Z",
-    "updated": "2026-06-11T17:59:49Z",
-    "url": "https://arxiv.org/abs/2606.13677v1",
-    "pdf_url": "https://arxiv.org/pdf/2606.13677v1",
+    "published": "2026-06-11T17:20:15Z",
+    "updated": "2026-06-11T17:20:15Z",
+    "url": "https://arxiv.org/abs/2606.13601v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.13601v1",
     "tags": [
       "cs.RO",
-      "cs.AI",
-      "cs.CV",
-      "cs.LG"
+      "eess.SY"
     ],
     "source": "arxiv",
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2606.12604v1",
-    "title": "EgoEngine: From Egocentric Human Videos to High-Fidelity Dexterous Robot Demonstrations",
-    "summary": "Dexterous manipulation is limited by the cost of collecting large-scale robot demonstrations. Egocentric human videos offer a scalable source of diverse manipulation behaviors, but directly using them for robot learning requires bridging two gaps: the visual gap between human and robot observations, and the action gap between human motion and robot-executable action. We propose EgoEngine, a scalable framework for transforming egocentric human manipulation videos into high-fidelity robot data. Given an egocentric RGB video, EgoEngine produces: (i) a high-fidelity robot observation video replacing human with robot while preserving scene context and temporal alignment, and (ii) a task-aligned, executable robot action trajectory under feasibility constraints. Experiments in simulation and on real robots show that EgoEngine enables scalable conversion of human videos into robot data and, to our knowledge, demonstrates the first zero-shot visuomotor dexterous policy learning from egocentric human videos without real-robot demonstrations. Project website: https://egoengine.github.io.",
+    "id": "2606.12402v1",
+    "title": "DIRECT: When and Where Should You Allocate Test-Time Compute in Embodied Planners?",
+    "summary": "Vision-Language Models (VLMs) are increasingly deployed as high-level planners for embodied agents, with an emerging strategy of scaling test-time compute to improve capability. However, we observe that doing so increases latency, token usage, and FLOPs while yielding uneven, often diminishing gains in downstream success, limiting where embodied agents can be deployed. We argue that choosing when and where to spend test-time compute is central to bringing frontier performance to the real world. We introduce DIRECT, a routing framework that uses multimodal scene context to allocate compute per prompt, improving the success--cost Pareto frontier over fixed model selection. Across three dominant scaling axes, namely chain-of-thought depth, model size, and memory history, our experiments on VLABench and RoboMME show that test-time compute is not a uniform lever: different axes yield qualitatively distinct capability gains. We validate these insights on a physical Franka arm in a DROID setup spanning zero-shot manipulation and long-horizon chaining, where our router matches or exceeds a stronger model's success rate at up to 65% lower average latency. Ultimately, our results show that naively scaling test-time compute is wasteful, and that DIRECT can provide frontier-level embodied planning in robotic systems at a fraction of the cost. Project page can be found at jadee-dao.github.io/direct/.",
     "authors": [
-      "Yangcen Liu",
-      "Shuo Cheng",
-      "Xinchen Yin",
-      "Woo Chul Shin",
-      "Alfred Cueva",
-      "Yiran Yang",
-      "Zhenyang Chen",
-      "Chuye Zhang",
-      "Danfei Xu"
+      "Jadelynn Dao",
+      "Milan Ganai",
+      "Yasmina Abukhadra",
+      "Ajay Sridhar",
+      "Mozhgan Nasr Azadani",
+      "Katie Luo",
+      "Clark Barrett",
+      "Jiajun Wu",
+      "Chelsea Finn",
+      "Marco Pavone"
     ],
-    "published": "2026-06-10T19:01:40Z",
-    "updated": "2026-06-10T19:01:40Z",
-    "url": "https://arxiv.org/abs/2606.12604v1",
-    "pdf_url": "https://arxiv.org/pdf/2606.12604v1",
+    "published": "2026-06-10T17:58:49Z",
+    "updated": "2026-06-10T17:58:49Z",
+    "url": "https://arxiv.org/abs/2606.12402v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.12402v1",
     "tags": [
-      "cs.RO"
+      "cs.RO",
+      "cs.AI",
+      "cs.CV"
     ],
     "source": "arxiv",
     "bucket": "Representative paper from your selected authors in the last three months"
