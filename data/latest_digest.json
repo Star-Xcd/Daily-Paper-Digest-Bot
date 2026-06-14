@@ -1,66 +1,68 @@
 [
   {
-    "id": "2606.13279v1",
-    "title": "See Selectively, Act Adaptively: Dual-Level Structural Decomposition for Bimanual Robot Manipulation",
-    "summary": "In bimanual robotic manipulation, task-relevant visual information varies with the task stage and context, while the interaction of the two arms shifts between independent and coordinated modes, making policy learning challenging. However, existing monolithic Vision-Language-Action (VLA) policies process diverse visual inputs and interaction patterns through a single shared representation and action generation pathway, often failing to separately account for visual relevance and bimanual interaction structure. To address this issue, we propose a bimanual manipulation VLA framework based on Dual-Level Structural Decomposition. The View-Selective Visual Router dynamically adjusts wrist-view contributions to emphasize relevant visual cues, while the Interaction-Aware Action Mixture-of-Experts (MoE) decomposes action generation into coordinated and arm-wise pathways to adapt to varying bimanual interaction modes. We evaluate the proposed method on six simulated bimanual manipulation tasks in RoboTwin 2.0 and three long-horizon real-world tasks. Our model improves the overall average success rate over a monolithic baseline by 27.7% in simulation and 43.3% in real-world evaluation, while consistently outperforming single-module variants across both settings. These results demonstrate that jointly considering selective visual processing and explicit decomposition of bimanual interaction structures provides an effective inductive bias for robust bimanual manipulation.",
+    "id": "2606.12978v1",
+    "title": "Trajectory-Level Redirection Attacks on Vision-Language-Action Models",
+    "summary": "Vision-language-action (VLA) policies bring natural language into closed-loop robot control, enabling robots to execute manipulation tasks directly from text instructions. The same interface gives text a recurring role in control because the prompt is reused at every replanning step, and each prompt-conditioned action changes the future observations on which the policy acts. Existing VLA attacks study adversarial prompts that elicit targeted low-level actions or make such actions persist across changing images. We identify a stronger trajectory-level failure mode: a prompt that still $\\textit{appears}$ to specify the intended task but redirects the final physical outcome. We mathematically formalize this setting as $\\textit{command-preserving trajectory redirection}$, a prompt-only threat model in which the attacker chooses one prompt before the episode, all policy and environment components remain fixed, and the prompt must stay close to the benign instruction while omitting target words and correction language. To find such prompts, we introduce an on-policy prompt search method that uses rollouts to discover perturbations whose closed-loop behavior tracks a target task while satisfying the command-preserving constraints. Experiments in simulation and on hardware show that near-benign prompt perturbations can redirect VLA rollouts to attacker-specified targets. These results expose a trajectory-level vulnerability in VLA instruction grounding: text that appears to preserve the intended command can still give an adversary control over the robot's final physical outcome. Project website: https://vla-redirection-attack.github.io/",
     "authors": [
-      "Yoon-Ji Choi",
-      "Young-Chae Son",
-      "Soo-Chul Lim"
+      "Gokul Puthumanaillam",
+      "Vardhan Dongre",
+      "Pranay Thangeda",
+      "Hooshang Nayyeri",
+      "Dilek Hakkani-Tür",
+      "Melkior Ornik"
     ],
-    "published": "2026-06-11T12:33:55Z",
-    "updated": "2026-06-11T12:33:55Z",
-    "url": "https://arxiv.org/abs/2606.13279v1",
-    "pdf_url": "https://arxiv.org/pdf/2606.13279v1",
+    "published": "2026-06-11T07:12:17Z",
+    "updated": "2026-06-11T07:12:17Z",
+    "url": "https://arxiv.org/abs/2606.12978v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.12978v1",
     "tags": [
-      "cs.RO"
+      "cs.RO",
+      "cs.CV",
+      "eess.SY"
     ],
     "source": "arxiv",
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2606.13601v1",
-    "title": "MCR-Bionic Hand: Anatomical Structural Priors for Dexterous Manipulation",
-    "summary": "Dexterous robotic hands are usually formulated as high dimensional active control systems governed by degrees of freedom, actuation, and algorithms. Human hand dexterity, however, is partly encoded in the physical architecture of bones, ligaments, tendons, aponeuroses, and intrinsic muscles. This work describes that contribution as two linked forms of structural intelligence: structural prior generation, in which wrist to finger tenodesis, FDS/FDP routing, and the dorsal extensor hood transform low dimensional posture inputs into default grasp configurations and PIP to DIP coordination; and muscle mediated modulation, in which extrinsic muscles, lumbricals, and interossei regulate MCP posture, distal stability, fingertip force paths, and contact states around that default state. Based on this framework, MCR-Bionic Hand is developed as a 1:1 musculoskeletal biomimetic hand integrating a two row eight bone wrist, cross wrist tendons, anatomical flexor routing, volar plate and collateral ligament constraints, the dorsal extensor hood, and intrinsic muscle pathways within one body. Functional demonstrations and geometric mechanical models show that wrist posture induces multi joint pre shaping, the extensor hood maps PIP posture to a coupled DIP response, and intrinsic plus pathways modulate distal stability and fingertip action direction after grasp formation. Contact rich tasks, including coin rotation, pen transfer, dorsal coin flipping, and cube manipulation, show that MCR-Bionic links low dimensional state generation with fine post contact modulation. These results suggest that anatomical biomimetics is valuable not for visual similarity, but for identifying human hand structures that perform part of control.",
+    "id": "2606.13332v1",
+    "title": "OR-Action: Multi-Role Video Understanding with Fine-Grained Actions",
+    "summary": "Fine-grained understanding of operating room (OR) activity could enable workflow-aware assistance, yet remains difficult due to clutter, occlusions, and limited sensing. The prevailing approach to model this environment is scene graphs as an interpretable representation of OR interactions. Converting their frame-wise relational predictions into temporally extended, fine-grained actions however, is challenging without explicit temporal modeling. To enable a principled temporal evaluation of current OR understanding methods, we introduce the first action-centric benchmark built on a publicly available ego-exocentric OR dataset by defining a fine-grained, multi-role action taxonomy and generating dense action segments via distillation from ground-truth scene graph state changes. Experiments on this benchmark show that current scene graph prediction methods struggle to model temporal structure, even when adding explicit modeling through Graph Neural Networks. We therefore introduce a vision-only temporal model that outperforms graph-based methods significantly when using all available egocentric video as input. Building on this model we also introduce a novel multi- to single-view feature alignment strategy that improves single-view performance on multi-role action recognition, mitigating the need for extensive egocentric video capture. Benchmark and code will be released upon acceptance.",
     "authors": [
-      "Haosen Yang",
-      "Guowu Wei"
+      "Felix Tristram",
+      "Ege Özsoy",
+      "Christian Benz",
+      "Marcel Walch",
+      "Ghazal Ghazaei",
+      "Nassir Navab"
     ],
-    "published": "2026-06-11T17:20:15Z",
-    "updated": "2026-06-11T17:20:15Z",
-    "url": "https://arxiv.org/abs/2606.13601v1",
-    "pdf_url": "https://arxiv.org/pdf/2606.13601v1",
+    "published": "2026-06-11T13:24:40Z",
+    "updated": "2026-06-11T13:24:40Z",
+    "url": "https://arxiv.org/abs/2606.13332v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.13332v1",
     "tags": [
-      "cs.RO",
-      "eess.SY"
+      "cs.CV"
     ],
     "source": "arxiv",
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2606.12402v1",
-    "title": "DIRECT: When and Where Should You Allocate Test-Time Compute in Embodied Planners?",
-    "summary": "Vision-Language Models (VLMs) are increasingly deployed as high-level planners for embodied agents, with an emerging strategy of scaling test-time compute to improve capability. However, we observe that doing so increases latency, token usage, and FLOPs while yielding uneven, often diminishing gains in downstream success, limiting where embodied agents can be deployed. We argue that choosing when and where to spend test-time compute is central to bringing frontier performance to the real world. We introduce DIRECT, a routing framework that uses multimodal scene context to allocate compute per prompt, improving the success--cost Pareto frontier over fixed model selection. Across three dominant scaling axes, namely chain-of-thought depth, model size, and memory history, our experiments on VLABench and RoboMME show that test-time compute is not a uniform lever: different axes yield qualitatively distinct capability gains. We validate these insights on a physical Franka arm in a DROID setup spanning zero-shot manipulation and long-horizon chaining, where our router matches or exceeds a stronger model's success rate at up to 65% lower average latency. Ultimately, our results show that naively scaling test-time compute is wasteful, and that DIRECT can provide frontier-level embodied planning in robotic systems at a fraction of the cost. Project page can be found at jadee-dao.github.io/direct/.",
+    "id": "2606.12352v1",
+    "title": "CHORUS: Decentralized Multi-Embodiment Collaboration with One VLA Policy",
+    "summary": "Multi-robot collaboration allows robots to efficiently take on a wide range of tasks, from moving a couch through a doorway to assembling structures on a construction site. However, achieving such coordination in mobile multi-robot settings remains challenging: centralized methods conditioned on the combined observations of a team scale poorly with team size, and decentralized methods that train one policy per robot often require explicit alignment procedures or information sharing at inference time to overcome partial observability. Our key insight is that the visuomotor priors of pretrained vision-language-action (VLA) models should enable reactive, decentralized collaboration from each robot's local observations alone, without these inference-time assumptions. We propose CHORUS, a framework that adapts a single VLA backbone to control diverse, multi-robot teams. At inference time, each robot runs an independent copy of CHORUS, conditioned only on its own observations and a robot-identifying prompt. In real-world experiments including mobile tape measurement, library book handovers, and laundry basket lifting, CHORUS achieves a 64% point improvement over decentralized, from-scratch models, improves reactivity to teammate behavior by 40% points, and outperforms centralized baselines. Together, these results show that a shared VLA backbone is capable of achieving decentralized multi-robot collaboration, without per-robot policies or inter-robot communication at inference.",
     "authors": [
-      "Jadelynn Dao",
-      "Milan Ganai",
-      "Yasmina Abukhadra",
-      "Ajay Sridhar",
-      "Mozhgan Nasr Azadani",
-      "Katie Luo",
-      "Clark Barrett",
-      "Jiajun Wu",
+      "Ria Doshi",
+      "Tian Gao",
+      "Annie Chen",
       "Chelsea Finn",
-      "Marco Pavone"
+      "Jeannette Bohg"
     ],
-    "published": "2026-06-10T17:58:49Z",
-    "updated": "2026-06-10T17:58:49Z",
-    "url": "https://arxiv.org/abs/2606.12402v1",
-    "pdf_url": "https://arxiv.org/pdf/2606.12402v1",
+    "published": "2026-06-10T17:26:08Z",
+    "updated": "2026-06-10T17:26:08Z",
+    "url": "https://arxiv.org/abs/2606.12352v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.12352v1",
     "tags": [
       "cs.RO",
-      "cs.AI",
-      "cs.CV"
+      "cs.AI"
     ],
     "source": "arxiv",
     "bucket": "Representative paper from your selected authors in the last three months"
