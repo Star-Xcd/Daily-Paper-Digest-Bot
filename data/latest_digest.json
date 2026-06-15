@@ -1,65 +1,71 @@
 [
   {
-    "id": "2606.12978v1",
-    "title": "Trajectory-Level Redirection Attacks on Vision-Language-Action Models",
-    "summary": "Vision-language-action (VLA) policies bring natural language into closed-loop robot control, enabling robots to execute manipulation tasks directly from text instructions. The same interface gives text a recurring role in control because the prompt is reused at every replanning step, and each prompt-conditioned action changes the future observations on which the policy acts. Existing VLA attacks study adversarial prompts that elicit targeted low-level actions or make such actions persist across changing images. We identify a stronger trajectory-level failure mode: a prompt that still $\\textit{appears}$ to specify the intended task but redirects the final physical outcome. We mathematically formalize this setting as $\\textit{command-preserving trajectory redirection}$, a prompt-only threat model in which the attacker chooses one prompt before the episode, all policy and environment components remain fixed, and the prompt must stay close to the benign instruction while omitting target words and correction language. To find such prompts, we introduce an on-policy prompt search method that uses rollouts to discover perturbations whose closed-loop behavior tracks a target task while satisfying the command-preserving constraints. Experiments in simulation and on hardware show that near-benign prompt perturbations can redirect VLA rollouts to attacker-specified targets. These results expose a trajectory-level vulnerability in VLA instruction grounding: text that appears to preserve the intended command can still give an adversary control over the robot's final physical outcome. Project website: https://vla-redirection-attack.github.io/",
+    "id": "2606.14375v1",
+    "title": "Elastic Queries Reinforcement Learning: Self-Aware Policy Execution for VLA Models",
+    "summary": "Vision-language-action (VLA) models are powerful action generators for robot manipulation, but they are typically executed with fixed inference and replanning schedules. This rigidity ignores the uneven difficulty of robot control: contact-rich or uncertain states may need more computation and fresher feedback, while easier states can often be handled with fewer inference steps and longer open-loop execution. We propose Elastic Queries Reinforcement Learning (EQRL), a framework that makes each VLA policy query elastic. A lightweight latent-schedule adaptor jointly selects the latent input, denoising budget, and action chunk length, without fine-tuning the underlying VLA model. To make scheduling difficulty-aware, EQRL trains a critic over the joint latent-schedule action and derives a state difficulty signal from critic ensemble disagreement. This signal guides compute toward difficult states, while a learned residual allows task-driven correction. We formulate variable chunk execution as query-level macro-action RL with chunk-dependent discounting and an amortized number-of-function-evaluations (NFE) budget. Across simulation and real-robot manipulation, EQRL reduces amortized inference cost while preserving or improving task success.",
     "authors": [
-      "Gokul Puthumanaillam",
-      "Vardhan Dongre",
-      "Pranay Thangeda",
-      "Hooshang Nayyeri",
-      "Dilek Hakkani-Tür",
-      "Melkior Ornik"
+      "Ge Wang",
+      "Xinyu Tan",
+      "Xiang Li",
+      "Man Luo",
+      "Chengsi Yao",
+      "Shenhao Yan",
+      "Jiahao Yang",
+      "Fan Feng",
+      "Honghao Cai",
+      "Xiangyuan Wang",
+      "Zhixin Mai",
+      "Yiming Zhao",
+      "Yatong Han",
+      "Zhen Li"
     ],
-    "published": "2026-06-11T07:12:17Z",
-    "updated": "2026-06-11T07:12:17Z",
-    "url": "https://arxiv.org/abs/2606.12978v1",
-    "pdf_url": "https://arxiv.org/pdf/2606.12978v1",
+    "published": "2026-06-12T12:06:41Z",
+    "updated": "2026-06-12T12:06:41Z",
+    "url": "https://arxiv.org/abs/2606.14375v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.14375v1",
     "tags": [
       "cs.RO",
-      "cs.CV",
-      "eess.SY"
+      "cs.AI"
     ],
     "source": "arxiv",
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2606.13332v1",
-    "title": "OR-Action: Multi-Role Video Understanding with Fine-Grained Actions",
-    "summary": "Fine-grained understanding of operating room (OR) activity could enable workflow-aware assistance, yet remains difficult due to clutter, occlusions, and limited sensing. The prevailing approach to model this environment is scene graphs as an interpretable representation of OR interactions. Converting their frame-wise relational predictions into temporally extended, fine-grained actions however, is challenging without explicit temporal modeling. To enable a principled temporal evaluation of current OR understanding methods, we introduce the first action-centric benchmark built on a publicly available ego-exocentric OR dataset by defining a fine-grained, multi-role action taxonomy and generating dense action segments via distillation from ground-truth scene graph state changes. Experiments on this benchmark show that current scene graph prediction methods struggle to model temporal structure, even when adding explicit modeling through Graph Neural Networks. We therefore introduce a vision-only temporal model that outperforms graph-based methods significantly when using all available egocentric video as input. Building on this model we also introduce a novel multi- to single-view feature alignment strategy that improves single-view performance on multi-role action recognition, mitigating the need for extensive egocentric video capture. Benchmark and code will be released upon acceptance.",
+    "id": "2606.14561v1",
+    "title": "ORCA: A Platform for Open-Source Dexterity Research",
+    "summary": "Robotics manipulation research increasingly focuses on two-finger parallel grippers for their effectiveness, affordability, and ease of teleoperation. Grippers are nonetheless limited by their form factor, often requiring bimanual setups even for simple reorientation tasks. Anthropomorphic hands are a more natural platform for dexterous robot learning -- closer to the human hand, and capable of learning from human video -- yet they remain hard to use in learning research: even where open and accessible hand hardware exists, the software for control, simulation, teleoperation, and retargeting is scattered in one-off code bases, and largely disconnected from the robot-learning ecosystem. In this work, we introduce the \\orca~learning stack, an open-source research stack for dexterity as a first-class robot learning domain. Our \\orca~stack unifies low-level control, simulation, teleoperation from a range of consumer platforms, and hand retargeting, behind a single interface, and integrates natively with popular robot-learning frameworks such as \\lerobot, so dexterous hand researchers can leverage the same data, training, and evaluation pipelines used for non-dexterous robot learning. We demonstrate a complete end-to-end workflow, collecting expert demonstrations of an in-hand reorientation task by teleoperation with a consumer-grade VR headset, training an autonomous policy with \\lerobot, and evaluating the learned policy in a fully reproducible and observable setup. We open-source the entire stack as a shared, reproducible foundation for dexterous-manipulation research.",
     "authors": [
-      "Felix Tristram",
-      "Ege Özsoy",
-      "Christian Benz",
-      "Marcel Walch",
-      "Ghazal Ghazaei",
-      "Nassir Navab"
+      "Francesco Capuano",
+      "Maximilian Eberlein",
+      "Fabrice Bourquin",
+      "Clemens Claudio Christoph"
     ],
-    "published": "2026-06-11T13:24:40Z",
-    "updated": "2026-06-11T13:24:40Z",
-    "url": "https://arxiv.org/abs/2606.13332v1",
-    "pdf_url": "https://arxiv.org/pdf/2606.13332v1",
+    "published": "2026-06-12T15:38:34Z",
+    "updated": "2026-06-12T15:38:34Z",
+    "url": "https://arxiv.org/abs/2606.14561v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.14561v1",
     "tags": [
-      "cs.CV"
+      "cs.RO",
+      "cs.LG"
     ],
     "source": "arxiv",
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2606.12352v1",
-    "title": "CHORUS: Decentralized Multi-Embodiment Collaboration with One VLA Policy",
-    "summary": "Multi-robot collaboration allows robots to efficiently take on a wide range of tasks, from moving a couch through a doorway to assembling structures on a construction site. However, achieving such coordination in mobile multi-robot settings remains challenging: centralized methods conditioned on the combined observations of a team scale poorly with team size, and decentralized methods that train one policy per robot often require explicit alignment procedures or information sharing at inference time to overcome partial observability. Our key insight is that the visuomotor priors of pretrained vision-language-action (VLA) models should enable reactive, decentralized collaboration from each robot's local observations alone, without these inference-time assumptions. We propose CHORUS, a framework that adapts a single VLA backbone to control diverse, multi-robot teams. At inference time, each robot runs an independent copy of CHORUS, conditioned only on its own observations and a robot-identifying prompt. In real-world experiments including mobile tape measurement, library book handovers, and laundry basket lifting, CHORUS achieves a 64% point improvement over decentralized, from-scratch models, improves reactivity to teammate behavior by 40% points, and outperforms centralized baselines. Together, these results show that a shared VLA backbone is capable of achieving decentralized multi-robot collaboration, without per-robot policies or inter-robot communication at inference.",
+    "id": "2606.10366v1",
+    "title": "A Practical Recipe Towards Improving Sim-and-Real Correlation for VLA Evaluation",
+    "summary": "Simulation has become an essential tool for evaluating and improving vision-language-action (VLA) policies, offering scalable, reproducible, and controllable alternatives to costly real-world robot evaluation. Recent simulation benchmarks have made substantial progress on realism and diversity, yet these platforms have not been widely adopted as reliable proxies for real-world policy evaluation. In this work, we investigate this issue through the lens of sim-and-real correlation. We conduct a systematic study across multiple simulation platforms, VLA policies, tasks, and perturbation factors, measuring whether simulated evaluation preserves real-world conclusions in terms of policy ranking consistency, performance correlation, and perturbation-wise failure patterns. This analysis allows us to characterize the limitations of existing simulators and identify what kinds of simulation signals are more aligned with real-world deployment. We further examine how users should exploit simulation for policy improvement, including when simulator-based finetuning is beneficial and how the amount of post-training data affects sim-and-real alignment. Overall, our work provides a unified framework for measuring, interpreting, and improving the usefulness of simulation for VLA policies, offering guidance both for simulator designers and for practitioners who use simulation as part of the policy development pipeline.",
     "authors": [
-      "Ria Doshi",
-      "Tian Gao",
-      "Annie Chen",
-      "Chelsea Finn",
-      "Jeannette Bohg"
+      "Shuo Wang",
+      "Hanyuan Xu",
+      "Yingdong Hu",
+      "Fanqi Lin",
+      "Yang Gao"
     ],
-    "published": "2026-06-10T17:26:08Z",
-    "updated": "2026-06-10T17:26:08Z",
-    "url": "https://arxiv.org/abs/2606.12352v1",
-    "pdf_url": "https://arxiv.org/pdf/2606.12352v1",
+    "published": "2026-06-09T03:25:02Z",
+    "updated": "2026-06-09T03:25:02Z",
+    "url": "https://arxiv.org/abs/2606.10366v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.10366v1",
     "tags": [
       "cs.RO",
       "cs.AI"
