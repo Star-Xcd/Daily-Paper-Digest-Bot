@@ -1,22 +1,21 @@
 [
   {
-    "id": "2606.18097v1",
-    "title": "WireCraft: A Simulation Benchmark for Industrial DLO Manipulation",
-    "summary": "Deformable Linear Objects (DLOs), such as wires and cables, are central to industrial assembly. Unlike rigid objects, whose state is captured by a 6-DoF pose, DLOs have an infinite-dimensional configuration space and deform continuously under contact with grippers, fixtures, and the workspace, making them a demanding benchmark for general dexterous manipulation. Despite their importance, policy development and comparison remain difficult: existing benchmarks are often tied to specific hardware setups, lack modular and customizable task assets, or study generic deformable-object tasks without the fixtures relevant to real-world industrial wire manipulation. Few benchmarks align simulation, real-world data, and shared evaluation protocols. To bridge this gap, we introduce WireCraft, a simulation benchmark for industrial DLO manipulation with configurable difficulty and assets, spanning three task families: connector insertion, clip routing, and channel seating. It supports two complementary DLO physics models, articulated and deformable, and the trajectories come from both simulation and a physical UR5. We benchmark reinforcement learning (RL), imitation learning (IL), and vision-language-action (VLA) policies under shared metrics. Privileged state-based RL solves a representative setting in each task family with over 82\\% success, confirming the tasks are well-posed. For connector insertion, however, the transition from reaching the socket to contact-rich alignment remains a key bottleneck for vision RL, IL, and VLA policies. These results indicate that industrial DLO manipulation, though tractable under privileged state, remains an open challenge for current vision-based learning. The benchmark, data, and tools will be open-sourced upon acceptance.",
+    "id": "2606.19340v1",
+    "title": "Zero-Shot Long-Horizon Dexterous Manipulation via Multi-View 3D-Grounded VLM Reasoning",
+    "summary": "We present a zero-shot framework for long-horizon dexterous manipulation that grounds language instructions into executable 3D task plans from calibrated multi-view RGB images. Rather than training an end-to-end policy, our system uses a vision-language model (VLM) to produce reference-frame task grounding and primitive-level 2D keypoints, then lifts them into 3D via multi-view fusion. This lifting combines triangulation of view-wise VLM groundings with reference-view ray voting, which searches along a semantic camera ray for geometrically consistent candidates across neighboring views. The resulting 3D keypoints support both pick-and-place and tool-use: for tool-use, we retrieve an object-centric atomic action corresponding to the inferred skill category and align its stored 6D tool trajectory to the scene; for dexterous execution, we expand the lifted grasp keypoint into a task-conditioned grasp affordance region and generate feasible grasp-motion pairs with an arm-hand motion generator. Real-world experiments show improved 3D grounding accuracy and execution reliability over single-view RGB-D grounding and fine-tuned VLA baselines. We further demonstrate long-horizon manipulation through closed-loop status verification and replan, enabling zero-shot execution on unseen objects and tool-use tasks in novel scenes.",
     "authors": [
-      "Chongyu Zhu",
-      "Ramy ElMallah",
-      "Hyegang Kim",
-      "Zachary Tang",
-      "Jiachen Rao",
-      "Artem Arutyunov",
-      "Seungyeon Ha",
-      "Chi-Guhn Lee"
+      "Jisoo Kim",
+      "Sangwon Baik",
+      "Taeksoo Kim",
+      "Sungjoo Kim",
+      "Junyoung Lee",
+      "Mingi Choi",
+      "Hanbyul Joo"
     ],
-    "published": "2026-06-16T15:59:46Z",
-    "updated": "2026-06-16T15:59:46Z",
-    "url": "https://arxiv.org/abs/2606.18097v1",
-    "pdf_url": "https://arxiv.org/pdf/2606.18097v1",
+    "published": "2026-06-17T17:59:56Z",
+    "updated": "2026-06-17T17:59:56Z",
+    "url": "https://arxiv.org/abs/2606.19340v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.19340v1",
     "tags": [
       "cs.RO"
     ],
@@ -24,34 +23,21 @@
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2606.17256v1",
-    "title": "Contrastive Action-Image Pre-training for Visuomotor Control",
-    "summary": "Existing vision encoders for robotics face a fundamental bottleneck: robotic datasets lack the scale necessary for large-scale pre-training. Prior work circumvents this data scarcity by turning to internet-scale image and language data or egocentric human video. While these models show promise, neither paradigm learns from paired vision and action data, which downstream visuomotor control policies require. However, robot trajectories, the most direct source of this paired signal, are not available at pre-training scale, motivating us to extract action signals from abundant human video instead. To this end, we introduce CAIP (Contrastive Action-Image Pre-training), a vision encoder that treats human hand poses from large-scale egocentric video as a proxy for end-effector actions. By extracting 3D hand keypoints, a representation that aligns naturally with downstream robot action spaces, CAIP learns a unified action-image representation through a contrastive objective. Leveraging 32,041 hours of egocentric human video and only 88 hours of robotic manipulation data, CAIP outperforms state-of-the-art vision encoders including DINOv2, SigLIP, MVP, and R3M. Evaluated on a challenging real-world dexterous manipulation setup using Dexmate Vega and Sharpa Wave hands, CAIP yields performance gains of more than 30% on tasks involving folding, pouring, and fine-grained manipulation. Our results show that our method of contrastive action-centric pre-training yields a scalable path to achieving robust visual representations better suited for physical interaction.",
+    "id": "2606.19333v1",
+    "title": "Do as I Do: Dexterous Manipulation Data from Everyday Human Videos",
+    "summary": "How can we scalably generate data for robotic manipulation, especially on human-like platforms such as dexterous multi-fingered hands? Learning from human videos has recently emerged as a likely answer to this question. However, difficulties in estimating hand-object interaction and crossing the human-to-robot embodiment gap have hindered the adoption of abundant monocular RGB-only human videos as the primary source of robot manipulation data. In this work, we present DO AS I DO, an algorithm to reconstruct and retarget monocular RGB human videos to multi-fingered dexterous robotic hands. DO AS I DO reconstructs hand-object interactions from various egocentric and exocentric in-the-wild video sources. The algorithm then retargets these hand-object interaction estimates into a sequence of actions executable in the real world, yielding robot-complete manipulation data from disparate human videos. Overall, DO AS I DO outperforms previous state of the art in estimating hand-object interactions and extracting dexterous manipulation trajectories from RGB videos, as we show in experiments on datasets with ground truths and on a dataset of video clips collected online. Our experiments enable us to propose an efficacy playbook for practitioners collecting human data for manipulation.",
     "authors": [
-      "Yuvan Sharma",
-      "Dantong Niu",
-      "Anirudh Pai",
-      "Zekai Wang",
-      "Zhuoyang Liu",
-      "Baifeng Shi",
-      "Stefano Saravalle",
-      "Boning Shao",
-      "Ruijie Zheng",
-      "Jing Wang",
-      "Konstantinos Kallidromitis",
-      "Yusuke Kato",
-      "Fabio Galasso",
-      "Yuke Zhu",
-      "Danfei Xu",
-      "Linxi \"Jim\" Fan",
-      "Jitendra Malik",
-      "Trevor Darrell",
-      "Roei Herzig"
+      "Bhawna Paliwal",
+      "Haritheja Etukuru",
+      "William Liang",
+      "Pieter Abbeel",
+      "Nur Muhammad Mahi Shafiullah",
+      "Jitendra Malik"
     ],
-    "published": "2026-06-15T20:00:20Z",
-    "updated": "2026-06-15T20:00:20Z",
-    "url": "https://arxiv.org/abs/2606.17256v1",
-    "pdf_url": "https://arxiv.org/pdf/2606.17256v1",
+    "published": "2026-06-17T17:57:34Z",
+    "updated": "2026-06-17T17:57:34Z",
+    "url": "https://arxiv.org/abs/2606.19333v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.19333v1",
     "tags": [
       "cs.RO",
       "cs.CV"
@@ -60,23 +46,19 @@
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2606.16178v1",
-    "title": "Scaling Short-Term Memory of Visuomotor Policies for Long-Horizon Tasks",
-    "summary": "Many robotic tasks require short-term memory, whether it's retrieving an object that's no longer visible or turning off an appliance after a set period. Yet, most visuomotor policies trained via imitation learning rely only on immediate sensory input without using past experiences to guide decisions. We present PRISM, a transformer-based architecture for visuomotor policies to effectively use short-term memory via two key components: (i) gated attention, which filters retrieved information to suppress irrelevant details, improving performance by reducing the spurious correlations between the history and current action prediction, (ii) a hierarchical architecture that first compresses local information into compact tokens and then integrates them to capture temporally extended dependencies, improving its compute and memory footprint. Together, these mechanisms enable us to scale short-term memory in visuomotor policies for up to two minutes. To systematically evaluate memory in visuomotor control, we introduce ReMemBench -- a benchmark of eight diverse household manipulation tasks spanning four categories of short-term memory -- designed to foster general memory mechanisms rather than siloed, task-specific solutions. PRISM consistently outperforms prior works, including recurrent architectures, transformers, and their variants -- achieving an absolute improvement of 5%--12% over the strongest baseline. On the RoboCasa and LIBERO benchmarks, it achieves absolute improvements of 11%--15% over its no-memory variant and fine-tuned Vision-Language-Action baselines such as GR00T-N1-3B and OpenVLA, despite not leveraging any large-scale pretraining. Together, PRISM and ReMemBench establish a foundation for developing and evaluating short-term memory-augmented visuomotor policies that scale to long-horizon tasks. Additional materials are available at https://shahrutav.github.io/short-term-memory",
+    "id": "2606.03177v2",
+    "title": "ConTrack: Constrained Hand Motion Tracking with Adaptive Trade-off Control",
+    "summary": "Human demonstrations provide strong priors for robot manipulation, yet it is non-trivial to transfer them to execute on real robots due to the kinematic gap. In dexterous manipulation, it remains challenging to track long-horizon, contact-rich sequences even in simulators: a reference-tracking policy must keep objects on their target trajectories while preserving demonstrated joint motion and contact timing. Existing approaches often rely on hand-crafted reward tuning that require per-sequence tuning and break under limited interaction budgets. We introduce ConTrack, a reinforcement learning (RL) framework that scales with tracking data. ConTrack treats object tracking as a constraint and allocates remaining control authority to motion fidelity, which allows it to adapt task--style trade-offs online using a dual-variable update. In addition, ConTrack also stabilizes long-horizon learning with an adaptive mid-trajectory reset library that reuses policy-reachable simulator states. Our qualitative and quantitative results in simulation tracking and real robot demonstrate that ConTrack improves success and object pose accuracy significantly over prior arts while preserving joint and contact fidelity. Website: https://www.lyt0112.com/projects/ConTrack.",
     "authors": [
-      "Rutav Shah",
-      "Rajat Kumar Jenamani",
-      "Xiaohan Zhang",
-      "Lingfeng Sun",
-      "Roberto Martín-Martín",
-      "Yuke Zhu",
-      "Deva Ramanan",
-      "Karl Schmeckpeper"
+      "Yutong Liang",
+      "Quanquan Peng",
+      "Ri-Zhao Qiu",
+      "Xiaolong Wang"
     ],
-    "published": "2026-06-15T03:49:23Z",
-    "updated": "2026-06-15T03:49:23Z",
-    "url": "https://arxiv.org/abs/2606.16178v1",
-    "pdf_url": "https://arxiv.org/pdf/2606.16178v1",
+    "published": "2026-06-02T05:31:32Z",
+    "updated": "2026-06-15T21:39:17Z",
+    "url": "https://arxiv.org/abs/2606.03177v2",
+    "pdf_url": "https://arxiv.org/pdf/2606.03177v2",
     "tags": [
       "cs.RO"
     ],
