@@ -1,25 +1,25 @@
 [
   {
-    "id": "2606.20562v1",
-    "title": "MemoryWAM: Efficient World Action Modeling with Persistent Memory",
-    "summary": "Robust robotic manipulation in the real world requires not only an understanding of the current observation, but also memory and dynamics modeling. World action models (WAMs) possess these capabilities by jointly modeling visual foresight and actions conditioned on both current and historical observations, making them a promising paradigm for robotic manipulation. However, existing WAMs face a fundamental trade-off: methods with efficient inference typically condition only on a bounded window of recent observations and therefore struggle in non-Markovian environments, whereas methods that preserve long histories incur time and space costs that grow substantially with sequence length. To address this challenge, we introduce MemoryWAM, a world action model with efficient persistent memory. MemoryWAM uses a hybrid memory design that combines recent frames, event-boundary anchor frames, and compact gist tokens that summarize long-range history. A tailored attention mechanism enables retrieval of both detailed short-term context and compressed long-term context, supporting memory-dependent decision-making with reduced inference latency and GPU memory usage. Across long-horizon, memory-dependent manipulation tasks in both simulation and the real world, MemoryWAM outperforms strong vision-language-action (VLA) and WAM baselines while maintaining favorable computational efficiency.",
+    "id": "2606.20285v1",
+    "title": "Co-VLA: Coordination-Aware Structured Action Modeling for Dual-Arm Vision-Language-Action Systems",
+    "summary": "Vision-language-action (VLA) models show strong capabilities in single and dual-arm robotic manipulation. Prior works show coordinated bimanual behaviors can emerge from end-to-end learning, leveraging large vision-language backbones with continuous action prediction. However, as bimanual tasks become tightly coupled and execution constraints become critical, implicit coordination alone is insufficient to ensure reliable, interpretable, and stable behavior. In this work, we propose Co-VLA, a coordination-aware bimanual manipulation framework introducing explicit structural priors into VLA models. We instantiate our method on a state-of-the-art vision-language backbone by replacing its monolithic action head with a Structured Action Expert (SAE) designed for bimanual coordination. Specifically, we introduce explicit structure at the action generation level with a modular coordination-aware loss that shapes shared and residual latents according to task-specific structures. The shared latent encodes task-level coordination intent, while residual latents capture execution adjustments for each arm. At deployment, a Latent-Aware Controller (LAC) interprets the learned representations to modulate synchronization strength, execution asymmetry, smoothness, and safety constraints in real time. LAC operates at the joint-command level and remains compatible with standard control pipelines without requiring force or impedance control. Experiments across simulation and real-world benchmarks show Co-VLA significantly outperforms monolithic baselines, achieving a 27% success rate gain in tight-coordination tasks, more than doubling performance in OOD real-world scenarios (from 13% to 27%), and reducing task completion time by up to 25%.",
     "authors": [
-      "Sizhe Yang",
-      "Juncheng Mu",
-      "Tianming Wei",
-      "Chenhao Lu",
-      "Xiaofan Li",
-      "Linning Xu",
-      "Zhengrong Xue",
-      "Zhecheng Yuan",
-      "Dahua Lin",
-      "Jiangmiao Pang",
-      "Huazhe Xu"
+      "Yandong Wang",
+      "Jiaqian Yu",
+      "Xiongfeng Peng",
+      "Lu Xu",
+      "Yamin Mao",
+      "Weiming Li",
+      "Jaewook Yoo",
+      "Dongwook Lee",
+      "Daehyun Ji",
+      "Mingbo Zhao",
+      "Chao Zhang"
     ],
-    "published": "2026-06-18T17:59:51Z",
-    "updated": "2026-06-18T17:59:51Z",
-    "url": "https://arxiv.org/abs/2606.20562v1",
-    "pdf_url": "https://arxiv.org/pdf/2606.20562v1",
+    "published": "2026-06-18T14:28:37Z",
+    "updated": "2026-06-18T14:28:37Z",
+    "url": "https://arxiv.org/abs/2606.20285v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.20285v1",
     "tags": [
       "cs.RO"
     ],
@@ -27,53 +27,53 @@
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2606.20193v1",
-    "title": "Belt-Finger: An Affordable Soft Belt-Driven Gripper for Dexterous In-Hand Manipulation",
-    "summary": "Parallel-jaw grippers are the default manipulator choice in robotics because they are simple, robust, and inexpensive. Their limited in-hand mobility, however, often forces large arm motions and restricts dexterous manipulation in confined workspaces. We present a parallel-gripper upgrade: a double-soft-belt-based finger module that preserves standard opening/closing while adding three in-hand degrees of freedom (DoF): translation, pitch, and roll. The mechanism is deliberately kept simple and engineered for inexpensive manufacturing and straightforward integration, preserving the reliability and precise control of traditional parallel grippers while greatly broadening the range of manipulation capabilities. To demonstrate the utility of the added DoFs, we integrate the gripper in two control pipelines. First, we adapt a model predictive controller for in-hand manipulation of known objects. Second, we introduce a lightweight teleoperation interface that enables simultaneous control of the robot arm and gripper (10 DoFs total) with minimal hardware. Across a suite of challenging manipulation tasks executed via teleoperation, MPC, and trained policies, the proposed gripper consistently improves dexterity and task feasibility compared to a conventional parallel gripper",
+    "id": "2606.20523v1",
+    "title": "SARLO-80: Worldwide Slant SAR Language Optic Dataset 80cm",
+    "summary": "Multimodal foundation models have advanced rapidly thanks to large optical benchmarks, but comparable resources for synthetic aperture radar (SAR) remain limited. Existing SAR--optical datasets largely rely on low-resolution, intensity-only Ground Range Detected~(GRD) products and do not preserve complex-valued SAR measurements or native acquisition geometry, which restricts physically grounded multimodal learning. In particular, large-scale public datasets combining very-high-resolution (VHR) SAR SLC, aligned optical imagery, and natural-language descriptions are still lacking. We present a VHR SAR--optical--text dataset built from open-access Umbra spotlight acquisitions distributed as Sensor Independent Complex Data (SICD). From around 2,500 worldwide scenes (VV/HH, 20cm--2m native resolution), we standardize all SAR data to an 80cm slant-range grid via band-limited FFT resampling and tile the imagery into 1024 by 1024 patches. For each SAR patch, we retrieve a high-resolution optical tile and warp it into the SAR grid using local coordinate correspondences for local pixel-level alignment. We further generate three caption variants (SHORT/MID/LONG) per sample to support vision--language training and evaluation. Our dataset contains 119,566 triplets (complex and amplitude slant-range SAR patch, aligned optical patch, natural-language description) covering 257 locations across 72 countries and a broad range of land types and infrastructures. We release fixed train/validation/test splits and the full preprocessing and baseline code to enable reproducible benchmarks for multimodal alignment on cross-modal retrieval and conditional generation in native SAR geometry. The dataset is publicly available on the Hugging Face Hub at https://huggingface.co/datasets/ONERA/SARLO-80.",
     "authors": [
-      "Boya Zhang",
-      "Andreas Zell",
-      "Georg Martius"
+      "Solène Debuysère",
+      "Nicolas Trouvé",
+      "Nathan Letheule",
+      "Elise Colin",
+      "Georgia Channing"
     ],
-    "published": "2026-06-18T13:07:04Z",
-    "updated": "2026-06-18T13:07:04Z",
-    "url": "https://arxiv.org/abs/2606.20193v1",
-    "pdf_url": "https://arxiv.org/pdf/2606.20193v1",
+    "published": "2026-06-18T17:38:01Z",
+    "updated": "2026-06-18T17:38:01Z",
+    "url": "https://arxiv.org/abs/2606.20523v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.20523v1",
     "tags": [
-      "cs.RO"
+      "cs.CV",
+      "cs.AI",
+      "cs.DB"
     ],
     "source": "arxiv",
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2606.19980v1",
-    "title": "ENPIRE: Agentic Robot Policy Self-Improvement in the Real World",
-    "summary": "Achieving dexterous robotic manipulation in the real world heavily relies on human supervision and algorithm engineering, which becomes a central bottleneck in the pursuit of general physical intelligence. Although emerging coding agents can generate code to automate algorithm search, their successes remain largely confined in digital environments. We conjecture that the missing abstraction to automate robotics research is a repeatable feedback loop for real-world policy improvement: reset the scene, execute a policy, verify the outcome, and refine the next iteration. To bridge this gap, we introduce ENPIRE, a harness framework for coding agents that instantiates this physical feedback routine with four core modules: an Environment module (EN) for automatic reset and verification, a Policy Improvement module (PI) that launches policy refinement, a Rollout module (R) to evaluate policies with one or multiple physical robots operating in parallel, and an Evolution module (E) in which coding agents analyze logs, consult literature, improve training infrastructure and algorithm code to address failure modes. This closed-loop system transforms real-world manipulation learning into a controllable optimization procedure, minimizing human effort while allowing fair ablations across training recipe and agent variants. Powered by ENPIRE, frontier coding agents can autonomously train a policy to achieve a 99% success rate on challenging, dexterous manipulation tasks, such as organizing a pin box, fastening a zip tie, and tool use, a process that further accelerates when we dispatch an agent team on a robot fleet. Our results suggest a practical and scalable path toward deploying coding agents to autonomously advancing robotics in the physical world.",
+    "id": "2606.18610v1",
+    "title": "SC3-Eval: Evaluating Robot Foundation Models via Self-Consistent Video Generation",
+    "summary": "Evaluating generalist robot manipulation policies in the real world is expensive, slow, and difficult to scale. Action-conditioned video world models offer a scalable alternative by simulating policy rollouts. Autoregressive rollouts accumulate compounding errors, observations across multiple camera views must remain mutually consistent, and the evaluator must generalize to policies whose behaviors lie outside the training distribution. We address these challenges with SC3-Eval, a self-consistent video generation recipe that adapts a pre-trained video foundation model into an accurate policy evaluator by enforcing three complementary forms of consistency. First, forward-inverse dynamics consistency jointly trains the model to predict frames from actions and to recover actions from frames, anchoring generated rollouts to a physically plausible action manifold and counteracting the drift a forward-only model cannot penalize. Second, cross-view consistency trains the model to inpaint each camera view from the other, keeping the multi-camera observation coherent over long rollouts without any explicit memory mechanism. Third, test-time consistency reuses the inverse dynamics mode at inference as a per-action-chunk uncertainty signal that terminates rollouts whose generated frames drift away from the requested actions. We also demonstrate SC3-Eval rollouts reproduce the failure modes that policies exhibit in real-world rollouts, supporting fine-grained diagnostic comparison rather than aggregate ranking alone. Across seven real-world vision-language-action policies, SC3-Eval attains a closed-loop Pearson correlation of $0.929$ and MMRV of $0.119$, outperforming three strong prior video-model-based baselines, and generalizes to new tasks.",
     "authors": [
-      "Wenli Xiao",
-      "Jia Xie",
-      "Tonghe Zhang",
-      "Haotian Lin",
-      "Letian \"Max\" Fu",
-      "Haoru Xue",
-      "Jalen Lu",
-      "Yi Yang",
-      "Cunxi Dai",
-      "Zi Wang",
-      "Jimmy Wu",
-      "Guanzhi Wang",
-      "S. Shankar Sastry",
-      "Ken Goldberg",
-      "Linxi \"Jim\" Fan",
-      "Yuke Zhu",
-      "Guanya Shi"
+      "Wei-Cheng Tseng",
+      "Gashon Hussein",
+      "Yuzhu Dong",
+      "Allen Z. Ren",
+      "Lucy X. Shi",
+      "XuDong Wang",
+      "Sergey Levine",
+      "Zhaoshuo Li",
+      "Jinwei Gu",
+      "Florian Shkurti",
+      "Ming-Yu Liu",
+      "Quan Vuong"
     ],
-    "published": "2026-06-18T09:21:27Z",
-    "updated": "2026-06-18T09:21:27Z",
-    "url": "https://arxiv.org/abs/2606.19980v1",
-    "pdf_url": "https://arxiv.org/pdf/2606.19980v1",
+    "published": "2026-06-17T02:15:46Z",
+    "updated": "2026-06-17T02:15:46Z",
+    "url": "https://arxiv.org/abs/2606.18610v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.18610v1",
     "tags": [
-      "cs.AI"
+      "cs.RO",
+      "cs.CV"
     ],
     "source": "arxiv",
     "bucket": "Representative paper from your selected authors in the last three months"
