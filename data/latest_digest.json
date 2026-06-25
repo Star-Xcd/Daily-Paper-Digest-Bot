@@ -1,45 +1,51 @@
 [
   {
-    "id": "2606.24884v1",
-    "title": "InSight: Self-Guided Skill Acquisition via Steerable VLAs",
-    "summary": "Vision-language-action (VLA) models can learn manipulation skills from demonstrations, but their capabilities are bounded by the skills in the training data. We present InSight, a framework that unlocks autonomous skill acquisition by rendering VLAs steerable at the primitive-action level (e.g., \"move gripper to the bowl\", \"lift upward\", \"pour the bottle\"). InSight consists of two primary stages: (1) an automated segmentation pipeline that partitions demonstrations into labeled primitives via VLM plan decomposition and end-effector poses to enable VLA primitive steerability, and (2) a VLM-guided data flywheel that identifies missing primitives required to accomplish a novel task, autonomously attempts demonstrations of the missing primitives with VLM-proposed low-level control, and automatically labels, stores, and integrates successful demonstrations into the VLA training set. We evaluate InSight across simulation and real-world manipulation tasks, including block flipping, drawer closing, sweeping, twisting, and pouring, without any human demonstrations of these target skills. Once learned, these primitives can be composed to execute novel, long-horizon tasks without additional human demonstrations. Our findings demonstrate that primitive steerability provides a practical foundation for continual skill acquisition in VLA policies. Project website: https://insight-vla.github.io.",
+    "id": "2606.26095v1",
+    "title": "Learning Action Priors for Cross-embodiment Robot Manipulation",
+    "summary": "Most Vision-Language-Action (VLA) models build on a Vision-Language Model (VLM) backbone by attaching an action module and optimizing the full policy jointly. This design inherits strong visual and linguistic priors from the VLM, but leaves the action module to learn physical motion almost from scratch. As a result, the policy lacks an explicit motion prior, forcing early optimization to simultaneously discover temporal action dynamics and cross-modal alignment, a challenge further amplified in cross-embodiment settings. In this work, we propose to pretrain the action module with motion priors before cross-modal VLA alignment. Specifically, we introduce a two-stage training framework that equips the action module with cross-embodiment temporal motion structure before VLA training begins. In Stage~1, a lightweight flow-matching-based encoder-decoder action module efficiently learns temporal motion structure solely from unconditioned action trajectories, without processing visual or language tokens. In Stage~2, this learned prior is transferred to VLA training through decoder reuse and early-stage latent distillation, aligning visual-language features with the action embedding space while still allowing end-to-end policy refinement. In addition, the trained encoder serves as a compact history compressor, summarizing state-action histories into a single temporal context token for history-aware modeling at negligible cost. Extensive experiments across 13 diverse cross-embodiment tasks on both simulated and real-world platforms validate the effectiveness of our approach. Compared with VLA training without action priors, our model achieves faster convergence, higher success rates, and substantially stronger performance on data-scarce real-world tasks. Moreover, scaling up the action data in Stage~1 yields a more generalizable action prior that directly improves downstream VLA performance.",
     "authors": [
-      "Maggie Wang",
-      "Lars Osterberg",
-      "Stephen Tian",
-      "Ola Shorinwa",
-      "Jiajun Wu",
-      "Mac Schwager"
+      "Dong Jing",
+      "Tianqi Zhang",
+      "Jiaqi Liu",
+      "Jinman Zhao",
+      "Zelong Sun",
+      "Li Erran Li",
+      "Zhiwu Lu",
+      "Mingyu Ding"
     ],
-    "published": "2026-06-23T17:59:01Z",
-    "updated": "2026-06-23T17:59:01Z",
-    "url": "https://arxiv.org/abs/2606.24884v1",
-    "pdf_url": "https://arxiv.org/pdf/2606.24884v1",
+    "published": "2026-06-24T17:59:56Z",
+    "updated": "2026-06-24T17:59:56Z",
+    "url": "https://arxiv.org/abs/2606.26095v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.26095v1",
     "tags": [
       "cs.RO",
       "cs.AI",
-      "cs.LG"
+      "cs.CV"
     ],
     "source": "arxiv",
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2606.22136v2",
-    "title": "Wh0: Generative World Models as Scalable Sources of Egocentric Human Hand Manipulation Data",
-    "summary": "Scaling dexterous manipulation requires generalization across objects, scenes, and tasks, yet existing data sources face a trade-off between scale and scene/embodiment alignment: teleoperation data is well aligned with robot deployment but expensive to collect; simulation is scalable but limited by the sim-to-real gap; and real egocentric videos scale effectively but remain misaligned with robot deployment. We propose Wh0, a framework that uses generative video world models as scalable and controllable sources of egocentric human-hand manipulation data to unlock the manipulation capabilities of pretrained dexterous VLA models. Conditioned on language, objects, and scenes, Wh0 uses a generative world model to produce WM-H, a 50k-episode dataset of egocentric human-object interaction videos. Wh0 then converts the generated videos into robot-trainable supervision through hand motion reconstruction and visual editing. Co-trained with a limited amount of real robot data, WM-H adapts pretrained VLA models to dexterous manipulation deployment. Across 18 real-world dexterous manipulation tasks, compared with a model post-trained only on robot data, Wh0 improves zero-shot success on unseen tasks from 8.3% to 38.9%. Ablation studies further show that scalable generation and scene/embodiment alignment are key drivers of performance gains. Videos and open-source code can be found on our project website: https://chenyt31.github.io/wh0.github.io/.",
+    "id": "2606.26093v1",
+    "title": "ForceBand: Learning Forceful Manipulation with sEMG",
+    "summary": "Human demonstrations are a scalable data source for learning robot manipulation policies. However, common sources of human demonstration data, such as motion-capture trajectories and internet videos, capture mostly motion and appearance while missing the contact forces that are critical for force-sensitive manipulation. In this paper, we introduce ForceBand, a low-cost wrist-worn sEMG system that turns human muscle activity into force-enriched demonstrations. We first collect a 10-hour multimodal dataset containing egocentric video, sEMG, IMU, and fingertip force measurements across diverse actions and objects. Using this dataset, we pre-train an EMG2Force model that predicts per-finger forces from sEMG and IMU signals. After a short user-specific calibration, users can collect target-task demonstrations using only ForceBand and video; EMG2Force then labels these demonstrations with per-finger force traces, producing force-augmented demonstrations for robot policy learning. Experiments show that ForceBand recovers fine-grained fingertip interactions with over 50% lower force prediction error than vision-based baselines and achieves an 87% success rate on pick, squeeze, and place tasks that require object-specific force control across objects with diverse shapes, sizes, and weights. Project website: https://forceband-emg.github.io",
     "authors": [
-      "Yangtao Chen",
-      "Zixuan Chen",
-      "Peiyang Wang",
-      "Yong-Lu Li",
-      "Jing Huo",
-      "Jieqi Shi",
-      "Yang Gao"
+      "Botao He",
+      "Zhi Wang",
+      "Linna Kuang",
+      "Ishaan Ghosh",
+      "Jitendra Malik",
+      "Cornelia Fermuller",
+      "Tingfan Wu",
+      "Jiayuan Mao",
+      "Ruoshi Liu",
+      "Haozhi Qi",
+      "Yiannis Aloimonos"
     ],
-    "published": "2026-06-20T16:31:40Z",
-    "updated": "2026-06-23T09:28:18Z",
-    "url": "https://arxiv.org/abs/2606.22136v2",
-    "pdf_url": "https://arxiv.org/pdf/2606.22136v2",
+    "published": "2026-06-24T17:59:35Z",
+    "updated": "2026-06-24T17:59:35Z",
+    "url": "https://arxiv.org/abs/2606.26093v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.26093v1",
     "tags": [
       "cs.RO"
     ],
@@ -47,30 +53,23 @@
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2606.18610v2",
-    "title": "SC3-Eval: Evaluating Robot Foundation Models via Self-Consistent Video Generation",
-    "summary": "Evaluating generalist robot manipulation policies in the real world is expensive, slow, and difficult to scale. Action-conditioned video world models offer a scalable alternative by simulating policy rollouts. Autoregressive rollouts accumulate compounding errors, observations across multiple camera views must remain mutually consistent, and the evaluator must generalize to policies whose behaviors lie outside the training distribution. We address these challenges with SC3-Eval, a self-consistent video generation recipe that adapts a pre-trained video foundation model into an accurate policy evaluator by enforcing three complementary forms of consistency. First, forward-inverse dynamics consistency jointly trains the model to predict frames from actions and to recover actions from frames, anchoring generated rollouts to a physically plausible action manifold and counteracting the drift a forward-only model cannot penalize. Second, cross-view consistency trains the model to inpaint each camera view from the other, keeping the multi-camera observation coherent over long rollouts without any explicit memory mechanism. Third, test-time consistency reuses the inverse dynamics mode at inference as a per-action-chunk uncertainty signal that terminates rollouts whose generated frames drift away from the requested actions. We also demonstrate SC3-Eval rollouts reproduce the failure modes that policies exhibit in real-world rollouts, supporting fine-grained diagnostic comparison rather than aggregate ranking alone. Across seven real-world vision-language-action policies, SC3-Eval attains a closed-loop Pearson correlation of $0.929$ and MMRV of $0.119$, outperforming three strong prior video-model-based baselines, and generalizes to new tasks.",
+    "id": "2606.23640v1",
+    "title": "Learning Process Rewards via Success Visitation Matching for Efficient RL",
+    "summary": "In many modern applications of reinforcement learning (RL), the natural reward for a task of interest is inherently sparse: a reward of 0 is given everywhere except when the task is completed, when a reward of +1 is given. Training a policy to maximize such a sparse reward requires solving a challenging credit assignment problem, leading to slow or ineffective RL improvement. We propose a simple approach to transform a sparse outcome reward into a dense process reward. Our approach relies on training a discriminator to distinguish between previous successful and unsuccessful episodes, and using this discriminator to incentivize the RL-learned policy to match the state-action visitations of successful episodes, while avoiding those of unsuccessful episodes. By incentivizing the policy to match the visitations over all states, not just those that correspond to task success, this reward provides dense feedback on whether progress is being made towards task completion, and, we show, provably achieves this without changing the optimal policy. Focusing on finetuning of robotic control policies, we demonstrate that our approach leads to significantly faster RL finetuning performance on both simulated and real-world manipulation tasks, as compared to simply maximizing the sparse outcome reward.",
     "authors": [
-      "Wei-Cheng Tseng",
-      "Gashon Hussein",
-      "Yuzhu Dong",
-      "Allen Z. Ren",
-      "Lucy X. Shi",
-      "XuDong Wang",
-      "Sergey Levine",
-      "Zhaoshuo Li",
-      "Jinwei Gu",
-      "Florian Shkurti",
-      "Ming-Yu Liu",
-      "Quan Vuong"
+      "Raymond Tsao",
+      "Andrew Wagenmaker",
+      "Sergey Levine"
     ],
-    "published": "2026-06-17T02:15:46Z",
-    "updated": "2026-06-23T00:20:02Z",
-    "url": "https://arxiv.org/abs/2606.18610v2",
-    "pdf_url": "https://arxiv.org/pdf/2606.18610v2",
+    "published": "2026-06-22T17:30:24Z",
+    "updated": "2026-06-22T17:30:24Z",
+    "url": "https://arxiv.org/abs/2606.23640v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.23640v1",
     "tags": [
+      "cs.LG",
+      "cs.AI",
       "cs.RO",
-      "cs.CV"
+      "stat.ML"
     ],
     "source": "arxiv",
     "bucket": "Representative paper from your selected authors in the last three months"
