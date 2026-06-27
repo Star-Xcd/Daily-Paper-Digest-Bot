@@ -1,32 +1,30 @@
 [
   {
-    "id": "2606.27375v1",
-    "title": "Scalable Behavior Cloning with Open Data, Training, and Evaluation",
-    "summary": "We introduce ABC, a fully open-source stack for manipulation with behavior cloning. At its core is ABC-130K: the largest open-source teleoperation dataset to date, featuring 3,500 hours of data spanning over 130K episodes across 195 diverse tasks. Furthermore, we open-source our accessible hardware setup, training infrastructure, and simulation pipeline. We also release 400 hours of sim-teleop data and provide a co-training recipe that produces correlated simulation and real-world evaluation, offering a reliable proxy for ablating model-design and training decisions before costly real-world evaluation. We explore various training recipes and compare common architectural choices for Diffusion Transformers (DiT) and Vision-Language-Action (VLA) models, grounding our findings in real-world evaluations. The resulting policies successfully execute dexterous tasks such as box folding and extracting credit cards from wallets. By providing a reproducible toolkit, we aim to place researchers on an equal footing, establishing the necessary foundation to learn the ABCs of Behavior Cloning together as a community.",
+    "id": "2606.27295v1",
+    "title": "LA4VLA: Learning to Act without Seeing via Language-Action Pretraining",
+    "summary": "Vision-Language-Action (VLA) models are commonly pretrained on robot demonstrations by jointly mapping visual observations and language instructions to actions. However, dense visual-action supervision can dominate the comparatively sparse language-action signal. As a result, policies may rely on visual shortcuts rather than learn how language conditions action execution, making them sensitive to visual variations. To address this limitation, we propose LA4VLA, a language-action pretraining framework that enables policies to acquire language-conditioned action priors without visual observations. These priors capture reusable manipulation skills shared across tasks and scenes, reducing reliance on scene-specific visual cues. Specifically, LA4VLA decomposes expert demonstration trajectories into atomic action segments and pairs each segment with a corresponding low-level action description. This yields LA4-33K, a dataset of 33K Language-Action (LA) episodes derived entirely from existing demonstrations without additional robot data collection. We further develop LA4VLA-1B, a lightweight 1B-parameter VLA model, and investigate three paradigms for incorporating language-action supervision into VLA learning: LA-only pretraining, sequential LA-to-VLA pretraining, and mixed LA-VLA pretraining. Across simulation and real-world tasks, LA-pretrained policies consistently outperform matched VLA-pretrained counterparts, while combining LA and VLA supervision leads to further gains. In particular, mixed LA-VLA pretraining improves the average success rate of LA4VLA-1B over the no-pretraining baseline by up to 17.8 and 45.0 percentage points in simulation and real-world tasks, respectively. These results establish LA4VLA as an effective and complementary pretraining strategy for building stronger and more robust VLA policies.",
     "authors": [
-      "Arthur Allshire",
-      "Himanshu Gaurav Singh",
-      "Ritvik Singh",
-      "Adam Rashid",
-      "Hongsuk Choi",
-      "David McAllister",
-      "Justin Yu",
-      "Yiyuan Chen",
-      "Huang Huang",
-      "Pieter Abbeel",
-      "Xi Chen",
-      "Rocky Duan",
-      "Phillip Isola",
-      "Jitendra Malik",
-      "Fred Shentu",
-      "Guanya Shi",
-      "Philipp Wu",
-      "Angjoo Kanazawa"
+      "Tao Lin",
+      "Yuxin Du",
+      "Yiran Mao",
+      "Zewei Ye",
+      "Yilei Zhong",
+      "Bing Cheng",
+      "Yiming Wang",
+      "Jiting Liu",
+      "Yang Tian",
+      "Junchi Yan",
+      "Feiran Wu",
+      "Zenan Meng",
+      "Hu Wei",
+      "Yuqian Fu",
+      "Gen Li",
+      "Bo Zhao"
     ],
-    "published": "2026-06-25T17:59:57Z",
-    "updated": "2026-06-25T17:59:57Z",
-    "url": "https://arxiv.org/abs/2606.27375v1",
-    "pdf_url": "https://arxiv.org/pdf/2606.27375v1",
+    "published": "2026-06-25T17:13:02Z",
+    "updated": "2026-06-25T17:13:02Z",
+    "url": "https://arxiv.org/abs/2606.27295v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.27295v1",
     "tags": [
       "cs.RO"
     ],
@@ -34,20 +32,22 @@
     "bucket": "Most relevant to your recent work"
   },
   {
-    "id": "2606.27344v1",
-    "title": "VibeAct: Vibration to Actions for Contact-Rich Reactive Robot Dexterity",
-    "summary": "Dexterous manipulation depends on contact events that are fast, local, and often visually occluded. Piezoelectric microphones offer a compact and high-bandwidth way to sense these interactions, but the resulting vibro-acoustic signals are difficult to simulate faithfully enough for end-to-end sim-to-real policy learning on dexterous robot hands. We propose VibeAct, a framework that bridges real vibrotactile sensing and simulation-based reinforcement learning through a shared physical representation of contact and slip. In the real world, we embed piezoelectric microphones into a dexterous robot hand and collect vibro-acoustic data through teleoperation, then replay the recordings in a calibrated digital clone to automatically label per-finger contact and slip. A tactile estimator learns to predict contact and slip from real microphone waveforms, while manipulation policies are trained in simulation on the same representation computed directly from simulated contacts. This decoupling lets policies exploit rapid tactile feedback without simulating raw audio. Across five contact-rich tasks spanning regrasping, in-hand reorientation, and insertion, VibeAct consistently outperforms a proprioception-and-point-cloud baseline in simulation, with the largest gains on tasks requiring sustained reactive control, where the continuous slip-magnitude channel proves the most informative observation. The learned policies transfer to a physical dexterous hand-arm platform, improving success rates on deployed tasks. Project videos and additional details are at https://vibeact.github.io/.",
+    "id": "2606.27146v1",
+    "title": "PhysReflect-VLA: Physical Feasibility and Self-Reflective Regulation for Reliable Vision-Language-Action Policies",
+    "summary": "Long-horizon robotic manipulation is highly sensitive to physically infeasible transitions, contact-induced disturbances, and the lack of effective self-correction during execution. Although Vision-Language-Action (VLA) models provide strong task grounding through multimodal learning, they typically generate actions in a feed-forward manner without explicitly checking physical feasibility or diagnosing execution errors online. We present PhysReflect-VLA, a plug-and-play execution-time reliability framework that augments VLA policies with physical feasibility evaluation and structured self-reflection in a closed-loop control pipeline. A Feasibility Operator evaluates whether candidate actions induce dynamically consistent state transitions; an Action Explanation Operator verifies transition coherence; and an LLM-based Reflection Module analyzes state discrepancies to generate corrective guidance for subsequent actions. A two-stage training procedure stabilizes feasibility modeling and integrates reflection into the control loop. Experiments on multi-stage, contact-rich real-world manipulation tasks show consistent improvements in stage-wise stability and overall task success compared with representative VLA baselines with an average gain of 5.4\\%. Ablation results further indicate that feasibility checking and reflection-based correction both contribute to improved execution robustness. These results highlight the importance of embedding physical consistency checks and online self-reflection for reliable long-horizon robotic manipulation.",
     "authors": [
-      "Yuemin Mao",
-      "Uksang Yoo",
-      "Jean Oh",
-      "Jonathan Francis",
-      "Jeffrey Ichnowski"
+      "Jiayu Yang",
+      "Tao Yang",
+      "Weijun Li",
+      "Xiang Chang",
+      "Fei Chao",
+      "Changjing Shang",
+      "Qiang Shen"
     ],
-    "published": "2026-06-25T17:50:07Z",
-    "updated": "2026-06-25T17:50:07Z",
-    "url": "https://arxiv.org/abs/2606.27344v1",
-    "pdf_url": "https://arxiv.org/pdf/2606.27344v1",
+    "published": "2026-06-25T15:18:10Z",
+    "updated": "2026-06-25T15:18:10Z",
+    "url": "https://arxiv.org/abs/2606.27146v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.27146v1",
     "tags": [
       "cs.RO"
     ],
@@ -55,22 +55,22 @@
     "bucket": "Interest-based topic recommendation"
   },
   {
-    "id": "2606.26428v1",
-    "title": "Play2Perfect: What Matters in Dexterous Play Pretraining for Precise Assembly?",
-    "summary": "Multi-fingered robots promise the speed and dexterity of human hands, yet challenging problems such as precise assembly have remained out of reach. These tasks are contact-rich, making data collection for imitation learning difficult, and sparse-reward, making direct exploration with reinforcement learning (RL) intractable. Consequently, prior work has made progress by structuring the problem with specialized grippers, tool attachments, and environment fixtures. In this work, we argue that before a robot can perfect precise assembly, it must first learn to play. We further ask the question: what factors in the process of learning to play matter for precise assembly? We propose Play2Perfect, an RL framework for task-agnostic pretraining through play on diverse objects and goals, which is then perfected on precise assembly. The goal of play is to acquire reusable manipulation priors, such as grasping, in-hand reorientation and pose reaching. Finetuning then adapts this general prior to assembly, focusing exploration on the final contact-rich, high-precision interactions needed for success. We systematically study key design choices in play pretraining, including object diversity, training objective, trajectory diversity, and goal precision. We show that our prior is 33x more sample-efficient than RL training from scratch, even when provided with dense, multi-stage rewards. We demonstrate zero-shot sim-to-real transfer, achieving 60% success on tight insertions with only 0.5 mm contact clearance, and over 50% success on long-horizon multi-part assembly and screwing.",
+    "id": "2606.23625v1",
+    "title": "Learning to See While Learning to Act: Diffusion Models for Active Perception in Robot Imitation",
+    "summary": "Most imitation learning methods assume full observability in table-top settings. In practice, objects are often occluded, requiring robots to both search and act, and learning this coupled behavior from limited demonstrations remains challenging. We propose See2Act, an imitation learning approach that conditions action prediction on a sequence of actively-inferred viewpoints at test time, by coupling action denoising with viewpoint refinement. The policy is trained using camera poses anchored to keyframe actions from offline demonstrations, enabling implicit learning of where to see, while learning how to act. We empirically demonstrate that in Ravens the policy recovers informative viewpoints under severe occlusions, and on RLBench tasks it improves performance by up to 34% over prior methods. In the real world, we collect 50 demonstrations in a digital twin and achieve zero-shot sim-to-real transfer on pick-and-place tasks using depth observations. The policy handles significant occlusions, showing that learned viewpoint reasoning enables robust manipulation under partial observability.",
     "authors": [
-      "Tyler Ga Wei Lum",
-      "Kushal Kedia",
-      "C. Karen Liu",
-      "Jeannette Bohg"
+      "Kuancheng Wang",
+      "Vaibhav Saxena",
+      "Shuo Cheng",
+      "Yotto Koga",
+      "Danfei Xu"
     ],
-    "published": "2026-06-24T22:39:12Z",
-    "updated": "2026-06-24T22:39:12Z",
-    "url": "https://arxiv.org/abs/2606.26428v1",
-    "pdf_url": "https://arxiv.org/pdf/2606.26428v1",
+    "published": "2026-06-22T17:19:57Z",
+    "updated": "2026-06-22T17:19:57Z",
+    "url": "https://arxiv.org/abs/2606.23625v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.23625v1",
     "tags": [
-      "cs.RO",
-      "cs.AI"
+      "cs.RO"
     ],
     "source": "arxiv",
     "bucket": "Representative paper from your selected authors in the last three months"
